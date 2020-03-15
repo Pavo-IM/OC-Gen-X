@@ -14,6 +14,15 @@
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
 		CF59E73C241DA59100A7C5EC /* AMDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73B241DA59100A7C5EC /* AMDVC.swift */; };
 		CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */; };
+		CF6F1118241E96DD00B70805 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1117241E96DD00B70805 /* Root.swift */; };
+		CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1119241E96EB00B70805 /* ACPI.swift */; };
+		CF6F111C241E96F400B70805 /* Booter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F111B241E96F400B70805 /* Booter.swift */; };
+		CF6F111E241E970B00B70805 /* DeviceProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F111D241E970B00B70805 /* DeviceProperties.swift */; };
+		CF6F1120241E971400B70805 /* Kernel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F111F241E971400B70805 /* Kernel.swift */; };
+		CF6F1122241E971E00B70805 /* Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1121241E971E00B70805 /* Misc.swift */; };
+		CF6F1124241E972600B70805 /* NVRAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1123241E972600B70805 /* NVRAM.swift */; };
+		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
+		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +36,15 @@
 		CF59E739241DA57A00A7C5EC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CF59E73B241DA59100A7C5EC /* AMDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMDVC.swift; sourceTree = "<group>"; };
 		CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		CF6F1117241E96DD00B70805 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		CF6F1119241E96EB00B70805 /* ACPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPI.swift; sourceTree = "<group>"; };
+		CF6F111B241E96F400B70805 /* Booter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booter.swift; sourceTree = "<group>"; };
+		CF6F111D241E970B00B70805 /* DeviceProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProperties.swift; sourceTree = "<group>"; };
+		CF6F111F241E971400B70805 /* Kernel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kernel.swift; sourceTree = "<group>"; };
+		CF6F1121241E971E00B70805 /* Misc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Misc.swift; sourceTree = "<group>"; };
+		CF6F1123241E972600B70805 /* NVRAM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVRAM.swift; sourceTree = "<group>"; };
+		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
+		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,7 @@
 		CF59E71B241DA2D500A7C5EC = {
 			isa = PBXGroup;
 			children = (
+				CF6F1116241E96C200B70805 /* Config */,
 				CF8D4E66241E8B76002713CE /* SkylakeX */,
 				CF8D4E65241E8B68002713CE /* BroadWellE */,
 				CF8D4E64241E8B61002713CE /* HaswellE */,
@@ -80,6 +99,22 @@
 				CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */,
 			);
 			path = "OC Gen-X";
+			sourceTree = "<group>";
+		};
+		CF6F1116241E96C200B70805 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CF6F1117241E96DD00B70805 /* Root.swift */,
+				CF6F1119241E96EB00B70805 /* ACPI.swift */,
+				CF6F111B241E96F400B70805 /* Booter.swift */,
+				CF6F111D241E970B00B70805 /* DeviceProperties.swift */,
+				CF6F111F241E971400B70805 /* Kernel.swift */,
+				CF6F1121241E971E00B70805 /* Misc.swift */,
+				CF6F1123241E972600B70805 /* NVRAM.swift */,
+				CF6F1125241E973600B70805 /* PlatformInfo.swift */,
+				CF6F1127241E973E00B70805 /* UEFI.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		CF8D4E5D241E8AD8002713CE /* 17h */ = {
@@ -222,11 +257,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */,
+				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
+				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
+				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
 				CF59E738241DA56500A7C5EC /* IntelVC.swift in Sources */,
+				CF6F1122241E971E00B70805 /* Misc.swift in Sources */,
+				CF6F1124241E972600B70805 /* NVRAM.swift in Sources */,
 				CF59E73C241DA59100A7C5EC /* AMDVC.swift in Sources */,
 				CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */,
+				CF6F1128241E973E00B70805 /* UEFI.swift in Sources */,
 				CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */,
+				CF6F1118241E96DD00B70805 /* Root.swift in Sources */,
+				CF6F111E241E970B00B70805 /* DeviceProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
