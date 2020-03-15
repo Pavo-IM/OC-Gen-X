@@ -6,4 +6,18 @@ struct Root: Codable {
     var deviceProperties: deviceProperties
     var kernel: kernel
     var misc: misc
+    var nvram: nvram
+    var platFormInfo: platFormInfo
+    var uefi: uefi
+    
+    enum CodingKeys: String, CodingKey {
+        case acpi = "ACPI"
+        case booter = "Booter"
+        case deviceProperties = "DeviceProperties"
+        case kernel = "Kernel"
+        case misc = "Misc"
+        case nvram = "NVRAM"
+        case platFormInfo = "PlatFormInfo"
+        case uefi = "UEFI"
+    }
 }

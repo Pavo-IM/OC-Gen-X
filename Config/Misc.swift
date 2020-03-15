@@ -7,6 +7,15 @@ struct misc: Codable {
     var entries: [entries]
     var security: security
     var tools: [tools]
+    
+    enum CodingKeys: String, CodingKey {
+        case blessOverRide = "BlessOverRide"
+        case boot = "Boot"
+        case debug = "Debug"
+        case entries = "Entries"
+        case security = "Security"
+        case tools = "Tools"
+    }
 }
 
 struct blessOverRide: Codable {
@@ -24,6 +33,19 @@ struct boot: Codable {
     var showPicker: Bool
     var takeoffDelay: Int
     var timeout: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case hibernateMode = "HibernateMode"
+        case hideAuxiliary = "HideAuxiliary"
+        case hideSelf = "HideSelf"
+        case pickerAttributes = "PickerAttributes"
+        case pickerAudioAssist = "PickerAudioAssist"
+        case pickerMode = "PickerMode"
+        case pollAppleHotKeys = "PollAppleHotKeys"
+        case showPicker = "ShowPicker"
+        case takeoffDelay = "TakeoffDelay"
+        case timeout = "Timeout"
+    }
 }
 
 struct debug: Codable {
@@ -31,6 +53,13 @@ struct debug: Codable {
     var displayDelay: Int
     var displayLevel: Int
     var target: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case disableWatchDog = "DisableWatchDog"
+        case displayDelay = "DisplayDelay"
+        case displayLevel = "DisplayLevel"
+        case target = "Target"
+    }
 }
 
 struct entries: Codable {
@@ -45,6 +74,16 @@ struct security: Codable {
     var haltLevel: Int
     var scanPolicy: Int
     var vault: String
+    
+    enum CodingKeys: String, CodingKey {
+        case allowNvramReset = "AllowNvramReset"
+        case allowSetDefault = "AllowSetDefault"
+        case authRestart = "AuthRestart"
+        case exposeSensitiveData = "ExposeSensitiveData"
+        case haltLevel = "HaltLevel"
+        case scanPolicy = "ScanPolicy"
+        case vault = "Vault"
+    }
 }
 
 struct tools: Codable {

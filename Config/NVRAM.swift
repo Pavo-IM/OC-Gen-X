@@ -7,16 +7,35 @@ struct nvram: Codable {
     var legacyOverwrite: Bool
     var legacySchema: legacySchema
     var writeFlash: Bool
+    
+    enum CodingKeys: String, CodingKey {
+        case add = "Add"
+        case block = "Block"
+        case legacyEnable = "LegacyEnable"
+        case legacyOverwrite = "LegacyOverwrite"
+        case legacySchema = "LegacySchema"
+        case writeFlash = "WriteFlash"
+    }
 }
 
 struct nAdd: Codable {
     var addAppleVendorVariableGuid: addAppleVendorVariableGuid
     var addAppleBootVariableGuid: addAppleBootVariableGuid
+    
+    enum CodingKeys: String, CodingKey {
+        case addAppleVendorVariableGuid = "4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"
+        case addAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"
+    }
 }
 
 struct addAppleVendorVariableGuid: Codable {
     var defaultBackgroundColor: Data
     var uiScale: Data
+    
+    enum CodingKeys: String, CodingKey {
+        case defaultBackgroundColor = "DefaultBackgroundColor"
+        case uiScale = "UIScale"
+    }
 }
 
 struct addAppleBootVariableGuid: Codable {
@@ -25,11 +44,24 @@ struct addAppleBootVariableGuid: Codable {
     var csrActiveConfig: Data
     var nvdaDrv: Data
     var prevLangKbd: Data
+    
+    enum CodingKeys: String, CodingKey {
+        case systemAudioVolume = "SystemAudioVolume"
+        case bootArgs = "boot-args"
+        case csrActiveConfig = "csr-active-config"
+        case nvdaDrv = "nvda_drv"
+        case prevLangKbd = "prev-lang:kbd"
+    }
 }
 
 struct nBlock: Codable {
     var blockAppleVendorVariableGuid: [blockAppleVendorVariableGuid]
     var blockAppleBootVariableGuid: [blockAppleBootVariableGuid]
+    
+    enum CodingKeys: String, CodingKey {
+        case blockAppleVendorVariableGuid = "4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"
+        case blockAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"
+    }
 }
 
 struct blockAppleVendorVariableGuid: Codable {
@@ -43,6 +75,11 @@ struct blockAppleBootVariableGuid: Codable {
 struct legacySchema: Codable {
     var legacyAppleBootVariableGuid: [legacyAppleBootVariableGuid]
     var legacyEfiGlobalVariable: [legacyEfiGlobalVariable]
+    
+    enum CodingKeys: String, CodingKey {
+        case legacyAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"
+        case legacyEfiGlobalVariable = "8BE4DF61-93CA-11D2-AA0D-00E098032B8C"
+    }
 }
 
 struct legacyAppleBootVariableGuid: Codable {
