@@ -23,6 +23,8 @@
 		CF6F1124241E972600B70805 /* NVRAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1123241E972600B70805 /* NVRAM.swift */; };
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
+		CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8624218ED90057656E /* 300px-Redpill2.png */; };
+		CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8724218ED90057656E /* 300px-Bluepill.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		CF6F1123241E972600B70805 /* NVRAM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVRAM.swift; sourceTree = "<group>"; };
 		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
+		CFF4DB8624218ED90057656E /* 300px-Redpill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Redpill2.png"; sourceTree = "<group>"; };
+		CFF4DB8724218ED90057656E /* 300px-Bluepill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Bluepill.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		CF59E71B241DA2D500A7C5EC = {
 			isa = PBXGroup;
 			children = (
+				CFF4DB8124218D690057656E /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
 				CF8D4E66241E8B76002713CE /* SkylakeX */,
 				CF8D4E65241E8B68002713CE /* BroadWellE */,
@@ -187,6 +192,15 @@
 			path = SkylakeX;
 			sourceTree = "<group>";
 		};
+		CFF4DB8124218D690057656E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CFF4DB8724218ED90057656E /* 300px-Bluepill.png */,
+				CFF4DB8624218ED90057656E /* 300px-Redpill2.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +261,8 @@
 			files = (
 				CF59E72C241DA2D600A7C5EC /* Assets.xcassets in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
+				CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */,
+				CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

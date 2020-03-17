@@ -11,10 +11,4 @@ class IntelVC: NSViewController {
         intelChipsetList.removeAllItems()
         intelChipsetList.addItems(withTitles: moboChipsetList)
     }
-    @IBAction func beginningClicked(_ sender: Any) {
-        if let mainWC = view.window?.windowController as? MainWindowController {
-            mainWC.moveToMainVC()
-        }
-    }
-    
 }
