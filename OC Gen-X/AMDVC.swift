@@ -12,4 +12,11 @@ class AMDVC: NSViewController {
         amdChipsetList.addItems(withTitles: moboFamily)
         
     }
+    @IBAction func previousClicked(_ sender: Any) {
+        if let mainWC = view.window?.windowController as? MainWindowController {
+            mainWC.moveToMainVC()
+        }
+    }
+    @IBAction func nextClicked(_ sender: Any) {
+    }
 }
