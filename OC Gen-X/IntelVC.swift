@@ -10,6 +10,8 @@ class IntelVC: NSViewController {
         
         intelChipsetList.removeAllItems()
         intelChipsetList.addItems(withTitles: moboChipsetList)
+        
+        
     }
     
     @IBAction func previousClicked(_ sender: Any) {
