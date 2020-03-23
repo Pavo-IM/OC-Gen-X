@@ -10,7 +10,6 @@ class AMDVC: NSViewController {
         
         amdChipsetList.removeAllItems()
         amdChipsetList.addItems(withTitles: moboFamily)
-        
     }
     @IBAction func previousClicked(_ sender: Any) {
         if let mainWC = view.window?.windowController as? MainWindowController {

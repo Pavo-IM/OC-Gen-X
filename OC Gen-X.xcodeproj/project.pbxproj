@@ -113,16 +113,6 @@
 		CF59E726241DA2D500A7C5EC /* OC Gen-X */ = {
 			isa = PBXGroup;
 			children = (
-				CFFB65DB2423DA7700F1F367 /* IvyBridgeVC.swift */,
-				CFFB65DD2423DA8900F1F367 /* HaswellVC.swift */,
-				CFFB65DF2423DA9B00F1F367 /* SkylakeVC.swift */,
-				CFFB65E12423DAAC00F1F367 /* KabyLakeVC.swift */,
-				CFFB65E32423DABE00F1F367 /* CoffeeLakeVC.swift */,
-				CFFB65E52423DACC00F1F367 /* HaswellEVC.swift */,
-				CFFB65E72423DAD900F1F367 /* BroadWellEVC.swift */,
-				CFFB65E92423DAE600F1F367 /* SkyLakeXVC.swift */,
-				CFFB65EF2423DC7900F1F367 /* 15_16hVC.swift */,
-				CFFB65F12423DC8600F1F367 /* 17hVC.swift */,
 				CF59E727241DA2D500A7C5EC /* AppDelegate.swift */,
 				CF59E737241DA56500A7C5EC /* IntelVC.swift */,
 				CF59E73B241DA59100A7C5EC /* AMDVC.swift */,
@@ -155,6 +145,7 @@
 		CF8D4E5D241E8AD8002713CE /* 17h */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65F12423DC8600F1F367 /* 17hVC.swift */,
 			);
 			path = 17h;
 			sourceTree = "<group>";
@@ -162,6 +153,7 @@
 		CF8D4E5E241E8AFD002713CE /* 15_16h */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65EF2423DC7900F1F367 /* 15_16hVC.swift */,
 			);
 			path = 15_16h;
 			sourceTree = "<group>";
@@ -169,6 +161,7 @@
 		CF8D4E5F241E8B1B002713CE /* Haswell */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65DD2423DA8900F1F367 /* HaswellVC.swift */,
 			);
 			path = Haswell;
 			sourceTree = "<group>";
@@ -176,6 +169,7 @@
 		CF8D4E60241E8B38002713CE /* IvyBridge */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65DB2423DA7700F1F367 /* IvyBridgeVC.swift */,
 			);
 			path = IvyBridge;
 			sourceTree = "<group>";
@@ -183,6 +177,7 @@
 		CF8D4E61241E8B46002713CE /* Skylake */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65DF2423DA9B00F1F367 /* SkylakeVC.swift */,
 			);
 			path = Skylake;
 			sourceTree = "<group>";
@@ -190,6 +185,7 @@
 		CF8D4E62241E8B4E002713CE /* KabyLake */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65E12423DAAC00F1F367 /* KabyLakeVC.swift */,
 			);
 			path = KabyLake;
 			sourceTree = "<group>";
@@ -197,6 +193,7 @@
 		CF8D4E63241E8B57002713CE /* CoffeeLake */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65E32423DABE00F1F367 /* CoffeeLakeVC.swift */,
 			);
 			path = CoffeeLake;
 			sourceTree = "<group>";
@@ -204,6 +201,7 @@
 		CF8D4E64241E8B61002713CE /* HaswellE */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65E52423DACC00F1F367 /* HaswellEVC.swift */,
 			);
 			path = HaswellE;
 			sourceTree = "<group>";
@@ -211,6 +209,7 @@
 		CF8D4E65241E8B68002713CE /* BroadWellE */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65E72423DAD900F1F367 /* BroadWellEVC.swift */,
 			);
 			path = BroadWellE;
 			sourceTree = "<group>";
@@ -218,6 +217,7 @@
 		CF8D4E66241E8B76002713CE /* SkylakeX */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB65E92423DAE600F1F367 /* SkyLakeXVC.swift */,
 			);
 			path = SkylakeX;
 			sourceTree = "<group>";
