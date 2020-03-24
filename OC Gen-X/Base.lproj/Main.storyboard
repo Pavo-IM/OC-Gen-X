@@ -1037,7 +1037,7 @@
                 </viewController>
                 <customObject id="krV-kD-C3a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="1313"/>
+            <point key="canvasLocation" x="76" y="1320"/>
         </scene>
         <!--IntelVC-->
         <scene sceneID="zbm-j3-xJB">
