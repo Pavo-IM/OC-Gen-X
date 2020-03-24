@@ -20,6 +20,9 @@ class IntelVC: NSViewController {
         }
     }
     @IBAction func nextClicked(_ sender: Any) {
+        if let mainWC = view.window?.windowController as? MainWindowController {
+            mainWC.moveToKextVC()
+        }
     }
     
 }

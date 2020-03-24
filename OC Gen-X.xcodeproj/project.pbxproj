@@ -25,16 +25,7 @@
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8624218ED90057656E /* 300px-Redpill2.png */; };
 		CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8724218ED90057656E /* 300px-Bluepill.png */; };
-		CFFB65DC2423DA7700F1F367 /* IvyBridgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65DB2423DA7700F1F367 /* IvyBridgeVC.swift */; };
-		CFFB65DE2423DA8900F1F367 /* HaswellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65DD2423DA8900F1F367 /* HaswellVC.swift */; };
-		CFFB65E02423DA9B00F1F367 /* SkylakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65DF2423DA9B00F1F367 /* SkylakeVC.swift */; };
-		CFFB65E22423DAAC00F1F367 /* KabyLakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65E12423DAAC00F1F367 /* KabyLakeVC.swift */; };
-		CFFB65E42423DABE00F1F367 /* CoffeeLakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65E32423DABE00F1F367 /* CoffeeLakeVC.swift */; };
-		CFFB65E62423DACC00F1F367 /* HaswellEVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65E52423DACC00F1F367 /* HaswellEVC.swift */; };
-		CFFB65E82423DAD900F1F367 /* BroadWellEVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65E72423DAD900F1F367 /* BroadWellEVC.swift */; };
-		CFFB65EA2423DAE600F1F367 /* SkyLakeXVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65E92423DAE600F1F367 /* SkyLakeXVC.swift */; };
-		CFFB65F02423DC7900F1F367 /* 15_16hVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65EF2423DC7900F1F367 /* 15_16hVC.swift */; };
-		CFFB65F22423DC8600F1F367 /* 17hVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB65F12423DC8600F1F367 /* 17hVC.swift */; };
+		CFF9ADCB2429985000FF7B8F /* kextsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9ADCA2429985000FF7B8F /* kextsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,16 +50,7 @@
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 		CFF4DB8624218ED90057656E /* 300px-Redpill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Redpill2.png"; sourceTree = "<group>"; };
 		CFF4DB8724218ED90057656E /* 300px-Bluepill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Bluepill.png"; sourceTree = "<group>"; };
-		CFFB65DB2423DA7700F1F367 /* IvyBridgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IvyBridgeVC.swift; sourceTree = "<group>"; };
-		CFFB65DD2423DA8900F1F367 /* HaswellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaswellVC.swift; sourceTree = "<group>"; };
-		CFFB65DF2423DA9B00F1F367 /* SkylakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkylakeVC.swift; sourceTree = "<group>"; };
-		CFFB65E12423DAAC00F1F367 /* KabyLakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KabyLakeVC.swift; sourceTree = "<group>"; };
-		CFFB65E32423DABE00F1F367 /* CoffeeLakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeLakeVC.swift; sourceTree = "<group>"; };
-		CFFB65E52423DACC00F1F367 /* HaswellEVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaswellEVC.swift; sourceTree = "<group>"; };
-		CFFB65E72423DAD900F1F367 /* BroadWellEVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadWellEVC.swift; sourceTree = "<group>"; };
-		CFFB65E92423DAE600F1F367 /* SkyLakeXVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyLakeXVC.swift; sourceTree = "<group>"; };
-		CFFB65EF2423DC7900F1F367 /* 15_16hVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15_16hVC.swift; sourceTree = "<group>"; };
-		CFFB65F12423DC8600F1F367 /* 17hVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17hVC.swift; sourceTree = "<group>"; };
+		CFF9ADCA2429985000FF7B8F /* kextsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kextsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,17 +69,7 @@
 			children = (
 				CFF4DB8124218D690057656E /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
-				CF8D4E66241E8B76002713CE /* SkylakeX */,
-				CF8D4E65241E8B68002713CE /* BroadWellE */,
-				CF8D4E64241E8B61002713CE /* HaswellE */,
-				CF8D4E63241E8B57002713CE /* CoffeeLake */,
-				CF8D4E62241E8B4E002713CE /* KabyLake */,
-				CF8D4E61241E8B46002713CE /* Skylake */,
-				CF8D4E60241E8B38002713CE /* IvyBridge */,
-				CF8D4E5F241E8B1B002713CE /* Haswell */,
-				CF8D4E5E241E8AFD002713CE /* 15_16h */,
 				CF59E726241DA2D500A7C5EC /* OC Gen-X */,
-				CF8D4E5D241E8AD8002713CE /* 17h */,
 				CF59E725241DA2D500A7C5EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CF59E727241DA2D500A7C5EC /* AppDelegate.swift */,
+				CFF9ADCA2429985000FF7B8F /* kextsVC.swift */,
 				CF59E737241DA56500A7C5EC /* IntelVC.swift */,
 				CF59E73B241DA59100A7C5EC /* AMDVC.swift */,
 				CF59E739241DA57A00A7C5EC /* MainVC.swift */,
@@ -140,86 +113,6 @@
 				CF6F1127241E973E00B70805 /* UEFI.swift */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		CF8D4E5D241E8AD8002713CE /* 17h */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65F12423DC8600F1F367 /* 17hVC.swift */,
-			);
-			path = 17h;
-			sourceTree = "<group>";
-		};
-		CF8D4E5E241E8AFD002713CE /* 15_16h */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65EF2423DC7900F1F367 /* 15_16hVC.swift */,
-			);
-			path = 15_16h;
-			sourceTree = "<group>";
-		};
-		CF8D4E5F241E8B1B002713CE /* Haswell */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65DD2423DA8900F1F367 /* HaswellVC.swift */,
-			);
-			path = Haswell;
-			sourceTree = "<group>";
-		};
-		CF8D4E60241E8B38002713CE /* IvyBridge */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65DB2423DA7700F1F367 /* IvyBridgeVC.swift */,
-			);
-			path = IvyBridge;
-			sourceTree = "<group>";
-		};
-		CF8D4E61241E8B46002713CE /* Skylake */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65DF2423DA9B00F1F367 /* SkylakeVC.swift */,
-			);
-			path = Skylake;
-			sourceTree = "<group>";
-		};
-		CF8D4E62241E8B4E002713CE /* KabyLake */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65E12423DAAC00F1F367 /* KabyLakeVC.swift */,
-			);
-			path = KabyLake;
-			sourceTree = "<group>";
-		};
-		CF8D4E63241E8B57002713CE /* CoffeeLake */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65E32423DABE00F1F367 /* CoffeeLakeVC.swift */,
-			);
-			path = CoffeeLake;
-			sourceTree = "<group>";
-		};
-		CF8D4E64241E8B61002713CE /* HaswellE */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65E52423DACC00F1F367 /* HaswellEVC.swift */,
-			);
-			path = HaswellE;
-			sourceTree = "<group>";
-		};
-		CF8D4E65241E8B68002713CE /* BroadWellE */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65E72423DAD900F1F367 /* BroadWellEVC.swift */,
-			);
-			path = BroadWellE;
-			sourceTree = "<group>";
-		};
-		CF8D4E66241E8B76002713CE /* SkylakeX */ = {
-			isa = PBXGroup;
-			children = (
-				CFFB65E92423DAE600F1F367 /* SkyLakeXVC.swift */,
-			);
-			path = SkylakeX;
 			sourceTree = "<group>";
 		};
 		CFF4DB8124218D690057656E /* Images */ = {
@@ -303,28 +196,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFFB65E42423DABE00F1F367 /* CoffeeLakeVC.swift in Sources */,
-				CFFB65E02423DA9B00F1F367 /* SkylakeVC.swift in Sources */,
 				CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */,
 				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
-				CFFB65DC2423DA7700F1F367 /* IvyBridgeVC.swift in Sources */,
-				CFFB65E62423DACC00F1F367 /* HaswellEVC.swift in Sources */,
-				CFFB65DE2423DA8900F1F367 /* HaswellVC.swift in Sources */,
 				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
 				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
-				CFFB65EA2423DAE600F1F367 /* SkyLakeXVC.swift in Sources */,
 				CF59E738241DA56500A7C5EC /* IntelVC.swift in Sources */,
 				CF6F1122241E971E00B70805 /* Misc.swift in Sources */,
-				CFFB65E22423DAAC00F1F367 /* KabyLakeVC.swift in Sources */,
 				CF6F1124241E972600B70805 /* NVRAM.swift in Sources */,
-				CFFB65F22423DC8600F1F367 /* 17hVC.swift in Sources */,
 				CF59E73C241DA59100A7C5EC /* AMDVC.swift in Sources */,
 				CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */,
+				CFF9ADCB2429985000FF7B8F /* kextsVC.swift in Sources */,
 				CF6F1128241E973E00B70805 /* UEFI.swift in Sources */,
 				CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */,
-				CFFB65F02423DC7900F1F367 /* 15_16hVC.swift in Sources */,
-				CFFB65E82423DAD900F1F367 /* BroadWellEVC.swift in Sources */,
 				CF6F1118241E96DD00B70805 /* Root.swift in Sources */,
 				CF6F111E241E970B00B70805 /* DeviceProperties.swift in Sources */,
 			);

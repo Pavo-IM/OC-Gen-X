@@ -5,6 +5,7 @@ class MainWindowController: NSWindowController {
     var mainVC: MainVC?
     var intelVC: IntelVC?
     var amdVC: AMDVC?
+    var kextsVC: kextsVC?
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -33,5 +34,12 @@ class MainWindowController: NSWindowController {
             amdVC = storyboard?.instantiateController(withIdentifier: "amdVC") as? AMDVC
         }
         window?.contentView = amdVC?.view
+    }
+    
+    func moveToKextVC() {
+        if kextsVC == nil {
+            kextsVC = storyboard?.instantiateController(withIdentifier: "kextsVC") as? kextsVC
+        }
+        window?.contentView = kextsVC?.view
     }
 }
