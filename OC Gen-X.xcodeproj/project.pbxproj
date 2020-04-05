@@ -10,9 +10,7 @@
 		CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E727241DA2D500A7C5EC /* AppDelegate.swift */; };
 		CF59E72C241DA2D600A7C5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72B241DA2D600A7C5EC /* Assets.xcassets */; };
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
-		CF59E738241DA56500A7C5EC /* IntelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E737241DA56500A7C5EC /* IntelVC.swift */; };
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
-		CF59E73C241DA59100A7C5EC /* AMDVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73B241DA59100A7C5EC /* AMDVC.swift */; };
 		CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */; };
 		CF6F1118241E96DD00B70805 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1117241E96DD00B70805 /* Root.swift */; };
 		CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1119241E96EB00B70805 /* ACPI.swift */; };
@@ -25,7 +23,6 @@
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8624218ED90057656E /* 300px-Redpill2.png */; };
 		CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8724218ED90057656E /* 300px-Bluepill.png */; };
-		CFF9ADCB2429985000FF7B8F /* kextsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF9ADCA2429985000FF7B8F /* kextsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +32,7 @@
 		CF59E72E241DA2D600A7C5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF59E730241DA2D600A7C5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OC_Gen_X.entitlements; sourceTree = "<group>"; };
-		CF59E737241DA56500A7C5EC /* IntelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelVC.swift; sourceTree = "<group>"; };
 		CF59E739241DA57A00A7C5EC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		CF59E73B241DA59100A7C5EC /* AMDVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AMDVC.swift; sourceTree = "<group>"; };
 		CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		CF6F1117241E96DD00B70805 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		CF6F1119241E96EB00B70805 /* ACPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPI.swift; sourceTree = "<group>"; };
@@ -50,7 +45,6 @@
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 		CFF4DB8624218ED90057656E /* 300px-Redpill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Redpill2.png"; sourceTree = "<group>"; };
 		CFF4DB8724218ED90057656E /* 300px-Bluepill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Bluepill.png"; sourceTree = "<group>"; };
-		CFF9ADCA2429985000FF7B8F /* kextsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kextsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				CF59E727241DA2D500A7C5EC /* AppDelegate.swift */,
-				CFF9ADCA2429985000FF7B8F /* kextsVC.swift */,
-				CF59E737241DA56500A7C5EC /* IntelVC.swift */,
-				CF59E73B241DA59100A7C5EC /* AMDVC.swift */,
 				CF59E739241DA57A00A7C5EC /* MainVC.swift */,
 				CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */,
 				CF59E72B241DA2D600A7C5EC /* Assets.xcassets */,
@@ -201,12 +192,9 @@
 				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
 				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
-				CF59E738241DA56500A7C5EC /* IntelVC.swift in Sources */,
 				CF6F1122241E971E00B70805 /* Misc.swift in Sources */,
 				CF6F1124241E972600B70805 /* NVRAM.swift in Sources */,
-				CF59E73C241DA59100A7C5EC /* AMDVC.swift in Sources */,
 				CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */,
-				CFF9ADCB2429985000FF7B8F /* kextsVC.swift in Sources */,
 				CF6F1128241E973E00B70805 /* UEFI.swift in Sources */,
 				CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */,
 				CF6F1118241E96DD00B70805 /* Root.swift in Sources */,
