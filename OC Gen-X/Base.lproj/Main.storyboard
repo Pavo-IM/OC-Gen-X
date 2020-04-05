@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="478"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="227"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -722,7 +722,7 @@
                                 </connections>
                             </button>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="31" width="811" height="453"/>
+                                <rect key="frame" x="-7" y="31" width="811" height="202"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -897,11 +897,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="407"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="423"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -909,18 +909,18 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="78"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="341" width="44" height="18"/>
+                                                                        <rect key="frame" x="8" y="42" width="44" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="Lilu" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MuK-5H-FYr">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="317" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="18" width="91" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="VirtualSMC" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="12X-0g-3tL">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -931,56 +931,310 @@
                                                                     <constraint firstItem="JsS-MV-XBV" firstAttribute="leading" secondItem="YQt-GO-VSt" secondAttribute="leading" constant="10" id="120-yq-dN4"/>
                                                                     <constraint firstItem="lbr-dO-TxB" firstAttribute="top" secondItem="JsS-MV-XBV" secondAttribute="bottom" constant="10" id="7B3-lB-Ab6"/>
                                                                     <constraint firstItem="JsS-MV-XBV" firstAttribute="top" secondItem="YQt-GO-VSt" secondAttribute="top" constant="20" id="asb-fl-R93"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="lbr-dO-TxB" secondAttribute="bottom" constant="20" id="b4D-wF-EjU"/>
                                                                     <constraint firstItem="lbr-dO-TxB" firstAttribute="leading" secondItem="JsS-MV-XBV" secondAttribute="leading" id="nIE-Co-gsn"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="VirtualSMC Plugins" identifier="" id="GBT-cr-FfU">
                                                             <view key="view" id="LuR-rU-oM9">
-                                                                <rect key="frame" x="10" y="33" width="785" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-Dt-rSe">
+                                                                        <rect key="frame" x="8" y="90" width="112" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="SMCProcessor" bezelStyle="regularSquare" imagePosition="left" inset="2" id="DA7-8c-MgT">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Ws-sH-cwr">
+                                                                        <rect key="frame" x="8" y="66" width="100" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="SMCSuperIO" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Ee7-82-v3F">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-Wb-cLO">
+                                                                        <rect key="frame" x="8" y="42" width="124" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="SMCLightSensor" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tIR-1p-bVa">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oG6-xM-fb1">
+                                                                        <rect key="frame" x="8" y="18" width="148" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="SMCBatteryManager" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ton-nF-qLw">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="iEi-Wb-cLO" firstAttribute="top" secondItem="0Ws-sH-cwr" secondAttribute="bottom" constant="10" id="9xk-Lk-EdH"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="oG6-xM-fb1" secondAttribute="bottom" constant="20" id="Q8l-of-tlr"/>
+                                                                    <constraint firstItem="iEi-Wb-cLO" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="RfT-OV-hsc"/>
+                                                                    <constraint firstItem="hgp-Dt-rSe" firstAttribute="top" secondItem="LuR-rU-oM9" secondAttribute="top" constant="20" id="Toy-Qp-KiH"/>
+                                                                    <constraint firstItem="oG6-xM-fb1" firstAttribute="top" secondItem="iEi-Wb-cLO" secondAttribute="bottom" constant="10" id="UVJ-Lj-RR9"/>
+                                                                    <constraint firstItem="0Ws-sH-cwr" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="Zcw-hc-zIB"/>
+                                                                    <constraint firstItem="oG6-xM-fb1" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="cv5-cI-fox"/>
+                                                                    <constraint firstItem="0Ws-sH-cwr" firstAttribute="top" secondItem="hgp-Dt-rSe" secondAttribute="bottom" constant="10" id="hUj-s3-JHT"/>
+                                                                    <constraint firstItem="hgp-Dt-rSe" firstAttribute="leading" secondItem="LuR-rU-oM9" secondAttribute="leading" constant="10" id="zlA-eH-KX6"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Graphics" identifier="" id="CsQ-iK-bJm">
                                                             <view key="view" id="0Jc-f5-SUh">
-                                                                <rect key="frame" x="10" y="33" width="785" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Qd-vMG">
+                                                                        <rect key="frame" x="8" y="18" width="117" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="WhateverGreen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iDh-wY-X4B">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="hIN-Qd-vMG" firstAttribute="top" secondItem="0Jc-f5-SUh" secondAttribute="top" constant="20" id="7aC-r7-Iu4"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="hIN-Qd-vMG" secondAttribute="bottom" constant="20" id="Wns-nJ-5nv"/>
+                                                                    <constraint firstItem="hIN-Qd-vMG" firstAttribute="leading" secondItem="0Jc-f5-SUh" secondAttribute="leading" constant="10" id="oKU-X8-lUE"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Audio" identifier="" id="cDA-bd-Nu2">
                                                             <view key="view" id="zNn-Hb-Zsg">
-                                                                <rect key="frame" x="10" y="33" width="785" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tdD-cl-Nki">
+                                                                        <rect key="frame" x="8" y="18" width="82" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="AppleALC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xJc-fW-aKb">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="tdD-cl-Nki" firstAttribute="leading" secondItem="zNn-Hb-Zsg" secondAttribute="leading" constant="10" id="CzN-2B-eC3"/>
+                                                                    <constraint firstItem="tdD-cl-Nki" firstAttribute="top" secondItem="zNn-Hb-Zsg" secondAttribute="top" constant="20" id="Gab-o3-bUL"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="tdD-cl-Nki" secondAttribute="bottom" constant="20" id="qt5-BN-1Fk"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Ethernet" identifier="" id="jN4-l8-qvI">
                                                             <view key="view" id="lVD-up-8iH">
-                                                                <rect key="frame" x="10" y="33" width="785" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-fA-SPR">
+                                                                        <rect key="frame" x="8" y="90" width="136" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="IntelMausiEthernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vAv-y8-VhO">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-PT-GyD">
+                                                                        <rect key="frame" x="8" y="66" width="147" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="SmallTreeIntel82576" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kOy-2E-PTF">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-62-ws7">
+                                                                        <rect key="frame" x="8" y="42" width="161" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="AtherosE2200Ethernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RyY-7M-g0k">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="peh-0s-slN">
+                                                                        <rect key="frame" x="8" y="18" width="117" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="RealtekRTL8111" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pdO-v3-bFc">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4ug-zg-Gr6"/>
+                                                                    <constraint firstItem="WYI-fA-SPR" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="7Ok-1c-EMI"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="MVo-Tk-Vwt"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="WYI-fA-SPR" secondAttribute="bottom" constant="10" id="oZL-E8-Re2"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="p7x-gC-xoS"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="peh-0s-slN" secondAttribute="bottom" constant="20" id="ppO-cH-vY7"/>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="qo6-jx-CW8"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="vEr-q8-cAe"/>
+                                                                    <constraint firstItem="WYI-fA-SPR" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="vyZ-Lt-ZXf"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="USB" identifier="" id="RqG-Fc-xie">
                                                             <view key="view" id="F3O-yf-zdV">
-                                                                <rect key="frame" x="10" y="33" width="490" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="78"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-sl-6lV">
+                                                                        <rect key="frame" x="8" y="42" width="97" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="USBInjectAll" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ONZ-We-spM">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vdF-qL-ibG">
+                                                                        <rect key="frame" x="8" y="18" width="137" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="XHCI-unsupported" bezelStyle="regularSquare" imagePosition="left" inset="2" id="y0k-eh-2jG">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="vdF-qL-ibG" firstAttribute="top" secondItem="h3S-sl-6lV" secondAttribute="bottom" constant="10" id="RE9-hz-PVl"/>
+                                                                    <constraint firstItem="h3S-sl-6lV" firstAttribute="leading" secondItem="F3O-yf-zdV" secondAttribute="leading" constant="10" id="Yfn-mR-hdG"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="vdF-qL-ibG" secondAttribute="bottom" constant="20" id="bqR-9Z-kHV"/>
+                                                                    <constraint firstItem="h3S-sl-6lV" firstAttribute="top" secondItem="F3O-yf-zdV" secondAttribute="top" constant="20" id="ck6-hm-KEq"/>
+                                                                    <constraint firstItem="vdF-qL-ibG" firstAttribute="leading" secondItem="h3S-sl-6lV" secondAttribute="leading" id="ptJ-zB-opD"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="WiFi and Bluetooth" identifier="" id="Yj4-FR-J1v">
                                                             <view key="view" id="rPW-aE-Bjy">
-                                                                <rect key="frame" x="10" y="33" width="490" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-1S-rZh">
+                                                                        <rect key="frame" x="8" y="114" width="129" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="AirportBrcmFixup" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zEv-oT-t25">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-JF-3EO">
+                                                                        <rect key="frame" x="8" y="90" width="117" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmPatchRAM" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qj8-aB-jkB">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <box hidden="YES" horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Hzs-en-ddc">
+                                                                        <rect key="frame" x="18" y="20" width="5" height="62"/>
+                                                                    </box>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1qa-WA-xvA">
+                                                                        <rect key="frame" x="29" y="66" width="158" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmBluetoothInjector" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tyw-Uy-2yF">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-xE-AlQ">
+                                                                        <rect key="frame" x="29" y="42" width="138" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmFirmwareData" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lj4-5C-vI4">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QT7-Gc-Xup">
+                                                                        <rect key="frame" x="29" y="18" width="125" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmPatchRAM3" bezelStyle="regularSquare" imagePosition="left" inset="2" id="N6I-GU-dI5">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="WWx-xE-AlQ" firstAttribute="top" secondItem="1qa-WA-xvA" secondAttribute="bottom" constant="10" id="0Wj-nx-1tX"/>
+                                                                    <constraint firstItem="QT7-Gc-Xup" firstAttribute="leading" secondItem="1qa-WA-xvA" secondAttribute="leading" id="5Ws-yd-KnB"/>
+                                                                    <constraint firstItem="1qa-WA-xvA" firstAttribute="leading" secondItem="Hzs-en-ddc" secondAttribute="trailing" constant="10" id="9rw-fg-bhO"/>
+                                                                    <constraint firstItem="WWx-xE-AlQ" firstAttribute="leading" secondItem="1qa-WA-xvA" secondAttribute="leading" id="F19-dX-Na2"/>
+                                                                    <constraint firstItem="T1u-1S-rZh" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="KrZ-X9-GDb"/>
+                                                                    <constraint firstItem="Hzs-en-ddc" firstAttribute="bottom" secondItem="QT7-Gc-Xup" secondAttribute="bottom" id="LjK-9H-hoj"/>
+                                                                    <constraint firstItem="gjG-JF-3EO" firstAttribute="leading" secondItem="T1u-1S-rZh" secondAttribute="leading" id="Pi4-Lu-sL1"/>
+                                                                    <constraint firstItem="Hzs-en-ddc" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="20" id="WKt-ld-8S4"/>
+                                                                    <constraint firstItem="1qa-WA-xvA" firstAttribute="top" secondItem="gjG-JF-3EO" secondAttribute="bottom" constant="10" id="Wkv-rQ-Wcx"/>
+                                                                    <constraint firstItem="gjG-JF-3EO" firstAttribute="top" secondItem="T1u-1S-rZh" secondAttribute="bottom" constant="10" id="XY8-SE-GfU"/>
+                                                                    <constraint firstItem="Hzs-en-ddc" firstAttribute="top" secondItem="1qa-WA-xvA" secondAttribute="top" id="b6C-HD-kFH"/>
+                                                                    <constraint firstItem="QT7-Gc-Xup" firstAttribute="top" secondItem="WWx-xE-AlQ" secondAttribute="bottom" constant="10" id="eee-Ez-2TF"/>
+                                                                    <constraint firstItem="T1u-1S-rZh" firstAttribute="top" secondItem="rPW-aE-Bjy" secondAttribute="top" constant="20" id="hbL-uL-KAV"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="QT7-Gc-Xup" secondAttribute="bottom" constant="20" id="tJZ-nq-zgE"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="AMD Specific" identifier="" id="ga0-uj-po8">
                                                             <view key="view" id="N7A-Ev-hwK">
-                                                                <rect key="frame" x="10" y="33" width="491" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="78"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-Ij-CXE">
+                                                                        <rect key="frame" x="8" y="42" width="103" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="XLNCUSBFIX" bezelStyle="regularSquare" imagePosition="left" inset="2" id="58Z-iD-hyi">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zb4-9d-i66">
+                                                                        <rect key="frame" x="8" y="18" width="96" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="VoodooHDA" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JmU-2A-zd6">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="zb4-9d-i66" firstAttribute="top" secondItem="u7Y-Ij-CXE" secondAttribute="bottom" constant="10" id="8Ce-mH-tGA"/>
+                                                                    <constraint firstItem="zb4-9d-i66" firstAttribute="leading" secondItem="u7Y-Ij-CXE" secondAttribute="leading" id="HpS-eH-5th"/>
+                                                                    <constraint firstItem="u7Y-Ij-CXE" firstAttribute="leading" secondItem="N7A-Ev-hwK" secondAttribute="leading" constant="10" id="PH2-pd-FUt"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="zb4-9d-i66" secondAttribute="bottom" constant="20" id="W2y-EG-HUJ"/>
+                                                                    <constraint firstItem="u7Y-Ij-CXE" firstAttribute="top" secondItem="N7A-Ev-hwK" secondAttribute="top" constant="20" id="oLb-uw-qTC"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Extra's" identifier="" id="4t3-PM-pAl">
                                                             <view key="view" id="KX3-xG-Ws2">
-                                                                <rect key="frame" x="10" y="33" width="558" height="377"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ws-KvM">
+                                                                        <rect key="frame" x="8" y="90" width="188" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="AppleMCEReporterDisabler" bezelStyle="regularSquare" imagePosition="left" inset="2" id="PvA-e7-VmS">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-ks-Pwo">
+                                                                        <rect key="frame" x="8" y="66" width="123" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="VoodooTSCSync" bezelStyle="regularSquare" imagePosition="left" inset="2" id="drT-zS-40e">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D0X-t8-vDc">
+                                                                        <rect key="frame" x="8" y="42" width="120" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="TSCAdjustReset" bezelStyle="regularSquare" imagePosition="left" inset="2" id="u6v-gt-li6">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="loP-ez-gz7">
+                                                                        <rect key="frame" x="8" y="18" width="77" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="NVMeFix" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6a6-OB-unK">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="zMy-ks-Pwo" firstAttribute="top" secondItem="LBK-Ws-KvM" secondAttribute="bottom" constant="10" id="8IG-Jd-M68"/>
+                                                                    <constraint firstItem="zMy-ks-Pwo" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="KhI-Te-CyG"/>
+                                                                    <constraint firstItem="loP-ez-gz7" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="Ryc-74-67g"/>
+                                                                    <constraint firstItem="D0X-t8-vDc" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="SYY-tR-CqU"/>
+                                                                    <constraint firstItem="loP-ez-gz7" firstAttribute="top" secondItem="D0X-t8-vDc" secondAttribute="bottom" constant="10" id="TVy-vr-dgA"/>
+                                                                    <constraint firstItem="LBK-Ws-KvM" firstAttribute="leading" secondItem="KX3-xG-Ws2" secondAttribute="leading" constant="10" id="Xcm-pC-el1"/>
+                                                                    <constraint firstItem="D0X-t8-vDc" firstAttribute="top" secondItem="zMy-ks-Pwo" secondAttribute="bottom" constant="10" id="hQp-kK-PZg"/>
+                                                                    <constraint firstItem="LBK-Ws-KvM" firstAttribute="top" secondItem="KX3-xG-Ws2" secondAttribute="top" constant="20" id="iu7-yG-D4E"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="loP-ez-gz7" secondAttribute="bottom" constant="20" id="kte-l9-tRh"/>
+                                                                </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                     </tabViewItems>
@@ -994,10 +1248,109 @@
                                             </constraints>
                                         </view>
                                     </tabViewItem>
-                                    <tabViewItem label="Item 2" identifier="" id="ZPE-fT-6Cu">
+                                    <tabViewItem label="Firmware Drivers" identifier="" id="ZPE-fT-6Cu">
                                         <view key="view" id="UVk-Ia-OKZ">
-                                            <rect key="frame" x="10" y="33" width="486" height="588"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <tabView translatesAutoresizingMaskIntoConstraints="NO" id="gac-5f-5uI">
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
+                                                    <font key="font" metaFont="system"/>
+                                                    <tabViewItems>
+                                                        <tabViewItem label="UEFI" identifier="" id="igs-eO-j1W">
+                                                            <view key="view" id="Jq2-Uk-wCu">
+                                                                <rect key="frame" x="10" y="33" width="785" height="102"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P3w-uR-vRu">
+                                                                        <rect key="frame" x="8" y="66" width="146" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="ApfsDriverLoader.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="rz0-1Q-gqu">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B96-MH-cRB">
+                                                                        <rect key="frame" x="8" y="42" width="87" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="HfsPlus.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3Un-ok-0yG">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-be-75d">
+                                                                        <rect key="frame" x="8" y="18" width="160" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="FwRuntimeServices.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Z9V-d8-hyP">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="P3w-uR-vRu" firstAttribute="leading" secondItem="Jq2-Uk-wCu" secondAttribute="leading" constant="10" id="1nn-RW-ogQ"/>
+                                                                    <constraint firstItem="P3w-uR-vRu" firstAttribute="top" secondItem="Jq2-Uk-wCu" secondAttribute="top" constant="20" id="44a-B5-IDl"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="gLn-be-75d" secondAttribute="bottom" constant="20" id="6Ri-f9-SBa"/>
+                                                                    <constraint firstItem="gLn-be-75d" firstAttribute="leading" secondItem="P3w-uR-vRu" secondAttribute="leading" id="AQ5-Gb-DNi"/>
+                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="top" secondItem="P3w-uR-vRu" secondAttribute="bottom" constant="10" id="Yu5-ns-GGb"/>
+                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="leading" secondItem="P3w-uR-vRu" secondAttribute="leading" id="lqZ-Q7-Uhk"/>
+                                                                    <constraint firstItem="gLn-be-75d" firstAttribute="top" secondItem="B96-MH-cRB" secondAttribute="bottom" constant="10" id="z46-sx-PmY"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </tabViewItem>
+                                                        <tabViewItem label="Legacy (BIOS)" identifier="" id="iEV-2n-Bnf">
+                                                            <view key="view" id="wr8-j1-shI">
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-Nu-Zck">
+                                                                        <rect key="frame" x="8" y="90" width="140" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="AppleUsbKbDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Fnr-dc-RFu">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UuB-sS-39W">
+                                                                        <rect key="frame" x="8" y="66" width="140" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="NvmExpressDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Is1-0J-fVS">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MP8-Nf-YEX">
+                                                                        <rect key="frame" x="8" y="18" width="130" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="HfsPlusLegacy.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="aWr-gR-hWB">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="phe-xo-PUR">
+                                                                        <rect key="frame" x="8" y="42" width="91" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="XhciDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="TJs-qc-bOt">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstItem="Be6-Nu-Zck" firstAttribute="leading" secondItem="wr8-j1-shI" secondAttribute="leading" constant="10" id="CAb-X0-1jL"/>
+                                                                    <constraint firstItem="MP8-Nf-YEX" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="J9z-By-NYQ"/>
+                                                                    <constraint firstItem="UuB-sS-39W" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="KxH-H8-p0X"/>
+                                                                    <constraint firstItem="UuB-sS-39W" firstAttribute="top" secondItem="Be6-Nu-Zck" secondAttribute="bottom" constant="10" id="NVb-MA-Mv1"/>
+                                                                    <constraint firstItem="Be6-Nu-Zck" firstAttribute="top" secondItem="wr8-j1-shI" secondAttribute="top" constant="20" id="Nzw-hX-jAN"/>
+                                                                    <constraint firstItem="phe-xo-PUR" firstAttribute="top" secondItem="UuB-sS-39W" secondAttribute="bottom" constant="10" id="P0M-RF-CGP"/>
+                                                                    <constraint firstItem="MP8-Nf-YEX" firstAttribute="top" secondItem="phe-xo-PUR" secondAttribute="bottom" constant="10" id="TFx-qn-m32"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="MP8-Nf-YEX" secondAttribute="bottom" constant="20" id="W5Z-th-tVY"/>
+                                                                    <constraint firstItem="phe-xo-PUR" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="pGS-Cv-Xbe"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </tabViewItem>
+                                                    </tabViewItems>
+                                                </tabView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gac-5f-5uI" secondAttribute="trailing" id="C4M-v7-9fj"/>
+                                                <constraint firstItem="gac-5f-5uI" firstAttribute="leading" secondItem="UVk-Ia-OKZ" secondAttribute="leading" id="TJe-Zk-SPM"/>
+                                                <constraint firstItem="gac-5f-5uI" firstAttribute="top" secondItem="UVk-Ia-OKZ" secondAttribute="top" id="lTk-xO-LrD"/>
+                                                <constraint firstAttribute="bottom" secondItem="gac-5f-5uI" secondAttribute="bottom" id="uvv-fh-EFa"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                 </tabViewItems>
@@ -1014,7 +1367,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="74" y="846"/>
+            <point key="canvasLocation" x="75" y="712"/>
         </scene>
     </scenes>
 </document>
