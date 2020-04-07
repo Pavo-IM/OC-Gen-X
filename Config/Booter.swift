@@ -23,12 +23,14 @@ struct booterQuirks: Codable {
     var enableSafeModeSlide: Bool
     var enableWriteUnprotector: Bool
     var forceExitBootServices: Bool
-    var protectCsmRegion: Bool
+    var protectMemoryRegion: Bool
     var protectSecureBoot: Bool
+    var protectUefiServices: Bool
     var provideCustomSlide: Bool
+    var rebuildAppleMemoryMap: Bool
     var setupVirtualMap: Bool
-    var shrinkMemoryMap: Bool
     var signalAppleOS: Bool
+    var syncRuntimePermissions: Bool
     
     enum CodingKeys: String, CodingKey {
         case avoidRuntimeDefrag = "AvoidRuntimeDefrag"
@@ -39,11 +41,13 @@ struct booterQuirks: Codable {
         case enableSafeModeSlide = "EnableSafeModeSlide"
         case enableWriteUnprotector = "EnableWriteUnprotector"
         case forceExitBootServices = "ForceExitBootServices"
-        case protectCsmRegion = "ProtectCsmRegion"
+        case protectMemoryRegion = "ProtectMemoryRegion"
         case protectSecureBoot = "ProtectSecureBoot"
+        case protectUefiServices = "ProtectUefiServices"
         case provideCustomSlide = "ProvideCustomSlide"
+        case rebuildAppleMemoryMap = "RebuildAppleMemoryMap"
         case setupVirtualMap = "SetupVirtualMap"
-        case shrinkMemoryMap = "ShrinkMemoryMap"
         case signalAppleOS = "SignalAppleOS"
+        case syncRuntimePermissions = "SyncRuntimePermissions"
     }
 }

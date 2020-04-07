@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="227"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="528"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -722,7 +722,7 @@
                                 </connections>
                             </button>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="31" width="811" height="202"/>
+                                <rect key="frame" x="-7" y="31" width="811" height="154"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -897,11 +897,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="108"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="124"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -1365,9 +1365,26 @@
                             <constraint firstItem="Wcy-uw-NdK" firstAttribute="centerX" secondItem="ZeK-sO-E8j" secondAttribute="centerX" id="zbL-aw-JLi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="broadwellEChecked" destination="p55-Fb-A4q" id="7sg-3I-0xf"/>
+                        <outlet property="bulldozerChecked" destination="bOp-3C-A40" id="MyW-0g-uj4"/>
+                        <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
+                        <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
+                        <outlet property="haswellEChecked" destination="Rhr-Fz-70Q" id="TF8-i5-Z6x"/>
+                        <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="RbQ-fl-hYL"/>
+                        <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
+                        <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
+                        <outlet property="ryzenChecked" destination="eeX-Ee-gPO" id="ZDb-TM-nZW"/>
+                        <outlet property="skylakeChecked" destination="fQy-FH-F4E" id="voZ-0f-GkF"/>
+                        <outlet property="skylakeXChecked" destination="TaU-Te-85W" id="3Zh-n0-ZOC"/>
+                        <outlet property="smcProcessorChecked" destination="hgp-Dt-rSe" id="BPX-eB-fhG"/>
+                        <outlet property="smcSuperIOChecked" destination="0Ws-sH-cwr" id="bbZ-qQ-8hw"/>
+                        <outlet property="threadripperChecked" destination="YFF-EX-aeL" id="MSj-NI-CN7"/>
+                        <outlet property="virtualSMCChecked" destination="lbr-dO-TxB" id="Gkr-Uk-vTU"/>
+                    </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="76" y="799"/>
+            <point key="canvasLocation" x="75.5" y="855"/>
         </scene>
     </scenes>
 </document>
