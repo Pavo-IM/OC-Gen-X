@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF4C200E243D06B700D2F187 /* XLNCUSBFix.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C200B243D06B700D2F187 /* XLNCUSBFix.kext */; };
+		CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C200C243D06B700D2F187 /* AppleMCEReporterDisabler.kext */; };
+		CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C200D243D06B700D2F187 /* SmallTreeIntel82576.kext */; };
+		CF4C2012243D06C600D2F187 /* VoodooTSCSync.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2011243D06C600D2F187 /* VoodooTSCSync.kext */; };
+		CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2013243D06D300D2F187 /* USBInjectAll.kext */; };
+		CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */; };
+		CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */; };
+		CF4C201A243D06FD00D2F187 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2019243D06FD00D2F187 /* WhateverGreen.kext */; };
+		CF4C2020243D070E00D2F187 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C201B243D070E00D2F187 /* SMCLightSensor.kext */; };
+		CF4C2021243D070E00D2F187 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C201C243D070E00D2F187 /* SMCSuperIO.kext */; };
+		CF4C2022243D070E00D2F187 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C201D243D070E00D2F187 /* SMCBatteryManager.kext */; };
+		CF4C2023243D070E00D2F187 /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C201E243D070E00D2F187 /* SMCProcessor.kext */; };
+		CF4C2024243D070E00D2F187 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C201F243D070E00D2F187 /* VirtualSMC.kext */; };
+		CF4C2026243D071900D2F187 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2025243D071900D2F187 /* AirportBrcmFixup.kext */; };
+		CF4C2028243D072300D2F187 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2027243D072300D2F187 /* AppleALC.kext */; };
+		CF4C202A243D072F00D2F187 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2029243D072F00D2F187 /* Lilu.kext */; };
+		CF4C202C243D074500D2F187 /* ApfsDriverLoader.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202B243D074500D2F187 /* ApfsDriverLoader.efi */; };
+		CF4C2031243D076000D2F187 /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202D243D076000D2F187 /* OpenUsbKbDxe.efi */; };
+		CF4C2032243D076000D2F187 /* NvmExpressDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202E243D076000D2F187 /* NvmExpressDxe.efi */; };
+		CF4C2033243D076000D2F187 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202F243D076000D2F187 /* XhciDxe.efi */; };
+		CF4C2034243D076000D2F187 /* OpenRuntime.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2030243D076000D2F187 /* OpenRuntime.efi */; };
+		CF4C2037243D079100D2F187 /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2036243D079100D2F187 /* BOOTx64.efi */; };
+		CF4C2039243D079C00D2F187 /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2038243D079C00D2F187 /* OpenCore.efi */; };
 		CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E727241DA2D500A7C5EC /* AppDelegate.swift */; };
 		CF59E72C241DA2D600A7C5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72B241DA2D600A7C5EC /* Assets.xcassets */; };
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
@@ -26,6 +49,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF4C200B243D06B700D2F187 /* XLNCUSBFix.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = XLNCUSBFix.kext; sourceTree = "<group>"; };
+		CF4C200C243D06B700D2F187 /* AppleMCEReporterDisabler.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleMCEReporterDisabler.kext; sourceTree = "<group>"; };
+		CF4C200D243D06B700D2F187 /* SmallTreeIntel82576.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SmallTreeIntel82576.kext; sourceTree = "<group>"; };
+		CF4C2011243D06C600D2F187 /* VoodooTSCSync.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VoodooTSCSync.kext; sourceTree = "<group>"; };
+		CF4C2013243D06D300D2F187 /* USBInjectAll.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = USBInjectAll.kext; sourceTree = "<group>"; };
+		CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = RealtekRTL8111.kext; sourceTree = "<group>"; };
+		CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AtherosE2200Ethernet.kext; sourceTree = "<group>"; };
+		CF4C2019243D06FD00D2F187 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
+		CF4C201B243D070E00D2F187 /* SMCLightSensor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCLightSensor.kext; sourceTree = "<group>"; };
+		CF4C201C243D070E00D2F187 /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
+		CF4C201D243D070E00D2F187 /* SMCBatteryManager.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCBatteryManager.kext; sourceTree = "<group>"; };
+		CF4C201E243D070E00D2F187 /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
+		CF4C201F243D070E00D2F187 /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
+		CF4C2025243D071900D2F187 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
+		CF4C2027243D072300D2F187 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
+		CF4C2029243D072F00D2F187 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
+		CF4C202B243D074500D2F187 /* ApfsDriverLoader.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = ApfsDriverLoader.efi; sourceTree = "<group>"; };
+		CF4C202D243D076000D2F187 /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
+		CF4C202E243D076000D2F187 /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
+		CF4C202F243D076000D2F187 /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
+		CF4C2030243D076000D2F187 /* OpenRuntime.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenRuntime.efi; sourceTree = "<group>"; };
+		CF4C2036243D079100D2F187 /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
+		CF4C2038243D079C00D2F187 /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
 		CF59E724241DA2D500A7C5EC /* OC Gen-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC Gen-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59E727241DA2D500A7C5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF59E72B241DA2D600A7C5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,9 +104,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF4C2008243D067000D2F187 /* Kexts */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C2013243D06D300D2F187 /* USBInjectAll.kext */,
+				CF4C2011243D06C600D2F187 /* VoodooTSCSync.kext */,
+				CF4C201D243D070E00D2F187 /* SMCBatteryManager.kext */,
+				CF4C2025243D071900D2F187 /* AirportBrcmFixup.kext */,
+				CF4C2027243D072300D2F187 /* AppleALC.kext */,
+				CF4C2029243D072F00D2F187 /* Lilu.kext */,
+				CF4C201B243D070E00D2F187 /* SMCLightSensor.kext */,
+				CF4C201E243D070E00D2F187 /* SMCProcessor.kext */,
+				CF4C201C243D070E00D2F187 /* SMCSuperIO.kext */,
+				CF4C201F243D070E00D2F187 /* VirtualSMC.kext */,
+				CF4C2019243D06FD00D2F187 /* WhateverGreen.kext */,
+				CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */,
+				CF4C200C243D06B700D2F187 /* AppleMCEReporterDisabler.kext */,
+				CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */,
+				CF4C200D243D06B700D2F187 /* SmallTreeIntel82576.kext */,
+				CF4C200B243D06B700D2F187 /* XLNCUSBFix.kext */,
+			);
+			path = Kexts;
+			sourceTree = "<group>";
+		};
+		CF4C200A243D069000D2F187 /* Drivers */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C202E243D076000D2F187 /* NvmExpressDxe.efi */,
+				CF4C2030243D076000D2F187 /* OpenRuntime.efi */,
+				CF4C202D243D076000D2F187 /* OpenUsbKbDxe.efi */,
+				CF4C202F243D076000D2F187 /* XhciDxe.efi */,
+				CF4C202B243D074500D2F187 /* ApfsDriverLoader.efi */,
+			);
+			path = Drivers;
+			sourceTree = "<group>";
+		};
+		CF4C2035243D077E00D2F187 /* OC Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF4C2038243D079C00D2F187 /* OpenCore.efi */,
+				CF4C2036243D079100D2F187 /* BOOTx64.efi */,
+			);
+			path = "OC Files";
+			sourceTree = "<group>";
+		};
 		CF59E71B241DA2D500A7C5EC = {
 			isa = PBXGroup;
 			children = (
+				CF4C2035243D077E00D2F187 /* OC Files */,
+				CF4C200A243D069000D2F187 /* Drivers */,
+				CF4C2008243D067000D2F187 /* Kexts */,
 				CFF4DB8124218D690057656E /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
 				CF59E726241DA2D500A7C5EC /* OC Gen-X */,
@@ -174,8 +267,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF59E72C241DA2D600A7C5EC /* Assets.xcassets in Resources */,
+				CF4C2012243D06C600D2F187 /* VoodooTSCSync.kext in Resources */,
+				CF4C2031243D076000D2F187 /* OpenUsbKbDxe.efi in Resources */,
+				CF4C2022243D070E00D2F187 /* SMCBatteryManager.kext in Resources */,
+				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
 				CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */,
+				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
+				CF4C2024243D070E00D2F187 /* VirtualSMC.kext in Resources */,
+				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
+				CF4C2039243D079C00D2F187 /* OpenCore.efi in Resources */,
+				CF4C201A243D06FD00D2F187 /* WhateverGreen.kext in Resources */,
+				CF4C2026243D071900D2F187 /* AirportBrcmFixup.kext in Resources */,
+				CF4C202C243D074500D2F187 /* ApfsDriverLoader.efi in Resources */,
+				CF4C2034243D076000D2F187 /* OpenRuntime.efi in Resources */,
+				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
+				CF4C2021243D070E00D2F187 /* SMCSuperIO.kext in Resources */,
+				CF4C202A243D072F00D2F187 /* Lilu.kext in Resources */,
+				CF4C2037243D079100D2F187 /* BOOTx64.efi in Resources */,
+				CF4C200E243D06B700D2F187 /* XLNCUSBFix.kext in Resources */,
+				CF4C2032243D076000D2F187 /* NvmExpressDxe.efi in Resources */,
+				CF4C2033243D076000D2F187 /* XhciDxe.efi in Resources */,
+				CF4C2020243D070E00D2F187 /* SMCLightSensor.kext in Resources */,
+				CF4C2028243D072300D2F187 /* AppleALC.kext in Resources */,
+				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
+				CF4C2023243D070E00D2F187 /* SMCProcessor.kext in Resources */,
 				CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

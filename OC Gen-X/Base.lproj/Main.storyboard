@@ -707,7 +707,7 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ZeK-sO-E8j">
+                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
                         <rect key="frame" x="0.0" y="0.0" width="797" height="227"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -833,8 +833,8 @@
                                                     <rect key="frame" x="10" y="80" width="771" height="5"/>
                                                 </box>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bOp-3C-A40">
-                                                    <rect key="frame" x="8" y="56" width="39" height="18"/>
-                                                    <buttonCell key="cell" type="check" title="FX" bezelStyle="regularSquare" imagePosition="left" inset="2" id="b7H-s6-xPK">
+                                                    <rect key="frame" x="8" y="56" width="124" height="18"/>
+                                                    <buttonCell key="cell" type="check" title="Bulldozer/Jaguar" bezelStyle="regularSquare" imagePosition="left" inset="2" id="b7H-s6-xPK">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
@@ -1250,11 +1250,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Firmware Drivers" identifier="" id="ZPE-fT-6Cu">
                                         <view key="view" id="UVk-Ia-OKZ">
-                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="132"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="gac-5f-5uI">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="148"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="UEFI" identifier="" id="igs-eO-j1W">
@@ -1277,8 +1277,8 @@
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-be-75d">
-                                                                        <rect key="frame" x="8" y="18" width="160" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="FwRuntimeServices.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Z9V-d8-hyP">
+                                                                        <rect key="frame" x="8" y="18" width="124" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="OpenRuntime.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Z9V-d8-hyP">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
@@ -1301,8 +1301,8 @@
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-Nu-Zck">
-                                                                        <rect key="frame" x="8" y="90" width="140" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="AppleUsbKbDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Fnr-dc-RFu">
+                                                                        <rect key="frame" x="8" y="90" width="137" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="OpenUsbKbDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Fnr-dc-RFu">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
@@ -1367,7 +1367,7 @@
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75" y="712"/>
+            <point key="canvasLocation" x="76" y="799"/>
         </scene>
     </scenes>
 </document>
