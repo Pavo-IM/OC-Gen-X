@@ -23,7 +23,6 @@
 		CF4C2026243D071900D2F187 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2025243D071900D2F187 /* AirportBrcmFixup.kext */; };
 		CF4C2028243D072300D2F187 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2027243D072300D2F187 /* AppleALC.kext */; };
 		CF4C202A243D072F00D2F187 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2029243D072F00D2F187 /* Lilu.kext */; };
-		CF4C202C243D074500D2F187 /* ApfsDriverLoader.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202B243D074500D2F187 /* ApfsDriverLoader.efi */; };
 		CF4C2031243D076000D2F187 /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202D243D076000D2F187 /* OpenUsbKbDxe.efi */; };
 		CF4C2032243D076000D2F187 /* NvmExpressDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202E243D076000D2F187 /* NvmExpressDxe.efi */; };
 		CF4C2033243D076000D2F187 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C202F243D076000D2F187 /* XhciDxe.efi */; };
@@ -65,7 +64,6 @@
 		CF4C2025243D071900D2F187 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CF4C2027243D072300D2F187 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CF4C2029243D072F00D2F187 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
-		CF4C202B243D074500D2F187 /* ApfsDriverLoader.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = ApfsDriverLoader.efi; sourceTree = "<group>"; };
 		CF4C202D243D076000D2F187 /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
 		CF4C202E243D076000D2F187 /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
 		CF4C202F243D076000D2F187 /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				CF4C2030243D076000D2F187 /* OpenRuntime.efi */,
 				CF4C202D243D076000D2F187 /* OpenUsbKbDxe.efi */,
 				CF4C202F243D076000D2F187 /* XhciDxe.efi */,
-				CF4C202B243D074500D2F187 /* ApfsDriverLoader.efi */,
 			);
 			path = Drivers;
 			sourceTree = "<group>";
@@ -279,7 +276,6 @@
 				CF4C2039243D079C00D2F187 /* OpenCore.efi in Resources */,
 				CF4C201A243D06FD00D2F187 /* WhateverGreen.kext in Resources */,
 				CF4C2026243D071900D2F187 /* AirportBrcmFixup.kext in Resources */,
-				CF4C202C243D074500D2F187 /* ApfsDriverLoader.efi in Resources */,
 				CF4C2034243D076000D2F187 /* OpenRuntime.efi in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF4C2021243D070E00D2F187 /* SMCSuperIO.kext in Resources */,
