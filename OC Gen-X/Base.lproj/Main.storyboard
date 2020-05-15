@@ -722,7 +722,7 @@
                                 </connections>
                             </button>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="31" width="811" height="154"/>
+                                <rect key="frame" x="-7" y="31" width="811" height="453"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -736,6 +736,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedIvyBridge:" target="7uK-TB-ntZ" id="lFi-xc-cK9"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-xg-ybM">
                                                     <rect key="frame" x="8" y="320" width="69" height="18"/>
@@ -743,6 +746,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedHaswell:" target="7uK-TB-ntZ" id="FDO-j5-YVl"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-FH-F4E">
                                                     <rect key="frame" x="8" y="296" width="69" height="18"/>
@@ -750,6 +756,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedSkylake:" target="7uK-TB-ntZ" id="acG-9X-Eib"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-g2-WWY">
                                                     <rect key="frame" x="8" y="272" width="85" height="18"/>
@@ -757,6 +766,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedKabylake:" target="7uK-TB-ntZ" id="YOg-6a-YNw"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-Fz-70Q">
                                                     <rect key="frame" x="8" y="176" width="83" height="18"/>
@@ -764,6 +776,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedHaswellE:" target="7uK-TB-ntZ" id="Ieg-JO-AIi"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p55-Fb-A4q">
                                                     <rect key="frame" x="8" y="152" width="95" height="18"/>
@@ -771,6 +786,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedBroadwellE:" target="7uK-TB-ntZ" id="2et-aJ-5ZQ"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-Te-85W">
                                                     <rect key="frame" x="8" y="128" width="84" height="18"/>
@@ -778,6 +796,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedSkylakeX:" target="7uK-TB-ntZ" id="ld4-Ki-Kjr"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-Ee-gPO">
                                                     <rect key="frame" x="8" y="32" width="125" height="18"/>
@@ -785,6 +806,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedRyzen:" target="7uK-TB-ntZ" id="HeZ-dC-xDE"/>
+                                                    </connections>
                                                 </button>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-wH-ii6">
                                                     <rect key="frame" x="10" y="368" width="771" height="5"/>
@@ -806,6 +830,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedCoffeeLake:" target="7uK-TB-ntZ" id="21Y-Mf-kcs"/>
+                                                    </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-Ud-Ml9">
                                                     <rect key="frame" x="362" y="213" width="68" height="16"/>
@@ -838,6 +865,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedBulldozer:" target="7uK-TB-ntZ" id="CW4-tf-3i9"/>
+                                                    </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YFF-EX-aeL">
                                                     <rect key="frame" x="8" y="8" width="126" height="18"/>
@@ -845,6 +875,9 @@
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="checkedThreadripper:" target="7uK-TB-ntZ" id="M6z-dE-066"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
