@@ -23,272 +23,165 @@ class MainVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
     
     @IBAction func checkedIvyBridge(_ sender: NSButton) {
         if ivyBridgeChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, haswellChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if ivyBridgeChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, haswellChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedHaswell(_ sender: NSButton) {
         if haswellChecked.isHidden == (sender.state == .off) {
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if haswellChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedSkylake(_ sender: NSButton) {
         if skylakeChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if skylakeChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedKabylake(_ sender: NSButton) {
         if kabylakeChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if kabylakeChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedHaswellE(_ sender: NSButton) {
         if haswellEChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if haswellEChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedBroadwellE(_ sender: NSButton) {
         if broadwellEChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if broadwellEChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedSkylakeX(_ sender: NSButton) {
         if skylakeXChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if skylakeXChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, ryzenChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     
     @IBAction func checkedRyzen(_ sender: NSButton) {
         if ryzenChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if ryzenChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, coffeelakeChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedCoffeeLake(_ sender: NSButton) {
         if coffeelakeChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if coffeelakeChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, bulldozerChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     @IBAction func checkedBulldozer(_ sender: NSButton) {
         if bulldozerChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
-            threadripperChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
-        threadripperChecked.isHidden = (sender.state == .on)
+        if bulldozerChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, ivyBridgeChecked, threadripperChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
+    
+    
     @IBAction func checkedThreadripper(_ sender: NSButton) {
         if threadripperChecked.isHidden == (sender.state == .off) {
-            haswellChecked.isHidden = (sender.state == .on)
-            skylakeChecked.isHidden = (sender.state == .on)
-            kabylakeChecked.isHidden = (sender.state == .on)
-            haswellEChecked.isHidden = (sender.state == .on)
-            broadwellEChecked.isHidden = (sender.state == .on)
-            skylakeXChecked.isHidden = (sender.state == .on)
-            ryzenChecked.isHidden = (sender.state == .on)
-            coffeelakeChecked.isHidden = (sender.state == .on)
-            bulldozerChecked.isHidden = (sender.state == .on)
-            ivyBridgeChecked.isHidden = (sender.state == .on)
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, ivyBridgeChecked, bulldozerChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == false)
+            }
         }
-        haswellChecked.isHidden = (sender.state == .on)
-        skylakeChecked.isHidden = (sender.state == .on)
-        kabylakeChecked.isHidden = (sender.state == .on)
-        haswellEChecked.isHidden = (sender.state == .on)
-        broadwellEChecked.isHidden = (sender.state == .on)
-        skylakeXChecked.isHidden = (sender.state == .on)
-        ryzenChecked.isHidden = (sender.state == .on)
-        coffeelakeChecked.isHidden = (sender.state == .on)
-        bulldozerChecked.isHidden = (sender.state == .on)
-        ivyBridgeChecked.isHidden = (sender.state == .on)
+        if threadripperChecked.isHidden == (sender.state == .on) {
+            let buttonArray = [haswellChecked, skylakeChecked, kabylakeChecked, haswellEChecked, broadwellEChecked, skylakeXChecked, ryzenChecked, coffeelakeChecked, ivyBridgeChecked, bulldozerChecked]
+            for i in buttonArray {
+                i!.isEnabled = (sender.isEnabled == true)
+            }
+        }
     }
     
     @IBAction func generateClicked(_ sender: Any) {
