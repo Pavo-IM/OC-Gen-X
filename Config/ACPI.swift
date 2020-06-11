@@ -2,13 +2,13 @@ import Foundation
 
 struct acpi: Codable {
     var add: [acpiAdd]
-    var block: [acpiBlock]
+    var delete: [acpiDelete]
     var patch: [acpiPatch]
     var quirks: acpuQuirks
     
     enum CodingKeys: String, CodingKey {
         case add = "Add"
-        case block = "Block"
+        case delete = "Delete"
         case patch = "Patch"
         case quirks = "Quirks"
     }
@@ -18,7 +18,7 @@ struct acpiAdd: Codable {
     
 }
 
-struct acpiBlock: Codable {
+struct acpiDelete: Codable {
     
 }
 

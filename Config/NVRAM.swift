@@ -2,7 +2,7 @@ import Foundation
 
 struct nvram: Codable {
     var add: nAdd
-    var block: nBlock
+    var delete: nDelete
     var legacyEnable: Bool
     var legacyOverwrite: Bool
     var legacySchema: legacySchema
@@ -10,7 +10,7 @@ struct nvram: Codable {
     
     enum CodingKeys: String, CodingKey {
         case add = "Add"
-        case block = "Block"
+        case delete = "Delete"
         case legacyEnable = "LegacyEnable"
         case legacyOverwrite = "LegacyOverwrite"
         case legacySchema = "LegacySchema"
@@ -20,10 +20,12 @@ struct nvram: Codable {
 
 struct nAdd: Codable {
     var addAppleVendorVariableGuid: addAppleVendorVariableGuid
+    var addAppleVendorGuid: addAppleVendorGuid
     var addAppleBootVariableGuid: addAppleBootVariableGuid
     
     enum CodingKeys: String, CodingKey {
         case addAppleVendorVariableGuid = "4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"
+        case addAppleVendorGuid = "4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102"
         case addAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"
     }
 }
@@ -35,6 +37,14 @@ struct addAppleVendorVariableGuid: Codable {
     enum CodingKeys: String, CodingKey {
         case defaultBackgroundColor = "DefaultBackgroundColor"
         case uiScale = "UIScale"
+    }
+}
+
+struct addAppleVendorGuid: Codable {
+    var rtcBlacklist: Data
+    
+    enum CodingKeys: String, CodingKey {
+        case rtcBlacklist = "rtc-blacklist"
     }
 }
 
@@ -54,7 +64,7 @@ struct addAppleBootVariableGuid: Codable {
     }
 }
 
-struct nBlock: Codable {
+struct nDelete: Codable {
     var blockAppleVendorVariableGuid: [blockAppleVendorVariableGuid]
     var blockAppleBootVariableGuid: [blockAppleBootVariableGuid]
     

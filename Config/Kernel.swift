@@ -39,20 +39,20 @@ struct kPatch: Codable {
 }
 
 struct kQuirks: Codable {
-    var appleCpuPmCfgLock: Bool
-    var appleXcpmCfgLock: Bool
-    var appleXcpmExtraMsrs: Bool
-    var appleXcpmForceBoost: Bool
-    var customSMBIOSGuid: Bool
-    var disableIoMapper: Bool
-    var dummyPowerManagement: Bool
-    var externalDiskIcons: Bool
-    var increasePciBarSize: Bool
-    var lapicKernelPanic: Bool
-    var panicNoKextDump: Bool
-    var powerTimeoutKernelPanic: Bool
-    var thirdPartyDrives: Bool
-    var xhciPortLimit: Bool
+    var appleCpuPmCfgLock: Bool = false
+    var appleXcpmCfgLock: Bool = false
+    var appleXcpmExtraMsrs: Bool = false
+    var appleXcpmForceBoost: Bool = false
+    var customSMBIOSGuid: Bool = false
+    var disableIoMapper: Bool = false
+    var dummyPowerManagement: Bool = false
+    var externalDiskIcons: Bool = false
+    var increasePciBarSize: Bool = false
+    var lapicKernelPanic: Bool = false
+    var panicNoKextDump: Bool = false
+    var powerTimeoutKernelPanic: Bool = false
+    var thirdPartyDrives: Bool = false
+    var xhciPortLimit: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case appleCpuPmCfgLock = "AppleCpuPmCfgLock"

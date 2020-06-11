@@ -2,11 +2,11 @@ import Foundation
 
 struct deviceProperties: Codable {
     var add: [dpAdd]
-    var block: [dpBlock]
+    var delete: [dpDelete]
     
     enum CodingKeys: String, CodingKey {
         case add = "Add"
-        case block = "Block"
+        case delete = "Delete"
     }
 }
 
@@ -14,6 +14,6 @@ struct dpAdd: Codable {
     
 }
 
-struct dpBlock: Codable {
+struct dpDelete: Codable {
     
 }

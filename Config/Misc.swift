@@ -23,9 +23,9 @@ struct blessOverRide: Codable {
 }
 
 struct boot: Codable {
+    var consoleAttributes: Int
     var hibernateMode: String
     var hideAuxiliary: Bool
-    var hideSelf: Bool
     var pickerAttributes: Int
     var pickerAudioAssist: Bool
     var pickerMode: String
@@ -35,9 +35,9 @@ struct boot: Codable {
     var timeout: Int
     
     enum CodingKeys: String, CodingKey {
+        case consoleAttributes = "ConsoleAttributes"
         case hibernateMode = "HibernateMode"
         case hideAuxiliary = "HideAuxiliary"
-        case hideSelf = "HideSelf"
         case pickerAttributes = "PickerAttributes"
         case pickerAudioAssist = "PickerAudioAssist"
         case pickerMode = "PickerMode"
@@ -49,15 +49,21 @@ struct boot: Codable {
 }
 
 struct debug: Codable {
+    var appleDebug: Bool
+    var applePanic: Bool
     var disableWatchDog: Bool
     var displayDelay: Int
     var displayLevel: Int
+    var sysReport: Bool
     var target: Int
     
     enum CodingKeys: String, CodingKey {
+        case appleDebug = "AppleDebug"
+        case applePanic = "ApplePanic"
         case disableWatchDog = "DisableWatchDog"
         case displayDelay = "DisplayDelay"
         case displayLevel = "DisplayLevel"
+        case sysReport = "SysReport"
         case target = "Target"
     }
 }
@@ -70,6 +76,8 @@ struct security: Codable {
     var allowNvramReset: Bool
     var allowSetDefault: Bool
     var authRestart: Bool
+    var blacklistAppleUpdate: Bool
+    var bootProtect: String
     var exposeSensitiveData: Int
     var haltLevel: Int
     var scanPolicy: Int
@@ -79,6 +87,8 @@ struct security: Codable {
         case allowNvramReset = "AllowNvramReset"
         case allowSetDefault = "AllowSetDefault"
         case authRestart = "AuthRestart"
+        case blacklistAppleUpdate = "BlacklistAppleUpdate"
+        case bootProtect = "BootProtect"
         case exposeSensitiveData = "ExposeSensitiveData"
         case haltLevel = "HaltLevel"
         case scanPolicy = "ScanPolicy"
