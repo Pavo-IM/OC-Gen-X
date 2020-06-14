@@ -57,7 +57,7 @@ class MainVC: NSViewController {
               connectDrivers: true,
               drivers: [drivers()],
               input: input(keyFiltering: false, keyForgetThreshold: 5, keyMergeThreshold: 2, keySupport: true, keySupportMode: "Auto", keySwap: false, pointerSupport: false, pointerSupportMode: "ASUS", timerResolution: 50000),
-              output: output(clearScreenOnModeSwitch: false, consoleMode: "Max", directGopRendering: false, ignoreTextInGraphics: false, provideConsoleGop: true, reconnectOnResChange: false, replaceTabWithSpace: false, resolution: "Max", sanitiseClearScreen: false, textRenderer: "BuiltinGraphics"),
+              output: output(clearScreenOnModeSwitch: false, consoleMode: "", directGopRendering: false, ignoreTextInGraphics: false, provideConsoleGop: true, reconnectOnResChange: false, replaceTabWithSpace: false, resolution: "Max", sanitiseClearScreen: false, textRenderer: "BuiltinGraphics"),
               protocols: protocols(appleAudio: false, appleBootPolicy: false, appleDebugLog: false, appleEvent: false, appleImageConversion: false, appleKeyMap: false, appleRtcRam: false, appleSmcIo: false, appleUserInterfaceTheme: false, dataHub: false, deviceProperties: false, firmwareVolume: false, hashServices: false, osInfo: false, unicodeCollation: false),
               quirks: uQuirks(deduplicateBootOrder: true, exitBootServicesDelay: 0, ignoreInvalidFlexRatio: false, releaseUsbOwnership: false, requestBootVarRouting: true, tscSyncTimeout: 0, unblockFsConnect: false),
               reservedMemory: [reservedMemory()])
@@ -228,12 +228,187 @@ class MainVC: NSViewController {
     }
     
     @IBAction func generateClicked(_ sender: Any) {
-        //TODO: Add all Intel specific info
+        //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Threadripper AMD, Bulldozer/Jaguar AMD specific info
         //TODO: Add disclaimer to UI to tell users all generated info is from the offical supported guide from https://dortania.github.io/OpenCore-Desktop-Guide/.
         //TODO: Add the array of kernel patches for AMD selection.
         //TODO: Create UI textfield elements so users can add SMBIOS info themselves.
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
+        switch ivyBridgeChecked.state {
+        case .on:
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
+        switch haswellChecked.state {
+        case .on:
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
+        switch skylakeChecked.state {
+        case .on:
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+        default:
+            break
+        }
+        
+        switch kabylakeChecked.state {
+        case .on:
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+        default:
+            break
+        }
+        
+        switch coffeelakeChecked.state {
+        case .on:
+            config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+        default:
+            break
+        }
+        
+        switch haswellEChecked.state {
+        case .on:
+            config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.disableVariableWrite = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.appleXcpmExtraMsrs = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
+        switch broadwellEChecked.state {
+        case .on:
+            config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.disableVariableWrite = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.appleXcpmExtraMsrs = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
         switch ryzenChecked.state {
         case .on:
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -252,8 +427,6 @@ class MainVC: NSViewController {
             config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
-            config.uefi.output.consoleMode = ""
         default:
             break
         }
