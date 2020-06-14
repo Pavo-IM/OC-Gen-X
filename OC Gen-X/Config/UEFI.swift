@@ -156,7 +156,7 @@ struct uQuirks: Codable {
     var ignoreInvalidFlexRatio: Bool
     var releaseUsbOwnership: Bool
     var requestBootVarRouting: Bool
-    var tscSyncTimeout: Bool
+    var tscSyncTimeout: Int
     var unblockFsConnect: Bool
     
     enum CodingKeys: String, CodingKey {
