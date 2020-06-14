@@ -18,6 +18,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var smcProcessorChecked: NSButton!
     @IBOutlet weak var smcSuperIOChecked: NSButton!
         
+    //FIXME: These settings are based off the release Sample.plist that comes with OpenCorePkg/Docs
     var config = Root(
         acpi: acpi(add: [acpiAdd()],
               delete: [acpiDelete()],
@@ -228,8 +229,11 @@ class MainVC: NSViewController {
     
     @IBAction func generateClicked(_ sender: Any) {
         //TODO: Add all Intel specific info
-        //TODO: Add disclaimer to UI to tell users all generated info is from the offical supported guide from https://dortania.github.io/OpenCore-Desktop-Guide/
-        
+        //TODO: Add disclaimer to UI to tell users all generated info is from the offical supported guide from https://dortania.github.io/OpenCore-Desktop-Guide/.
+        //TODO: Add the array of kernel patches for AMD selection.
+        //TODO: Create UI textfield elements so users can add SMBIOS info themselves.
+        //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
+        //TODO: Add methods to copy items from Bundle to ESP.
         switch ryzenChecked.state {
         case .on:
             config.booter.quirks.rebuildAppleMemoryMap = true
