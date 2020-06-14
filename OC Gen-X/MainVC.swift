@@ -63,7 +63,6 @@ class MainVC: NSViewController {
     )
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -228,9 +227,29 @@ class MainVC: NSViewController {
     }
     
     @IBAction func generateClicked(_ sender: Any) {
+        //TODO: Add all Intel specific info
+        //TODO: Add disclaimer to UI to tell users all generated info is from the offical supported guide from https://dortania.github.io/OpenCore-Desktop-Guide/
+        
         switch ryzenChecked.state {
         case .on:
-            config.acpi.quirks.rebaseRegions = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kQuirks.dummyPowerManagement = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
+            config.uefi.output.consoleMode = ""
         default:
             break
         }
