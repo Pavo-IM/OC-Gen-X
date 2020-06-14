@@ -184,15 +184,11 @@ class MainVC: NSViewController {
     }
     
     @IBAction func generateClicked(_ sender: Any) {
-//        let fm = FileManager.default
-//        let efiDirectory = fm.urls(for: .desktopDirectory, in: .userDomainMask)
-//        let srcDir = Bundle.main.url(forResource: "AppleALC", withExtension: "kext")
-        
-        switch config.acpi.quirks.rebaseRegions {
-        case true:
-            <#code#>
-        case false:
-            <#code#>
+        switch ryzenChecked.state {
+        case .on:
+            config.acpi.quirks.rebaseRegions = true
+        default:
+            break
         }
     }
 }
