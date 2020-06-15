@@ -34,7 +34,7 @@ class MainVC: NSViewController {
         kernel: kernel(kAdd: [kAdd()],
                 kBlock: [kBlock()],
                 emulate: emulate(cpuid1Data: Data(), cpuid1Mask: Data()),
-                kPatch: [kPatch()],
+                kPatch: [kPatch(base: "", comment: "", count: 0, enabled: false, find: Data(), identifier: "", limit: 0, mask: Data(), maxKernel: "", minKernel: "", replace: Data(), replaceMask: Data(), skip: 0)],
                 kQuirks: kQuirks(appleCpuPmCfgLock: false, appleXcpmCfgLock: false, appleXcpmExtraMsrs: false, appleXcpmForceBoost: false, customSMBIOSGuid: false, disableIoMapper: false, dummyPowerManagement: false, externalDiskIcons: false, increasePciBarSize: false, lapicKernelPanic: false, panicNoKextDump: false, powerTimeoutKernelPanic: false, thirdPartyDrives: false, xhciPortLimit: false)),
                     
         misc: misc(blessOverRide: [blessOverRide()],
@@ -64,11 +64,10 @@ class MainVC: NSViewController {
     )
     
     // These patches are from https://github.com/AMD-OSX/AMD_Vanilla/blob/opencore/17h/patches.plist
-    var firstRyzenPatch = amdPatches(base: "", comment: "algrey - commpage_populate -remove rdmsr", count: 1, enabled: true, find: Data([0xB9, 0xA0, 0x01, 0x00, 0x00, 0x0F, 0x32]), identifier: "kernel", limit: 0, mask: Data(), maxKernel: "19.99.99", minKernel: "17.0.0", replace: Data([0x0F, 0x1F, 0x80, 0x00, 0x00, 0x00, 0x00]), replaceMask: Data(), skip: 0)
-    var secondRyzenPatch = amdPatches(base: "_cpu_topology_sort", comment: "algrey - cpu_topology_sort -disable _x86_validate_topology", count: 1, enabled: true, find: Data([0xE8, 0x00, 0x00, 0xFF, 0xFF]), identifier: "kernel", limit: 0, mask: Data([0xFF, 0x00, 0x00, 0xFF, 0xFF]), maxKernel: "19.99.99", minKernel: "17.0.0", replace: Data([0x0F, 0x1F, 0x44, 0x00, 0x00]), replaceMask: Data(), skip: 0)
-    var thirdRyzenPatch = amdPatches(base: "", comment: "algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 0 - 10.15", count: 1, enabled: true, find: Data([0x31, 0xC0, 0x31, 0xDB, 0x31, 0xC9, 0x31, 0xD2, 0x0F, 0xA2, 0x41, 0x89, 0xC6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x74]), identifier: "kernel", limit: 0, mask: Data([0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF]), maxKernel: "19.99.99", minKernel: "19.0.0", replace: Data([0xB8, 0x1D, 0x00, 0x00, 0x80, 0x31, 0xDB, 0x31, 0xC9, 0x31, 0xD2, 0x0F, 0xA2, 0x41, 0x89, 0xC6, 0x0F, 0x1F, 0x40, 0x00, 0xEB]), replaceMask: Data(), skip: 0)
+    let firstRyzenPatch = kPatch(base: "", comment: "algrey - commpage_populate -remove rdmsr", count: 1, enabled: true, find: Data([0xB9, 0xA0, 0x01, 0x00, 0x00, 0x0F, 0x32]), identifier: "kernel", limit: 0, mask: Data(), maxKernel: "19.99.99", minKernel: "17.0.0", replace: Data([0x0F, 0x1F, 0x80, 0x00, 0x00, 0x00, 0x00]), replaceMask: Data(), skip: 0)
+    var secondRyzenPatch = kPatch(base: "_cpu_topology_sort", comment: "algrey - cpu_topology_sort -disable _x86_validate_topology", count: 1, enabled: true, find: Data([0xE8, 0x00, 0x00, 0xFF, 0xFF]), identifier: "kernel", limit: 0, mask: Data([0xFF, 0x00, 0x00, 0xFF, 0xFF]), maxKernel: "19.99.99", minKernel: "17.0.0", replace: Data([0x0F, 0x1F, 0x44, 0x00, 0x00]), replaceMask: Data(), skip: 0)
+    var thirdRyzenPatch = kPatch(base: "", comment: "algrey - cpuid_set_cache_info - cpuid 0x8000001D instead 0 - 10.15", count: 1, enabled: true, find: Data([0x31, 0xC0, 0x31, 0xDB, 0x31, 0xC9, 0x31, 0xD2, 0x0F, 0xA2, 0x41, 0x89, 0xC6, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x74]), identifier: "kernel", limit: 0, mask: Data([0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF]), maxKernel: "19.99.99", minKernel: "19.0.0", replace: Data([0xB8, 0x1D, 0x00, 0x00, 0x80, 0x31, 0xDB, 0x31, 0xC9, 0x31, 0xD2, 0x0F, 0xA2, 0x41, 0x89, 0xC6, 0x0F, 0x1F, 0x40, 0x00, 0xEB]), replaceMask: Data(), skip: 0)
     
-    var ryzenPatchArray = [amdPatches]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -417,11 +416,10 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
-            ryzenPatchArray.append(firstRyzenPatch)
-            ryzenPatchArray.append(secondRyzenPatch)
-            ryzenPatchArray.append(thirdRyzenPatch)
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kPatch = [firstRyzenPatch]
+            config.kernel.kPatch?.append(secondRyzenPatch)
             config.kernel.kQuirks.dummyPowerManagement = true
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
@@ -439,7 +437,7 @@ class MainVC: NSViewController {
         default:
             break
         }
-        print(ryzenPatchArray[0])
-        print(ryzenPatchArray[1])
+        print(config.kernel.kPatch![0])
+        print(config.kernel.kPatch![1])
     }
 }
