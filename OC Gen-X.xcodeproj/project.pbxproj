@@ -43,6 +43,8 @@
 		CF6F1124241E972600B70805 /* NVRAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1123241E972600B70805 /* NVRAM.swift */; };
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
+		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
+		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
 		CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8624218ED90057656E /* 300px-Redpill2.png */; };
 		CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8724218ED90057656E /* 300px-Bluepill.png */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		CF6F1123241E972600B70805 /* NVRAM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVRAM.swift; sourceTree = "<group>"; };
 		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
+		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
+		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
 		CFF4DB8624218ED90057656E /* 300px-Redpill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Redpill2.png"; sourceTree = "<group>"; };
 		CFF4DB8724218ED90057656E /* 300px-Bluepill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Bluepill.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +196,8 @@
 				CF6F1123241E972600B70805 /* NVRAM.swift */,
 				CF6F1125241E973600B70805 /* PlatformInfo.swift */,
 				CF6F1127241E973E00B70805 /* UEFI.swift */,
+				CF7D661224983B3F006333B6 /* 17H_Patches.swift */,
+				CFC7C52524983D4C000CEF89 /* default_config_settings.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -300,8 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */,
+				CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */,
 				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
 				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
+				CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
 				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
 				CF6F1122241E971E00B70805 /* Misc.swift in Sources */,
