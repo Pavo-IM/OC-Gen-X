@@ -17,11 +17,13 @@ class MainVC: NSViewController {
     @IBOutlet weak var virtualSMCChecked: NSButton!
     @IBOutlet weak var smcProcessorChecked: NSButton!
     @IBOutlet weak var smcSuperIOChecked: NSButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
     }

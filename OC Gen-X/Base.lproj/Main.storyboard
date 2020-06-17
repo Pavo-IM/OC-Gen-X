@@ -722,7 +722,7 @@
                                 </connections>
                             </button>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="31" width="811" height="475"/>
+                                <rect key="frame" x="-7" y="31" width="811" height="202"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -930,11 +930,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="180"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="196"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -947,6 +947,18 @@
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
                                                                         <rect key="frame" x="8" y="42" width="44" height="18"/>
+                                                                        <mutableString key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
+Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
+Add -liluoff to disable Lilu.
+Add -liluuseroff to disable Lilu user patcher (for e.g. dyld_shared_cache manipulations).
+Add -liluslow to enable legacy user patcher.
+Add -lilulowmem to disable kernel unpack (disables Lilu in recovery mode).
+Add -lilubeta to enable Lilu on unsupported os versions (10.13 and below are enabled by default).
+Add -lilubetaall to enable Lilu and all loaded plugins on unsupported os versions (use very carefully).
+Add -liluforce to enable Lilu regardless of the mode, OS, installer, or recovery.
+Add liludelay=1000 to enable 1 second delay after each print for troubleshooting.
+Add lilucpu=N to let Lilu and plugins assume Nth CPUInfo::CpuGeneration.
+Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_MAJOR.KERN_MINOR.txt after N seconds</mutableString>
                                                                         <buttonCell key="cell" type="check" title="Lilu" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MuK-5H-FYr">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -954,6 +966,17 @@
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
                                                                         <rect key="frame" x="8" y="18" width="91" height="18"/>
+                                                                        <mutableString key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
+Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
+Add -vsmcoff to switch off all the Lilu enhancements.
+Add -vsmcbeta to enable Lilu enhancements on unsupported os (10.13 and below are enabled by default).
+Add -vsmcrpt to report about missing SMC keys to the system log.
+Add -vsmccomp to prefer existing hardware SMC implementation if found.
+Add vsmcgen=X to force exposing X-gen SMC device (1 and 2 are supported).
+Add vsmchbkp=X to set HBKP dumping mode (0 - off, 1 - normal, 2 - without encryption).
+Add vsmcslvl=X to set value serialisation level (0 - off, 1 - normal, 2 - with sensitive data (default)).
+Add smcdebug=0xff to enable AppleSMC debug information printing.
+Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutableString>
                                                                         <buttonCell key="cell" type="check" title="VirtualSMC" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="12X-0g-3tL">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1021,7 +1044,7 @@
                                                                 <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Qd-vMG">
+                                                                    <button toolTip="Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.4.0 or newer.  Boot Args:" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Qd-vMG">
                                                                         <rect key="frame" x="8" y="18" width="117" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="WhateverGreen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iDh-wY-X4B">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1042,6 +1065,7 @@
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tdD-cl-Nki">
+                                                                        <string key="identifier">An open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications.</string>
                                                                         <rect key="frame" x="8" y="18" width="82" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AppleALC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xJc-fW-aKb">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1063,6 +1087,34 @@
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-fA-SPR">
                                                                         <rect key="frame" x="8" y="90" width="136" height="18"/>
+                                                                        <mutableString key="toolTip">Intel onboard LAN driver for macOS.  Supports: 5 Series:
+82578LM
+82578LC
+82578DM
+82578DC 
+6 and 7 Series:
+82579LM
+82579V 
+8 and 9 Series:
+I217LM
+I217V
+I218LM
+I218V
+I218LM2
+I218V2
+I218LM3 
+100 Series:
+I219V
+I219LM
+I219V2
+I219LM2
+I219LM3 
+200 Series:
+I219LM
+I219V 
+300 Series:
+I219LM
+I219V</mutableString>
                                                                         <buttonCell key="cell" type="check" title="IntelMausiEthernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vAv-y8-VhO">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1077,12 +1129,13 @@
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-62-ws7">
                                                                         <rect key="frame" x="8" y="42" width="161" height="18"/>
+                                                                        <string key="toolTip">Qualcomm Atheros Killer E2200 driver for macOS.  Supports: Qualcomm Atheros AR816x, AR817x, Killer E220x, Killer E2400 and Killer E2500</string>
                                                                         <buttonCell key="cell" type="check" title="AtherosE2200Ethernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RyY-7M-g0k">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="peh-0s-slN">
+                                                                    <button toolTip="OS X open source driver for the Realtek RTL8111/8168 family.  Supports: Realtek RTL8111/8168 B/C/D/E/F/G/H" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="peh-0s-slN">
                                                                         <rect key="frame" x="8" y="18" width="117" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="RealtekRTL8111" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pdO-v3-bFc">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
