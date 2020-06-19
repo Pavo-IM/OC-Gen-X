@@ -707,12 +707,12 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="528"/>
+                    <view key="view" id="ZeK-sO-E8j">
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="569"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="340" y="3" width="118" height="32"/>
+                                <rect key="frame" x="340" y="72" width="118" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -722,7 +722,7 @@
                                 </connections>
                             </button>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="31" width="811" height="202"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="475"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -881,6 +881,8 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fQy-FH-F4E" secondAttribute="trailing" symbolic="YES" id="0LP-ma-KQy"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y2r-xg-ybM" secondAttribute="trailing" constant="20" symbolic="YES" id="0t1-f0-f3F"/>
                                                 <constraint firstAttribute="trailing" secondItem="4ot-SR-6YO" secondAttribute="trailing" constant="10" id="2DX-Nd-OXS"/>
                                                 <constraint firstItem="y2r-xg-ybM" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="2GM-b9-Jvc"/>
                                                 <constraint firstItem="fQy-FH-F4E" firstAttribute="top" secondItem="y2r-xg-ybM" secondAttribute="bottom" constant="10" id="4mN-tL-4sr"/>
@@ -888,10 +890,13 @@
                                                 <constraint firstItem="h8w-7F-qHq" firstAttribute="top" secondItem="NbE-uy-4f2" secondAttribute="bottom" constant="10" id="7On-LQ-IoE"/>
                                                 <constraint firstItem="fQy-FH-F4E" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="7s4-6q-R1N"/>
                                                 <constraint firstItem="Rhr-Fz-70Q" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="9CU-at-fqf"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YFF-EX-aeL" secondAttribute="trailing" symbolic="YES" id="9q2-cM-f14"/>
                                                 <constraint firstItem="gDG-g2-WWY" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="Be8-NZ-HKa"/>
                                                 <constraint firstItem="hlu-wH-ii6" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="Bmf-mY-cop"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="top" secondItem="TaU-Te-85W" secondAttribute="bottom" constant="10" id="DgF-EK-m0a"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDG-g2-WWY" secondAttribute="trailing" constant="20" symbolic="YES" id="DjY-s9-GJX"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="FD5-xM-x6B"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" symbolic="YES" id="FGa-tl-83h"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="NIP-2u-BKE"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="top" secondItem="h8w-7F-qHq" secondAttribute="bottom" constant="10" id="NfV-F3-IYi"/>
                                                 <constraint firstItem="eeX-Ee-gPO" firstAttribute="leading" secondItem="bOp-3C-A40" secondAttribute="leading" id="PUc-Z0-57E"/>
@@ -907,19 +912,25 @@
                                                 <constraint firstItem="NbE-uy-4f2" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="ZzC-o5-Hso"/>
                                                 <constraint firstItem="4ot-SR-6YO" firstAttribute="top" secondItem="Nf9-hV-dOz" secondAttribute="bottom" constant="10" id="a8r-fg-ykz"/>
                                                 <constraint firstAttribute="bottom" secondItem="YFF-EX-aeL" secondAttribute="bottom" constant="10" id="abU-eV-9E3"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eeX-Ee-gPO" secondAttribute="trailing" symbolic="YES" id="cGI-Yo-U3Z"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="cwx-Qc-7xQ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rhr-Fz-70Q" secondAttribute="trailing" constant="20" symbolic="YES" id="dWU-nh-DzA"/>
                                                 <constraint firstItem="bOp-3C-A40" firstAttribute="top" secondItem="4ot-SR-6YO" secondAttribute="bottom" constant="10" id="daO-8K-XdZ"/>
                                                 <constraint firstAttribute="trailing" secondItem="hlu-wH-ii6" secondAttribute="trailing" constant="10" id="dgh-JF-1fO"/>
                                                 <constraint firstItem="Rhr-Fz-70Q" firstAttribute="top" secondItem="We0-KK-fmZ" secondAttribute="bottom" constant="10" id="e7S-mP-wBr"/>
                                                 <constraint firstItem="NbE-uy-4f2" firstAttribute="top" secondItem="gDG-g2-WWY" secondAttribute="bottom" constant="10" id="gB4-1N-cqV"/>
                                                 <constraint firstAttribute="trailing" secondItem="h8w-7F-qHq" secondAttribute="trailing" constant="10" id="gbT-4Y-08s"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p55-Fb-A4q" secondAttribute="trailing" constant="20" symbolic="YES" id="gtQ-Ig-ATI"/>
                                                 <constraint firstItem="bOp-3C-A40" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="hdM-b2-QQg"/>
                                                 <constraint firstItem="arC-k3-phI" firstAttribute="top" secondItem="hlu-wH-ii6" secondAttribute="bottom" constant="10" id="jF4-Ze-EXb"/>
                                                 <constraint firstItem="h8w-7F-qHq" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="kRe-C7-4Ex"/>
                                                 <constraint firstItem="0Yb-zy-Quz" firstAttribute="top" secondItem="C1C-xa-78L" secondAttribute="top" constant="10" id="lUj-6W-ETo"/>
                                                 <constraint firstItem="arC-k3-phI" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="mm4-Y0-uDU"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NbE-uy-4f2" secondAttribute="trailing" symbolic="YES" id="nMJ-e8-khx"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bOp-3C-A40" secondAttribute="trailing" constant="20" symbolic="YES" id="oBE-jZ-kxA"/>
                                                 <constraint firstItem="y2r-xg-ybM" firstAttribute="top" secondItem="arC-k3-phI" secondAttribute="bottom" constant="10" id="p4C-hm-OFt"/>
                                                 <constraint firstItem="YFF-EX-aeL" firstAttribute="top" secondItem="eeX-Ee-gPO" secondAttribute="bottom" constant="10" id="r5t-Uj-tQb"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TaU-Te-85W" secondAttribute="trailing" constant="20" symbolic="YES" id="tiC-Bq-tWV"/>
                                                 <constraint firstItem="0Yb-zy-Quz" firstAttribute="centerX" secondItem="C1C-xa-78L" secondAttribute="centerX" id="uA7-za-v3R"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="top" secondItem="rg6-Ud-Ml9" secondAttribute="bottom" constant="10" id="upm-J8-b9h"/>
                                                 <constraint firstItem="YFF-EX-aeL" firstAttribute="leading" secondItem="bOp-3C-A40" secondAttribute="leading" id="vJg-hg-ngs"/>
@@ -947,7 +958,7 @@
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
                                                                         <rect key="frame" x="8" y="42" width="44" height="18"/>
-                                                                        <mutableString key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
+                                                                        <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
 Add -liluuseroff to disable Lilu user patcher (for e.g. dyld_shared_cache manipulations).
@@ -958,7 +969,7 @@ Add -lilubetaall to enable Lilu and all loaded plugins on unsupported os version
 Add -liluforce to enable Lilu regardless of the mode, OS, installer, or recovery.
 Add liludelay=1000 to enable 1 second delay after each print for troubleshooting.
 Add lilucpu=N to let Lilu and plugins assume Nth CPUInfo::CpuGeneration.
-Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_MAJOR.KERN_MINOR.txt after N seconds</mutableString>
+Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_MAJOR.KERN_MINOR.txt after N seconds</string>
                                                                         <buttonCell key="cell" type="check" title="Lilu" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="MuK-5H-FYr">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -966,7 +977,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
                                                                         <rect key="frame" x="8" y="18" width="91" height="18"/>
-                                                                        <mutableString key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
+                                                                        <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
 Add -vsmcbeta to enable Lilu enhancements on unsupported os (10.13 and below are enabled by default).
@@ -976,7 +987,7 @@ Add vsmcgen=X to force exposing X-gen SMC device (1 and 2 are supported).
 Add vsmchbkp=X to set HBKP dumping mode (0 - off, 1 - normal, 2 - without encryption).
 Add vsmcslvl=X to set value serialisation level (0 - off, 1 - normal, 2 - with sensitive data (default)).
 Add smcdebug=0xff to enable AppleSMC debug information printing.
-Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutableString>
+Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</string>
                                                                         <buttonCell key="cell" type="check" title="VirtualSMC" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="12X-0g-3tL">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -985,9 +996,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutab
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="JsS-MV-XBV" firstAttribute="leading" secondItem="YQt-GO-VSt" secondAttribute="leading" constant="10" id="120-yq-dN4"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lbr-dO-TxB" secondAttribute="trailing" symbolic="YES" id="5MZ-6H-RI4"/>
                                                                     <constraint firstItem="lbr-dO-TxB" firstAttribute="top" secondItem="JsS-MV-XBV" secondAttribute="bottom" constant="10" id="7B3-lB-Ab6"/>
                                                                     <constraint firstItem="JsS-MV-XBV" firstAttribute="top" secondItem="YQt-GO-VSt" secondAttribute="top" constant="20" id="asb-fl-R93"/>
                                                                     <constraint firstAttribute="bottom" secondItem="lbr-dO-TxB" secondAttribute="bottom" constant="20" id="b4D-wF-EjU"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JsS-MV-XBV" secondAttribute="trailing" symbolic="YES" id="bRO-Bv-qJv"/>
                                                                     <constraint firstItem="lbr-dO-TxB" firstAttribute="leading" secondItem="JsS-MV-XBV" secondAttribute="leading" id="nIE-Co-gsn"/>
                                                                 </constraints>
                                                             </view>
@@ -1028,13 +1041,17 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutab
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="iEi-Wb-cLO" firstAttribute="top" secondItem="0Ws-sH-cwr" secondAttribute="bottom" constant="10" id="9xk-Lk-EdH"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iEi-Wb-cLO" secondAttribute="trailing" symbolic="YES" id="GU7-1P-7oo"/>
                                                                     <constraint firstAttribute="bottom" secondItem="oG6-xM-fb1" secondAttribute="bottom" constant="20" id="Q8l-of-tlr"/>
                                                                     <constraint firstItem="iEi-Wb-cLO" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="RfT-OV-hsc"/>
                                                                     <constraint firstItem="hgp-Dt-rSe" firstAttribute="top" secondItem="LuR-rU-oM9" secondAttribute="top" constant="20" id="Toy-Qp-KiH"/>
                                                                     <constraint firstItem="oG6-xM-fb1" firstAttribute="top" secondItem="iEi-Wb-cLO" secondAttribute="bottom" constant="10" id="UVJ-Lj-RR9"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oG6-xM-fb1" secondAttribute="trailing" symbolic="YES" id="ZY8-s5-gDs"/>
                                                                     <constraint firstItem="0Ws-sH-cwr" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="Zcw-hc-zIB"/>
                                                                     <constraint firstItem="oG6-xM-fb1" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="cv5-cI-fox"/>
                                                                     <constraint firstItem="0Ws-sH-cwr" firstAttribute="top" secondItem="hgp-Dt-rSe" secondAttribute="bottom" constant="10" id="hUj-s3-JHT"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hgp-Dt-rSe" secondAttribute="trailing" constant="20" symbolic="YES" id="kwd-44-TAp"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Ws-sH-cwr" secondAttribute="trailing" symbolic="YES" id="sw1-fi-mmX"/>
                                                                     <constraint firstItem="hgp-Dt-rSe" firstAttribute="leading" secondItem="LuR-rU-oM9" secondAttribute="leading" constant="10" id="zlA-eH-KX6"/>
                                                                 </constraints>
                                                             </view>
@@ -1055,6 +1072,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutab
                                                                 <constraints>
                                                                     <constraint firstItem="hIN-Qd-vMG" firstAttribute="top" secondItem="0Jc-f5-SUh" secondAttribute="top" constant="20" id="7aC-r7-Iu4"/>
                                                                     <constraint firstAttribute="bottom" secondItem="hIN-Qd-vMG" secondAttribute="bottom" constant="20" id="Wns-nJ-5nv"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hIN-Qd-vMG" secondAttribute="trailing" symbolic="YES" id="epb-9n-seS"/>
                                                                     <constraint firstItem="hIN-Qd-vMG" firstAttribute="leading" secondItem="0Jc-f5-SUh" secondAttribute="leading" constant="10" id="oKU-X8-lUE"/>
                                                                 </constraints>
                                                             </view>
@@ -1076,6 +1094,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutab
                                                                 <constraints>
                                                                     <constraint firstItem="tdD-cl-Nki" firstAttribute="leading" secondItem="zNn-Hb-Zsg" secondAttribute="leading" constant="10" id="CzN-2B-eC3"/>
                                                                     <constraint firstItem="tdD-cl-Nki" firstAttribute="top" secondItem="zNn-Hb-Zsg" secondAttribute="top" constant="20" id="Gab-o3-bUL"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tdD-cl-Nki" secondAttribute="trailing" symbolic="YES" id="ZtK-G7-8Nr"/>
                                                                     <constraint firstAttribute="bottom" secondItem="tdD-cl-Nki" secondAttribute="bottom" constant="20" id="qt5-BN-1Fk"/>
                                                                 </constraints>
                                                             </view>
@@ -1087,7 +1106,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</mutab
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-fA-SPR">
                                                                         <rect key="frame" x="8" y="90" width="136" height="18"/>
-                                                                        <mutableString key="toolTip">Intel onboard LAN driver for macOS.  Supports: 5 Series:
+                                                                        <string key="toolTip">Intel onboard LAN driver for macOS.  Supports: 5 Series:
 82578LM
 82578LC
 82578DM
@@ -1114,7 +1133,7 @@ I219LM
 I219V 
 300 Series:
 I219LM
-I219V</mutableString>
+I219V</string>
                                                                         <buttonCell key="cell" type="check" title="IntelMausiEthernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vAv-y8-VhO">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1146,13 +1165,17 @@ I219V</mutableString>
                                                                 <constraints>
                                                                     <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4ug-zg-Gr6"/>
                                                                     <constraint firstItem="WYI-fA-SPR" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="7Ok-1c-EMI"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WYI-fA-SPR" secondAttribute="trailing" constant="20" symbolic="YES" id="GJd-T2-MeM"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="peh-0s-slN" secondAttribute="trailing" constant="20" symbolic="YES" id="KCR-bC-u5F"/>
                                                                     <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="MVo-Tk-Vwt"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sCA-PT-GyD" secondAttribute="trailing" constant="20" symbolic="YES" id="nGG-mU-ehT"/>
                                                                     <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="WYI-fA-SPR" secondAttribute="bottom" constant="10" id="oZL-E8-Re2"/>
                                                                     <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="p7x-gC-xoS"/>
                                                                     <constraint firstAttribute="bottom" secondItem="peh-0s-slN" secondAttribute="bottom" constant="20" id="ppO-cH-vY7"/>
                                                                     <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="qo6-jx-CW8"/>
                                                                     <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="vEr-q8-cAe"/>
                                                                     <constraint firstItem="WYI-fA-SPR" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="vyZ-Lt-ZXf"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" symbolic="YES" id="yNL-y6-iZ7"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1178,10 +1201,12 @@ I219V</mutableString>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="vdF-qL-ibG" firstAttribute="top" secondItem="h3S-sl-6lV" secondAttribute="bottom" constant="10" id="RE9-hz-PVl"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h3S-sl-6lV" secondAttribute="trailing" symbolic="YES" id="RpG-Jh-tW6"/>
                                                                     <constraint firstItem="h3S-sl-6lV" firstAttribute="leading" secondItem="F3O-yf-zdV" secondAttribute="leading" constant="10" id="Yfn-mR-hdG"/>
                                                                     <constraint firstAttribute="bottom" secondItem="vdF-qL-ibG" secondAttribute="bottom" constant="20" id="bqR-9Z-kHV"/>
                                                                     <constraint firstItem="h3S-sl-6lV" firstAttribute="top" secondItem="F3O-yf-zdV" secondAttribute="top" constant="20" id="ck6-hm-KEq"/>
                                                                     <constraint firstItem="vdF-qL-ibG" firstAttribute="leading" secondItem="h3S-sl-6lV" secondAttribute="leading" id="ptJ-zB-opD"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vdF-qL-ibG" secondAttribute="trailing" symbolic="YES" id="zK0-7C-Qce"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1232,18 +1257,23 @@ I219V</mutableString>
                                                                 <constraints>
                                                                     <constraint firstItem="WWx-xE-AlQ" firstAttribute="top" secondItem="1qa-WA-xvA" secondAttribute="bottom" constant="10" id="0Wj-nx-1tX"/>
                                                                     <constraint firstItem="QT7-Gc-Xup" firstAttribute="leading" secondItem="1qa-WA-xvA" secondAttribute="leading" id="5Ws-yd-KnB"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QT7-Gc-Xup" secondAttribute="trailing" constant="20" symbolic="YES" id="7Up-Xc-ANg"/>
                                                                     <constraint firstItem="1qa-WA-xvA" firstAttribute="leading" secondItem="Hzs-en-ddc" secondAttribute="trailing" constant="10" id="9rw-fg-bhO"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WWx-xE-AlQ" secondAttribute="trailing" symbolic="YES" id="ADv-dh-UGA"/>
                                                                     <constraint firstItem="WWx-xE-AlQ" firstAttribute="leading" secondItem="1qa-WA-xvA" secondAttribute="leading" id="F19-dX-Na2"/>
                                                                     <constraint firstItem="T1u-1S-rZh" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="KrZ-X9-GDb"/>
                                                                     <constraint firstItem="Hzs-en-ddc" firstAttribute="bottom" secondItem="QT7-Gc-Xup" secondAttribute="bottom" id="LjK-9H-hoj"/>
                                                                     <constraint firstItem="gjG-JF-3EO" firstAttribute="leading" secondItem="T1u-1S-rZh" secondAttribute="leading" id="Pi4-Lu-sL1"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1qa-WA-xvA" secondAttribute="trailing" symbolic="YES" id="SK0-yZ-znA"/>
                                                                     <constraint firstItem="Hzs-en-ddc" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="20" id="WKt-ld-8S4"/>
                                                                     <constraint firstItem="1qa-WA-xvA" firstAttribute="top" secondItem="gjG-JF-3EO" secondAttribute="bottom" constant="10" id="Wkv-rQ-Wcx"/>
                                                                     <constraint firstItem="gjG-JF-3EO" firstAttribute="top" secondItem="T1u-1S-rZh" secondAttribute="bottom" constant="10" id="XY8-SE-GfU"/>
                                                                     <constraint firstItem="Hzs-en-ddc" firstAttribute="top" secondItem="1qa-WA-xvA" secondAttribute="top" id="b6C-HD-kFH"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gjG-JF-3EO" secondAttribute="trailing" symbolic="YES" id="bKE-Xh-riw"/>
                                                                     <constraint firstItem="QT7-Gc-Xup" firstAttribute="top" secondItem="WWx-xE-AlQ" secondAttribute="bottom" constant="10" id="eee-Ez-2TF"/>
                                                                     <constraint firstItem="T1u-1S-rZh" firstAttribute="top" secondItem="rPW-aE-Bjy" secondAttribute="top" constant="20" id="hbL-uL-KAV"/>
                                                                     <constraint firstAttribute="bottom" secondItem="QT7-Gc-Xup" secondAttribute="bottom" constant="20" id="tJZ-nq-zgE"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T1u-1S-rZh" secondAttribute="trailing" symbolic="YES" id="tba-kU-GKF"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1269,10 +1299,12 @@ I219V</mutableString>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="zb4-9d-i66" firstAttribute="top" secondItem="u7Y-Ij-CXE" secondAttribute="bottom" constant="10" id="8Ce-mH-tGA"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zb4-9d-i66" secondAttribute="trailing" symbolic="YES" id="CK8-ML-HE9"/>
                                                                     <constraint firstItem="zb4-9d-i66" firstAttribute="leading" secondItem="u7Y-Ij-CXE" secondAttribute="leading" id="HpS-eH-5th"/>
                                                                     <constraint firstItem="u7Y-Ij-CXE" firstAttribute="leading" secondItem="N7A-Ev-hwK" secondAttribute="leading" constant="10" id="PH2-pd-FUt"/>
                                                                     <constraint firstAttribute="bottom" secondItem="zb4-9d-i66" secondAttribute="bottom" constant="20" id="W2y-EG-HUJ"/>
                                                                     <constraint firstItem="u7Y-Ij-CXE" firstAttribute="top" secondItem="N7A-Ev-hwK" secondAttribute="top" constant="20" id="oLb-uw-qTC"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7Y-Ij-CXE" secondAttribute="trailing" symbolic="YES" id="sNa-77-OvR"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1313,6 +1345,8 @@ I219V</mutableString>
                                                                 <constraints>
                                                                     <constraint firstItem="zMy-ks-Pwo" firstAttribute="top" secondItem="LBK-Ws-KvM" secondAttribute="bottom" constant="10" id="8IG-Jd-M68"/>
                                                                     <constraint firstItem="zMy-ks-Pwo" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="KhI-Te-CyG"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="loP-ez-gz7" secondAttribute="trailing" symbolic="YES" id="ND4-0p-Qdr"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zMy-ks-Pwo" secondAttribute="trailing" symbolic="YES" id="R0S-es-kNB"/>
                                                                     <constraint firstItem="loP-ez-gz7" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="Ryc-74-67g"/>
                                                                     <constraint firstItem="D0X-t8-vDc" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="SYY-tR-CqU"/>
                                                                     <constraint firstItem="loP-ez-gz7" firstAttribute="top" secondItem="D0X-t8-vDc" secondAttribute="bottom" constant="10" id="TVy-vr-dgA"/>
@@ -1320,6 +1354,8 @@ I219V</mutableString>
                                                                     <constraint firstItem="D0X-t8-vDc" firstAttribute="top" secondItem="zMy-ks-Pwo" secondAttribute="bottom" constant="10" id="hQp-kK-PZg"/>
                                                                     <constraint firstItem="LBK-Ws-KvM" firstAttribute="top" secondItem="KX3-xG-Ws2" secondAttribute="top" constant="20" id="iu7-yG-D4E"/>
                                                                     <constraint firstAttribute="bottom" secondItem="loP-ez-gz7" secondAttribute="bottom" constant="20" id="kte-l9-tRh"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LBK-Ws-KvM" secondAttribute="trailing" symbolic="YES" id="nWI-CW-oGZ"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D0X-t8-vDc" secondAttribute="trailing" symbolic="YES" id="rit-PR-caP"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1336,47 +1372,39 @@ I219V</mutableString>
                                     </tabViewItem>
                                     <tabViewItem label="Firmware Drivers" identifier="" id="ZPE-fT-6Cu">
                                         <view key="view" id="UVk-Ia-OKZ">
-                                            <rect key="frame" x="10" y="33" width="791" height="132"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="gac-5f-5uI">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="148"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="UEFI" identifier="" id="igs-eO-j1W">
                                                             <view key="view" id="Jq2-Uk-wCu">
-                                                                <rect key="frame" x="10" y="33" width="785" height="102"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P3w-uR-vRu">
-                                                                        <rect key="frame" x="8" y="66" width="146" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="ApfsDriverLoader.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="rz0-1Q-gqu">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B96-MH-cRB">
                                                                         <rect key="frame" x="8" y="42" width="87" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="HfsPlus.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="3Un-ok-0yG">
+                                                                        <buttonCell key="cell" type="check" title="HfsPlus.efi" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3Un-ok-0yG">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-be-75d">
                                                                         <rect key="frame" x="8" y="18" width="124" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="OpenRuntime.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Z9V-d8-hyP">
+                                                                        <buttonCell key="cell" type="check" title="OpenRuntime.efi" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Z9V-d8-hyP">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="P3w-uR-vRu" firstAttribute="leading" secondItem="Jq2-Uk-wCu" secondAttribute="leading" constant="10" id="1nn-RW-ogQ"/>
-                                                                    <constraint firstItem="P3w-uR-vRu" firstAttribute="top" secondItem="Jq2-Uk-wCu" secondAttribute="top" constant="20" id="44a-B5-IDl"/>
+                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="leading" secondItem="gLn-be-75d" secondAttribute="leading" id="6FE-e1-WpF"/>
                                                                     <constraint firstAttribute="bottom" secondItem="gLn-be-75d" secondAttribute="bottom" constant="20" id="6Ri-f9-SBa"/>
-                                                                    <constraint firstItem="gLn-be-75d" firstAttribute="leading" secondItem="P3w-uR-vRu" secondAttribute="leading" id="AQ5-Gb-DNi"/>
-                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="top" secondItem="P3w-uR-vRu" secondAttribute="bottom" constant="10" id="Yu5-ns-GGb"/>
-                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="leading" secondItem="P3w-uR-vRu" secondAttribute="leading" id="lqZ-Q7-Uhk"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLn-be-75d" secondAttribute="trailing" symbolic="YES" id="Rsg-eV-Hmq"/>
+                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="leading" secondItem="Jq2-Uk-wCu" secondAttribute="leading" constant="10" id="SxU-bS-klX"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B96-MH-cRB" secondAttribute="trailing" symbolic="YES" id="mLQ-WS-TZh"/>
                                                                     <constraint firstItem="gLn-be-75d" firstAttribute="top" secondItem="B96-MH-cRB" secondAttribute="bottom" constant="10" id="z46-sx-PmY"/>
                                                                 </constraints>
                                                             </view>
@@ -1417,14 +1445,18 @@ I219V</mutableString>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="Be6-Nu-Zck" firstAttribute="leading" secondItem="wr8-j1-shI" secondAttribute="leading" constant="10" id="CAb-X0-1jL"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UuB-sS-39W" secondAttribute="trailing" constant="20" symbolic="YES" id="Cfb-dE-l6W"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phe-xo-PUR" secondAttribute="trailing" constant="20" symbolic="YES" id="IrW-NP-now"/>
                                                                     <constraint firstItem="MP8-Nf-YEX" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="J9z-By-NYQ"/>
                                                                     <constraint firstItem="UuB-sS-39W" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="KxH-H8-p0X"/>
                                                                     <constraint firstItem="UuB-sS-39W" firstAttribute="top" secondItem="Be6-Nu-Zck" secondAttribute="bottom" constant="10" id="NVb-MA-Mv1"/>
                                                                     <constraint firstItem="Be6-Nu-Zck" firstAttribute="top" secondItem="wr8-j1-shI" secondAttribute="top" constant="20" id="Nzw-hX-jAN"/>
                                                                     <constraint firstItem="phe-xo-PUR" firstAttribute="top" secondItem="UuB-sS-39W" secondAttribute="bottom" constant="10" id="P0M-RF-CGP"/>
                                                                     <constraint firstItem="MP8-Nf-YEX" firstAttribute="top" secondItem="phe-xo-PUR" secondAttribute="bottom" constant="10" id="TFx-qn-m32"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Be6-Nu-Zck" secondAttribute="trailing" symbolic="YES" id="UA1-0k-kYR"/>
                                                                     <constraint firstAttribute="bottom" secondItem="MP8-Nf-YEX" secondAttribute="bottom" constant="20" id="W5Z-th-tVY"/>
                                                                     <constraint firstItem="phe-xo-PUR" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="pGS-Cv-Xbe"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MP8-Nf-YEX" secondAttribute="trailing" constant="20" symbolic="YES" id="uIk-YU-GWQ"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1441,36 +1473,86 @@ I219V</mutableString>
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Z7c-dp-thl">
+                                <rect key="frame" x="18" y="37" width="761" height="32"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="*Disclaimer* The config.plist is based off the settings on" id="5gZ-sK-sE9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-fp-3dO">
+                                <rect key="frame" x="18" y="20" width="761" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="center" title="https://dortania.github.io/OpenCore-Desktop-Guide/" id="O9I-Ci-F3S">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UIh-RX-3Ag" secondAttribute="trailing" id="2Aa-if-5FR"/>
-                            <constraint firstAttribute="bottom" secondItem="Wcy-uw-NdK" secondAttribute="bottom" constant="10" id="6So-Mn-Q5k"/>
+                            <constraint firstItem="Z7c-dp-thl" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="44I-ye-TeM"/>
+                            <constraint firstItem="Y5K-fp-3dO" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="84m-ii-7ma"/>
+                            <constraint firstItem="Y5K-fp-3dO" firstAttribute="top" secondItem="Z7c-dp-thl" secondAttribute="bottom" constant="1" id="Pns-vu-SDf"/>
+                            <constraint firstAttribute="trailing" secondItem="Z7c-dp-thl" secondAttribute="trailing" constant="20" id="cL5-jR-qzA"/>
+                            <constraint firstItem="Z7c-dp-thl" firstAttribute="top" secondItem="Wcy-uw-NdK" secondAttribute="bottom" constant="10" id="fmL-5t-b9a"/>
                             <constraint firstItem="UIh-RX-3Ag" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" id="k9z-eE-bjZ"/>
                             <constraint firstItem="Wcy-uw-NdK" firstAttribute="top" secondItem="UIh-RX-3Ag" secondAttribute="bottom" constant="10" id="m3d-be-2tT"/>
+                            <constraint firstAttribute="bottom" secondItem="Y5K-fp-3dO" secondAttribute="bottom" constant="20" id="qo8-DW-Voe"/>
                             <constraint firstItem="UIh-RX-3Ag" firstAttribute="top" secondItem="ZeK-sO-E8j" secondAttribute="top" id="rXX-3V-hvg"/>
+                            <constraint firstAttribute="trailing" secondItem="Y5K-fp-3dO" secondAttribute="trailing" constant="20" id="zKc-7U-i8D"/>
                             <constraint firstItem="Wcy-uw-NdK" firstAttribute="centerX" secondItem="ZeK-sO-E8j" secondAttribute="centerX" id="zbL-aw-JLi"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="airportBrcmChecked" destination="T1u-1S-rZh" id="4h2-yy-MBj"/>
+                        <outlet property="appleALCChecked" destination="tdD-cl-Nki" id="0el-9i-FBU"/>
+                        <outlet property="appleMCEReporterChecked" destination="LBK-Ws-KvM" id="ZGl-fo-17b"/>
+                        <outlet property="atherosChecked" destination="xhE-62-ws7" id="okM-0r-Pa8"/>
+                        <outlet property="brcmBluetoothInjectorChecked" destination="1qa-WA-xvA" id="nQG-ib-z1u"/>
+                        <outlet property="brcmFirmwareDataChecked" destination="WWx-xE-AlQ" id="H1V-f5-i7T"/>
+                        <outlet property="brcmPatchRam3Checked" destination="QT7-Gc-Xup" id="YdF-cV-fQr"/>
+                        <outlet property="brcmPatchRamChecked" destination="gjG-JF-3EO" id="3XF-7d-PAm"/>
                         <outlet property="broadwellEChecked" destination="p55-Fb-A4q" id="7sg-3I-0xf"/>
                         <outlet property="bulldozerChecked" destination="bOp-3C-A40" id="MyW-0g-uj4"/>
                         <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
+                        <outlet property="fxXlncUSBChecked" destination="u7Y-Ij-CXE" id="bkO-LJ-yjq"/>
                         <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
                         <outlet property="haswellEChecked" destination="Rhr-Fz-70Q" id="TF8-i5-Z6x"/>
+                        <outlet property="hfsPlusChecked" destination="B96-MH-cRB" id="xVM-rg-jGu"/>
+                        <outlet property="hfsPlusLegacyuChecked" destination="MP8-Nf-YEX" id="VtU-Ft-zsZ"/>
+                        <outlet property="intelMausiChecked" destination="WYI-fA-SPR" id="L2G-1m-p79"/>
                         <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="RbQ-fl-hYL"/>
                         <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
                         <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
+                        <outlet property="nvmExpressChecked" destination="UuB-sS-39W" id="rrz-TN-2rm"/>
+                        <outlet property="nvmeFixChecked" destination="loP-ez-gz7" id="WqY-gI-ota"/>
+                        <outlet property="openRuntimeChecked" destination="gLn-be-75d" id="PYu-FU-0CR"/>
+                        <outlet property="openUSBChecked" destination="Be6-Nu-Zck" id="dsc-zl-9OA"/>
+                        <outlet property="realTekChecked" destination="peh-0s-slN" id="azM-P4-3bM"/>
                         <outlet property="ryzenChecked" destination="eeX-Ee-gPO" id="ZDb-TM-nZW"/>
                         <outlet property="skylakeChecked" destination="fQy-FH-F4E" id="voZ-0f-GkF"/>
                         <outlet property="skylakeXChecked" destination="TaU-Te-85W" id="3Zh-n0-ZOC"/>
+                        <outlet property="smallTreeChecked" destination="sCA-PT-GyD" id="KHu-Sz-dwd"/>
+                        <outlet property="smcBatteryManagerChecked" destination="oG6-xM-fb1" id="B9B-je-vi6"/>
+                        <outlet property="smcLightSensorChecked" destination="iEi-Wb-cLO" id="K5Q-zY-uCB"/>
                         <outlet property="smcProcessorChecked" destination="hgp-Dt-rSe" id="BPX-eB-fhG"/>
                         <outlet property="smcSuperIOChecked" destination="0Ws-sH-cwr" id="bbZ-qQ-8hw"/>
+                        <outlet property="textfield" destination="Y5K-fp-3dO" id="atc-DC-SWQ"/>
                         <outlet property="threadripperChecked" destination="YFF-EX-aeL" id="MSj-NI-CN7"/>
+                        <outlet property="tscAdjustResetChecked" destination="D0X-t8-vDc" id="8ai-If-pSd"/>
+                        <outlet property="usbInjectAllChecked" destination="h3S-sl-6lV" id="65K-pl-1TZ"/>
                         <outlet property="virtualSMCChecked" destination="lbr-dO-TxB" id="Gkr-Uk-vTU"/>
+                        <outlet property="voodooHDAChecked" destination="zb4-9d-i66" id="EDh-0V-daS"/>
+                        <outlet property="voodooTSCSyncChecked" destination="zMy-ks-Pwo" id="5gY-Z7-MRi"/>
+                        <outlet property="whatevergreenChecked" destination="hIN-Qd-vMG" id="LVV-Fn-A8d"/>
+                        <outlet property="xhciChecked" destination="phe-xo-PUR" id="tTx-6B-4TF"/>
+                        <outlet property="xhciUnsupportedChecked" destination="vdF-qL-ibG" id="AjF-qT-d9a"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75.5" y="855"/>
+            <point key="canvasLocation" x="75.5" y="1096.5"/>
         </scene>
     </scenes>
 </document>

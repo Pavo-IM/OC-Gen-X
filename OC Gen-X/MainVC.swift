@@ -17,13 +17,40 @@ class MainVC: NSViewController {
     @IBOutlet weak var virtualSMCChecked: NSButton!
     @IBOutlet weak var smcProcessorChecked: NSButton!
     @IBOutlet weak var smcSuperIOChecked: NSButton!
+    @IBOutlet weak var smcLightSensorChecked: NSButton!
+    @IBOutlet weak var smcBatteryManagerChecked: NSButton!
+    @IBOutlet weak var whatevergreenChecked: NSButton!
+    @IBOutlet weak var appleALCChecked: NSButton!
+    @IBOutlet weak var intelMausiChecked: NSButton!
+    @IBOutlet weak var smallTreeChecked: NSButton!
+    @IBOutlet weak var atherosChecked: NSButton!
+    @IBOutlet weak var realTekChecked: NSButton!
+    @IBOutlet weak var usbInjectAllChecked: NSButton!
+    @IBOutlet weak var xhciUnsupportedChecked: NSButton!
+    @IBOutlet weak var airportBrcmChecked: NSButton!
+    @IBOutlet weak var brcmPatchRamChecked: NSButton!
+    @IBOutlet weak var brcmBluetoothInjectorChecked: NSButton!
+    @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
+    @IBOutlet weak var brcmPatchRam3Checked: NSButton!
+    @IBOutlet weak var fxXlncUSBChecked: NSButton!
+    @IBOutlet weak var voodooHDAChecked: NSButton!
+    @IBOutlet weak var appleMCEReporterChecked: NSButton!
+    @IBOutlet weak var tscAdjustResetChecked: NSButton!
+    @IBOutlet weak var voodooTSCSyncChecked: NSButton!
+    @IBOutlet weak var nvmeFixChecked: NSButton!
+    @IBOutlet weak var hfsPlusChecked: NSButton!
+    @IBOutlet weak var openRuntimeChecked: NSButton!
+    @IBOutlet weak var openUSBChecked: NSButton!
+    @IBOutlet weak var nvmExpressChecked: NSButton!
+    @IBOutlet weak var hfsPlusLegacyuChecked: NSButton!
+    @IBOutlet weak var xhciChecked: NSButton!
+    @IBOutlet weak var textfield: NSTextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
-    
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
     }
@@ -31,7 +58,6 @@ class MainVC: NSViewController {
     
     @IBAction func generateClicked(_ sender: Any) {
         //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Bulldozer/Jaguar AMD specific info
-        //TODO: Add disclaimer to UI to tell users all generated info is from the offical supported guide from https://dortania.github.io/OpenCore-Desktop-Guide/.
         //TODO: Create UI textfield elements so users can add SMBIOS info themselves.
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
