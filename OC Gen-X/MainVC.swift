@@ -46,7 +46,6 @@ class MainVC: NSViewController {
     @IBOutlet weak var xhciChecked: NSButton!
     @IBOutlet weak var textfield: NSTextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -290,8 +289,56 @@ class MainVC: NSViewController {
         default:
             break
         }
-        for i in config.kernel.kPatch! {
-            print(i)
+        
+        let efidirName = "Desktop/EFI"
+        let fm = FileManager.default
+        let destDirURL = fm.homeDirectoryForCurrentUser
+        let deskDirString: String = destDirURL.appendingPathComponent(efidirName).path
+        if fm.fileExists(atPath: deskDirString) {
+            do {
+                try fm.trashItem(at: destDirURL.appendingPathComponent(efidirName), resultingItemURL: nil )
+                try fm.createDirectory(at: destDirURL.appendingPathComponent(efidirName), withIntermediateDirectories: false, attributes: nil)
+                let newdestDir = URL(fileURLWithPath: deskDirString)
+                let ocBootDir = newdestDir.appendingPathComponent("BOOT")
+                let ocDir = newdestDir.appendingPathComponent("OC")
+                try fm.createDirectory(at: ocBootDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocDir, withIntermediateDirectories: false, attributes: nil)
+                let ocACPIDir = ocDir.appendingPathComponent("ACPI")
+                let ocBootstrapDir = ocDir.appendingPathComponent("Bootstrap")
+                let ocDriversDir = ocDir.appendingPathComponent("Drivers")
+                let ocKextsDir = ocDir.appendingPathComponent("Kexts")
+                let ocResourcesDir = ocDir.appendingPathComponent("Resources")
+                let ocToolsDir = ocDir.appendingPathComponent("Tools")
+                try fm.createDirectory(at: ocACPIDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocBootstrapDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocDriversDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
+            }
+            catch {}
+        } else {
+            do {
+                try fm.createDirectory(at: destDirURL.appendingPathComponent(efidirName), withIntermediateDirectories: false, attributes: nil)
+                let newdestDir = URL(fileURLWithPath: deskDirString)
+                let ocBootDir = newdestDir.appendingPathComponent("BOOT")
+                let ocDir = newdestDir.appendingPathComponent("OC")
+                try fm.createDirectory(at: ocBootDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocDir, withIntermediateDirectories: false, attributes: nil)
+                let ocACPIDir = ocDir.appendingPathComponent("ACPI")
+                let ocBootstrapDir = ocDir.appendingPathComponent("Bootstrap")
+                let ocDriversDir = ocDir.appendingPathComponent("Drivers")
+                let ocKextsDir = ocDir.appendingPathComponent("Kexts")
+                let ocResourcesDir = ocDir.appendingPathComponent("Resources")
+                let ocToolsDir = ocDir.appendingPathComponent("Tools")
+                try fm.createDirectory(at: ocACPIDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocBootstrapDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocDriversDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
+                try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
+            }
+            catch {}
         }
     }
 }
