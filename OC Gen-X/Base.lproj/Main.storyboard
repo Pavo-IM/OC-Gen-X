@@ -707,8 +707,8 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="569"/>
+                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="272"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -721,17 +721,33 @@
                                     <action selector="generateClicked:" target="7uK-TB-ntZ" id="jbR-J6-sAL"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Z7c-dp-thl">
+                                <rect key="frame" x="18" y="37" width="761" height="32"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="*Disclaimer* The config.plist is based off the settings on" id="5gZ-sK-sE9">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-fp-3dO">
+                                <rect key="frame" x="18" y="20" width="761" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="center" title="https://dortania.github.io/OpenCore-Desktop-Guide/" id="O9I-Ci-F3S">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="475"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="178"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
                                         <view key="view" id="C1C-xa-78L">
-                                            <rect key="frame" x="10" y="33" width="791" height="429"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="215"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="arC-k3-phI">
-                                                    <rect key="frame" x="9" y="365" width="83" height="18"/>
+                                                    <rect key="frame" x="9" y="151" width="83" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Ivy Bridge" bezelStyle="regularSquare" imagePosition="left" inset="2" id="HZ2-2v-r96">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -741,7 +757,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-xg-ybM">
-                                                    <rect key="frame" x="9" y="339" width="69" height="18"/>
+                                                    <rect key="frame" x="9" y="125" width="69" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Haswell" bezelStyle="regularSquare" imagePosition="left" inset="2" id="MN4-d4-vLo">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -751,7 +767,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-FH-F4E">
-                                                    <rect key="frame" x="9" y="313" width="69" height="18"/>
+                                                    <rect key="frame" x="9" y="99" width="69" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Skylake" bezelStyle="regularSquare" imagePosition="left" inset="2" id="afu-ay-sGx">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -761,7 +777,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-g2-WWY">
-                                                    <rect key="frame" x="9" y="287" width="85" height="18"/>
+                                                    <rect key="frame" x="9" y="73" width="85" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Kaby Lake" bezelStyle="regularSquare" imagePosition="left" inset="2" id="E6q-nu-QRN">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -771,7 +787,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-Fz-70Q">
-                                                    <rect key="frame" x="9" y="187" width="83" height="18"/>
+                                                    <rect key="frame" x="9" y="-27" width="83" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Haswell-E" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KpI-jw-Vii">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -781,7 +797,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p55-Fb-A4q">
-                                                    <rect key="frame" x="9" y="161" width="95" height="18"/>
+                                                    <rect key="frame" x="9" y="-53" width="95" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Broadwell-E" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nh7-BO-Meg">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -791,7 +807,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-Te-85W">
-                                                    <rect key="frame" x="9" y="135" width="84" height="18"/>
+                                                    <rect key="frame" x="9" y="-79" width="84" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Skylake-X" bezelStyle="regularSquare" imagePosition="left" inset="2" id="auJ-pT-5l3">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -801,7 +817,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-Ee-gPO">
-                                                    <rect key="frame" x="9" y="35" width="125" height="18"/>
+                                                    <rect key="frame" x="9" y="-179" width="125" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Ryzen Zen/Zen 2" bezelStyle="regularSquare" imagePosition="left" inset="2" id="MiB-nH-3Ok">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -811,10 +827,10 @@
                                                     </connections>
                                                 </button>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-wH-ii6">
-                                                    <rect key="frame" x="10" y="390" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="176" width="771" height="5"/>
                                                 </box>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-zy-Quz">
-                                                    <rect key="frame" x="348" y="403" width="96" height="16"/>
+                                                    <rect key="frame" x="348" y="189" width="96" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Intel Consumer" id="dJk-VA-o4e">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -822,10 +838,10 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="h8w-7F-qHq">
-                                                    <rect key="frame" x="10" y="249" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="35" width="771" height="5"/>
                                                 </box>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NbE-uy-4f2">
-                                                    <rect key="frame" x="9" y="261" width="95" height="18"/>
+                                                    <rect key="frame" x="9" y="47" width="95" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Coffee Lake" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v5y-EW-Vvj">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -835,7 +851,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-Ud-Ml9">
-                                                    <rect key="frame" x="362" y="225" width="68" height="16"/>
+                                                    <rect key="frame" x="362" y="11" width="68" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Intel HEDT" id="NuB-U2-9fd">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -843,13 +859,13 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="We0-KK-fmZ">
-                                                    <rect key="frame" x="10" y="212" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="-2" width="771" height="5"/>
                                                 </box>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-26-MGn">
-                                                    <rect key="frame" x="10" y="123" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="-91" width="771" height="5"/>
                                                 </box>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nf9-hV-dOz">
-                                                    <rect key="frame" x="379" y="99" width="34" height="16"/>
+                                                    <rect key="frame" x="379" y="-115" width="34" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="AMD" id="Z9R-gJ-Gnm">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -857,10 +873,10 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box hidden="YES" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4ot-SR-6YO">
-                                                    <rect key="frame" x="10" y="86" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="-128" width="771" height="5"/>
                                                 </box>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bOp-3C-A40">
-                                                    <rect key="frame" x="9" y="61" width="124" height="18"/>
+                                                    <rect key="frame" x="9" y="-153" width="124" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Bulldozer/Jaguar" bezelStyle="regularSquare" imagePosition="left" inset="2" id="b7H-s6-xPK">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -870,7 +886,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YFF-EX-aeL">
-                                                    <rect key="frame" x="9" y="9" width="126" height="18"/>
+                                                    <rect key="frame" x="9" y="-205" width="126" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="ThreadRipper 1/2" bezelStyle="regularSquare" imagePosition="left" inset="2" id="XT3-ak-pUV">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -941,11 +957,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="108"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="124"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -1094,51 +1110,16 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                 <constraints>
                                                                     <constraint firstItem="tdD-cl-Nki" firstAttribute="leading" secondItem="zNn-Hb-Zsg" secondAttribute="leading" constant="10" id="CzN-2B-eC3"/>
                                                                     <constraint firstItem="tdD-cl-Nki" firstAttribute="top" secondItem="zNn-Hb-Zsg" secondAttribute="top" constant="20" id="Gab-o3-bUL"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tdD-cl-Nki" secondAttribute="trailing" symbolic="YES" id="ZtK-G7-8Nr"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="tdD-cl-Nki" secondAttribute="trailing" constant="20" symbolic="YES" id="ZtK-G7-8Nr"/>
                                                                     <constraint firstAttribute="bottom" secondItem="tdD-cl-Nki" secondAttribute="bottom" constant="20" id="qt5-BN-1Fk"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Ethernet" identifier="" id="jN4-l8-qvI">
                                                             <view key="view" id="lVD-up-8iH">
-                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="102"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-fA-SPR">
-                                                                        <rect key="frame" x="8" y="90" width="136" height="18"/>
-                                                                        <string key="toolTip">Intel onboard LAN driver for macOS.  Supports: 5 Series:
-82578LM
-82578LC
-82578DM
-82578DC 
-6 and 7 Series:
-82579LM
-82579V 
-8 and 9 Series:
-I217LM
-I217V
-I218LM
-I218V
-I218LM2
-I218V2
-I218LM3 
-100 Series:
-I219V
-I219LM
-I219V2
-I219LM2
-I219LM3 
-200 Series:
-I219LM
-I219V 
-300 Series:
-I219LM
-I219V</string>
-                                                                        <buttonCell key="cell" type="check" title="IntelMausiEthernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vAv-y8-VhO">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-PT-GyD">
                                                                         <rect key="frame" x="8" y="66" width="147" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SmallTreeIntel82576" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kOy-2E-PTF">
@@ -1163,199 +1144,100 @@ I219V</string>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="4NQ-a0-hoH"/>
                                                                     <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4ug-zg-Gr6"/>
-                                                                    <constraint firstItem="WYI-fA-SPR" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="7Ok-1c-EMI"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WYI-fA-SPR" secondAttribute="trailing" constant="20" symbolic="YES" id="GJd-T2-MeM"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="6zK-VB-yd5"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="peh-0s-slN" secondAttribute="trailing" constant="20" symbolic="YES" id="KCR-bC-u5F"/>
                                                                     <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="MVo-Tk-Vwt"/>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="OgQ-WK-a5V"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="hxI-x3-ZKc"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sCA-PT-GyD" secondAttribute="trailing" constant="20" symbolic="YES" id="nGG-mU-ehT"/>
-                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="WYI-fA-SPR" secondAttribute="bottom" constant="10" id="oZL-E8-Re2"/>
-                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="p7x-gC-xoS"/>
                                                                     <constraint firstAttribute="bottom" secondItem="peh-0s-slN" secondAttribute="bottom" constant="20" id="ppO-cH-vY7"/>
-                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="qo6-jx-CW8"/>
-                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="WYI-fA-SPR" secondAttribute="leading" id="vEr-q8-cAe"/>
-                                                                    <constraint firstItem="WYI-fA-SPR" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="vyZ-Lt-ZXf"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" symbolic="YES" id="yNL-y6-iZ7"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" constant="20" symbolic="YES" id="yNL-y6-iZ7"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="USB" identifier="" id="RqG-Fc-xie">
                                                             <view key="view" id="F3O-yf-zdV">
-                                                                <rect key="frame" x="10" y="33" width="785" height="78"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-sl-6lV">
-                                                                        <rect key="frame" x="8" y="42" width="97" height="18"/>
+                                                                        <rect key="frame" x="8" y="18" width="97" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="USBInjectAll" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ONZ-We-spM">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vdF-qL-ibG">
-                                                                        <rect key="frame" x="8" y="18" width="137" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="XHCI-unsupported" bezelStyle="regularSquare" imagePosition="left" inset="2" id="y0k-eh-2jG">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="vdF-qL-ibG" firstAttribute="top" secondItem="h3S-sl-6lV" secondAttribute="bottom" constant="10" id="RE9-hz-PVl"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h3S-sl-6lV" secondAttribute="trailing" symbolic="YES" id="RpG-Jh-tW6"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="h3S-sl-6lV" secondAttribute="bottom" constant="20" id="5mH-pE-iG6"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="h3S-sl-6lV" secondAttribute="trailing" constant="20" symbolic="YES" id="RpG-Jh-tW6"/>
                                                                     <constraint firstItem="h3S-sl-6lV" firstAttribute="leading" secondItem="F3O-yf-zdV" secondAttribute="leading" constant="10" id="Yfn-mR-hdG"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="vdF-qL-ibG" secondAttribute="bottom" constant="20" id="bqR-9Z-kHV"/>
                                                                     <constraint firstItem="h3S-sl-6lV" firstAttribute="top" secondItem="F3O-yf-zdV" secondAttribute="top" constant="20" id="ck6-hm-KEq"/>
-                                                                    <constraint firstItem="vdF-qL-ibG" firstAttribute="leading" secondItem="h3S-sl-6lV" secondAttribute="leading" id="ptJ-zB-opD"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vdF-qL-ibG" secondAttribute="trailing" symbolic="YES" id="zK0-7C-Qce"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="WiFi and Bluetooth" identifier="" id="Yj4-FR-J1v">
                                                             <view key="view" id="rPW-aE-Bjy">
-                                                                <rect key="frame" x="10" y="33" width="785" height="150"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-1S-rZh">
-                                                                        <rect key="frame" x="8" y="114" width="129" height="18"/>
+                                                                        <rect key="frame" x="8" y="18" width="129" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AirportBrcmFixup" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zEv-oT-t25">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gjG-JF-3EO">
-                                                                        <rect key="frame" x="8" y="90" width="117" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="BrcmPatchRAM" bezelStyle="regularSquare" imagePosition="left" inset="2" id="qj8-aB-jkB">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                    <box hidden="YES" horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Hzs-en-ddc">
-                                                                        <rect key="frame" x="18" y="20" width="5" height="62"/>
-                                                                    </box>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1qa-WA-xvA">
-                                                                        <rect key="frame" x="29" y="66" width="158" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="BrcmBluetoothInjector" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tyw-Uy-2yF">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WWx-xE-AlQ">
-                                                                        <rect key="frame" x="29" y="42" width="138" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="BrcmFirmwareData" bezelStyle="regularSquare" imagePosition="left" inset="2" id="lj4-5C-vI4">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QT7-Gc-Xup">
-                                                                        <rect key="frame" x="29" y="18" width="125" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="BrcmPatchRAM3" bezelStyle="regularSquare" imagePosition="left" inset="2" id="N6I-GU-dI5">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="WWx-xE-AlQ" firstAttribute="top" secondItem="1qa-WA-xvA" secondAttribute="bottom" constant="10" id="0Wj-nx-1tX"/>
-                                                                    <constraint firstItem="QT7-Gc-Xup" firstAttribute="leading" secondItem="1qa-WA-xvA" secondAttribute="leading" id="5Ws-yd-KnB"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="QT7-Gc-Xup" secondAttribute="trailing" constant="20" symbolic="YES" id="7Up-Xc-ANg"/>
-                                                                    <constraint firstItem="1qa-WA-xvA" firstAttribute="leading" secondItem="Hzs-en-ddc" secondAttribute="trailing" constant="10" id="9rw-fg-bhO"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WWx-xE-AlQ" secondAttribute="trailing" symbolic="YES" id="ADv-dh-UGA"/>
-                                                                    <constraint firstItem="WWx-xE-AlQ" firstAttribute="leading" secondItem="1qa-WA-xvA" secondAttribute="leading" id="F19-dX-Na2"/>
                                                                     <constraint firstItem="T1u-1S-rZh" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="KrZ-X9-GDb"/>
-                                                                    <constraint firstItem="Hzs-en-ddc" firstAttribute="bottom" secondItem="QT7-Gc-Xup" secondAttribute="bottom" id="LjK-9H-hoj"/>
-                                                                    <constraint firstItem="gjG-JF-3EO" firstAttribute="leading" secondItem="T1u-1S-rZh" secondAttribute="leading" id="Pi4-Lu-sL1"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1qa-WA-xvA" secondAttribute="trailing" symbolic="YES" id="SK0-yZ-znA"/>
-                                                                    <constraint firstItem="Hzs-en-ddc" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="20" id="WKt-ld-8S4"/>
-                                                                    <constraint firstItem="1qa-WA-xvA" firstAttribute="top" secondItem="gjG-JF-3EO" secondAttribute="bottom" constant="10" id="Wkv-rQ-Wcx"/>
-                                                                    <constraint firstItem="gjG-JF-3EO" firstAttribute="top" secondItem="T1u-1S-rZh" secondAttribute="bottom" constant="10" id="XY8-SE-GfU"/>
-                                                                    <constraint firstItem="Hzs-en-ddc" firstAttribute="top" secondItem="1qa-WA-xvA" secondAttribute="top" id="b6C-HD-kFH"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gjG-JF-3EO" secondAttribute="trailing" symbolic="YES" id="bKE-Xh-riw"/>
-                                                                    <constraint firstItem="QT7-Gc-Xup" firstAttribute="top" secondItem="WWx-xE-AlQ" secondAttribute="bottom" constant="10" id="eee-Ez-2TF"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="T1u-1S-rZh" secondAttribute="bottom" constant="20" id="eom-j6-Eha"/>
                                                                     <constraint firstItem="T1u-1S-rZh" firstAttribute="top" secondItem="rPW-aE-Bjy" secondAttribute="top" constant="20" id="hbL-uL-KAV"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="QT7-Gc-Xup" secondAttribute="bottom" constant="20" id="tJZ-nq-zgE"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T1u-1S-rZh" secondAttribute="trailing" symbolic="YES" id="tba-kU-GKF"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T1u-1S-rZh" secondAttribute="trailing" constant="20" symbolic="YES" id="tba-kU-GKF"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="AMD Specific" identifier="" id="ga0-uj-po8">
                                                             <view key="view" id="N7A-Ev-hwK">
-                                                                <rect key="frame" x="10" y="33" width="785" height="78"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-Ij-CXE">
-                                                                        <rect key="frame" x="8" y="42" width="103" height="18"/>
+                                                                        <rect key="frame" x="8" y="18" width="103" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="XLNCUSBFIX" bezelStyle="regularSquare" imagePosition="left" inset="2" id="58Z-iD-hyi">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zb4-9d-i66">
-                                                                        <rect key="frame" x="8" y="18" width="96" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="VoodooHDA" bezelStyle="regularSquare" imagePosition="left" inset="2" id="JmU-2A-zd6">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="zb4-9d-i66" firstAttribute="top" secondItem="u7Y-Ij-CXE" secondAttribute="bottom" constant="10" id="8Ce-mH-tGA"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zb4-9d-i66" secondAttribute="trailing" symbolic="YES" id="CK8-ML-HE9"/>
-                                                                    <constraint firstItem="zb4-9d-i66" firstAttribute="leading" secondItem="u7Y-Ij-CXE" secondAttribute="leading" id="HpS-eH-5th"/>
                                                                     <constraint firstItem="u7Y-Ij-CXE" firstAttribute="leading" secondItem="N7A-Ev-hwK" secondAttribute="leading" constant="10" id="PH2-pd-FUt"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="zb4-9d-i66" secondAttribute="bottom" constant="20" id="W2y-EG-HUJ"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="u7Y-Ij-CXE" secondAttribute="bottom" constant="20" id="bYW-jm-G8O"/>
                                                                     <constraint firstItem="u7Y-Ij-CXE" firstAttribute="top" secondItem="N7A-Ev-hwK" secondAttribute="top" constant="20" id="oLb-uw-qTC"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7Y-Ij-CXE" secondAttribute="trailing" symbolic="YES" id="sNa-77-OvR"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7Y-Ij-CXE" secondAttribute="trailing" constant="20" symbolic="YES" id="sNa-77-OvR"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Extra's" identifier="" id="4t3-PM-pAl">
                                                             <view key="view" id="KX3-xG-Ws2">
-                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ws-KvM">
-                                                                        <rect key="frame" x="8" y="90" width="188" height="18"/>
+                                                                        <rect key="frame" x="8" y="18" width="188" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AppleMCEReporterDisabler" bezelStyle="regularSquare" imagePosition="left" inset="2" id="PvA-e7-VmS">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-ks-Pwo">
-                                                                        <rect key="frame" x="8" y="66" width="123" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="VoodooTSCSync" bezelStyle="regularSquare" imagePosition="left" inset="2" id="drT-zS-40e">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="D0X-t8-vDc">
-                                                                        <rect key="frame" x="8" y="42" width="120" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="TSCAdjustReset" bezelStyle="regularSquare" imagePosition="left" inset="2" id="u6v-gt-li6">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="loP-ez-gz7">
-                                                                        <rect key="frame" x="8" y="18" width="77" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="NVMeFix" bezelStyle="regularSquare" imagePosition="left" inset="2" id="6a6-OB-unK">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="zMy-ks-Pwo" firstAttribute="top" secondItem="LBK-Ws-KvM" secondAttribute="bottom" constant="10" id="8IG-Jd-M68"/>
-                                                                    <constraint firstItem="zMy-ks-Pwo" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="KhI-Te-CyG"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="loP-ez-gz7" secondAttribute="trailing" symbolic="YES" id="ND4-0p-Qdr"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zMy-ks-Pwo" secondAttribute="trailing" symbolic="YES" id="R0S-es-kNB"/>
-                                                                    <constraint firstItem="loP-ez-gz7" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="Ryc-74-67g"/>
-                                                                    <constraint firstItem="D0X-t8-vDc" firstAttribute="leading" secondItem="LBK-Ws-KvM" secondAttribute="leading" id="SYY-tR-CqU"/>
-                                                                    <constraint firstItem="loP-ez-gz7" firstAttribute="top" secondItem="D0X-t8-vDc" secondAttribute="bottom" constant="10" id="TVy-vr-dgA"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="LBK-Ws-KvM" secondAttribute="bottom" constant="20" id="Jgv-bG-azY"/>
                                                                     <constraint firstItem="LBK-Ws-KvM" firstAttribute="leading" secondItem="KX3-xG-Ws2" secondAttribute="leading" constant="10" id="Xcm-pC-el1"/>
-                                                                    <constraint firstItem="D0X-t8-vDc" firstAttribute="top" secondItem="zMy-ks-Pwo" secondAttribute="bottom" constant="10" id="hQp-kK-PZg"/>
                                                                     <constraint firstItem="LBK-Ws-KvM" firstAttribute="top" secondItem="KX3-xG-Ws2" secondAttribute="top" constant="20" id="iu7-yG-D4E"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="loP-ez-gz7" secondAttribute="bottom" constant="20" id="kte-l9-tRh"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LBK-Ws-KvM" secondAttribute="trailing" symbolic="YES" id="nWI-CW-oGZ"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="D0X-t8-vDc" secondAttribute="trailing" symbolic="YES" id="rit-PR-caP"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LBK-Ws-KvM" secondAttribute="trailing" constant="20" symbolic="YES" id="nWI-CW-oGZ"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1372,25 +1254,18 @@ I219V</string>
                                     </tabViewItem>
                                     <tabViewItem label="Firmware Drivers" identifier="" id="ZPE-fT-6Cu">
                                         <view key="view" id="UVk-Ia-OKZ">
-                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="132"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="gac-5f-5uI">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="148"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="UEFI" identifier="" id="igs-eO-j1W">
                                                             <view key="view" id="Jq2-Uk-wCu">
-                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B96-MH-cRB">
-                                                                        <rect key="frame" x="8" y="42" width="87" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="HfsPlus.efi" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3Un-ok-0yG">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-be-75d">
                                                                         <rect key="frame" x="8" y="18" width="124" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="OpenRuntime.efi" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Z9V-d8-hyP">
@@ -1400,43 +1275,34 @@ I219V</string>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="leading" secondItem="gLn-be-75d" secondAttribute="leading" id="6FE-e1-WpF"/>
                                                                     <constraint firstAttribute="bottom" secondItem="gLn-be-75d" secondAttribute="bottom" constant="20" id="6Ri-f9-SBa"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLn-be-75d" secondAttribute="trailing" symbolic="YES" id="Rsg-eV-Hmq"/>
-                                                                    <constraint firstItem="B96-MH-cRB" firstAttribute="leading" secondItem="Jq2-Uk-wCu" secondAttribute="leading" constant="10" id="SxU-bS-klX"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B96-MH-cRB" secondAttribute="trailing" symbolic="YES" id="mLQ-WS-TZh"/>
-                                                                    <constraint firstItem="gLn-be-75d" firstAttribute="top" secondItem="B96-MH-cRB" secondAttribute="bottom" constant="10" id="z46-sx-PmY"/>
+                                                                    <constraint firstItem="gLn-be-75d" firstAttribute="top" secondItem="Jq2-Uk-wCu" secondAttribute="top" constant="20" id="vxo-9T-4EO"/>
+                                                                    <constraint firstItem="gLn-be-75d" firstAttribute="leading" secondItem="Jq2-Uk-wCu" secondAttribute="leading" constant="10" id="x31-cw-Naz"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
                                                         <tabViewItem label="Legacy (BIOS)" identifier="" id="iEV-2n-Bnf">
                                                             <view key="view" id="wr8-j1-shI">
-                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="102"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-Nu-Zck">
-                                                                        <rect key="frame" x="8" y="90" width="137" height="18"/>
+                                                                        <rect key="frame" x="8" y="66" width="137" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="OpenUsbKbDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Fnr-dc-RFu">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UuB-sS-39W">
-                                                                        <rect key="frame" x="8" y="66" width="140" height="18"/>
+                                                                        <rect key="frame" x="8" y="42" width="140" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="NvmExpressDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Is1-0J-fVS">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MP8-Nf-YEX">
-                                                                        <rect key="frame" x="8" y="18" width="130" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="HfsPlusLegacy.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="aWr-gR-hWB">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="phe-xo-PUR">
-                                                                        <rect key="frame" x="8" y="42" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="18" width="91" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="XhciDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="TJs-qc-bOt">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1446,17 +1312,14 @@ I219V</string>
                                                                 <constraints>
                                                                     <constraint firstItem="Be6-Nu-Zck" firstAttribute="leading" secondItem="wr8-j1-shI" secondAttribute="leading" constant="10" id="CAb-X0-1jL"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UuB-sS-39W" secondAttribute="trailing" constant="20" symbolic="YES" id="Cfb-dE-l6W"/>
+                                                                    <constraint firstItem="Be6-Nu-Zck" firstAttribute="top" secondItem="wr8-j1-shI" secondAttribute="top" constant="20" id="H6S-4t-lBh"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="phe-xo-PUR" secondAttribute="trailing" constant="20" symbolic="YES" id="IrW-NP-now"/>
-                                                                    <constraint firstItem="MP8-Nf-YEX" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="J9z-By-NYQ"/>
                                                                     <constraint firstItem="UuB-sS-39W" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="KxH-H8-p0X"/>
                                                                     <constraint firstItem="UuB-sS-39W" firstAttribute="top" secondItem="Be6-Nu-Zck" secondAttribute="bottom" constant="10" id="NVb-MA-Mv1"/>
-                                                                    <constraint firstItem="Be6-Nu-Zck" firstAttribute="top" secondItem="wr8-j1-shI" secondAttribute="top" constant="20" id="Nzw-hX-jAN"/>
                                                                     <constraint firstItem="phe-xo-PUR" firstAttribute="top" secondItem="UuB-sS-39W" secondAttribute="bottom" constant="10" id="P0M-RF-CGP"/>
-                                                                    <constraint firstItem="MP8-Nf-YEX" firstAttribute="top" secondItem="phe-xo-PUR" secondAttribute="bottom" constant="10" id="TFx-qn-m32"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Be6-Nu-Zck" secondAttribute="trailing" symbolic="YES" id="UA1-0k-kYR"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="MP8-Nf-YEX" secondAttribute="bottom" constant="20" id="W5Z-th-tVY"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Be6-Nu-Zck" secondAttribute="trailing" constant="20" symbolic="YES" id="UA1-0k-kYR"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="phe-xo-PUR" secondAttribute="bottom" constant="20" id="j3v-rx-V8v"/>
                                                                     <constraint firstItem="phe-xo-PUR" firstAttribute="leading" secondItem="Be6-Nu-Zck" secondAttribute="leading" id="pGS-Cv-Xbe"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MP8-Nf-YEX" secondAttribute="trailing" constant="20" symbolic="YES" id="uIk-YU-GWQ"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1473,22 +1336,6 @@ I219V</string>
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Z7c-dp-thl">
-                                <rect key="frame" x="18" y="37" width="761" height="32"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="center" title="*Disclaimer* The config.plist is based off the settings on" id="5gZ-sK-sE9">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-fp-3dO">
-                                <rect key="frame" x="18" y="20" width="761" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="center" title="https://dortania.github.io/OpenCore-Desktop-Guide/" id="O9I-Ci-F3S">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UIh-RX-3Ag" secondAttribute="trailing" id="2Aa-if-5FR"/>
@@ -1510,24 +1357,16 @@ I219V</string>
                         <outlet property="appleALCChecked" destination="tdD-cl-Nki" id="0el-9i-FBU"/>
                         <outlet property="appleMCEReporterChecked" destination="LBK-Ws-KvM" id="ZGl-fo-17b"/>
                         <outlet property="atherosChecked" destination="xhE-62-ws7" id="okM-0r-Pa8"/>
-                        <outlet property="brcmBluetoothInjectorChecked" destination="1qa-WA-xvA" id="nQG-ib-z1u"/>
-                        <outlet property="brcmFirmwareDataChecked" destination="WWx-xE-AlQ" id="H1V-f5-i7T"/>
-                        <outlet property="brcmPatchRam3Checked" destination="QT7-Gc-Xup" id="YdF-cV-fQr"/>
-                        <outlet property="brcmPatchRamChecked" destination="gjG-JF-3EO" id="3XF-7d-PAm"/>
                         <outlet property="broadwellEChecked" destination="p55-Fb-A4q" id="7sg-3I-0xf"/>
                         <outlet property="bulldozerChecked" destination="bOp-3C-A40" id="MyW-0g-uj4"/>
                         <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
                         <outlet property="fxXlncUSBChecked" destination="u7Y-Ij-CXE" id="bkO-LJ-yjq"/>
                         <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
                         <outlet property="haswellEChecked" destination="Rhr-Fz-70Q" id="TF8-i5-Z6x"/>
-                        <outlet property="hfsPlusChecked" destination="B96-MH-cRB" id="xVM-rg-jGu"/>
-                        <outlet property="hfsPlusLegacyuChecked" destination="MP8-Nf-YEX" id="VtU-Ft-zsZ"/>
-                        <outlet property="intelMausiChecked" destination="WYI-fA-SPR" id="L2G-1m-p79"/>
                         <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="RbQ-fl-hYL"/>
                         <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
                         <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
                         <outlet property="nvmExpressChecked" destination="UuB-sS-39W" id="rrz-TN-2rm"/>
-                        <outlet property="nvmeFixChecked" destination="loP-ez-gz7" id="WqY-gI-ota"/>
                         <outlet property="openRuntimeChecked" destination="gLn-be-75d" id="PYu-FU-0CR"/>
                         <outlet property="openUSBChecked" destination="Be6-Nu-Zck" id="dsc-zl-9OA"/>
                         <outlet property="realTekChecked" destination="peh-0s-slN" id="azM-P4-3bM"/>
@@ -1541,18 +1380,14 @@ I219V</string>
                         <outlet property="smcSuperIOChecked" destination="0Ws-sH-cwr" id="bbZ-qQ-8hw"/>
                         <outlet property="textfield" destination="Y5K-fp-3dO" id="atc-DC-SWQ"/>
                         <outlet property="threadripperChecked" destination="YFF-EX-aeL" id="MSj-NI-CN7"/>
-                        <outlet property="tscAdjustResetChecked" destination="D0X-t8-vDc" id="8ai-If-pSd"/>
                         <outlet property="usbInjectAllChecked" destination="h3S-sl-6lV" id="65K-pl-1TZ"/>
                         <outlet property="virtualSMCChecked" destination="lbr-dO-TxB" id="Gkr-Uk-vTU"/>
-                        <outlet property="voodooHDAChecked" destination="zb4-9d-i66" id="EDh-0V-daS"/>
-                        <outlet property="voodooTSCSyncChecked" destination="zMy-ks-Pwo" id="5gY-Z7-MRi"/>
                         <outlet property="whatevergreenChecked" destination="hIN-Qd-vMG" id="LVV-Fn-A8d"/>
                         <outlet property="xhciChecked" destination="phe-xo-PUR" id="tTx-6B-4TF"/>
-                        <outlet property="xhciUnsupportedChecked" destination="vdF-qL-ibG" id="AjF-qT-d9a"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75.5" y="1096.5"/>
+            <point key="canvasLocation" x="75.5" y="1166.5"/>
         </scene>
     </scenes>
 </document>
