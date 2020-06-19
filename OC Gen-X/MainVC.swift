@@ -33,16 +33,10 @@ class MainVC: NSViewController {
     @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
     @IBOutlet weak var brcmPatchRam3Checked: NSButton!
     @IBOutlet weak var fxXlncUSBChecked: NSButton!
-    @IBOutlet weak var voodooHDAChecked: NSButton!
     @IBOutlet weak var appleMCEReporterChecked: NSButton!
-    @IBOutlet weak var tscAdjustResetChecked: NSButton!
-    @IBOutlet weak var voodooTSCSyncChecked: NSButton!
-    @IBOutlet weak var nvmeFixChecked: NSButton!
-    @IBOutlet weak var hfsPlusChecked: NSButton!
     @IBOutlet weak var openRuntimeChecked: NSButton!
     @IBOutlet weak var openUSBChecked: NSButton!
     @IBOutlet weak var nvmExpressChecked: NSButton!
-    @IBOutlet weak var hfsPlusLegacyuChecked: NSButton!
     @IBOutlet weak var xhciChecked: NSButton!
     @IBOutlet weak var textfield: NSTextField!
     
@@ -54,6 +48,31 @@ class MainVC: NSViewController {
     @IBAction func systemTypeChecked(_ sender: NSButton) {
     }
     
+    func kextCopy (kextname: String, item: String, location: URL) {
+        let bundle = Bundle.main
+        let fm = FileManager.default
+        let kextname = bundle.path(forResource: "\(item)", ofType: ".kext")
+        let kextnameURL = URL(fileURLWithPath: kextname!)
+        let kextnameDir = "\(item).kext"
+        do {
+            try fm.copyItem(at: kextnameURL, to: location.appendingPathComponent(kextnameDir))
+        }
+        catch {
+        }
+    }
+    
+    func driverCopy (drivername: String, item: String, location: URL) {
+        let bundle = Bundle.main
+        let fm = FileManager.default
+        let drivername = bundle.path(forResource: "\(item)", ofType: ".efi")
+        let drivernameURL = URL(fileURLWithPath: drivername!)
+        let drivernameDir = "\(item).efi"
+        do {
+            try fm.copyItem(at: drivernameURL, to: location.appendingPathComponent(drivernameDir))
+        }
+        catch {
+        }
+    }
     
     @IBAction func generateClicked(_ sender: Any) {
         //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Bulldozer/Jaguar AMD specific info
@@ -290,6 +309,15 @@ class MainVC: NSViewController {
             break
         }
         
+        switch liluChecked.state {
+        case .on:
+            let liluAdd = kAdd(bundlePath: "Lilu.kext", comment: "", enabled: true, executablePath: "Contents/MacOS/Lilu", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+            config.kernel.kAdd.removeAll()
+            config.kernel.kAdd.append(liluAdd)
+        default:
+            break
+        }
+        
         let efidirName = "Desktop/EFI"
         let fm = FileManager.default
         let destDirURL = fm.homeDirectoryForCurrentUser
@@ -315,8 +343,67 @@ class MainVC: NSViewController {
                 try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
+                if liluChecked.state == .on {
+                    kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
+                }
+                if virtualSMCChecked.state == .on {
+                    kextCopy(kextname: "virtualsmc", item: "VirtualSMC", location: ocKextsDir)
+                }
+                if smcProcessorChecked.state == .on {
+                    kextCopy(kextname: "smcprocessor", item: "SMCProcessor", location: ocKextsDir)
+                }
+                if smcSuperIOChecked.state == .on {
+                    kextCopy(kextname: "smcSuperIO", item: "SMCSuperIO", location: ocKextsDir)
+                }
+                if smcLightSensorChecked.state == .on {
+                    kextCopy(kextname: "smcLightSensor", item: "SMCLightSensor", location: ocKextsDir)
+                }
+                if smcBatteryManagerChecked.state == .on {
+                    kextCopy(kextname: "SMCBatteryManager", item: "SMCBatteryManager", location: ocKextsDir)
+                }
+                if whatevergreenChecked.state == .on {
+                    kextCopy(kextname: "whatevergreen", item: "WhateverGreen", location: ocKextsDir)
+                }
+                if appleALCChecked.state == .on {
+                    kextCopy(kextname: "appleALC", item: "AppleALC", location: ocKextsDir)
+                }
+                if smallTreeChecked.state == .on {
+                    kextCopy(kextname: "smallTree", item: "SmallTreeIntel82576", location: ocKextsDir)
+                }
+                if atherosChecked.state == .on {
+                    kextCopy(kextname: "atheros", item: "AtherosE2200Ethernet", location: ocKextsDir)
+                }
+                if realTekChecked.state == .on {
+                    kextCopy(kextname: "realTek", item: "RealtekRTL8111", location: ocKextsDir)
+                }
+                if usbInjectAllChecked.state == .on {
+                    kextCopy(kextname: "usbInjectAll", item: "USBInjectAll", location: ocKextsDir)
+                }
+                if airportBrcmChecked.state == .on {
+                    kextCopy(kextname: "airportBrcm", item: "AirportBrcmFixup", location: ocKextsDir)
+                }
+                if fxXlncUSBChecked.state == .on {
+                    kextCopy(kextname: "fxXlncUSB", item: "XLNCUSBFix", location: ocKextsDir)
+                }
+                if appleMCEReporterChecked.state == .on {
+                    kextCopy(kextname: "appleMCEReporter", item: "AppleMCEReporterDisabler", location: ocKextsDir)
+                }
+                if openRuntimeChecked.state == .on {
+                    driverCopy(drivername: "openRuntime", item: "OpenRuntime", location: ocDriversDir)
+                }
+                if openUSBChecked.state == .on {
+                    driverCopy(drivername: "openUSB", item: "OpenUsbKbDxe", location: ocDriversDir)
+                }
+                if nvmExpressChecked.state == .on {
+                    driverCopy(drivername: "nvmExpress", item: "NvmExpressDxe", location: ocDriversDir)
+                }
+                if xhciChecked.state == .on {
+                    driverCopy(drivername: "xhci", item: "XhciDxe", location: ocDriversDir)
+                }
+                
             }
-            catch {}
+            catch {
+            }
         } else {
             do {
                 try fm.createDirectory(at: destDirURL.appendingPathComponent(efidirName), withIntermediateDirectories: false, attributes: nil)
@@ -337,8 +424,66 @@ class MainVC: NSViewController {
                 try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
+                if liluChecked.state == .on {
+                    kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
+                }
+                if virtualSMCChecked.state == .on {
+                    kextCopy(kextname: "virtualsmc", item: "VirtualSMC", location: ocKextsDir)
+                }
+                if smcProcessorChecked.state == .on {
+                    kextCopy(kextname: "smcprocessor", item: "SMCProcessor", location: ocKextsDir)
+                }
+                if smcSuperIOChecked.state == .on {
+                    kextCopy(kextname: "smcSuperIO", item: "SMCSuperIO", location: ocKextsDir)
+                }
+                if smcLightSensorChecked.state == .on {
+                    kextCopy(kextname: "smcLightSensor", item: "SMCLightSensor", location: ocKextsDir)
+                }
+                if smcBatteryManagerChecked.state == .on {
+                    kextCopy(kextname: "SMCBatteryManager", item: "SMCBatteryManager", location: ocKextsDir)
+                }
+                if whatevergreenChecked.state == .on {
+                    kextCopy(kextname: "whatevergreen", item: "WhateverGreen", location: ocKextsDir)
+                }
+                if appleALCChecked.state == .on {
+                    kextCopy(kextname: "appleALC", item: "AppleALC", location: ocKextsDir)
+                }
+                if smallTreeChecked.state == .on {
+                    kextCopy(kextname: "smallTree", item: "SmallTreeIntel82576", location: ocKextsDir)
+                }
+                if atherosChecked.state == .on {
+                    kextCopy(kextname: "atheros", item: "AtherosE2200Ethernet", location: ocKextsDir)
+                }
+                if realTekChecked.state == .on {
+                    kextCopy(kextname: "realTek", item: "RealtekRTL8111", location: ocKextsDir)
+                }
+                if usbInjectAllChecked.state == .on {
+                    kextCopy(kextname: "usbInjectAll", item: "USBInjectAll", location: ocKextsDir)
+                }
+                if airportBrcmChecked.state == .on {
+                    kextCopy(kextname: "airportBrcm", item: "AirportBrcmFixup", location: ocKextsDir)
+                }
+                if fxXlncUSBChecked.state == .on {
+                    kextCopy(kextname: "fxXlncUSB", item: "XLNCUSBFix", location: ocKextsDir)
+                }
+                if appleMCEReporterChecked.state == .on {
+                    kextCopy(kextname: "appleMCEReporter", item: "AppleMCEReporterDisabler", location: ocKextsDir)
+                }
+                if openRuntimeChecked.state == .on {
+                    driverCopy(drivername: "openRuntime", item: "OpenRuntime", location: ocDriversDir)
+                }
+                if openUSBChecked.state == .on {
+                    driverCopy(drivername: "openUSB", item: "OpenUsbKbDxe", location: ocDriversDir)
+                }
+                if nvmExpressChecked.state == .on {
+                    driverCopy(drivername: "nvmExpress", item: "NvmExpressDxe", location: ocDriversDir)
+                }
+                if xhciChecked.state == .on {
+                    driverCopy(drivername: "xhci", item: "XhciDxe", location: ocDriversDir)
+                }
             }
-            catch {}
+            catch {
+            }
         }
     }
 }

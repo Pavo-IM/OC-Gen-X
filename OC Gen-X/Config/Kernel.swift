@@ -17,7 +17,23 @@ struct kernel: Codable {
 }
 
 struct kAdd: Codable {
+    var bundlePath: String
+    var comment: String
+    var enabled: Bool
+    var executablePath: String
+    var maxKernel: String
+    var minKernel: String
+    var plistPath: String
     
+    enum CodingKeys: String, CodingKey {
+        case bundlePath = "BundlePath"
+        case comment = "Comment"
+        case enabled = "Enabled"
+        case executablePath = "ExecutablePath"
+        case maxKernel = "MaxKernel"
+        case minKernel = "MinKernel"
+        case plistPath = "PlistPath"
+    }
 }
 
 struct kBlock: Codable {

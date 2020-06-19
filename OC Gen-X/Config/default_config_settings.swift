@@ -13,7 +13,7 @@ var config = Root(
     deviceProperties: deviceProperties(add: [dpAdd()],
                       delete: [dpDelete()]),
                 
-    kernel: kernel(kAdd: [kAdd()],
+    kernel: kernel(kAdd: [kAdd(bundlePath: "", comment: "", enabled: false, executablePath: "", maxKernel: "", minKernel: "", plistPath: "")],
             kBlock: [kBlock()],
             emulate: emulate(cpuid1Data: Data(), cpuid1Mask: Data()),
             kPatch: [kPatch(base: "", comment: "", count: 0, enabled: false, find: Data(), identifier: "", limit: 0, mask: Data(), maxKernel: "", minKernel: "", replace: Data(), replaceMask: Data(), skip: 0)],
