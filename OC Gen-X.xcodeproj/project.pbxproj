@@ -45,8 +45,6 @@
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
-		CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8624218ED90057656E /* 300px-Redpill2.png */; };
-		CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */ = {isa = PBXBuildFile; fileRef = CFF4DB8724218ED90057656E /* 300px-Bluepill.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,8 +89,6 @@
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
-		CFF4DB8624218ED90057656E /* 300px-Redpill2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Redpill2.png"; sourceTree = "<group>"; };
-		CFF4DB8724218ED90057656E /* 300px-Bluepill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "300px-Bluepill.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				CF6F1116241E96C200B70805 /* Config */,
-				CFF4DB8124218D690057656E /* Images */,
 				CF4C2008243D067000D2F187 /* Kexts */,
 				CF4C2035243D077E00D2F187 /* OC Files */,
 				CF4C200A243D069000D2F187 /* Drivers */,
@@ -200,15 +195,6 @@
 				CFC7C52524983D4C000CEF89 /* default_config_settings.swift */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		CFF4DB8124218D690057656E /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				CFF4DB8724218ED90057656E /* 300px-Bluepill.png */,
-				CFF4DB8624218ED90057656E /* 300px-Redpill2.png */,
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +260,6 @@
 				CF4C2022243D070E00D2F187 /* SMCBatteryManager.kext in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
-				CFF4DB8924218ED90057656E /* 300px-Bluepill.png in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CF4C2024243D070E00D2F187 /* VirtualSMC.kext in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
@@ -294,7 +279,6 @@
 				CF4C2028243D072300D2F187 /* AppleALC.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
 				CF4C2023243D070E00D2F187 /* SMCProcessor.kext in Resources */,
-				CFF4DB8824218ED90057656E /* 300px-Redpill2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
