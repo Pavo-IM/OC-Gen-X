@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="221"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="340"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -738,7 +738,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="107"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="226"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -931,11 +931,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="113"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="180"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="129"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="196"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -943,11 +943,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="93"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="83"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="57" width="44" height="18"/>
+                                                                        <rect key="frame" x="8" y="47" width="44" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -966,7 +966,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="33" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="23" width="91" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1139,18 +1139,18 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="Ethernet" identifier="" id="jN4-l8-qvI">
                                                             <view key="view" id="lVD-up-8iH">
-                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-PT-GyD">
-                                                                        <rect key="frame" x="8" y="90" width="147" height="18"/>
+                                                                        <rect key="frame" x="8" y="114" width="147" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SmallTreeIntel82576" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kOy-2E-PTF">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-62-ws7">
-                                                                        <rect key="frame" x="8" y="66" width="161" height="18"/>
+                                                                        <rect key="frame" x="8" y="90" width="161" height="18"/>
                                                                         <string key="toolTip">Qualcomm Atheros Killer E2200 driver for macOS.  Supports: Qualcomm Atheros AR816x, AR817x, Killer E220x, Killer E2400 and Killer E2500</string>
                                                                         <buttonCell key="cell" type="check" title="AtherosE2200Ethernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RyY-7M-g0k">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1158,34 +1158,44 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button toolTip="OS X open source driver for the Realtek RTL8111/8168 family.  Supports: Realtek RTL8111/8168 B/C/D/E/F/G/H" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="peh-0s-slN">
-                                                                        <rect key="frame" x="8" y="42" width="117" height="18"/>
+                                                                        <rect key="frame" x="8" y="66" width="117" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="RealtekRTL8111" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pdO-v3-bFc">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q76-Th-577">
-                                                                        <rect key="frame" x="8" y="18" width="84" height="18"/>
+                                                                        <rect key="frame" x="8" y="42" width="84" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="IntelMausi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iTP-dz-xbQ">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Qj-MH-Oax">
+                                                                        <rect key="frame" x="8" y="18" width="157" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="LucyRTL8125Ethernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="H8P-ij-rPR">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="0xA-iw-HKf"/>
-                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4na-Vo-zYe"/>
-                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="AbG-qm-dZs"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q76-Th-577" secondAttribute="trailing" symbolic="YES" id="GsL-qE-XxA"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="q76-Th-577" secondAttribute="bottom" constant="20" id="Jnk-zI-YP9"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" symbolic="YES" id="ZPr-Nr-hhy"/>
-                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="aNy-yz-8aW"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sCA-PT-GyD" secondAttribute="trailing" symbolic="YES" id="ghL-Fw-PBZ"/>
-                                                                    <constraint firstItem="q76-Th-577" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="jmv-hZ-fRe"/>
-                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="sTF-Sd-4wk"/>
-                                                                    <constraint firstItem="q76-Th-577" firstAttribute="top" secondItem="peh-0s-slN" secondAttribute="bottom" constant="10" id="uIS-vd-mqt"/>
-                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="yto-h4-VkG"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="peh-0s-slN" secondAttribute="trailing" symbolic="YES" id="zhb-uc-7XB"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Qj-MH-Oax" secondAttribute="trailing" symbolic="YES" id="4R6-nc-4FL"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="peh-0s-slN" secondAttribute="trailing" symbolic="YES" id="5ru-Y7-ieR"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="6sa-rM-eBa"/>
+                                                                    <constraint firstItem="0Qj-MH-Oax" firstAttribute="top" secondItem="q76-Th-577" secondAttribute="bottom" constant="10" id="79m-1o-kar"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="EZe-T4-UxY"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" symbolic="YES" id="Hsh-M0-ok6"/>
+                                                                    <constraint firstItem="0Qj-MH-Oax" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="IEb-WX-Nvg"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="0Qj-MH-Oax" secondAttribute="bottom" constant="20" id="NfZ-lq-EMA"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q76-Th-577" secondAttribute="trailing" symbolic="YES" id="SJL-IO-fzb"/>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="ZK4-aX-b9C"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="gJP-Ii-ZiV"/>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="lAL-hL-Iua"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="rKO-Qj-THo"/>
+                                                                    <constraint firstItem="q76-Th-577" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="tKq-S5-TgG"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sCA-PT-GyD" secondAttribute="trailing" symbolic="YES" id="vJV-eF-051"/>
+                                                                    <constraint firstItem="q76-Th-577" firstAttribute="top" secondItem="peh-0s-slN" secondAttribute="bottom" constant="10" id="vxQ-dy-9bH"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1212,22 +1222,68 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="WiFi and Bluetooth" identifier="" id="Yj4-FR-J1v">
                                                             <view key="view" id="rPW-aE-Bjy">
-                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-1S-rZh">
-                                                                        <rect key="frame" x="8" y="18" width="129" height="18"/>
+                                                                        <rect key="frame" x="8" y="114" width="129" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AirportBrcmFixup" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zEv-oT-t25">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5aF-3i-FQP">
+                                                                        <rect key="frame" x="8" y="90" width="461" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmPatchRAM3 for 10.14+ (must be paired with BrcmBluetoothInjector)" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WCB-vf-Sn9">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <action selector="brcmPatchRam3Clicked:" target="7uK-TB-ntZ" id="HTW-ek-DSM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fiJ-Iz-9U3">
+                                                                        <rect key="frame" x="8" y="66" width="215" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmPatchRAM2 for 10.11-10.14" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Bfe-UG-B4k">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                        <connections>
+                                                                            <action selector="brcmpatchram2Clicked:" target="7uK-TB-ntZ" id="uX0-V2-30F"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mTX-gT-fpn">
+                                                                        <rect key="frame" x="8" y="42" width="158" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmBluetoothInjector" bezelStyle="regularSquare" imagePosition="left" inset="2" id="O1L-D8-db8">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-HP-03l">
+                                                                        <rect key="frame" x="8" y="18" width="138" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="BrcmFirmwareData" bezelStyle="regularSquare" imagePosition="left" inset="2" id="arU-pS-rWH">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="T1u-1S-rZh" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="KrZ-X9-GDb"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="T1u-1S-rZh" secondAttribute="bottom" constant="20" id="eom-j6-Eha"/>
-                                                                    <constraint firstItem="T1u-1S-rZh" firstAttribute="top" secondItem="rPW-aE-Bjy" secondAttribute="top" constant="20" id="hbL-uL-KAV"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T1u-1S-rZh" secondAttribute="trailing" constant="20" symbolic="YES" id="tba-kU-GKF"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T1u-1S-rZh" secondAttribute="trailing" constant="20" symbolic="YES" id="1bd-EX-jZc"/>
+                                                                    <constraint firstItem="T1u-1S-rZh" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="67o-m2-mUN"/>
+                                                                    <constraint firstItem="5aF-3i-FQP" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="Ddx-FE-W1z"/>
+                                                                    <constraint firstItem="bF9-HP-03l" firstAttribute="top" secondItem="mTX-gT-fpn" secondAttribute="bottom" constant="10" id="F7M-op-Mjg"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5aF-3i-FQP" secondAttribute="trailing" constant="20" symbolic="YES" id="KPH-Ib-IRT"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="bF9-HP-03l" secondAttribute="bottom" constant="20" id="Ljj-I9-zxo"/>
+                                                                    <constraint firstItem="mTX-gT-fpn" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="NN9-dk-wf2"/>
+                                                                    <constraint firstItem="mTX-gT-fpn" firstAttribute="top" secondItem="fiJ-Iz-9U3" secondAttribute="bottom" constant="10" id="QWI-7F-9iw"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bF9-HP-03l" secondAttribute="trailing" constant="20" symbolic="YES" id="R0R-lx-UGS"/>
+                                                                    <constraint firstItem="5aF-3i-FQP" firstAttribute="top" secondItem="T1u-1S-rZh" secondAttribute="bottom" constant="10" id="W7O-rt-Z2U"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mTX-gT-fpn" secondAttribute="trailing" constant="20" symbolic="YES" id="baJ-7d-m67"/>
+                                                                    <constraint firstItem="fiJ-Iz-9U3" firstAttribute="top" secondItem="5aF-3i-FQP" secondAttribute="bottom" constant="10" id="cFK-gY-VXh"/>
+                                                                    <constraint firstItem="fiJ-Iz-9U3" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="hv1-eo-rHn"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fiJ-Iz-9U3" secondAttribute="trailing" constant="20" symbolic="YES" id="lDn-Uv-ueI"/>
+                                                                    <constraint firstItem="bF9-HP-03l" firstAttribute="leading" secondItem="rPW-aE-Bjy" secondAttribute="leading" constant="10" id="yDV-P9-l7w"/>
+                                                                    <constraint firstItem="T1u-1S-rZh" firstAttribute="top" secondItem="rPW-aE-Bjy" secondAttribute="top" constant="20" id="ytd-cD-XOQ"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1536,6 +1592,10 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="atherosChecked" destination="xhE-62-ws7" id="okM-0r-Pa8"/>
                         <outlet property="bootargsInputfield" destination="uB2-nW-w58" id="Bth-cg-iNF"/>
                         <outlet property="bootargsLabel" destination="IeY-sN-Q1c" id="o1l-Xy-fVt"/>
+                        <outlet property="brcmBtInjectorChecked" destination="mTX-gT-fpn" id="6dT-fd-QJh"/>
+                        <outlet property="brcmFirmwareDataChecked" destination="bF9-HP-03l" id="hkv-L5-e89"/>
+                        <outlet property="brcmPatchRam2Checked" destination="fiJ-Iz-9U3" id="WF8-Se-ndu"/>
+                        <outlet property="brcmPatchRam3Checked" destination="5aF-3i-FQP" id="ZOJ-Ix-Pt1"/>
                         <outlet property="broadwellEChecked" destination="p55-Fb-A4q" id="7sg-3I-0xf"/>
                         <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
                         <outlet property="fxXlncUSBChecked" destination="u7Y-Ij-CXE" id="bkO-LJ-yjq"/>
@@ -1547,6 +1607,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="kU8-dn-rw5"/>
                         <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
                         <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
+                        <outlet property="lucyRTLChecked" destination="0Qj-MH-Oax" id="m4i-Pa-fTY"/>
                         <outlet property="mlbInput" destination="seQ-dV-vxW" id="Kzv-Mw-zmw"/>
                         <outlet property="modelInput" destination="oOV-TR-Goe" id="qYO-Hr-CuF"/>
                         <outlet property="nvmExpressChecked" destination="UuB-sS-39W" id="rrz-TN-2rm"/>
@@ -1573,7 +1634,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="67" y="1602"/>
+            <point key="canvasLocation" x="66.5" y="1676.5"/>
         </scene>
     </scenes>
 </document>

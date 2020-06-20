@@ -29,10 +29,6 @@ class MainVC: NSViewController {
     @IBOutlet weak var usbInjectAllChecked: NSButton!
     @IBOutlet weak var xhciUnsupportedChecked: NSButton!
     @IBOutlet weak var airportBrcmChecked: NSButton!
-    @IBOutlet weak var brcmPatchRamChecked: NSButton!
-    @IBOutlet weak var brcmBluetoothInjectorChecked: NSButton!
-    @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
-    @IBOutlet weak var brcmPatchRam3Checked: NSButton!
     @IBOutlet weak var fxXlncUSBChecked: NSButton!
     @IBOutlet weak var appleMCEReporterChecked: NSButton!
     @IBOutlet weak var openRuntimeChecked: NSButton!
@@ -51,6 +47,11 @@ class MainVC: NSViewController {
     @IBOutlet weak var appleALCInputfield: NSTextField!
     @IBOutlet weak var bootargsLabel: NSTextField!
     @IBOutlet weak var bootargsInputfield: NSTextField!
+    @IBOutlet weak var lucyRTLChecked: NSButton!
+    @IBOutlet weak var brcmPatchRam3Checked: NSButton!
+    @IBOutlet weak var brcmPatchRam2Checked: NSButton!
+    @IBOutlet weak var brcmBtInjectorChecked: NSButton!
+    @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
     
     
     
@@ -62,6 +63,28 @@ class MainVC: NSViewController {
     @IBAction func systemTypeChecked(_ sender: NSButton) {
         generateButton.isEnabled = (sender.isEnabled == true)
     }
+    
+    @IBAction func brcmPatchRam3Clicked(_ sender: NSButton) {
+        switch brcmPatchRam3Checked.state {
+        case .on:
+            brcmBtInjectorChecked.state = NSControl.StateValue.on
+            brcmPatchRam2Checked.isEnabled = (sender.isEnabled == false)
+        default:
+            brcmBtInjectorChecked.state = NSControl.StateValue.off
+            brcmPatchRam2Checked.isEnabled = (sender.isEnabled == true)
+        }
+    }
+    
+    @IBAction func brcmpatchram2Clicked(_ sender: NSButton) {
+        switch brcmPatchRam2Checked.state {
+        case .on:
+            brcmPatchRam3Checked.isEnabled = (sender.isEnabled == false)
+            brcmPatchRam3Checked.state = NSControl.StateValue.off
+        default:
+            brcmPatchRam3Checked.isEnabled = (sender.isEnabled == true)
+        }
+    }
+    
     
     @IBAction func appleALCClicked(_ sender: NSButton) {
         switch appleALCChecked.state {
@@ -501,6 +524,13 @@ class MainVC: NSViewController {
             break
         }
         
+        switch lucyRTLChecked.state {
+        case .on:
+            addKextToConfig(item: "LucyRTL8125Ethernet")
+        default:
+            break
+        }
+        
         switch usbInjectAllChecked.state {
         case .on:
             addKextToConfig(item: "USBInjectAll")
@@ -511,6 +541,34 @@ class MainVC: NSViewController {
         switch airportBrcmChecked.state {
         case .on:
             addKextToConfig(item: "AirportBrcmFixup")
+        default:
+            break
+        }
+        
+        switch brcmBtInjectorChecked.state {
+        case .on:
+            addKextToConfig(item: "BrcmBluetoothInjector")
+        default:
+            break
+        }
+        
+        switch brcmFirmwareDataChecked.state {
+        case .on:
+            addKextToConfig(item: "BrcmFirmwareData")
+        default:
+            break
+        }
+        
+        switch brcmPatchRam3Checked.state {
+        case .on:
+            addKextToConfig(item: "BrcmPatchRAM3")
+        default:
+            break
+        }
+        
+        switch brcmPatchRam2Checked.state {
+        case .on:
+            addKextToConfig(item: "BrcmPatchRAM2")
         default:
             break
         }
@@ -649,11 +707,26 @@ class MainVC: NSViewController {
                 if intelMausiChecked.state == .on {
                     kextCopy(kextname: "IntelMausi", item: "IntelMausi", location: ocKextsDir)
                 }
+                if lucyRTLChecked.state == .on {
+                    kextCopy(kextname: "LucyRTL8125Ethernet", item: "LucyRTL8125Ethernet", location: ocKextsDir)
+                }
                 if usbInjectAllChecked.state == .on {
                     kextCopy(kextname: "usbInjectAll", item: "USBInjectAll", location: ocKextsDir)
                 }
                 if airportBrcmChecked.state == .on {
                     kextCopy(kextname: "airportBrcm", item: "AirportBrcmFixup", location: ocKextsDir)
+                }
+                if brcmPatchRam2Checked.state == .on {
+                    kextCopy(kextname: "brcmpatchram2", item: "BrcmPatchRAM2", location: ocKextsDir)
+                }
+                if brcmFirmwareDataChecked.state == .on {
+                    kextCopy(kextname: "BrcmFirmwareData", item: "BrcmFirmwareData", location: ocKextsDir)
+                }
+                if brcmBtInjectorChecked.state == .on {
+                    kextCopy(kextname: "BrcmBluetoothInjector", item: "BrcmBluetoothInjector", location: ocKextsDir)
+                }
+                if brcmPatchRam3Checked.state == .on {
+                    kextCopy(kextname: "BrcmPatchRAM3", item: "BrcmPatchRAM3", location: ocKextsDir)
                 }
                 if fxXlncUSBChecked.state == .on {
                     kextCopy(kextname: "fxXlncUSB", item: "XLNCUSBFix", location: ocKextsDir)
