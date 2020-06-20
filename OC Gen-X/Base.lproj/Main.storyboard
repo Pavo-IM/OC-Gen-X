@@ -707,7 +707,7 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
+                    <view key="view" id="ZeK-sO-E8j">
                         <rect key="frame" x="0.0" y="0.0" width="797" height="228"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1256,6 +1256,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q1Z-HB-msw" secondAttribute="trailing" constant="20" symbolic="YES" id="EKp-6l-MyC"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLn-be-75d" secondAttribute="trailing" constant="20" symbolic="YES" id="Rsg-eV-Hmq"/>
                                                                     <constraint firstAttribute="bottom" secondItem="Q1Z-HB-msw" secondAttribute="bottom" constant="10" id="Sco-XN-gf9"/>
                                                                     <constraint firstItem="Q1Z-HB-msw" firstAttribute="leading" secondItem="gLn-be-75d" secondAttribute="leading" id="tkQ-Rj-3H3"/>
