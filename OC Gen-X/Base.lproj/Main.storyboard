@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="316"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -738,7 +738,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="202"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="301"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -943,11 +943,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="78"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="42" width="44" height="18"/>
+                                                                        <rect key="frame" x="8" y="90" width="44" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -966,7 +966,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="18" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="66" width="91" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1128,12 +1128,16 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                     <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="0xA-iw-HKf"/>
                                                                     <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4na-Vo-zYe"/>
                                                                     <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="AbG-qm-dZs"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q76-Th-577" secondAttribute="trailing" symbolic="YES" id="GsL-qE-XxA"/>
                                                                     <constraint firstAttribute="bottom" secondItem="q76-Th-577" secondAttribute="bottom" constant="20" id="Jnk-zI-YP9"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" symbolic="YES" id="ZPr-Nr-hhy"/>
                                                                     <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="aNy-yz-8aW"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sCA-PT-GyD" secondAttribute="trailing" symbolic="YES" id="ghL-Fw-PBZ"/>
                                                                     <constraint firstItem="q76-Th-577" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="jmv-hZ-fRe"/>
                                                                     <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="sTF-Sd-4wk"/>
                                                                     <constraint firstItem="q76-Th-577" firstAttribute="top" secondItem="peh-0s-slN" secondAttribute="bottom" constant="10" id="uIS-vd-mqt"/>
                                                                     <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="yto-h4-VkG"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="peh-0s-slN" secondAttribute="trailing" symbolic="YES" id="zhb-uc-7XB"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1326,11 +1330,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="SMBIOS" identifier="" id="5pE-yU-lCV">
                                         <view key="view" id="yfq-k4-YvT">
-                                            <rect key="frame" x="10" y="33" width="791" height="254"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="255"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-Rb-FJJ">
-                                                    <rect key="frame" x="8" y="153" width="94" height="16"/>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-Rb-FJJ">
+                                                    <rect key="frame" x="8" y="153" width="94" height="17"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Serial Number:" id="t8U-2J-bUf">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1354,15 +1358,15 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ver-Sx-K2G">
-                                                    <rect key="frame" x="120" y="151" width="293" height="20"/>
+                                                    <rect key="frame" x="120" y="151" width="651" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="W00000000001" drawsBackground="YES" id="jY5-ae-HXf">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-dV-vxW">
-                                                    <rect key="frame" x="200" y="84" width="288" height="21"/>
+                                                <textField verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-dV-vxW">
+                                                    <rect key="frame" x="200" y="84" width="571" height="22"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="M0000000000000001" drawsBackground="YES" id="0Eb-bB-POy">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1370,15 +1374,15 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wpt-Ki-nzt">
-                                                    <rect key="frame" x="85" y="18" width="403" height="21"/>
+                                                    <rect key="frame" x="85" y="18" width="686" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="00000000-0000-0000-0000-000000000000" drawsBackground="YES" id="NmB-Qp-bLW">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
                                                 </textField>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-hI-HOe">
-                                                    <rect key="frame" x="8" y="219" width="94" height="15"/>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-hI-HOe">
+                                                    <rect key="frame" x="8" y="220" width="94" height="15"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="System Model:" id="tR7-sh-igK">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1386,10 +1390,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-TR-Goe">
-                                                    <rect key="frame" x="120" y="216" width="293" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="auI-Vm-gyO"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="120" y="217" width="651" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="iMac19,1" drawsBackground="YES" id="DML-Mx-U6W">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1399,15 +1400,18 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="oOV-TR-Goe" firstAttribute="leading" secondItem="Ui7-hI-HOe" secondAttribute="trailing" constant="20" id="1mN-Tb-uaY"/>
-                                                <constraint firstItem="Wpt-Ki-nzt" firstAttribute="trailing" secondItem="seQ-dV-vxW" secondAttribute="trailing" id="3Tq-dH-qAT"/>
+                                                <constraint firstItem="Rmb-Iy-rlL" firstAttribute="top" secondItem="ow1-AX-04H" secondAttribute="bottom" constant="50" id="7hD-sX-ruA"/>
                                                 <constraint firstItem="Ui7-hI-HOe" firstAttribute="top" secondItem="yfq-k4-YvT" secondAttribute="top" constant="20" id="CM3-KT-BMT"/>
                                                 <constraint firstItem="ow1-AX-04H" firstAttribute="leading" secondItem="Ui7-hI-HOe" secondAttribute="leading" id="DDf-Cg-iK0"/>
                                                 <constraint firstItem="Ver-Sx-K2G" firstAttribute="centerY" secondItem="Rn5-Rb-FJJ" secondAttribute="centerY" id="DdC-9S-Sl6"/>
                                                 <constraint firstItem="oOV-TR-Goe" firstAttribute="trailing" secondItem="Ver-Sx-K2G" secondAttribute="trailing" id="HZT-5K-fSO"/>
                                                 <constraint firstItem="Ui7-hI-HOe" firstAttribute="leading" secondItem="yfq-k4-YvT" secondAttribute="leading" constant="10" id="IWQ-zO-m8g"/>
                                                 <constraint firstItem="seQ-dV-vxW" firstAttribute="leading" secondItem="ow1-AX-04H" secondAttribute="trailing" constant="20" id="JKG-Uh-wrr"/>
+                                                <constraint firstItem="seQ-dV-vxW" firstAttribute="baseline" secondItem="ow1-AX-04H" secondAttribute="baseline" id="LRa-sv-erT"/>
                                                 <constraint firstItem="Ver-Sx-K2G" firstAttribute="top" secondItem="oOV-TR-Goe" secondAttribute="bottom" constant="45" id="MHi-Qn-kbC"/>
                                                 <constraint firstItem="Rmb-Iy-rlL" firstAttribute="leading" secondItem="Ui7-hI-HOe" secondAttribute="leading" id="P6f-xe-mjT"/>
+                                                <constraint firstAttribute="trailing" secondItem="seQ-dV-vxW" secondAttribute="trailing" constant="20" id="Pto-x2-bJ4"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ver-Sx-K2G" secondAttribute="trailing" constant="20" id="Wlo-Ix-fcj"/>
                                                 <constraint firstItem="Wpt-Ki-nzt" firstAttribute="centerY" secondItem="Rmb-Iy-rlL" secondAttribute="centerY" id="Yw4-Sr-Pcb"/>
                                                 <constraint firstItem="Ver-Sx-K2G" firstAttribute="leading" secondItem="Rn5-Rb-FJJ" secondAttribute="trailing" constant="20" id="Zeh-QX-9xX"/>
                                                 <constraint firstItem="seQ-dV-vxW" firstAttribute="centerY" secondItem="ow1-AX-04H" secondAttribute="centerY" id="aun-ld-h4s"/>
@@ -1415,11 +1419,13 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                 <constraint firstAttribute="bottom" secondItem="Wpt-Ki-nzt" secondAttribute="bottom" constant="18" id="ebk-5E-fgg"/>
                                                 <constraint firstItem="Wpt-Ki-nzt" firstAttribute="leading" secondItem="Rmb-Iy-rlL" secondAttribute="trailing" constant="20" id="i10-qM-1t6"/>
                                                 <constraint firstAttribute="bottom" secondItem="Rmb-Iy-rlL" secondAttribute="bottom" constant="20" id="iBN-pa-a1t"/>
-                                                <constraint firstItem="Wpt-Ki-nzt" firstAttribute="top" secondItem="seQ-dV-vxW" secondAttribute="bottom" constant="45" id="mku-7d-O1r"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wpt-Ki-nzt" secondAttribute="trailing" constant="20" symbolic="YES" id="nBG-Qg-qoe"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wpt-Ki-nzt" secondAttribute="trailing" constant="20" id="nZl-aJ-e4k"/>
                                                 <constraint firstItem="Rn5-Rb-FJJ" firstAttribute="top" secondItem="Ui7-hI-HOe" secondAttribute="bottom" constant="50" id="oy3-UB-xfQ"/>
                                                 <constraint firstItem="oOV-TR-Goe" firstAttribute="top" secondItem="yfq-k4-YvT" secondAttribute="top" constant="17" id="r0k-LZ-hJT"/>
                                                 <constraint firstItem="Rn5-Rb-FJJ" firstAttribute="leading" secondItem="Ui7-hI-HOe" secondAttribute="leading" id="wxF-1G-ELw"/>
                                                 <constraint firstItem="ow1-AX-04H" firstAttribute="top" secondItem="Rn5-Rb-FJJ" secondAttribute="bottom" constant="50" id="xK4-al-f1K"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="seQ-dV-vxW" secondAttribute="trailing" constant="20" symbolic="YES" id="zme-l2-DRx"/>
                                             </constraints>
                                         </view>
                                     </tabViewItem>
