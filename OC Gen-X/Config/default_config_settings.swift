@@ -10,8 +10,8 @@ var config = Root(
     booter: booter(mmioWhitelist: [mmioWhitelist(address: 0, comment: "", enabled: false)],
             quirks: booterQuirks(avoidRuntimeDefrag: true, devirtualiseMmio: false, disableSingleUser: false, disableVariableWrite: false, discardHibernateMap: false, enableSafeModeSlide: true, enableWriteUnprotector: true, forceExitBootServices: false, protectMemoryRegion: false, protectSecureBoot: false, protectUefiServices: false, provideCustomSlide: true, rebuildAppleMemoryMap: false, setupVirtualMap: true, signalAppleOS: false, syncRuntimePermissions: false)),
                 
-    deviceProperties: deviceProperties(add: [dpAdd()],
-                      delete: [dpDelete()]),
+    deviceProperties: deviceProperties(add: dpAdd(),
+                      delete: dpDelete()),
                 
     kernel: kernel(kAdd: [kAdd(bundlePath: "", comment: "", enabled: false, executablePath: "", maxKernel: "", minKernel: "", plistPath: "")],
             kBlock: [kBlock()],
@@ -27,9 +27,9 @@ var config = Root(
           tools: [tools()]),
                 
     nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(defaultBackgroundColor: Data(), uiScale: Data()), addAppleVendorGuid: addAppleVendorGuid(rtcBlacklist: Data()), addAppleBootVariableGuid: addAppleBootVariableGuid(systemAudioVolume: Data(), bootArgs: "-v keepsyms=1", csrActiveConfig: Data(), nvdaDrv: Data(), prevLangKbd: Data())),
-           delete: nDelete(blockAppleVendorVariableGuid: [blockAppleVendorVariableGuid()], blockAppleBootVariableGuid: [blockAppleBootVariableGuid()]),
+           delete: nDelete(blockAppleVendorVariableGuid: ["UIScale", "DefaultBackgroundColor"], blockAppleVendorGuid: ["rtc-blacklist"], blockAppleBootVariableGuid: ["boot-args"]),
            legacyEnable: false, legacyOverwrite: false,
-           legacySchema: legacySchema(legacyAppleBootVariableGuid: [legacyAppleBootVariableGuid()], legacyEfiGlobalVariable: [legacyEfiGlobalVariable()]),
+           legacySchema: legacySchema(legacyAppleBootVariableGuid: ["EFILoginHiDPI", "EFIBluetoothDelay", "LocationServicesEnabled", "SystemAudioVolume", "SystemAudioVolumeDB", "SystemAudioVolumeSaved", "bluetoothActiveControllerInfo", "bluetoothInternalControllerInfo", "flagstate", "fmm-computer-name", "nvda_drv", "prev-lang:kbd"], legacyEfiGlobalVariable: ["Boot0080", "Boot0081", "Boot0082", "BootNext", "BootOrder"]),
            writeFlash: true),
                 
     platFormInfo: platFormInfo(automatic: true, generic: generic(adviseWindows: false, mlb: "", rom: Data(), spoofVendor: false, systemProductName: "", systemSerialNumber: "", systemUUID: ""), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: "Create"),

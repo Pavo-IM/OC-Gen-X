@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="415"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="283"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -738,7 +738,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="301"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="169"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -931,11 +931,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="123"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="139"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -1048,22 +1048,45 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="Graphics" identifier="" id="CsQ-iK-bJm">
                                                             <view key="view" id="0Jc-f5-SUh">
-                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="93"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button toolTip="Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.4.0 or newer.  Boot Args:" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Qd-vMG">
-                                                                        <rect key="frame" x="8" y="18" width="117" height="18"/>
+                                                                        <rect key="frame" x="8" y="57" width="117" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="WhateverGreen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iDh-wY-X4B">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
+                                                                        <connections>
+                                                                            <action selector="whatevergreenClicked:" target="7uK-TB-ntZ" id="UO2-ud-Tcy"/>
+                                                                        </connections>
                                                                     </button>
+                                                                    <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-4Z-WL9">
+                                                                        <rect key="frame" x="8" y="23" width="168" height="16"/>
+                                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="WhateverGreen Boot-Args:" id="DhZ-jd-01r">
+                                                                            <font key="font" metaFont="system"/>
+                                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
+                                                                    <textField hidden="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOy-PJ-qmO">
+                                                                        <rect key="frame" x="194" y="20" width="571" height="21"/>
+                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="agdpmod=pikera" drawsBackground="YES" id="bA5-tk-VSa">
+                                                                            <font key="font" metaFont="system"/>
+                                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="hIN-Qd-vMG" firstAttribute="top" secondItem="0Jc-f5-SUh" secondAttribute="top" constant="20" id="7aC-r7-Iu4"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="hIN-Qd-vMG" secondAttribute="bottom" constant="20" id="Wns-nJ-5nv"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hIN-Qd-vMG" secondAttribute="trailing" symbolic="YES" id="epb-9n-seS"/>
-                                                                    <constraint firstItem="hIN-Qd-vMG" firstAttribute="leading" secondItem="0Jc-f5-SUh" secondAttribute="leading" constant="10" id="oKU-X8-lUE"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="gOy-PJ-qmO" secondAttribute="bottom" constant="20" id="4v1-Rd-VSa"/>
+                                                                    <constraint firstItem="gOy-PJ-qmO" firstAttribute="leading" secondItem="NI0-4Z-WL9" secondAttribute="trailing" constant="20" id="BI4-um-HbF"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="gOy-PJ-qmO" secondAttribute="trailing" constant="20" id="D87-jy-jzO"/>
+                                                                    <constraint firstItem="NI0-4Z-WL9" firstAttribute="leading" secondItem="0Jc-f5-SUh" secondAttribute="leading" constant="10" id="NgF-3k-epP"/>
+                                                                    <constraint firstItem="hIN-Qd-vMG" firstAttribute="leading" secondItem="0Jc-f5-SUh" secondAttribute="leading" constant="10" id="OoP-fa-5ar"/>
+                                                                    <constraint firstItem="hIN-Qd-vMG" firstAttribute="top" secondItem="0Jc-f5-SUh" secondAttribute="top" constant="20" id="Ubg-sA-5Fu"/>
+                                                                    <constraint firstItem="gOy-PJ-qmO" firstAttribute="centerY" secondItem="NI0-4Z-WL9" secondAttribute="centerY" id="aXm-vI-e8M"/>
+                                                                    <constraint firstItem="NI0-4Z-WL9" firstAttribute="top" secondItem="hIN-Qd-vMG" secondAttribute="bottom" constant="20" id="sVz-hT-j6t"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1482,12 +1505,14 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="textfield" destination="Y5K-fp-3dO" id="atc-DC-SWQ"/>
                         <outlet property="usbInjectAllChecked" destination="h3S-sl-6lV" id="65K-pl-1TZ"/>
                         <outlet property="virtualSMCChecked" destination="lbr-dO-TxB" id="Gkr-Uk-vTU"/>
+                        <outlet property="wegBootargsTextfield" destination="gOy-PJ-qmO" id="6r5-n4-hv3"/>
+                        <outlet property="wegLabel" destination="NI0-4Z-WL9" id="SVI-bX-cDB"/>
                         <outlet property="whatevergreenChecked" destination="hIN-Qd-vMG" id="LVV-Fn-A8d"/>
                         <outlet property="xhciChecked" destination="phe-xo-PUR" id="tTx-6B-4TF"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75.5" y="1796.5"/>
+            <point key="canvasLocation" x="75.5" y="1877.5"/>
         </scene>
     </scenes>
 </document>

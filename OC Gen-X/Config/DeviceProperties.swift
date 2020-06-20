@@ -1,8 +1,8 @@
 import Foundation
 
 struct deviceProperties: Codable {
-    var add: [dpAdd]
-    var delete: [dpDelete]
+    var add: dpAdd
+    var delete: dpDelete
     
     enum CodingKeys: String, CodingKey {
         case add = "Add"

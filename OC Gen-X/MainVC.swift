@@ -45,6 +45,8 @@ class MainVC: NSViewController {
     @IBOutlet weak var mlbInput: NSTextField!
     @IBOutlet weak var smuuidInput: NSTextField!
     @IBOutlet weak var modelInput: NSTextField!
+    @IBOutlet weak var wegLabel: NSTextField!
+    @IBOutlet weak var wegBootargsTextfield: NSTextField!
     
     
     override func viewDidLoad() {
@@ -55,6 +57,22 @@ class MainVC: NSViewController {
     @IBAction func systemTypeChecked(_ sender: NSButton) {
         generateButton.isEnabled = (sender.isEnabled == true)
     }
+    
+    @IBAction func whatevergreenClicked(_ sender: NSButton) {
+        switch whatevergreenChecked.state {
+        case .on:
+            wegLabel.isHidden = (sender.isHidden == true)
+            wegBootargsTextfield.isHidden = (sender.isHidden == true)
+        case .off:
+            wegLabel.isHidden = (sender.isHidden == false)
+            wegBootargsTextfield.isHidden = (sender.isHidden == false)
+        default:
+            wegLabel.isHidden = (sender.isHidden == false)
+            wegBootargsTextfield.isHidden = (sender.isHidden == false)
+        }
+        
+    }
+    
     
     func kextCopy (kextname: String, item: String, location: URL) {
         let bundle = Bundle.main
@@ -121,6 +139,8 @@ class MainVC: NSViewController {
             switch returnCode {
             case NSApplication.ModalResponse.alertFirstButtonReturn: do {
                 try fileManager.removeItem(at: kextUrl)
+                config.kernel.kAdd.removeAll()
+                config.uefi.drivers.removeAll()
             }
             catch {
                 print(error.localizedDescription)
@@ -368,7 +388,7 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
-            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v"
+            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
         default:
             break
         }
@@ -420,6 +440,7 @@ class MainVC: NSViewController {
         switch whatevergreenChecked.state {
         case .on:
             addKextToConfig(item: "WhateverGreen")
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: wegBootargsTextfield.stringValue)
         default:
             break
         }
@@ -551,6 +572,7 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
+                config.misc.blessOverRide.removeAll()
                 if (modelInput != nil) {
                     config.platFormInfo.generic.systemProductName = modelInput.stringValue
                 }

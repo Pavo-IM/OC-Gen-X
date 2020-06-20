@@ -65,33 +65,23 @@ struct addAppleBootVariableGuid: Codable {
 }
 
 struct nDelete: Codable {
-    var blockAppleVendorVariableGuid: [blockAppleVendorVariableGuid]
-    var blockAppleBootVariableGuid: [blockAppleBootVariableGuid]
+    var blockAppleVendorVariableGuid: [String]
+    var blockAppleVendorGuid: [String]
+    var blockAppleBootVariableGuid: [String]
     
     enum CodingKeys: String, CodingKey {
         case blockAppleVendorVariableGuid = "4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"
+        case blockAppleVendorGuid = "4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102"
         case blockAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"
     }
 }
 
-struct blockAppleVendorVariableGuid: Codable {
-}
-
-struct blockAppleBootVariableGuid: Codable {
-}
-
 struct legacySchema: Codable {
-    var legacyAppleBootVariableGuid: [legacyAppleBootVariableGuid]
-    var legacyEfiGlobalVariable: [legacyEfiGlobalVariable]
+    var legacyAppleBootVariableGuid: [String]
+    var legacyEfiGlobalVariable: [String]
     
     enum CodingKeys: String, CodingKey {
         case legacyAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"
         case legacyEfiGlobalVariable = "8BE4DF61-93CA-11D2-AA0D-00E098032B8C"
     }
-}
-
-struct legacyAppleBootVariableGuid: Codable {
-}
-
-struct legacyEfiGlobalVariable: Codable {
 }
