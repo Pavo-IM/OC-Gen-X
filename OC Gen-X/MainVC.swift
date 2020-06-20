@@ -335,6 +335,7 @@ class MainVC: NSViewController {
         switch liluChecked.state {
         case .on:
             let liluAdd = kAdd(bundlePath: "Lilu.kext", comment: "", enabled: true, executablePath: "Contents/MacOS/Lilu", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+            config.kernel.kAdd.removeAll()
             config.kernel.kAdd.append(liluAdd)
         default:
             break

@@ -17,7 +17,7 @@ var config = Root(
             kBlock: [kBlock()],
             emulate: emulate(cpuid1Data: Data(), cpuid1Mask: Data()),
             kPatch: [kPatch(base: "", comment: "", count: 0, enabled: false, find: Data(), identifier: "", limit: 0, mask: Data(), maxKernel: "", minKernel: "", replace: Data(), replaceMask: Data(), skip: 0)],
-            kQuirks: kQuirks(appleCpuPmCfgLock: false, appleXcpmCfgLock: false, appleXcpmExtraMsrs: false, appleXcpmForceBoost: false, customSMBIOSGuid: false, disableIoMapper: false, dummyPowerManagement: false, externalDiskIcons: false, increasePciBarSize: false, lapicKernelPanic: false, panicNoKextDump: false, powerTimeoutKernelPanic: false, thirdPartyDrives: false, xhciPortLimit: false)),
+            kQuirks: kQuirks(appleCpuPmCfgLock: false, appleXcpmCfgLock: false, appleXcpmExtraMsrs: false, appleXcpmForceBoost: false, customSMBIOSGuid: false, disableIoMapper: false, disableRtcChecksum: false, dummyPowerManagement: false, externalDiskIcons: false, increasePciBarSize: false, lapicKernelPanic: false, panicNoKextDump: false, powerTimeoutKernelPanic: false, thirdPartyDrives: false, xhciPortLimit: false)),
                 
     misc: misc(blessOverRide: [blessOverRide()],
           boot: boot(consoleAttributes: 0, hibernateMode: "None", hideAuxiliary: false, pickerAttributes: 1, pickerAudioAssist: false, pickerMode: "Builtin", pollAppleHotKeys: false, showPicker: true, takeoffDelay: 0, timeout: 5),

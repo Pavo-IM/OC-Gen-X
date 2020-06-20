@@ -89,6 +89,7 @@ struct kQuirks: Codable {
     var appleXcpmForceBoost: Bool = false
     var customSMBIOSGuid: Bool = false
     var disableIoMapper: Bool = false
+    var disableRtcChecksum: Bool = false
     var dummyPowerManagement: Bool = false
     var externalDiskIcons: Bool = false
     var increasePciBarSize: Bool = false
@@ -105,6 +106,7 @@ struct kQuirks: Codable {
         case appleXcpmForceBoost = "AppleXcpmForceBoost"
         case customSMBIOSGuid = "CustomSMBIOSGuid"
         case disableIoMapper = "DisableIoMapper"
+        case disableRtcChecksum = "DisableRtcChecksum"
         case dummyPowerManagement = "DummyPowerManagement"
         case externalDiskIcons = "ExternalDiskIcons"
         case increasePciBarSize = "IncreasePciBarSize"
