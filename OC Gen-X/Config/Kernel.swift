@@ -66,7 +66,7 @@ struct kPatch: Codable {
     var skip: Int
     
     enum CodingKeys: String, CodingKey {
-        case base = "base"
+        case base = "Base"
         case comment = "Comment"
         case count = "Count"
         case enabled = "Enabled"

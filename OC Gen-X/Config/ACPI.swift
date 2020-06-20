@@ -83,7 +83,7 @@ struct acpuQuirks: Codable {
     
     enum CodingKeys: String, CodingKey {
         case fadtEnableReset = "FadtEnableReset"
-        case normalizeHeader = "NormalizeHeader"
+        case normalizeHeader = "NormalizeHeaders"
         case rebaseRegions = "RebaseRegions"
         case resetHwSig = "ResetHwSig"
         case resetLogoStatus = "ResetLogoStatus"

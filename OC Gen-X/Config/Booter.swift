@@ -49,7 +49,7 @@ struct booterQuirks: Codable {
         case enableSafeModeSlide = "EnableSafeModeSlide"
         case enableWriteUnprotector = "EnableWriteUnprotector"
         case forceExitBootServices = "ForceExitBootServices"
-        case protectMemoryRegion = "ProtectMemoryRegion"
+        case protectMemoryRegion = "ProtectMemoryRegions"
         case protectSecureBoot = "ProtectSecureBoot"
         case protectUefiServices = "ProtectUefiServices"
         case provideCustomSlide = "ProvideCustomSlide"

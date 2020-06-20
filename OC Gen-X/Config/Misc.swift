@@ -9,7 +9,7 @@ struct misc: Codable {
     var tools: [tools]
     
     enum CodingKeys: String, CodingKey {
-        case blessOverRide = "BlessOverRide"
+        case blessOverRide = "BlessOverride"
         case boot = "Boot"
         case debug = "Debug"
         case entries = "Entries"

@@ -18,7 +18,7 @@ struct uefi: Codable {
         case drivers = "Drivers"
         case input = "Input"
         case output = "Output"
-        case protocols = "Protocols"
+        case protocols = "ProtocolOverrides"
         case quirks = "Quirks"
         case reservedMemory = "ReservedMemory"
     }
