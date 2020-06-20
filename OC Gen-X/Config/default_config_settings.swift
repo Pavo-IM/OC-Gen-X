@@ -2,12 +2,12 @@ import Foundation
 
 //FIXME: These settings are based off the release Sample.plist that comes with OpenCorePkg/Docs
 var config = Root(
-    acpi: acpi(add: [acpiAdd()],
-          delete: [acpiDelete()],
-          patch: [acpiPatch()],
+    acpi: acpi(add: [acpiAdd(comment: "", enabled: false, path: "")],
+          delete: [acpiDelete(all: false, comment: "", enabled: false, oemTableId: Data(), tableLength: 0, tableSignature: Data())],
+          patch: [acpiPatch(comment: "", count: 0, enabled: false, find: Data(), limit: 0, mask: Data(), oemTableId: Data(), replace: Data(), replaceMask: Data(), skip: 0, tableLength: 0, tableSignature: Data())],
           quirks: acpuQuirks(fadtEnableReset: false, normalizeHeader: false, rebaseRegions: false, resetHwSig: false, resetLogoStatus: false)),
                   
-    booter: booter(mmioWhitelist: [mmioWhitelist()],
+    booter: booter(mmioWhitelist: [mmioWhitelist(address: 0, comment: "", enabled: false)],
             quirks: booterQuirks(avoidRuntimeDefrag: true, devirtualiseMmio: false, disableSingleUser: false, disableVariableWrite: false, discardHibernateMap: false, enableSafeModeSlide: true, enableWriteUnprotector: true, forceExitBootServices: false, protectMemoryRegion: false, protectSecureBoot: false, protectUefiServices: false, provideCustomSlide: true, rebuildAppleMemoryMap: false, setupVirtualMap: true, signalAppleOS: false, syncRuntimePermissions: false)),
                 
     deviceProperties: deviceProperties(add: [dpAdd()],
@@ -37,7 +37,7 @@ var config = Root(
     uefi: uefi(apfs: apfs(enableJumpstart: true, hideVerbose: true, jumpstartHotPlug: false, minDate: 0, minVersion: 0),
           audio: audio(audioCodec: 0, audioDevice: "PciRoot(0x0)/Pci(0x1b,0x0)", audioOut: 0, audioSupport: false, minimumVolume: 20, playChime: false, volumeAmplifier: 0),
           connectDrivers: true,
-          drivers: [drivers()],
+          drivers: [],
           input: input(keyFiltering: false, keyForgetThreshold: 5, keyMergeThreshold: 2, keySupport: true, keySupportMode: "Auto", keySwap: false, pointerSupport: false, pointerSupportMode: "ASUS", timerResolution: 50000),
           output: output(clearScreenOnModeSwitch: false, consoleMode: "", directGopRendering: false, ignoreTextInGraphics: false, provideConsoleGop: true, reconnectOnResChange: false, replaceTabWithSpace: false, resolution: "Max", sanitiseClearScreen: false, textRenderer: "BuiltinGraphics"),
           protocols: protocols(appleAudio: false, appleBootPolicy: false, appleDebugLog: false, appleEvent: false, appleImageConversion: false, appleKeyMap: false, appleRtcRam: false, appleSmcIo: false, appleUserInterfaceTheme: false, dataHub: false, deviceProperties: false, firmwareVolume: false, hashServices: false, osInfo: false, unicodeCollation: false),

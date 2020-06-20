@@ -4,7 +4,7 @@ struct uefi: Codable {
     var apfs: apfs
     var audio: audio
     var connectDrivers: Bool
-    var drivers: [drivers]
+    var drivers: [String]
     var input: input
     var output: output
     var protocols: protocols
@@ -58,10 +58,6 @@ struct audio: Codable {
         case playChime = "PlayChime"
         case volumeAmplifier = "VolumeAmplifier"
     }
-}
-
-struct drivers: Codable {
-    
 }
 
 struct input: Codable {

@@ -39,6 +39,8 @@ class MainVC: NSViewController {
     @IBOutlet weak var nvmExpressChecked: NSButton!
     @IBOutlet weak var xhciChecked: NSButton!
     @IBOutlet weak var textfield: NSTextField!
+    @IBOutlet weak var hfsPlusChecked: NSButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,11 +76,32 @@ class MainVC: NSViewController {
         }
     }
     
+    func efiCopy (efiname: String, item: String, location: URL) {
+        let bundle = Bundle.main
+        let fm = FileManager.default
+        let efiname = bundle.path(forResource: "\(item)", ofType: ".efi")
+        let efinameURL = URL(fileURLWithPath: efiname!)
+        let efinameDir = "\(item).efi"
+        do {
+            try fm.copyItem(at: efinameURL, to: location.appendingPathComponent(efinameDir))
+        }
+        catch {
+        }
+    }
+    
+    func addKextToConfig (item: String) {
+        let kext = kAdd(bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(item)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+        config.kernel.kAdd.append(kext)
+    }
+    
     @IBAction func generateClicked(_ sender: Any) {
         //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Bulldozer/Jaguar AMD specific info
         //TODO: Create UI textfield elements so users can add SMBIOS info themselves.
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
+        //FIXME: Copy Bootstrap.efi to Bootstrap location
+        //TODO: Add an alert to alert the user of EFI generated
+        
         switch ivyBridgeChecked.state {
         case .on:
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -318,6 +341,139 @@ class MainVC: NSViewController {
             break
         }
         
+        switch virtualSMCChecked.state {
+        case .on:
+            addKextToConfig(item: "VirtualSMC")
+        default:
+            break
+        }
+        
+        switch smcProcessorChecked.state {
+        case .on:
+            addKextToConfig(item: "SMCProcessor")
+        default:
+            break
+        }
+        
+        switch smcSuperIOChecked.state {
+        case .on:
+            addKextToConfig(item: "SMCSuperIO")
+        default:
+            break
+        }
+        
+        switch smcLightSensorChecked.state {
+        case .on:
+            addKextToConfig(item: "SMCLightSensor")
+        default:
+            break
+        }
+        
+        switch smcBatteryManagerChecked.state {
+        case .on:
+            addKextToConfig(item: "SMCBatteryManager")
+        default:
+            break
+        }
+        
+        switch whatevergreenChecked.state {
+        case .on:
+            addKextToConfig(item: "WhateverGreen")
+        default:
+            break
+        }
+        
+        switch appleALCChecked.state {
+        case .on:
+            addKextToConfig(item: "AppleALC")
+        default:
+            break
+        }
+        
+        switch smallTreeChecked.state {
+        case .on:
+            addKextToConfig(item: "SmallTreeIntel82576")
+        default:
+            break
+        }
+        
+        switch atherosChecked.state {
+        case .on:
+            addKextToConfig(item: "AtherosE2200Ethernet")
+        default:
+            break
+        }
+        
+        switch realTekChecked.state {
+        case .on:
+            addKextToConfig(item: "RealtekRTL8111")
+        default:
+            break
+        }
+        
+        switch usbInjectAllChecked.state {
+        case .on:
+            addKextToConfig(item: "USBInjectAll")
+        default:
+            break
+        }
+        
+        switch airportBrcmChecked.state {
+        case .on:
+            addKextToConfig(item: "AirportBrcmFixup")
+        default:
+            break
+        }
+        
+        switch fxXlncUSBChecked.state {
+        case .on:
+            addKextToConfig(item: "XLNCUSBFix")
+        default:
+            break
+        }
+        
+        switch appleMCEReporterChecked.state {
+        case .on:
+            addKextToConfig(item: "AppleMCEReporterDisabler")
+        default:
+            break
+        }
+        
+        switch openRuntimeChecked.state {
+        case .on:
+            config.uefi.drivers.append("OpenRuntime.efi")
+        default:
+            break
+        }
+        
+        switch hfsPlusChecked.state {
+        case .on:
+            config.uefi.drivers.append("HfsPlus.efi")
+        default:
+            break
+        }
+        
+        switch openUSBChecked.state {
+        case .on:
+            config.uefi.drivers.append("OpenUsbKbDxe.efi")
+        default:
+            break
+        }
+        
+        switch nvmExpressChecked.state {
+        case .on:
+            config.uefi.drivers.append("NvmExpressDxe.efi")
+        default:
+            break
+        }
+        
+        switch xhciChecked.state {
+        case .on:
+            config.uefi.drivers.append("XhciDxe.efi")
+        default:
+            break
+        }
+        
         let efidirName = "Desktop/EFI"
         let fm = FileManager.default
         let destDirURL = fm.homeDirectoryForCurrentUser
@@ -343,6 +499,8 @@ class MainVC: NSViewController {
                 try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
+                efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
+                efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 if liluChecked.state == .on {
                     kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
                 }
@@ -391,6 +549,9 @@ class MainVC: NSViewController {
                 if openRuntimeChecked.state == .on {
                     driverCopy(drivername: "openRuntime", item: "OpenRuntime", location: ocDriversDir)
                 }
+                if hfsPlusChecked.state == .on {
+                    driverCopy(drivername: "hfsPlus", item: "HfsPlus", location: ocDriversDir)
+                }
                 if openUSBChecked.state == .on {
                     driverCopy(drivername: "openUSB", item: "OpenUsbKbDxe", location: ocDriversDir)
                 }
@@ -400,7 +561,19 @@ class MainVC: NSViewController {
                 if xhciChecked.state == .on {
                     driverCopy(drivername: "xhci", item: "XhciDxe", location: ocDriversDir)
                 }
-                
+                do {
+                    let plistEncoder = PropertyListEncoder()
+                    plistEncoder.outputFormat = .xml
+                    let configFilePath =  ocDir.appendingPathComponent("config.plist")
+                    let configToEncode = config
+                    let data = try plistEncoder.encode(configToEncode)
+                    try data.write(to: configFilePath)
+                    config.uefi.drivers.removeAll()
+                    config.kernel.kAdd.removeAll()
+                    config.kernel.kBlock.removeAll()
+                }
+                catch {
+                }
             }
             catch {
             }
@@ -424,6 +597,8 @@ class MainVC: NSViewController {
                 try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
+                efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
+                efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 if liluChecked.state == .on {
                     kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
                 }
@@ -472,6 +647,9 @@ class MainVC: NSViewController {
                 if openRuntimeChecked.state == .on {
                     driverCopy(drivername: "openRuntime", item: "OpenRuntime", location: ocDriversDir)
                 }
+                if hfsPlusChecked.state == .on {
+                    driverCopy(drivername: "hfsPlus", item: "HfsPlus", location: ocDriversDir)
+                }
                 if openUSBChecked.state == .on {
                     driverCopy(drivername: "openUSB", item: "OpenUsbKbDxe", location: ocDriversDir)
                 }
@@ -480,6 +658,19 @@ class MainVC: NSViewController {
                 }
                 if xhciChecked.state == .on {
                     driverCopy(drivername: "xhci", item: "XhciDxe", location: ocDriversDir)
+                }
+                do {
+                    let plistEncoder = PropertyListEncoder()
+                    plistEncoder.outputFormat = .xml
+                    let configFilePath =  ocDir.appendingPathComponent("config.plist")
+                    let configToEncode = config
+                    let data = try plistEncoder.encode(configToEncode)
+                    try data.write(to: configFilePath)
+                    config.uefi.drivers.removeAll()
+                    config.kernel.kAdd.removeAll()
+                    config.kernel.kBlock.removeAll()
+                }
+                catch {
                 }
             }
             catch {

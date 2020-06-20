@@ -75,11 +75,9 @@ struct nDelete: Codable {
 }
 
 struct blockAppleVendorVariableGuid: Codable {
-    
 }
 
 struct blockAppleBootVariableGuid: Codable {
-    
 }
 
 struct legacySchema: Codable {
@@ -93,9 +91,7 @@ struct legacySchema: Codable {
 }
 
 struct legacyAppleBootVariableGuid: Codable {
-    
 }
 
 struct legacyEfiGlobalVariable: Codable {
-    
 }

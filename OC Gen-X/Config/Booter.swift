@@ -11,7 +11,15 @@ struct booter: Codable {
 }
 
 struct mmioWhitelist: Codable {
+    var address: Int
+    var comment: String
+    var enabled: Bool
     
+    enum CodingKeys: String, CodingKey {
+        case address = "Address"
+        case comment = "Comment"
+        case enabled = "Enabled"
+    }
 }
 
 struct booterQuirks: Codable {

@@ -17,7 +17,7 @@ struct Root: Codable {
         case kernel = "Kernel"
         case misc = "Misc"
         case nvram = "NVRAM"
-        case platFormInfo = "PlatFormInfo"
+        case platFormInfo = "PlatformInfo"
         case uefi = "UEFI"
     }
 }
