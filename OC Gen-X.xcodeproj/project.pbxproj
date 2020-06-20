@@ -30,7 +30,6 @@
 		CF4C2037243D079100D2F187 /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2036243D079100D2F187 /* BOOTx64.efi */; };
 		CF4C2039243D079C00D2F187 /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2038243D079C00D2F187 /* OpenCore.efi */; };
 		CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E727241DA2D500A7C5EC /* AppDelegate.swift */; };
-		CF59E72C241DA2D600A7C5EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72B241DA2D600A7C5EC /* Assets.xcassets */; };
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
 		CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */; };
@@ -45,6 +44,7 @@
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
+		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEA3A7C249E3FB500EDE7CB /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 /* End PBXBuildFile section */
@@ -74,7 +74,6 @@
 		CF4C2038243D079C00D2F187 /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
 		CF59E724241DA2D500A7C5EC /* OC Gen-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC Gen-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59E727241DA2D500A7C5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF59E72B241DA2D600A7C5EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF59E72E241DA2D600A7C5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF59E730241DA2D600A7C5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OC_Gen_X.entitlements; sourceTree = "<group>"; };
@@ -91,6 +90,7 @@
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
+		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,10 +177,10 @@
 				CF59E727241DA2D500A7C5EC /* AppDelegate.swift */,
 				CF59E739241DA57A00A7C5EC /* MainVC.swift */,
 				CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */,
-				CF59E72B241DA2D600A7C5EC /* Assets.xcassets */,
 				CF59E72D241DA2D600A7C5EC /* Main.storyboard */,
 				CF59E730241DA2D600A7C5EC /* Info.plist */,
 				CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */,
+				CFE8A22F249E662400D72669 /* AppIcon.xcassets */,
 			);
 			path = "OC Gen-X";
 			sourceTree = "<group>";
@@ -261,10 +261,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF59E72C241DA2D600A7C5EC /* Assets.xcassets in Resources */,
 				CF4C2031243D076000D2F187 /* OpenUsbKbDxe.efi in Resources */,
 				CF4C2022243D070E00D2F187 /* SMCBatteryManager.kext in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
+				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
