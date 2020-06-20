@@ -1675,6 +1675,6 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
         </scene>
     </scenes>
     <resources>
-        <image name="genx" width="1200" height="350"/>
+        <image name="genx" width="600" height="175"/>
     </resources>
 </document>
