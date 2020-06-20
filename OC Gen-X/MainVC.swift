@@ -52,6 +52,8 @@ class MainVC: NSViewController {
     @IBOutlet weak var brcmPatchRam2Checked: NSButton!
     @IBOutlet weak var brcmBtInjectorChecked: NSButton!
     @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
+    @IBOutlet weak var cometLakeChecked: NSButton!
+    @IBOutlet weak var casecadeChecked: NSButton!
     
     
     
@@ -200,7 +202,6 @@ class MainVC: NSViewController {
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
-        //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Bulldozer/Jaguar AMD specific info
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
         
@@ -325,6 +326,35 @@ class MainVC: NSViewController {
             break
         }
         
+        switch coffeelakeChecked.state {
+        case .on:
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.protectUefiServices = true
+            config.booter.quirks.provideCustomSlide = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.setupVirtualMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+        default:
+            break
+        }
+        
         switch haswellEChecked.state {
         case .on:
             config.booter.quirks.devirtualiseMmio = true
@@ -375,6 +405,34 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
+        switch casecadeChecked.state {
+        case .on:
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.provideCustomSlide = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.setupVirtualMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }

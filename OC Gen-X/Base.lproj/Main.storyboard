@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="340"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="415"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -738,7 +738,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="226"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="301"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -875,9 +875,30 @@
                                                 <box hidden="YES" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4ot-SR-6YO">
                                                     <rect key="frame" x="10" y="34" width="771" height="5"/>
                                                 </box>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GuR-Jk-C6I">
+                                                    <rect key="frame" x="154" y="313" width="95" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="Comet Lake" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6WF-b2-qWH">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="8Rz-b9-vUE"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2kH-rr-uNc">
+                                                    <rect key="frame" x="154" y="287" width="246" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="Skylake-X/W and Cascade Lake-X/W" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="QoQ-nT-8Ys">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="oKh-uO-xyY"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fQy-FH-F4E" secondAttribute="trailing" constant="20" symbolic="YES" id="0LP-ma-KQy"/>
+                                                <constraint firstItem="2kH-rr-uNc" firstAttribute="leading" secondItem="GuR-Jk-C6I" secondAttribute="leading" id="0Tr-Qy-kbU"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y2r-xg-ybM" secondAttribute="trailing" constant="20" symbolic="YES" id="0t1-f0-f3F"/>
                                                 <constraint firstAttribute="bottom" secondItem="eeX-Ee-gPO" secondAttribute="bottom" constant="10" id="23K-Ka-ald"/>
                                                 <constraint firstAttribute="trailing" secondItem="4ot-SR-6YO" secondAttribute="trailing" constant="10" id="2DX-Nd-OXS"/>
@@ -892,12 +913,13 @@
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="top" secondItem="TaU-Te-85W" secondAttribute="bottom" constant="10" id="DgF-EK-m0a"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDG-g2-WWY" secondAttribute="trailing" constant="20" symbolic="YES" id="DjY-s9-GJX"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="FD5-xM-x6B"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" constant="20" symbolic="YES" id="FGa-tl-83h"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="NIP-2u-BKE"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="top" secondItem="h8w-7F-qHq" secondAttribute="bottom" constant="10" id="NfV-F3-IYi"/>
+                                                <constraint firstItem="GuR-Jk-C6I" firstAttribute="top" secondItem="hlu-wH-ii6" secondAttribute="bottom" constant="10" id="PVs-7B-2mm"/>
                                                 <constraint firstItem="TaU-Te-85W" firstAttribute="top" secondItem="p55-Fb-A4q" secondAttribute="bottom" constant="10" id="Pzm-62-hiV"/>
                                                 <constraint firstItem="4ot-SR-6YO" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="SGc-8H-DGR"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="top" secondItem="T1A-26-MGn" secondAttribute="bottom" constant="10" id="UDA-wf-lZ2"/>
+                                                <constraint firstItem="2kH-rr-uNc" firstAttribute="top" secondItem="GuR-Jk-C6I" secondAttribute="bottom" constant="10" id="UHp-Yc-tMc"/>
                                                 <constraint firstAttribute="trailing" secondItem="T1A-26-MGn" secondAttribute="trailing" constant="10" id="WDB-Bh-wDJ"/>
                                                 <constraint firstItem="TaU-Te-85W" firstAttribute="leading" secondItem="Rhr-Fz-70Q" secondAttribute="leading" id="WfS-I3-se4"/>
                                                 <constraint firstItem="eeX-Ee-gPO" firstAttribute="top" secondItem="4ot-SR-6YO" secondAttribute="bottom" constant="10" id="X5r-iv-mBE"/>
@@ -909,6 +931,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eeX-Ee-gPO" secondAttribute="trailing" symbolic="YES" id="cGI-Yo-U3Z"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="cwx-Qc-7xQ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rhr-Fz-70Q" secondAttribute="trailing" constant="20" symbolic="YES" id="dWU-nh-DzA"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2kH-rr-uNc" secondAttribute="trailing" symbolic="YES" id="dXa-a8-OSs"/>
                                                 <constraint firstAttribute="trailing" secondItem="hlu-wH-ii6" secondAttribute="trailing" constant="10" id="dgh-JF-1fO"/>
                                                 <constraint firstItem="Rhr-Fz-70Q" firstAttribute="top" secondItem="We0-KK-fmZ" secondAttribute="bottom" constant="10" id="e7S-mP-wBr"/>
                                                 <constraint firstItem="NbE-uy-4f2" firstAttribute="top" secondItem="gDG-g2-WWY" secondAttribute="bottom" constant="10" id="gB4-1N-cqV"/>
@@ -921,9 +944,11 @@
                                                 <constraint firstItem="arC-k3-phI" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="mm4-Y0-uDU"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NbE-uy-4f2" secondAttribute="trailing" symbolic="YES" id="nMJ-e8-khx"/>
                                                 <constraint firstItem="y2r-xg-ybM" firstAttribute="top" secondItem="arC-k3-phI" secondAttribute="bottom" constant="10" id="p4C-hm-OFt"/>
+                                                <constraint firstAttribute="trailing" secondItem="GuR-Jk-C6I" secondAttribute="trailing" constant="544" id="pmS-nP-Wgr"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TaU-Te-85W" secondAttribute="trailing" constant="20" symbolic="YES" id="tiC-Bq-tWV"/>
                                                 <constraint firstItem="0Yb-zy-Quz" firstAttribute="centerX" secondItem="C1C-xa-78L" secondAttribute="centerX" id="uA7-za-v3R"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="top" secondItem="rg6-Ud-Ml9" secondAttribute="bottom" constant="10" id="upm-J8-b9h"/>
+                                                <constraint firstItem="GuR-Jk-C6I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" symbolic="YES" id="wKp-Ju-R7f"/>
                                                 <constraint firstItem="p55-Fb-A4q" firstAttribute="top" secondItem="Rhr-Fz-70Q" secondAttribute="bottom" constant="10" id="wyk-ZU-NeO"/>
                                                 <constraint firstItem="p55-Fb-A4q" firstAttribute="leading" secondItem="Rhr-Fz-70Q" secondAttribute="leading" id="zDL-2D-2ay"/>
                                             </constraints>
@@ -943,11 +968,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="83"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="150"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="47" width="44" height="18"/>
+                                                                        <rect key="frame" x="8" y="114" width="44" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -966,7 +991,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="23" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="90" width="91" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1434,11 +1459,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="SMBIOS" identifier="" id="5pE-yU-lCV">
                                         <view key="view" id="yfq-k4-YvT">
-                                            <rect key="frame" x="10" y="33" width="791" height="113"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="255"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-Rb-FJJ">
-                                                    <rect key="frame" x="8" y="11" width="94" height="17"/>
+                                                    <rect key="frame" x="8" y="153" width="94" height="17"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Serial Number:" id="t8U-2J-bUf">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1446,7 +1471,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-AX-04H">
-                                                    <rect key="frame" x="8" y="-55" width="174" height="16"/>
+                                                    <rect key="frame" x="8" y="87" width="174" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Board Serial Number (MLB):" id="6I2-HK-yp8">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1454,7 +1479,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Rmb-Iy-rlL">
-                                                    <rect key="frame" x="8" y="-122" width="59" height="17"/>
+                                                    <rect key="frame" x="8" y="20" width="59" height="17"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="SmUUID:" id="PFB-BZ-IJ5">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1462,7 +1487,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ver-Sx-K2G">
-                                                    <rect key="frame" x="120" y="9" width="651" height="21"/>
+                                                    <rect key="frame" x="120" y="151" width="651" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="W00000000001" drawsBackground="YES" id="jY5-ae-HXf">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1470,7 +1495,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-dV-vxW">
-                                                    <rect key="frame" x="200" y="-58" width="571" height="22"/>
+                                                    <rect key="frame" x="200" y="84" width="571" height="22"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="M0000000000000001" drawsBackground="YES" id="0Eb-bB-POy">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1478,7 +1503,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wpt-Ki-nzt">
-                                                    <rect key="frame" x="85" y="-124" width="686" height="21"/>
+                                                    <rect key="frame" x="85" y="18" width="686" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="00000000-0000-0000-0000-000000000000" drawsBackground="YES" id="NmB-Qp-bLW">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1486,7 +1511,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-hI-HOe">
-                                                    <rect key="frame" x="8" y="78" width="94" height="15"/>
+                                                    <rect key="frame" x="8" y="220" width="94" height="15"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="System Model:" id="tR7-sh-igK">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1494,7 +1519,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-TR-Goe">
-                                                    <rect key="frame" x="120" y="75" width="651" height="21"/>
+                                                    <rect key="frame" x="120" y="217" width="651" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="iMac19,1" drawsBackground="YES" id="DML-Mx-U6W">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1597,7 +1622,9 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="brcmPatchRam2Checked" destination="fiJ-Iz-9U3" id="WF8-Se-ndu"/>
                         <outlet property="brcmPatchRam3Checked" destination="5aF-3i-FQP" id="ZOJ-Ix-Pt1"/>
                         <outlet property="broadwellEChecked" destination="p55-Fb-A4q" id="7sg-3I-0xf"/>
+                        <outlet property="casecadeChecked" destination="2kH-rr-uNc" id="nLK-07-iev"/>
                         <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
+                        <outlet property="cometLakeChecked" destination="GuR-Jk-C6I" id="vZK-KM-a1v"/>
                         <outlet property="fxXlncUSBChecked" destination="u7Y-Ij-CXE" id="bkO-LJ-yjq"/>
                         <outlet property="generateButton" destination="Wcy-uw-NdK" id="Oo3-OM-ng4"/>
                         <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
