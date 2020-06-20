@@ -47,6 +47,11 @@ class MainVC: NSViewController {
     @IBOutlet weak var modelInput: NSTextField!
     @IBOutlet weak var wegLabel: NSTextField!
     @IBOutlet weak var wegBootargsTextfield: NSTextField!
+    @IBOutlet weak var appleALCBootargs: NSTextField!
+    @IBOutlet weak var appleALCInputfield: NSTextField!
+    @IBOutlet weak var bootargsLabel: NSTextField!
+    @IBOutlet weak var bootargsInputfield: NSTextField!
+    
     
     
     override func viewDidLoad() {
@@ -56,6 +61,20 @@ class MainVC: NSViewController {
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
         generateButton.isEnabled = (sender.isEnabled == true)
+    }
+    
+    @IBAction func appleALCClicked(_ sender: NSButton) {
+        switch appleALCChecked.state {
+        case .on:
+            appleALCBootargs.isHidden = (sender.isHidden == true)
+            appleALCInputfield.isHidden = (sender.isHidden == true)
+        case .off:
+            appleALCBootargs.isHidden = (sender.isHidden == false)
+            appleALCInputfield.isHidden = (sender.isHidden == false)
+        default:
+            appleALCBootargs.isHidden = (sender.isHidden == false)
+            appleALCInputfield.isHidden = (sender.isHidden == false)
+        }
     }
     
     @IBAction func whatevergreenClicked(_ sender: NSButton) {
@@ -141,6 +160,7 @@ class MainVC: NSViewController {
                 try fileManager.removeItem(at: kextUrl)
                 config.kernel.kAdd.removeAll()
                 config.uefi.drivers.removeAll()
+                config.nvram.add.addAppleBootVariableGuid.bootArgs = ""
             }
             catch {
                 print(error.localizedDescription)
@@ -440,7 +460,7 @@ class MainVC: NSViewController {
         switch whatevergreenChecked.state {
         case .on:
             addKextToConfig(item: "WhateverGreen")
-            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: wegBootargsTextfield.stringValue)
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: wegBootargsTextfield.stringValue + " ")
         default:
             break
         }
@@ -448,6 +468,7 @@ class MainVC: NSViewController {
         switch appleALCChecked.state {
         case .on:
             addKextToConfig(item: "AppleALC")
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: appleALCInputfield.stringValue + " ")
         default:
             break
         }
@@ -573,6 +594,9 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
                 config.misc.blessOverRide.removeAll()
+                if (bootargsInputfield != nil) {
+                    config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: bootargsInputfield.stringValue + " ")
+                }
                 if (modelInput != nil) {
                     config.platFormInfo.generic.systemProductName = modelInput.stringValue
                 }
