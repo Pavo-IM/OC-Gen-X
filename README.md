@@ -8,10 +8,15 @@ Based on the architecture of your system.
 The configuration file is based off the dortania guide.
 
 ![1](https://i.imgur.com/zOKGbcE.png)
+
 ![2](https://i.imgur.com/Vdtovgy.png)
+
 ![3](https://i.imgur.com/YamyeMn.png)
+
 ![4](https://i.imgur.com/JvMQrUC.png)
+
 ![5](https://i.imgur.com/V1ymHlE.png)
+
 
 ### Credits
 
