@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="316"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -738,16 +738,16 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="300"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="202"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
                                         <view key="view" id="C1C-xa-78L">
-                                            <rect key="frame" x="10" y="33" width="791" height="438"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="377"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="arC-k3-phI">
-                                                    <rect key="frame" x="9" y="374" width="83" height="18"/>
+                                                    <rect key="frame" x="9" y="313" width="83" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Ivy Bridge" bezelStyle="regularSquare" imagePosition="left" inset="2" id="HZ2-2v-r96">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -757,7 +757,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-xg-ybM">
-                                                    <rect key="frame" x="9" y="348" width="69" height="18"/>
+                                                    <rect key="frame" x="9" y="287" width="69" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Haswell" bezelStyle="regularSquare" imagePosition="left" inset="2" id="MN4-d4-vLo">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -767,7 +767,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fQy-FH-F4E">
-                                                    <rect key="frame" x="9" y="322" width="69" height="18"/>
+                                                    <rect key="frame" x="9" y="261" width="69" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Skylake" bezelStyle="regularSquare" imagePosition="left" inset="2" id="afu-ay-sGx">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -777,7 +777,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-g2-WWY">
-                                                    <rect key="frame" x="9" y="296" width="85" height="18"/>
+                                                    <rect key="frame" x="9" y="235" width="85" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Kaby Lake" bezelStyle="regularSquare" imagePosition="left" inset="2" id="E6q-nu-QRN">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -787,7 +787,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-Fz-70Q">
-                                                    <rect key="frame" x="9" y="196" width="83" height="18"/>
+                                                    <rect key="frame" x="9" y="135" width="83" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Haswell-E" bezelStyle="regularSquare" imagePosition="left" inset="2" id="KpI-jw-Vii">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -797,7 +797,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p55-Fb-A4q">
-                                                    <rect key="frame" x="9" y="170" width="95" height="18"/>
+                                                    <rect key="frame" x="9" y="109" width="95" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Broadwell-E" bezelStyle="regularSquare" imagePosition="left" inset="2" id="nh7-BO-Meg">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -807,7 +807,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-Te-85W">
-                                                    <rect key="frame" x="9" y="144" width="84" height="18"/>
+                                                    <rect key="frame" x="9" y="83" width="84" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Skylake-X" bezelStyle="regularSquare" imagePosition="left" inset="2" id="auJ-pT-5l3">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -817,7 +817,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eeX-Ee-gPO">
-                                                    <rect key="frame" x="9" y="70" width="125" height="18"/>
+                                                    <rect key="frame" x="9" y="9" width="125" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Ryzen Zen/Zen 2" bezelStyle="regularSquare" imagePosition="left" inset="2" id="MiB-nH-3Ok">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -827,10 +827,10 @@
                                                     </connections>
                                                 </button>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-wH-ii6">
-                                                    <rect key="frame" x="10" y="399" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="338" width="771" height="5"/>
                                                 </box>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-zy-Quz">
-                                                    <rect key="frame" x="348" y="412" width="96" height="16"/>
+                                                    <rect key="frame" x="348" y="351" width="96" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Intel Consumer" id="dJk-VA-o4e">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -838,10 +838,10 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="h8w-7F-qHq">
-                                                    <rect key="frame" x="10" y="258" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="197" width="771" height="5"/>
                                                 </box>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NbE-uy-4f2">
-                                                    <rect key="frame" x="9" y="270" width="95" height="18"/>
+                                                    <rect key="frame" x="9" y="209" width="95" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Coffee Lake" bezelStyle="regularSquare" imagePosition="left" inset="2" id="v5y-EW-Vvj">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -851,7 +851,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-Ud-Ml9">
-                                                    <rect key="frame" x="362" y="234" width="68" height="16"/>
+                                                    <rect key="frame" x="362" y="173" width="68" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Intel HEDT" id="NuB-U2-9fd">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -859,13 +859,13 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="We0-KK-fmZ">
-                                                    <rect key="frame" x="10" y="221" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="160" width="771" height="5"/>
                                                 </box>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-26-MGn">
-                                                    <rect key="frame" x="10" y="132" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="71" width="771" height="5"/>
                                                 </box>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nf9-hV-dOz">
-                                                    <rect key="frame" x="379" y="108" width="34" height="16"/>
+                                                    <rect key="frame" x="379" y="47" width="34" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="AMD" id="Z9R-gJ-Gnm">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -873,7 +873,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box hidden="YES" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4ot-SR-6YO">
-                                                    <rect key="frame" x="10" y="95" width="771" height="5"/>
+                                                    <rect key="frame" x="10" y="34" width="771" height="5"/>
                                                 </box>
                                             </subviews>
                                             <constraints>
@@ -931,11 +931,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="438"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="156"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="320" width="805" height="124"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="172"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -1091,18 +1091,18 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="Ethernet" identifier="" id="jN4-l8-qvI">
                                                             <view key="view" id="lVD-up-8iH">
-                                                                <rect key="frame" x="10" y="33" width="785" height="102"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sCA-PT-GyD">
-                                                                        <rect key="frame" x="8" y="66" width="147" height="18"/>
+                                                                        <rect key="frame" x="8" y="90" width="147" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SmallTreeIntel82576" bezelStyle="regularSquare" imagePosition="left" inset="2" id="kOy-2E-PTF">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xhE-62-ws7">
-                                                                        <rect key="frame" x="8" y="42" width="161" height="18"/>
+                                                                        <rect key="frame" x="8" y="66" width="161" height="18"/>
                                                                         <string key="toolTip">Qualcomm Atheros Killer E2200 driver for macOS.  Supports: Qualcomm Atheros AR816x, AR817x, Killer E220x, Killer E2400 and Killer E2500</string>
                                                                         <buttonCell key="cell" type="check" title="AtherosE2200Ethernet" bezelStyle="regularSquare" imagePosition="left" inset="2" id="RyY-7M-g0k">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -1110,24 +1110,30 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button toolTip="OS X open source driver for the Realtek RTL8111/8168 family.  Supports: Realtek RTL8111/8168 B/C/D/E/F/G/H" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="peh-0s-slN">
-                                                                        <rect key="frame" x="8" y="18" width="117" height="18"/>
+                                                                        <rect key="frame" x="8" y="42" width="117" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="RealtekRTL8111" bezelStyle="regularSquare" imagePosition="left" inset="2" id="pdO-v3-bFc">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q76-Th-577">
+                                                                        <rect key="frame" x="8" y="18" width="84" height="18"/>
+                                                                        <buttonCell key="cell" type="check" title="IntelMausi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iTP-dz-xbQ">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
-                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="4NQ-a0-hoH"/>
-                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4ug-zg-Gr6"/>
-                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="6zK-VB-yd5"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="peh-0s-slN" secondAttribute="trailing" constant="20" symbolic="YES" id="KCR-bC-u5F"/>
-                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="MVo-Tk-Vwt"/>
-                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="OgQ-WK-a5V"/>
-                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="hxI-x3-ZKc"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sCA-PT-GyD" secondAttribute="trailing" constant="20" symbolic="YES" id="nGG-mU-ehT"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="peh-0s-slN" secondAttribute="bottom" constant="20" id="ppO-cH-vY7"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xhE-62-ws7" secondAttribute="trailing" constant="20" symbolic="YES" id="yNL-y6-iZ7"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="0xA-iw-HKf"/>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="top" secondItem="sCA-PT-GyD" secondAttribute="bottom" constant="10" id="4na-Vo-zYe"/>
+                                                                    <constraint firstItem="peh-0s-slN" firstAttribute="top" secondItem="xhE-62-ws7" secondAttribute="bottom" constant="10" id="AbG-qm-dZs"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="q76-Th-577" secondAttribute="bottom" constant="20" id="Jnk-zI-YP9"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="leading" secondItem="lVD-up-8iH" secondAttribute="leading" constant="10" id="aNy-yz-8aW"/>
+                                                                    <constraint firstItem="q76-Th-577" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="jmv-hZ-fRe"/>
+                                                                    <constraint firstItem="xhE-62-ws7" firstAttribute="leading" secondItem="sCA-PT-GyD" secondAttribute="leading" id="sTF-Sd-4wk"/>
+                                                                    <constraint firstItem="q76-Th-577" firstAttribute="top" secondItem="peh-0s-slN" secondAttribute="bottom" constant="10" id="uIS-vd-mqt"/>
+                                                                    <constraint firstItem="sCA-PT-GyD" firstAttribute="top" secondItem="lVD-up-8iH" secondAttribute="top" constant="20" id="yto-h4-VkG"/>
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
@@ -1365,9 +1371,6 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wpt-Ki-nzt">
                                                     <rect key="frame" x="85" y="18" width="403" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="403" id="5QS-DQ-XPQ"/>
-                                                    </constraints>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="00000000-0000-0000-0000-000000000000" drawsBackground="YES" id="NmB-Qp-bLW">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1385,7 +1388,6 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-TR-Goe">
                                                     <rect key="frame" x="120" y="216" width="293" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="293" id="Nka-Vc-EYw"/>
                                                         <constraint firstAttribute="height" constant="21" id="auI-Vm-gyO"/>
                                                     </constraints>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="iMac19,1" drawsBackground="YES" id="DML-Mx-U6W">
@@ -1451,6 +1453,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
                         <outlet property="haswellEChecked" destination="Rhr-Fz-70Q" id="TF8-i5-Z6x"/>
                         <outlet property="hfsPlusChecked" destination="Q1Z-HB-msw" id="dA4-sP-Kdg"/>
+                        <outlet property="intelMausiChecked" destination="q76-Th-577" id="mT4-VO-kW1"/>
                         <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="kU8-dn-rw5"/>
                         <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
                         <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
@@ -1478,7 +1481,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75.5" y="1719"/>
+            <point key="canvasLocation" x="75.5" y="1796.5"/>
         </scene>
     </scenes>
 </document>

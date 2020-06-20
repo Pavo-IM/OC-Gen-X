@@ -451,6 +451,13 @@ class MainVC: NSViewController {
             break
         }
         
+        switch intelMausiChecked.state {
+        case .on:
+            addKextToConfig(item: "IntelMausi")
+        default:
+            break
+        }
+        
         switch usbInjectAllChecked.state {
         case .on:
             addKextToConfig(item: "USBInjectAll")
@@ -591,6 +598,9 @@ class MainVC: NSViewController {
                 }
                 if realTekChecked.state == .on {
                     kextCopy(kextname: "realTek", item: "RealtekRTL8111", location: ocKextsDir)
+                }
+                if intelMausiChecked.state == .on {
+                    kextCopy(kextname: "IntelMausi", item: "IntelMausi", location: ocKextsDir)
                 }
                 if usbInjectAllChecked.state == .on {
                     kextCopy(kextname: "usbInjectAll", item: "USBInjectAll", location: ocKextsDir)
