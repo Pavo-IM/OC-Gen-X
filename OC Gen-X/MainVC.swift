@@ -368,6 +368,7 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
+            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v"
         default:
             break
         }
