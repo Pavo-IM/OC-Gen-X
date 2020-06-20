@@ -15,8 +15,9 @@ The configuration file is based off the dortania guide.
 
 ### Credits
 
-* App is made and designed by Pavo-IM
-* Special Thanks to the Acidanthea Development Team for Opencore (This app is not endorsed or promoted by Acidanthea)
-* Also Special Thanks to the Dortania Team for the Opencore Guide.
+* App is made and designed and copyrighted by *Pavo-IM*
+* Special Thanks to the *Acidanthea Development Team* for Opencore (This app is not endorsed or promoted by Acidanthea)
+* Also Special Thanks to the *Dortania Team* for the Opencore Guide.
+* Credit to *Hackintosh x86* for testing and logo's
 
 
