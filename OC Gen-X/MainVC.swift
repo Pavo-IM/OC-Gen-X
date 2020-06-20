@@ -41,6 +41,10 @@ class MainVC: NSViewController {
     @IBOutlet weak var xhciChecked: NSButton!
     @IBOutlet weak var textfield: NSTextField!
     @IBOutlet weak var hfsPlusChecked: NSButton!
+    @IBOutlet weak var snInput: NSTextField!
+    @IBOutlet weak var mlbInput: NSTextField!
+    @IBOutlet weak var smuuidInput: NSTextField!
+    @IBOutlet weak var modelInput: NSTextField!
     
     
     override func viewDidLoad() {
@@ -134,7 +138,6 @@ class MainVC: NSViewController {
     
     @IBAction func generateClicked(_ sender: NSButton) {
         //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Bulldozer/Jaguar AMD specific info
-        //TODO: Create UI textfield elements so users can add SMBIOS info themselves.
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
         
@@ -364,6 +367,7 @@ class MainVC: NSViewController {
             config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
         default:
             break
         }
@@ -539,6 +543,22 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
+                if (modelInput != nil) {
+                    config.platFormInfo.generic.systemProductName = modelInput.stringValue
+                }
+                
+                if (snInput != nil) {
+                    config.platFormInfo.generic.systemSerialNumber = snInput.stringValue
+                }
+                
+                if (mlbInput != nil) {
+                    config.platFormInfo.generic.mlb = mlbInput.stringValue
+                }
+                
+                if (smuuidInput != nil) {
+                    config.platFormInfo.generic.systemUUID = smuuidInput.stringValue
+                }
+                
                 if liluChecked.state == .on {
                     kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
                 }

@@ -32,7 +32,7 @@ var config = Root(
            legacySchema: legacySchema(legacyAppleBootVariableGuid: [legacyAppleBootVariableGuid()], legacyEfiGlobalVariable: [legacyEfiGlobalVariable()]),
            writeFlash: true),
                 
-    platFormInfo: platFormInfo(automatic: true, generic: generic(adviseWindows: false, mlb: "M0000000000000001", rom: Data(), spoofVendor: false, systemProductName: "iMac19,1", systemSerialNumber: "W00000000001", systemUUID: "00000000-0000-0000-0000-000000000000"), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: "Create"),
+    platFormInfo: platFormInfo(automatic: true, generic: generic(adviseWindows: false, mlb: "", rom: Data(), spoofVendor: false, systemProductName: "", systemSerialNumber: "", systemUUID: ""), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: "Create"),
                 
     uefi: uefi(apfs: apfs(enableJumpstart: true, hideVerbose: true, jumpstartHotPlug: false, minDate: 0, minVersion: 0),
           audio: audio(audioCodec: 0, audioDevice: "PciRoot(0x0)/Pci(0x1b,0x0)", audioOut: 0, audioSupport: false, minimumVolume: 20, playChime: false, volumeAmplifier: 0),
