@@ -2,6 +2,7 @@ import Cocoa
 
 class MainVC: NSViewController {
     
+    @IBOutlet weak var generateButton: NSButton!
     @IBOutlet weak var ivyBridgeChecked: NSButton!
     @IBOutlet weak var haswellChecked: NSButton!
     @IBOutlet weak var skylakeChecked: NSButton!
@@ -44,10 +45,11 @@ class MainVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        generateButton.isEnabled = false
     }
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
+        generateButton.isEnabled = (sender.isEnabled == true)
     }
     
     func kextCopy (kextname: String, item: String, location: URL) {
@@ -89,18 +91,52 @@ class MainVC: NSViewController {
         }
     }
     
+    func saveAlert () {
+        let fileManager = FileManager.default
+        let home = fileManager.homeDirectoryForCurrentUser
+        let kextPath = "Desktop/EFI"
+        let kextUrl = home.appendingPathComponent(kextPath)
+        let alert = NSAlert()
+        alert.messageText = "EFI Generation Complete!"
+        alert.informativeText = "The EFI has been generated and saved to \(kextUrl.path)"
+        alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
+    }
+    
+    func existAlert () {
+        let fileManager = FileManager.default
+        let home = fileManager.homeDirectoryForCurrentUser
+        let kextPath = "Desktop/EFI"
+        let kextUrl = home.appendingPathComponent(kextPath)
+        let alert = NSAlert()
+        alert.alertStyle = .critical
+        alert.addButton(withTitle: "Delete")
+        alert.addButton(withTitle: "Cancel")
+        alert.messageText = "EFI directory already exist!"
+        alert.informativeText = "EFI directory already exist at \(kextUrl.path). Click the Delete button to delete the existing directory!"
+        alert.beginSheetModal(for: self.view.window!, completionHandler: { (returnCode) -> Void in
+            switch returnCode {
+            case NSApplication.ModalResponse.alertFirstButtonReturn: do {
+                try fileManager.removeItem(at: kextUrl)
+            }
+            catch {
+                print(error.localizedDescription)
+                }
+            default:
+                return
+            }
+        })
+    }
+    
     func addKextToConfig (item: String) {
         let kext = kAdd(bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(item)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
         config.kernel.kAdd.append(kext)
     }
     
-    @IBAction func generateClicked(_ sender: Any) {
+    @IBAction func generateClicked(_ sender: NSButton) {
         //TODO: Add Sylake-X/Cascade Lake-X/W, Comet Lake, Bulldozer/Jaguar AMD specific info
         //TODO: Create UI textfield elements so users can add SMBIOS info themselves.
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
-        //FIXME: Copy Bootstrap.efi to Bootstrap location
-        //TODO: Add an alert to alert the user of EFI generated
         
         switch ivyBridgeChecked.state {
         case .on:
@@ -479,104 +515,7 @@ class MainVC: NSViewController {
         let destDirURL = fm.homeDirectoryForCurrentUser
         let deskDirString: String = destDirURL.appendingPathComponent(efidirName).path
         if fm.fileExists(atPath: deskDirString) {
-            do {
-                try fm.trashItem(at: destDirURL.appendingPathComponent(efidirName), resultingItemURL: nil )
-                try fm.createDirectory(at: destDirURL.appendingPathComponent(efidirName), withIntermediateDirectories: false, attributes: nil)
-                let newdestDir = URL(fileURLWithPath: deskDirString)
-                let ocBootDir = newdestDir.appendingPathComponent("BOOT")
-                let ocDir = newdestDir.appendingPathComponent("OC")
-                try fm.createDirectory(at: ocBootDir, withIntermediateDirectories: false, attributes: nil)
-                try fm.createDirectory(at: ocDir, withIntermediateDirectories: false, attributes: nil)
-                let ocACPIDir = ocDir.appendingPathComponent("ACPI")
-                let ocBootstrapDir = ocDir.appendingPathComponent("Bootstrap")
-                let ocDriversDir = ocDir.appendingPathComponent("Drivers")
-                let ocKextsDir = ocDir.appendingPathComponent("Kexts")
-                let ocResourcesDir = ocDir.appendingPathComponent("Resources")
-                let ocToolsDir = ocDir.appendingPathComponent("Tools")
-                try fm.createDirectory(at: ocACPIDir, withIntermediateDirectories: false, attributes: nil)
-                try fm.createDirectory(at: ocBootstrapDir, withIntermediateDirectories: false, attributes: nil)
-                try fm.createDirectory(at: ocDriversDir, withIntermediateDirectories: false, attributes: nil)
-                try fm.createDirectory(at: ocKextsDir, withIntermediateDirectories: false, attributes: nil)
-                try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
-                try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
-                efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
-                efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
-                if liluChecked.state == .on {
-                    kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
-                }
-                if virtualSMCChecked.state == .on {
-                    kextCopy(kextname: "virtualsmc", item: "VirtualSMC", location: ocKextsDir)
-                }
-                if smcProcessorChecked.state == .on {
-                    kextCopy(kextname: "smcprocessor", item: "SMCProcessor", location: ocKextsDir)
-                }
-                if smcSuperIOChecked.state == .on {
-                    kextCopy(kextname: "smcSuperIO", item: "SMCSuperIO", location: ocKextsDir)
-                }
-                if smcLightSensorChecked.state == .on {
-                    kextCopy(kextname: "smcLightSensor", item: "SMCLightSensor", location: ocKextsDir)
-                }
-                if smcBatteryManagerChecked.state == .on {
-                    kextCopy(kextname: "SMCBatteryManager", item: "SMCBatteryManager", location: ocKextsDir)
-                }
-                if whatevergreenChecked.state == .on {
-                    kextCopy(kextname: "whatevergreen", item: "WhateverGreen", location: ocKextsDir)
-                }
-                if appleALCChecked.state == .on {
-                    kextCopy(kextname: "appleALC", item: "AppleALC", location: ocKextsDir)
-                }
-                if smallTreeChecked.state == .on {
-                    kextCopy(kextname: "smallTree", item: "SmallTreeIntel82576", location: ocKextsDir)
-                }
-                if atherosChecked.state == .on {
-                    kextCopy(kextname: "atheros", item: "AtherosE2200Ethernet", location: ocKextsDir)
-                }
-                if realTekChecked.state == .on {
-                    kextCopy(kextname: "realTek", item: "RealtekRTL8111", location: ocKextsDir)
-                }
-                if usbInjectAllChecked.state == .on {
-                    kextCopy(kextname: "usbInjectAll", item: "USBInjectAll", location: ocKextsDir)
-                }
-                if airportBrcmChecked.state == .on {
-                    kextCopy(kextname: "airportBrcm", item: "AirportBrcmFixup", location: ocKextsDir)
-                }
-                if fxXlncUSBChecked.state == .on {
-                    kextCopy(kextname: "fxXlncUSB", item: "XLNCUSBFix", location: ocKextsDir)
-                }
-                if appleMCEReporterChecked.state == .on {
-                    kextCopy(kextname: "appleMCEReporter", item: "AppleMCEReporterDisabler", location: ocKextsDir)
-                }
-                if openRuntimeChecked.state == .on {
-                    driverCopy(drivername: "openRuntime", item: "OpenRuntime", location: ocDriversDir)
-                }
-                if hfsPlusChecked.state == .on {
-                    driverCopy(drivername: "hfsPlus", item: "HfsPlus", location: ocDriversDir)
-                }
-                if openUSBChecked.state == .on {
-                    driverCopy(drivername: "openUSB", item: "OpenUsbKbDxe", location: ocDriversDir)
-                }
-                if nvmExpressChecked.state == .on {
-                    driverCopy(drivername: "nvmExpress", item: "NvmExpressDxe", location: ocDriversDir)
-                }
-                if xhciChecked.state == .on {
-                    driverCopy(drivername: "xhci", item: "XhciDxe", location: ocDriversDir)
-                }
-                do {
-                    let plistEncoder = PropertyListEncoder()
-                    plistEncoder.outputFormat = .xml
-                    let configFilePath =  ocDir.appendingPathComponent("config.plist")
-                    let configToEncode = config
-                    let data = try plistEncoder.encode(configToEncode)
-                    try data.write(to: configFilePath)
-                    config.uefi.drivers.removeAll()
-                    config.kernel.kAdd.removeAll()
-                    config.kernel.kPatch?.removeAll()
-                }
-                catch {
-                }
-            }
-            catch {
-            }
+            existAlert()
         } else {
             do {
                 try fm.createDirectory(at: destDirURL.appendingPathComponent(efidirName), withIntermediateDirectories: false, attributes: nil)
@@ -599,6 +538,7 @@ class MainVC: NSViewController {
                 try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
+                efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
                 if liluChecked.state == .on {
                     kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
                 }
@@ -669,6 +609,7 @@ class MainVC: NSViewController {
                     config.uefi.drivers.removeAll()
                     config.kernel.kAdd.removeAll()
                     config.kernel.kPatch?.removeAll()
+                    saveAlert()
                 }
                 catch {
                 }

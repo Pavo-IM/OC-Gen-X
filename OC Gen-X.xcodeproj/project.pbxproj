@@ -45,6 +45,7 @@
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
+		CFEA3A7C249E3FB500EDE7CB /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
+		CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		CF4C2035243D077E00D2F187 /* OC Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */,
 				CF4C2038243D079C00D2F187 /* OpenCore.efi */,
 				CF4C2036243D079100D2F187 /* BOOTx64.efi */,
 			);
@@ -264,6 +267,7 @@
 				CF4C2024243D070E00D2F187 /* VirtualSMC.kext in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
 				CF4C2039243D079C00D2F187 /* OpenCore.efi in Resources */,
+				CFEA3A7C249E3FB500EDE7CB /* Bootstrap.efi in Resources */,
 				CF039FA8249DA1C400C3622E /* HfsPlus.efi in Resources */,
 				CF4C201A243D06FD00D2F187 /* WhateverGreen.kext in Resources */,
 				CF4C2026243D071900D2F187 /* AirportBrcmFixup.kext in Resources */,

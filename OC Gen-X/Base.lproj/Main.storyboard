@@ -708,7 +708,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="228"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="517"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -738,7 +738,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="100" width="811" height="134"/>
+                                <rect key="frame" x="-7" y="100" width="811" height="423"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -753,7 +753,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="hzN-Sw-cTp"/>
+                                                        <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="FSB-Bv-5PU"/>
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="y2r-xg-ybM">
@@ -877,7 +877,7 @@
                                                 </box>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fQy-FH-F4E" secondAttribute="trailing" symbolic="YES" id="0LP-ma-KQy"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fQy-FH-F4E" secondAttribute="trailing" constant="20" symbolic="YES" id="0LP-ma-KQy"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y2r-xg-ybM" secondAttribute="trailing" constant="20" symbolic="YES" id="0t1-f0-f3F"/>
                                                 <constraint firstAttribute="bottom" secondItem="eeX-Ee-gPO" secondAttribute="bottom" constant="10" id="23K-Ka-ald"/>
                                                 <constraint firstAttribute="trailing" secondItem="4ot-SR-6YO" secondAttribute="trailing" constant="10" id="2DX-Nd-OXS"/>
@@ -892,7 +892,7 @@
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="top" secondItem="TaU-Te-85W" secondAttribute="bottom" constant="10" id="DgF-EK-m0a"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDG-g2-WWY" secondAttribute="trailing" constant="20" symbolic="YES" id="DjY-s9-GJX"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="FD5-xM-x6B"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" symbolic="YES" id="FGa-tl-83h"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" constant="20" symbolic="YES" id="FGa-tl-83h"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="NIP-2u-BKE"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="top" secondItem="h8w-7F-qHq" secondAttribute="bottom" constant="10" id="NfV-F3-IYi"/>
                                                 <constraint firstItem="TaU-Te-85W" firstAttribute="top" secondItem="p55-Fb-A4q" secondAttribute="bottom" constant="10" id="Pzm-62-hiV"/>
@@ -1344,10 +1344,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="broadwellEChecked" destination="p55-Fb-A4q" id="7sg-3I-0xf"/>
                         <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
                         <outlet property="fxXlncUSBChecked" destination="u7Y-Ij-CXE" id="bkO-LJ-yjq"/>
+                        <outlet property="generateButton" destination="Wcy-uw-NdK" id="Oo3-OM-ng4"/>
                         <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
                         <outlet property="haswellEChecked" destination="Rhr-Fz-70Q" id="TF8-i5-Z6x"/>
                         <outlet property="hfsPlusChecked" destination="Q1Z-HB-msw" id="dA4-sP-Kdg"/>
-                        <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="RbQ-fl-hYL"/>
+                        <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="kU8-dn-rw5"/>
                         <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
                         <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
                         <outlet property="nvmExpressChecked" destination="UuB-sS-39W" id="rrz-TN-2rm"/>
