@@ -55,8 +55,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B82BCA36249EF26C00F32369 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
-		B8FCBC4A249F1BC400BBDEAB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CF039FA7249DA1C400C3622E /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = LucyRTL8125Ethernet.kext; sourceTree = "<group>"; };
 		CF4B049F249EBD6400690FB2 /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
@@ -262,7 +260,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ko,
 			);
 			mainGroup = CF59E71B241DA2D500A7C5EC;
 			productRefGroup = CF59E725241DA2D500A7C5EC /* Products */;
@@ -344,8 +341,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				CF59E72E241DA2D600A7C5EC /* Base */,
-				B82BCA36249EF26C00F32369 /* ko */,
-				B8FCBC4A249F1BC400BBDEAB /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -357,7 +352,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -418,7 +412,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -476,7 +469,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NY6S6KYZWU;
+				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +492,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = NY6S6KYZWU;
+				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = NO;
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
