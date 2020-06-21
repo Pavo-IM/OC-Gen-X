@@ -2,7 +2,7 @@
 # Opencore Gen-X
 ## All-In-One Opencore EFI Creation Utility
 
-Opencore Generation X is a Utiltiy to create a pre structured EFI Folder to the Desktop
+Opencore Generation X is a Utility to create a pre structured EFI Folder to the Desktop
 Based on the architecture of your system.
 
 This Application is currently in beta. testing
