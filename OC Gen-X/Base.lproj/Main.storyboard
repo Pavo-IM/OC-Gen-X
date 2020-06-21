@@ -712,7 +712,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="340" y="72" width="118" height="32"/>
+                                <rect key="frame" x="339" y="72" width="119" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1592,8 +1592,16 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                 </tabViewItems>
                             </tabView>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
-                                <rect key="frame" x="183" y="586" width="433" height="114"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
+                                <rect key="frame" x="561" y="79" width="218" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.5.9" id="c09-ms-Iid">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
+                                <rect key="frame" x="182" y="586" width="433" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="433" id="O7n-w9-UZS"/>
                                 </constraints>
@@ -1604,13 +1612,17 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                             <constraint firstAttribute="trailing" secondItem="UIh-RX-3Ag" secondAttribute="trailing" id="2Aa-if-5FR"/>
                             <constraint firstItem="Z7c-dp-thl" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="44I-ye-TeM"/>
                             <constraint firstItem="Y5K-fp-3dO" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="84m-ii-7ma"/>
+                            <constraint firstItem="JJY-uW-evJ" firstAttribute="top" secondItem="UIh-RX-3Ag" secondAttribute="bottom" constant="15" id="A3L-q2-ouN"/>
                             <constraint firstItem="m6I-TH-BfI" firstAttribute="top" secondItem="ZeK-sO-E8j" secondAttribute="top" constant="10" id="KP4-Rk-q7d"/>
                             <constraint firstItem="UIh-RX-3Ag" firstAttribute="top" secondItem="m6I-TH-BfI" secondAttribute="bottom" constant="14" id="LMp-Th-T6E"/>
+                            <constraint firstAttribute="trailing" secondItem="JJY-uW-evJ" secondAttribute="trailing" constant="20" id="N8f-sI-xxF"/>
                             <constraint firstItem="Y5K-fp-3dO" firstAttribute="top" secondItem="Z7c-dp-thl" secondAttribute="bottom" constant="1" id="Pns-vu-SDf"/>
                             <constraint firstItem="m6I-TH-BfI" firstAttribute="centerX" secondItem="Wcy-uw-NdK" secondAttribute="centerX" id="Vzk-HI-IJn"/>
+                            <constraint firstItem="Z7c-dp-thl" firstAttribute="top" secondItem="JJY-uW-evJ" secondAttribute="bottom" constant="10" id="bld-ML-nII"/>
                             <constraint firstAttribute="trailing" secondItem="Z7c-dp-thl" secondAttribute="trailing" constant="20" id="cL5-jR-qzA"/>
                             <constraint firstItem="Z7c-dp-thl" firstAttribute="top" secondItem="Wcy-uw-NdK" secondAttribute="bottom" constant="10" id="fmL-5t-b9a"/>
                             <constraint firstItem="UIh-RX-3Ag" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" id="k9z-eE-bjZ"/>
+                            <constraint firstItem="JJY-uW-evJ" firstAttribute="leading" secondItem="Wcy-uw-NdK" secondAttribute="trailing" constant="111" id="kcE-Fe-IiH"/>
                             <constraint firstItem="Wcy-uw-NdK" firstAttribute="top" secondItem="UIh-RX-3Ag" secondAttribute="bottom" constant="10" id="m3d-be-2tT"/>
                             <constraint firstAttribute="bottom" secondItem="Y5K-fp-3dO" secondAttribute="bottom" constant="20" id="qo8-DW-Voe"/>
                             <constraint firstItem="UIh-RX-3Ag" firstAttribute="top" secondItem="ZeK-sO-E8j" secondAttribute="top" constant="138" id="rXX-3V-hvg"/>
@@ -1675,6 +1687,6 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
         </scene>
     </scenes>
     <resources>
-        <image name="genx" width="600" height="175"/>
+        <image name="genx" width="1200" height="350"/>
     </resources>
 </document>
