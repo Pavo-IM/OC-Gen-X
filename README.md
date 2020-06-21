@@ -1,14 +1,13 @@
 ![logo](https://i.imgur.com/ArRajCS.png)
-# Opencore Gen-X
+# Opencore Gen-X [![Build Status](https://app.bitrise.io/app/c2a4e7ccf1e23c7f/status.svg?token=pb-dIZ8cTFQ88IjrXjJw9Q&branch=master)](https://app.bitrise.io/app/c2a4e7ccf1e23c7f)
 ## All-In-One Opencore EFI Creation Utility
 
-Opencore Generation X is a Utiltiy to create a pre structured EFI Folder to the Desktop
-Based on the architecture of your system.
+First Ever Beta is now released to the Public for Testing.  Bugs or Issues please submit bug reports via the github page!  Also tell us what you think and what future features you would like to see in the release, we want to make hackintoshing a breeze!
 
-This Application is currently in beta. testing
-It was designed and developed to make it easy to get Opencore installed.
+Opencore Generation X is a Utility to create a pre-structured EFI Folder to the Desktop Based on the selection of the user.
 
-The configuration file is based off the dortania guide.
+The config.plist generated is based off the architectures in the Dortania guide.
+i.e: Haswell, Skylake, Coffeelake etc..
 
 ![1](https://i.imgur.com/zOKGbcE.png)
 
@@ -24,8 +23,8 @@ The configuration file is based off the dortania guide.
 ### Credits
 
 * App is made and designed and copyrighted by *Pavo-IM*
-* Special Thanks to the *Acidanthea Development Team* for Opencore (This app is not endorsed or promoted by Acidanthea)
-* Also Special Thanks to the *Dortania Team* for the Opencore Guide.
-* Credit to *Hackintosh x86* for testing and logo's
+* *Acidanthea Development Team* for Opencore (This app is not endorsed or promoted by Acidanthea)
+* *Dortania Team* for the Opencore Guide.
+* *Hackintosh x86* for testing and logo's
 
 
