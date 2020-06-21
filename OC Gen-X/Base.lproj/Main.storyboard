@@ -886,7 +886,7 @@
                                                     </connections>
                                                 </button>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2kH-rr-uNc">
-                                                    <rect key="frame" x="154" y="287" width="246" height="18"/>
+                                                    <rect key="frame" x="154" y="135" width="246" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Skylake-X/W and Cascade Lake-X/W" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="QoQ-nT-8Ys">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -913,13 +913,13 @@
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="top" secondItem="TaU-Te-85W" secondAttribute="bottom" constant="10" id="DgF-EK-m0a"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDG-g2-WWY" secondAttribute="trailing" constant="20" symbolic="YES" id="DjY-s9-GJX"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="FD5-xM-x6B"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2kH-rr-uNc" secondAttribute="trailing" symbolic="YES" id="Jy3-jK-aTi"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="NIP-2u-BKE"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="top" secondItem="h8w-7F-qHq" secondAttribute="bottom" constant="10" id="NfV-F3-IYi"/>
                                                 <constraint firstItem="GuR-Jk-C6I" firstAttribute="top" secondItem="hlu-wH-ii6" secondAttribute="bottom" constant="10" id="PVs-7B-2mm"/>
                                                 <constraint firstItem="TaU-Te-85W" firstAttribute="top" secondItem="p55-Fb-A4q" secondAttribute="bottom" constant="10" id="Pzm-62-hiV"/>
                                                 <constraint firstItem="4ot-SR-6YO" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="SGc-8H-DGR"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="top" secondItem="T1A-26-MGn" secondAttribute="bottom" constant="10" id="UDA-wf-lZ2"/>
-                                                <constraint firstItem="2kH-rr-uNc" firstAttribute="top" secondItem="GuR-Jk-C6I" secondAttribute="bottom" constant="10" id="UHp-Yc-tMc"/>
                                                 <constraint firstAttribute="trailing" secondItem="T1A-26-MGn" secondAttribute="trailing" constant="10" id="WDB-Bh-wDJ"/>
                                                 <constraint firstItem="TaU-Te-85W" firstAttribute="leading" secondItem="Rhr-Fz-70Q" secondAttribute="leading" id="WfS-I3-se4"/>
                                                 <constraint firstItem="eeX-Ee-gPO" firstAttribute="top" secondItem="4ot-SR-6YO" secondAttribute="bottom" constant="10" id="X5r-iv-mBE"/>
@@ -931,7 +931,6 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eeX-Ee-gPO" secondAttribute="trailing" constant="20" symbolic="YES" id="cGI-Yo-U3Z"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="cwx-Qc-7xQ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rhr-Fz-70Q" secondAttribute="trailing" constant="20" symbolic="YES" id="dWU-nh-DzA"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2kH-rr-uNc" secondAttribute="trailing" constant="20" symbolic="YES" id="dXa-a8-OSs"/>
                                                 <constraint firstAttribute="trailing" secondItem="hlu-wH-ii6" secondAttribute="trailing" constant="10" id="dgh-JF-1fO"/>
                                                 <constraint firstItem="Rhr-Fz-70Q" firstAttribute="top" secondItem="We0-KK-fmZ" secondAttribute="bottom" constant="10" id="e7S-mP-wBr"/>
                                                 <constraint firstItem="NbE-uy-4f2" firstAttribute="top" secondItem="gDG-g2-WWY" secondAttribute="bottom" constant="10" id="gB4-1N-cqV"/>
@@ -939,6 +938,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="p55-Fb-A4q" secondAttribute="trailing" constant="20" symbolic="YES" id="gtQ-Ig-ATI"/>
                                                 <constraint firstItem="eeX-Ee-gPO" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="hLa-tY-i5N"/>
                                                 <constraint firstItem="arC-k3-phI" firstAttribute="top" secondItem="hlu-wH-ii6" secondAttribute="bottom" constant="10" id="jF4-Ze-EXb"/>
+                                                <constraint firstItem="2kH-rr-uNc" firstAttribute="top" secondItem="We0-KK-fmZ" secondAttribute="bottom" constant="10" id="jSh-gN-gce"/>
                                                 <constraint firstItem="h8w-7F-qHq" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="kRe-C7-4Ex"/>
                                                 <constraint firstItem="0Yb-zy-Quz" firstAttribute="top" secondItem="C1C-xa-78L" secondAttribute="top" constant="65" id="lUj-6W-ETo"/>
                                                 <constraint firstItem="arC-k3-phI" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="mm4-Y0-uDU"/>
@@ -948,7 +948,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TaU-Te-85W" secondAttribute="trailing" constant="20" symbolic="YES" id="tiC-Bq-tWV"/>
                                                 <constraint firstItem="0Yb-zy-Quz" firstAttribute="centerX" secondItem="C1C-xa-78L" secondAttribute="centerX" id="uA7-za-v3R"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="top" secondItem="rg6-Ud-Ml9" secondAttribute="bottom" constant="10" id="upm-J8-b9h"/>
-                                                <constraint firstItem="GuR-Jk-C6I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" constant="8" symbolic="YES" id="wKp-Ju-R7f"/>
+                                                <constraint firstItem="GuR-Jk-C6I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" symbolic="YES" id="wKp-Ju-R7f"/>
                                                 <constraint firstItem="p55-Fb-A4q" firstAttribute="top" secondItem="Rhr-Fz-70Q" secondAttribute="bottom" constant="10" id="wyk-ZU-NeO"/>
                                                 <constraint firstItem="p55-Fb-A4q" firstAttribute="leading" secondItem="Rhr-Fz-70Q" secondAttribute="leading" id="zDL-2D-2ay"/>
                                             </constraints>
