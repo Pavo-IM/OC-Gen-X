@@ -207,6 +207,14 @@ class MainVC: NSViewController {
         
         switch ivyBridgeChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -231,6 +239,14 @@ class MainVC: NSViewController {
         
         switch haswellChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -255,6 +271,14 @@ class MainVC: NSViewController {
         
         switch skylakeChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
@@ -279,6 +303,14 @@ class MainVC: NSViewController {
         
         switch kabylakeChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
@@ -303,6 +335,14 @@ class MainVC: NSViewController {
         
         switch coffeelakeChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -328,6 +368,14 @@ class MainVC: NSViewController {
         
         switch coffeelakeChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.protectUefiServices = true
@@ -357,6 +405,14 @@ class MainVC: NSViewController {
         
         switch haswellEChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.disableVariableWrite = true
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -384,6 +440,14 @@ class MainVC: NSViewController {
         
         switch broadwellEChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.disableVariableWrite = true
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -411,6 +475,14 @@ class MainVC: NSViewController {
         
         switch casecadeChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.provideCustomSlide = true
@@ -439,6 +511,13 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kPatch = [firstRyzenPatch]
@@ -709,7 +788,6 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
-                config.misc.blessOverRide.removeAll()
                 if (bootargsInputfield != nil) {
                     config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: bootargsInputfield.stringValue + " ")
                 }
