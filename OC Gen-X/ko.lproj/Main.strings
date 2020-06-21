@@ -1,0 +1,632 @@
+
+/* Class = "NSTextFieldCell"; placeholderString = "M0000000000000001"; ObjectID = "0Eb-bB-POy"; */
+"0Eb-bB-POy.placeholderString" = "M0000000000000001";
+
+/* Class = "NSButtonCell"; title = "VirtualSMC"; ObjectID = "12X-0g-3tL"; */
+"12X-0g-3tL.title" = "VirtualSMC";
+
+/* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
+"1UK-8n-QPP.title" = "툴바 사용자화…";
+
+/* Class = "NSMenuItem"; title = "OC Gen-X"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "OC Gen-X";
+
+/* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
+"1b7-l0-nxx.title" = "Find";
+
+/* Class = "NSMenuItem"; title = "Lower"; ObjectID = "1tx-W0-xDw"; */
+"1tx-W0-xDw.title" = "Lower";
+
+/* Class = "NSMenuItem"; title = "Raise"; ObjectID = "2h7-ER-AoG"; */
+"2h7-ER-AoG.title" = "Raise";
+
+/* Class = "NSMenuItem"; title = "Transformations"; ObjectID = "2oI-Rn-ZJC"; */
+"2oI-Rn-ZJC.title" = "Transformations";
+
+/* Class = "NSMenu"; title = "Spelling"; ObjectID = "3IN-sU-3Bg"; */
+"3IN-sU-3Bg.title" = "Spelling";
+
+/* Class = "NSMenuItem"; title = "Use Default"; ObjectID = "3Om-Ey-2VK"; */
+"3Om-Ey-2VK.title" = "Use Default";
+
+/* Class = "NSMenu"; title = "Speech"; ObjectID = "3rS-ZA-NoH"; */
+"3rS-ZA-NoH.title" = "Speech";
+
+/* Class = "NSMenuItem"; title = "Tighten"; ObjectID = "46P-cB-AYj"; */
+"46P-cB-AYj.title" = "Tighten";
+
+/* Class = "NSMenuItem"; title = "Find"; ObjectID = "4EN-yA-p0u"; */
+"4EN-yA-p0u.title" = "Find";
+
+/* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
+"4J7-dP-txa.title" = "Enter Full Screen";
+
+/* Class = "NSTextFieldCell"; placeholderString = "keepsyms=1 debug=0x100 -v npci=0x2000"; ObjectID = "4nm-7t-p3D"; */
+"4nm-7t-p3D.placeholderString" = "keepsyms=1 debug=0x100 -v npci=0x2000";
+
+/* Class = "NSMenuItem"; title = "Quit OC Gen-X"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit OC Gen-X";
+
+/* Class = "NSTabViewItem"; label = "Extra's"; ObjectID = "4t3-PM-pAl"; */
+"4t3-PM-pAl.label" = "부가 옵션";
+
+/* Class = "NSButtonCell"; title = "XLNCUSBFIX"; ObjectID = "58Z-iD-hyi"; */
+"58Z-iD-hyi.title" = "XLNCUSBFIX";
+
+/* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
+"5QF-Oa-p0T.title" = "Edit";
+
+/* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
+"5Vv-lz-BsD.title" = "Copy Style";
+
+/* Class = "NSTextFieldCell"; title = "*Disclaimer* The config.plist is based off the settings on"; ObjectID = "5gZ-sK-sE9"; */
+"5gZ-sK-sE9.title" = "** 알 림 ** OC Gen-X에서 생성되는 Config.plist는 dortania 가이드를 준수합니다";
+
+/* Class = "NSMenuItem"; title = "About OC Gen-X"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About OC Gen-X";
+
+/* Class = "NSTabViewItem"; label = "SMBIOS"; ObjectID = "5pE-yU-lCV"; */
+"5pE-yU-lCV.label" = "시스템 바이오스";
+
+/* Class = "NSTextFieldCell"; title = "Board Serial Number (MLB):"; ObjectID = "6I2-HK-yp8"; */
+"6I2-HK-yp8.title" = "보드 시리얼 번호 (MLB):";
+
+/* Class = "NSButtonCell"; title = "Comet Lake"; ObjectID = "6WF-b2-qWH"; */
+"6WF-b2-qWH.title" = "코멧 레이크";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
+"6dh-zS-Vam.title" = "Redo";
+
+/* Class = "NSMenuItem"; title = "Correct Spelling Automatically"; ObjectID = "78Y-hA-62v"; */
+"78Y-hA-62v.title" = "Correct Spelling Automatically";
+
+/* Class = "NSMenu"; title = "Writing Direction"; ObjectID = "8mr-sm-Yjd"; */
+"8mr-sm-Yjd.title" = "Writing Direction";
+
+/* Class = "NSMenuItem"; title = "Substitutions"; ObjectID = "9ic-FL-obx"; */
+"9ic-FL-obx.title" = "Substitutions";
+
+/* Class = "NSTabViewItem"; label = "Kext"; ObjectID = "9mi-No-NeI"; */
+"9mi-No-NeI.label" = "커널 익스텐션";
+
+/* Class = "NSMenuItem"; title = "Smart Copy/Paste"; ObjectID = "9yt-4B-nSM"; */
+"9yt-4B-nSM.title" = "Smart Copy/Paste";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "주 메뉴";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSButtonCell"; title = "BrcmPatchRAM2 for 10.11-10.14"; ObjectID = "Bfe-UG-B4k"; */
+"Bfe-UG-B4k.title" = "BrcmPatchRAM2 (10.11~10.14 지원)";
+
+/* Class = "NSMenuItem"; title = "\tLeft to Right"; ObjectID = "BgM-ve-c93"; */
+"BgM-ve-c93.title" = "\tLeft to Right";
+
+/* Class = "NSMenuItem"; title = "Save As…"; ObjectID = "Bw7-FT-i3A"; */
+"Bw7-FT-i3A.title" = "Save As…";
+
+/* Class = "NSTabViewItem"; label = "Graphics"; ObjectID = "CsQ-iK-bJm"; */
+"CsQ-iK-bJm.label" = "내장/외장 GPU";
+
+/* Class = "NSButtonCell"; title = "SMCProcessor"; ObjectID = "DA7-8c-MgT"; */
+"DA7-8c-MgT.title" = "SMCProcessor";
+
+/* Class = "NSTextFieldCell"; placeholderString = "iMac19,1"; ObjectID = "DML-Mx-U6W"; */
+"DML-Mx-U6W.placeholderString" = "iMac19,1";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
+"DVo-aG-piG.title" = "Close";
+
+/* Class = "NSTextFieldCell"; title = "WhateverGreen Boot-Args:"; ObjectID = "DhZ-jd-01r"; */
+"DhZ-jd-01r.title" = "WhateverGreen 부트 옵션(Boot-Args):";
+
+/* Class = "NSMenuItem"; title = "Spelling and Grammar"; ObjectID = "Dv1-io-Yv7"; */
+"Dv1-io-Yv7.title" = "Spelling and Grammar";
+
+/* Class = "NSButtonCell"; title = "Kaby Lake"; ObjectID = "E6q-nu-QRN"; */
+"E6q-nu-QRN.title" = "카비 레이크";
+
+/* Class = "NSButtonCell"; title = "SMCSuperIO"; ObjectID = "Ee7-82-v3F"; */
+"Ee7-82-v3F.title" = "SMCSuperIO";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "OC Gen-X Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "OC Gen-X Help";
+
+/* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
+"Fal-I4-PZk.title" = "Text";
+
+/* Class = "NSMenu"; title = "Substitutions"; ObjectID = "FeM-D8-WVr"; */
+"FeM-D8-WVr.title" = "Substitutions";
+
+/* Class = "NSButtonCell"; title = "OpenUsbKbDxe.efi"; ObjectID = "Fnr-dc-RFu"; */
+"Fnr-dc-RFu.title" = "OpenUsbKbDxe.efi";
+
+/* Class = "NSMenuItem"; title = "Bold"; ObjectID = "GB9-OM-e27"; */
+"GB9-OM-e27.title" = "Bold";
+
+/* Class = "NSTabViewItem"; label = "VirtualSMC Plugins"; ObjectID = "GBT-cr-FfU"; */
+"GBT-cr-FfU.label" = "VSMC 플러그인";
+
+/* Class = "NSMenu"; title = "Format"; ObjectID = "GEO-Iw-cKr"; */
+"GEO-Iw-cKr.title" = "Format";
+
+/* Class = "NSMenuItem"; title = "Use Default"; ObjectID = "GUa-eO-cwY"; */
+"GUa-eO-cwY.title" = "Use Default";
+
+/* Class = "NSMenuItem"; title = "Font"; ObjectID = "Gi5-1S-RQB"; */
+"Gi5-1S-RQB.title" = "Font";
+
+/* Class = "NSMenuItem"; title = "Writing Direction"; ObjectID = "H1b-Si-o9J"; */
+"H1b-Si-o9J.title" = "Writing Direction";
+
+/* Class = "NSButtonCell"; title = "LucyRTL8125Ethernet"; ObjectID = "H8P-ij-rPR"; */
+"H8P-ij-rPR.title" = "LucyRTL8125Ethernet";
+
+/* Class = "NSMenuItem"; title = "View"; ObjectID = "H8h-7b-M4v"; */
+"H8h-7b-M4v.title" = "View";
+
+/* Class = "NSMenuItem"; title = "Text Replacement"; ObjectID = "HFQ-gK-NFA"; */
+"HFQ-gK-NFA.title" = "Text Replacement";
+
+/* Class = "NSMenuItem"; title = "Show Spelling and Grammar"; ObjectID = "HFo-cy-zxI"; */
+"HFo-cy-zxI.title" = "Show Spelling and Grammar";
+
+/* Class = "NSButtonCell"; title = "Ivy Bridge"; ObjectID = "HZ2-2v-r96"; */
+"HZ2-2v-r96.title" = "아이비 브릿지";
+
+/* Class = "NSMenu"; title = "View"; ObjectID = "HyV-fh-RgO"; */
+"HyV-fh-RgO.title" = "View";
+
+/* Class = "NSMenuItem"; title = "Subscript"; ObjectID = "I0S-gh-46l"; */
+"I0S-gh-46l.title" = "Subscript";
+
+/* Class = "NSMenuItem"; title = "Open…"; ObjectID = "IAo-SY-fd9"; */
+"IAo-SY-fd9.title" = "Open…";
+
+/* Class = "NSWindow"; title = "OC Gen-X"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "OC Gen-X";
+
+/* Class = "NSButtonCell"; title = "NvmExpressDxe.efi"; ObjectID = "Is1-0J-fVS"; */
+"Is1-0J-fVS.title" = "NvmExpressDxe.efi";
+
+/* Class = "NSMenuItem"; title = "Justify"; ObjectID = "J5U-5w-g23"; */
+"J5U-5w-g23.title" = "Justify";
+
+/* Class = "NSMenuItem"; title = "Use None"; ObjectID = "J7y-lM-qPV"; */
+"J7y-lM-qPV.title" = "Use None";
+
+/* Class = "NSButtonCell"; title = "HfsPlus.efi"; ObjectID = "JEy-dk-rTY"; */
+"JEy-dk-rTY.title" = "HfsPlus.efi";
+
+/* Class = "NSButton"; ibShadowedToolTip = "An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).\nAdd -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).\nAdd -liluoff to disable Lilu.\nAdd -liluuseroff to disable Lilu user patcher (for e.g. dyld_shared_cache manipulations).\nAdd -liluslow to enable legacy user patcher.\nAdd -lilulowmem to disable kernel unpack (disables Lilu in recovery mode).\nAdd -lilubeta to enable Lilu on unsupported os versions (10.13 and below are enabled by default).\nAdd -lilubetaall to enable Lilu and all loaded plugins on unsupported os versions (use very carefully).\nAdd -liluforce to enable Lilu regardless of the mode, OS, installer, or recovery.\nAdd liludelay=1000 to enable 1 second delay after each print for troubleshooting.\nAdd lilucpu=N to let Lilu and plugins assume Nth CPUInfo::CpuGeneration.\nAdd liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_MAJOR.KERN_MINOR.txt after N seconds"; ObjectID = "JsS-MV-XBV"; */
+"JsS-MV-XBV.ibShadowedToolTip" = "macOS용 시스템을 위한 Kext, Library및 패치를 통해 플랫폼을 확장 시키는 오픈 소스 커널이며, DEBUG 기능은 DEBUG 바이너리가 설치되어 있어야만 해당 기능을 사용할 수 있습니다  부트 옵션(Boot-Args)에 추가할 수 있는 옵션: -liludbg: 디버그 내용을 출력하려면 추가해 주세요\n-liludbgall: Lilu및 Lilu에 의존성을 가진 모든 플러그인에 대해 디버그 내용을 출력합니다\n-liluoff: Lilu를 비활성화 시킬 때 사용합니다\n-liluuseroff: Lilu 사용자 패치를 비활성화 시킵니다 (예: dyld_shared_cache 변경)\n-liluslow: 레거시 사용자 패쳐를 활성화 시킵니다\n-lilulowmem: 커널 압축 풀기를 비활성화 시키며 이는 복구모드에서 Lilu를 비활성화 시킵니다\n-lilubeta: 미지원 OS 버전에서 Lilu를 사용할 때 추가합니다 (10.13 이하는 기본 활성화)\n-lilubetaall: 미지원 OS에서 Lilu와 모든 플러그인을 사용하므로 신중히 사용해 주세요\n-liluforce: Mode,OS,설치 프로그램 또는 복구와 관계없이 Lilu를 활성화 시킵니다\n-liludelay=1000: 문제 해결을 위해 1초 지연을 활성화 시키고자 할 때 사용합니다\n-lilucpu=N: Lilu와 플러그인이 N개의 CPUInfo::CpuGerneration을 시키도록 합니다\n-liludump=N: Lilu 디버그 내용을 /var/log/Lilu_VERSION_KERN_MAJOR.KERN_MINOR.txt 파일에 N초 후 기록합니다";
+
+/* Class = "NSMenuItem"; title = "Revert to Saved"; ObjectID = "KaW-ft-85H"; */
+"KaW-ft-85H.title" = "Revert to Saved";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSButtonCell"; title = "Haswell-E"; ObjectID = "KpI-jw-Vii"; */
+"KpI-jw-Vii.title" = "하스웰-E";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Paste Ruler"; ObjectID = "LVM-kO-fVI"; */
+"LVM-kO-fVI.title" = "Paste Ruler";
+
+/* Class = "NSMenuItem"; title = "\tLeft to Right"; ObjectID = "Lbh-J2-qVU"; */
+"Lbh-J2-qVU.title" = "\tLeft to Right";
+
+/* Class = "NSButtonCell"; title = "Haswell"; ObjectID = "MN4-d4-vLo"; */
+"MN4-d4-vLo.title" = "하스웰";
+
+/* Class = "NSButtonCell"; title = "Ryzen Zen/Zen 2"; ObjectID = "MiB-nH-3Ok"; */
+"MiB-nH-3Ok.title" = "라이젠 젠/젠 2";
+
+/* Class = "NSMenuItem"; title = "Copy Ruler"; ObjectID = "MkV-Pr-PK5"; */
+"MkV-Pr-PK5.title" = "Copy Ruler";
+
+/* Class = "NSButtonCell"; title = "Lilu"; ObjectID = "MuK-5H-FYr"; */
+"MuK-5H-FYr.title" = "Lilu";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSTextFieldCell"; placeholderString = "00000000-0000-0000-0000-000000000000"; ObjectID = "NmB-Qp-bLW"; */
+"NmB-Qp-bLW.placeholderString" = "00000000-0000-0000-0000-000000000000";
+
+/* Class = "NSMenuItem"; title = "\tDefault"; ObjectID = "Nop-cj-93Q"; */
+"Nop-cj-93Q.title" = "\tDefault";
+
+/* Class = "NSTextFieldCell"; title = "Intel HEDT"; ObjectID = "NuB-U2-9fd"; */
+"NuB-U2-9fd.title" = "인텔 HEDT [하이엔드 데스크탑 플랫폼]";
+
+/* Class = "NSButtonCell"; title = "BrcmBluetoothInjector"; ObjectID = "O1L-D8-db8"; */
+"O1L-D8-db8.title" = "BrcmBluetoothInjector";
+
+/* Class = "NSTextFieldCell"; title = "https://dortania.github.io/OpenCore-Desktop-Guide/"; ObjectID = "O9I-Ci-F3S"; */
+"O9I-Ci-F3S.title" = "https://dortania.github.io/OpenCore-Desktop-Guide/";
+
+/* Class = "NSButtonCell"; title = "USBInjectAll"; ObjectID = "ONZ-We-spM"; */
+"ONZ-We-spM.title" = "USBInjectAll (USB 15포트 정리 후 USBport.kext로 대체 가능)";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimize";
+
+/* Class = "NSMenuItem"; title = "Baseline"; ObjectID = "OaQ-X3-Vso"; */
+"OaQ-X3-Vso.title" = "Baseline";
+
+/* Class = "NSMenuItem"; title = "Hide OC Gen-X"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide OC Gen-X";
+
+/* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
+"OwM-mh-QMV.title" = "Find Previous";
+
+/* Class = "NSMenuItem"; title = "Stop Speaking"; ObjectID = "Oyz-dy-DGm"; */
+"Oyz-dy-DGm.title" = "Stop Speaking";
+
+/* Class = "NSTextFieldCell"; title = "SmUUID:"; ObjectID = "PFB-BZ-IJ5"; */
+"PFB-BZ-IJ5.title" = "시스템 UUID:";
+
+/* Class = "NSMenuItem"; title = "Bigger"; ObjectID = "Ptp-SP-VEL"; */
+"Ptp-SP-VEL.title" = "Bigger";
+
+/* Class = "NSButtonCell"; title = "AppleMCEReporterDisabler"; ObjectID = "PvA-e7-VmS"; */
+"PvA-e7-VmS.title" = "AppleMCEReporterDisabler (Z390, C600, AMD CPU 사용 시 설치하며 네이티브/가상화 모두 해당됩니다)";
+
+/* Class = "NSMenuItem"; title = "Show Fonts"; ObjectID = "Q5e-8K-NDq"; */
+"Q5e-8K-NDq.title" = "Show Fonts";
+
+/* Class = "NSButtonCell"; title = "Skylake-X/W and Cascade Lake-X/W"; ObjectID = "QoQ-nT-8Ys"; */
+"QoQ-nT-8Ys.title" = "스카이 레이크-X/W, 캐스케이드 레이크-X/W";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSMenuItem"; title = "\tRight to Left"; ObjectID = "RB4-Sm-HuC"; */
+"RB4-Sm-HuC.title" = "\tRight to Left";
+
+/* Class = "NSTabViewItem"; label = "Additional BootArgs"; ObjectID = "RFV-rz-T1j"; */
+"RFV-rz-T1j.label" = "부트 옵션(Boot-Args)";
+
+/* Class = "NSTextFieldCell"; title = "AppleALC BootArgs:"; ObjectID = "RQy-GJ-ofV"; */
+"RQy-GJ-ofV.title" = "AppleALC 부트 옵션(Boot-Args):";
+
+/* Class = "NSTabViewItem"; label = "USB"; ObjectID = "RqG-Fc-xie"; */
+"RqG-Fc-xie.label" = "USB";
+
+/* Class = "NSMenuItem"; title = "Superscript"; ObjectID = "Rqc-34-cIF"; */
+"Rqc-34-cIF.title" = "Superscript";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "Ruw-6m-B2m"; */
+"Ruw-6m-B2m.title" = "Select All";
+
+/* Class = "NSButtonCell"; title = "AtherosE2200Ethernet"; ObjectID = "RyY-7M-g0k"; */
+"RyY-7M-g0k.title" = "AtherosE2200Ethernet";
+
+/* Class = "NSMenuItem"; title = "Jump to Selection"; ObjectID = "S0p-oC-mLd"; */
+"S0p-oC-mLd.title" = "Jump to Selection";
+
+/* Class = "NSButtonCell"; title = "XhciDxe.efi"; ObjectID = "TJs-qc-bOt"; */
+"TJs-qc-bOt.title" = "XhciDxe.efi";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Capitalize"; ObjectID = "UEZ-Bs-lqG"; */
+"UEZ-Bs-lqG.title" = "Capitalize";
+
+/* Class = "NSMenuItem"; title = "Center"; ObjectID = "VIY-Ag-zcb"; */
+"VIY-Ag-zcb.title" = "Center";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSMenuItem"; title = "Italic"; ObjectID = "Vjx-xi-njq"; */
+"Vjx-xi-njq.title" = "Italic";
+
+/* Class = "NSMenu"; title = "Edit"; ObjectID = "W48-6f-4Dl"; */
+"W48-6f-4Dl.title" = "Edit";
+
+/* Class = "NSButtonCell"; title = "BrcmPatchRAM3 for 10.14+ (must be paired with BrcmBluetoothInjector)"; ObjectID = "WCB-vf-Sn9"; */
+"WCB-vf-Sn9.title" = "BrcmPatchRAM3 (반드시 BrcmBluetoothInjector와 함께 사용되야 하며 10.14이상 버전에서 사용합니다)";
+
+/* Class = "NSMenuItem"; title = "Underline"; ObjectID = "WRG-CD-K1S"; */
+"WRG-CD-K1S.title" = "Underline";
+
+/* Class = "NSMenuItem"; title = "New"; ObjectID = "Was-JA-tGl"; */
+"Was-JA-tGl.title" = "New";
+
+/* Class = "NSMenuItem"; title = "Paste and Match Style"; ObjectID = "WeT-3V-zwk"; */
+"WeT-3V-zwk.title" = "Paste and Match Style";
+
+/* Class = "NSTextFieldCell"; placeholderString = "alcid=1"; ObjectID = "Xab-li-tWz"; */
+"Xab-li-tWz.placeholderString" = "alcid=1";
+
+/* Class = "NSTabViewItem"; label = "Essential"; ObjectID = "XhX-Gy-OsH"; */
+"XhX-Gy-OsH.label" = "필수 커널";
+
+/* Class = "NSMenuItem"; title = "Find…"; ObjectID = "Xz5-n4-O0W"; */
+"Xz5-n4-O0W.title" = "Find…";
+
+/* Class = "NSMenuItem"; title = "Find and Replace…"; ObjectID = "YEy-JH-Tfz"; */
+"YEy-JH-Tfz.title" = "Find and Replace…";
+
+/* Class = "NSMenuItem"; title = "\tDefault"; ObjectID = "YGs-j5-SAR"; */
+"YGs-j5-SAR.title" = "\tDefault";
+
+/* Class = "NSTabViewItem"; label = "WiFi and Bluetooth"; ObjectID = "Yj4-FR-J1v"; */
+"Yj4-FR-J1v.label" = "무선랜/블루투스";
+
+/* Class = "NSMenuItem"; title = "Start Speaking"; ObjectID = "Ynk-f8-cLZ"; */
+"Ynk-f8-cLZ.title" = "Start Speaking";
+
+/* Class = "NSTextFieldCell"; title = "AMD"; ObjectID = "Z9R-gJ-Gnm"; */
+"Z9R-gJ-Gnm.title" = "AMD";
+
+/* Class = "NSButtonCell"; title = "OpenRuntime.efi"; ObjectID = "Z9V-d8-hyP"; */
+"Z9V-d8-hyP.title" = "OpenRuntime.efi";
+
+/* Class = "NSMenuItem"; title = "Align Left"; ObjectID = "ZM1-6Q-yy1"; */
+"ZM1-6Q-yy1.title" = "Align Left";
+
+/* Class = "NSTabViewItem"; label = "Firmware Drivers"; ObjectID = "ZPE-fT-6Cu"; */
+"ZPE-fT-6Cu.label" = "펌웨어 드라이버";
+
+/* Class = "NSMenuItem"; title = "Paragraph"; ObjectID = "ZvO-Gk-QUH"; */
+"ZvO-Gk-QUH.title" = "Paragraph";
+
+/* Class = "NSMenuItem"; title = "Print…"; ObjectID = "aTl-1u-JFS"; */
+"aTl-1u-JFS.title" = "Print…";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Window";
+
+/* Class = "NSMenu"; title = "Font"; ObjectID = "aXa-aM-Jaq"; */
+"aXa-aM-Jaq.title" = "Font";
+
+/* Class = "NSButtonCell"; title = "Skylake"; ObjectID = "afu-ay-sGx"; */
+"afu-ay-sGx.title" = "스카이 레이크";
+
+/* Class = "NSMenuItem"; title = "Use Default"; ObjectID = "agt-UL-0e3"; */
+"agt-UL-0e3.title" = "Use Default";
+
+/* Class = "NSButtonCell"; title = "BrcmFirmwareData"; ObjectID = "arU-pS-rWH"; */
+"arU-pS-rWH.title" = "BrcmFirmwareData";
+
+/* Class = "NSButtonCell"; title = "Skylake-X"; ObjectID = "auJ-pT-5l3"; */
+"auJ-pT-5l3.title" = "스카이 레이크-X";
+
+/* Class = "NSTextFieldCell"; placeholderString = "agdpmod=pikera"; ObjectID = "bA5-tk-VSa"; */
+"bA5-tk-VSa.placeholderString" = "agdpmod=pikera";
+
+/* Class = "NSMenuItem"; title = "Show Colors"; ObjectID = "bgn-CT-cEk"; */
+"bgn-CT-cEk.title" = "Show Colors";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Use Selection for Find"; ObjectID = "buJ-ug-pKt"; */
+"buJ-ug-pKt.title" = "Use Selection for Find";
+
+/* Class = "NSMenu"; title = "Transformations"; ObjectID = "c8a-y6-VQd"; */
+"c8a-y6-VQd.title" = "Transformations";
+
+/* Class = "NSTabViewItem"; label = "Audio"; ObjectID = "cDA-bd-Nu2"; */
+"cDA-bd-Nu2.label" = "내장 사운드";
+
+/* Class = "NSMenuItem"; title = "Use None"; ObjectID = "cDB-IK-hbR"; */
+"cDB-IK-hbR.title" = "Use None";
+
+/* Class = "NSMenuItem"; title = "Selection"; ObjectID = "cqv-fj-IhA"; */
+"cqv-fj-IhA.title" = "Selection";
+
+/* Class = "NSMenuItem"; title = "Smart Links"; ObjectID = "cwL-P1-jid"; */
+"cwL-P1-jid.title" = "Smart Links";
+
+/* Class = "NSMenuItem"; title = "Make Lower Case"; ObjectID = "d9M-CD-aMd"; */
+"d9M-CD-aMd.title" = "Make Lower Case";
+
+/* Class = "NSMenu"; title = "Text"; ObjectID = "d9c-me-L2H"; */
+"d9c-me-L2H.title" = "Text";
+
+/* Class = "NSTextFieldCell"; title = "Intel Consumer"; ObjectID = "dJk-VA-o4e"; */
+"dJk-VA-o4e.title" = "Intel 컨슈머 [데스크탑 플랫폼]";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "File";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "dRJ-4n-Yzg"; */
+"dRJ-4n-Yzg.title" = "Undo";
+
+/* Class = "NSTextFieldCell"; title = "BootArgs:"; ObjectID = "fDJ-bw-FI2"; */
+"fDJ-bw-FI2.title" = "부트 옵션(Boot-Args):";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "gVA-U4-sdL"; */
+"gVA-U4-sdL.title" = "Paste";
+
+/* Class = "NSTabViewItem"; label = "AMD Specific"; ObjectID = "ga0-uj-po8"; */
+"ga0-uj-po8.label" = "AMD CPU용";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.4.0 or newer.  Boot Args:"; ObjectID = "hIN-Qd-vMG"; */
+"hIN-Qd-vMG.ibShadowedToolTip" = "카탈리나 10.15.5의 macOS 버전에서 최신 AMD/Intel GPU를 활성화 시키기 위한 패치는 Lilu 1.4.0 이상 버전이 필요합니다  부트 옵션(Boot-Args):
+    \n-wegdbg: 디버그 내용을 출력하려면 추가해 주세요\n-wegoff: WhateverGreen을 비활성화 시킬 때 사용해 주세요\n-wegbeta : 미지원 OS에서 사용할 때 추가합니다 (10.15이하는 기본 활성화)\nagdpmod=vit9696: board-id 검사를 비활성화 시켜 블랙아웃을 방지합니다\nagdpmod=pikera: board-id를 board-ix로 변경해 GPU 블랙아웃을 방지합니다\nagdpmod=ignore: AGDP 패치를 하지 않으며 vit9696,pikera 값은 EGPU만 적용)\n\n-igfxfbdump:\nIGPU 프레임버퍼를 IOService:/IOResources/WhateverGreen IOREG로  네이티브 덤프 시킵니다\n\n-igfxdump:\n내장 그래픽 프레임 버퍼 Kext를 /var/log/AppleIntelFramebuffer_X_Y 파일에 덤프 시킵니다\n\n\n**그외 부가 옵션은 https://github.com/acidanthera/WhateverGreen을 참고해 주세요\n\n**WhateverGreen 사용 시 Headless 프레임버퍼로 IGPU를 인식하므로 전체 프레임버퍼 설정이 필요한 경우 Config.plist/DeviceProperties/Add 항목에 PCI 장치 정보 중 플랫폼 ID와 디바이스 ID 값을 추가 해야합니다 (PCI 장치 정보는 Hackintool을 이용해 손쉽게 추출할 수 있습니다)\n\n만약 IGPU와 썬더볼트3 장치 충돌이 발생 시Booter/Quirks/ProvideCustomSlide을 활성화 시켜야 할 수 있으며 부트 옵션(Boot-Args)에 Slide 옵션을 추가하지 않도록 합니다\n\n또한 썬더볼트3 커스텀 펌웨어 33버전과 ThunderboltDROM 패치를 할 경우 ProvideCustomSlide 옵션을 비활성화해도 아무런 문제가 발생하지 않을 수 있습니다 [부가 설명: ZISQO (HACKINTOSHX86, SIXFLOW)]";
+
+/* Class = "NSMenuItem"; title = "Smart Quotes"; ObjectID = "hQb-2v-fYv"; */
+"hQb-2v-fYv.title" = "Smart Quotes";
+
+/* Class = "NSMenuItem"; title = "Check Document Now"; ObjectID = "hz2-CU-CR7"; */
+"hz2-CU-CR7.title" = "Check Document Now";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Smaller"; ObjectID = "i1d-Er-qST"; */
+"i1d-Er-qST.title" = "Smaller";
+
+/* Class = "NSButtonCell"; title = "WhateverGreen"; ObjectID = "iDh-wY-X4B"; */
+"iDh-wY-X4B.title" = "WhateverGreen";
+
+/* Class = "NSTabViewItem"; label = "Legacy (BIOS)"; ObjectID = "iEV-2n-Bnf"; */
+"iEV-2n-Bnf.label" = "레거시 (BIOS)";
+
+/* Class = "NSButtonCell"; title = "IntelMausi"; ObjectID = "iTP-dz-xbQ"; */
+"iTP-dz-xbQ.title" = "IntelMausi";
+
+/* Class = "NSTabViewItem"; label = "UEFI"; ObjectID = "igs-eO-j1W"; */
+"igs-eO-j1W.label" = "UEFI";
+
+/* Class = "NSMenu"; title = "Baseline"; ObjectID = "ijk-EB-dga"; */
+"ijk-EB-dga.title" = "Baseline";
+
+/* Class = "NSMenuItem"; title = "Kern"; ObjectID = "jBQ-r6-VK2"; */
+"jBQ-r6-VK2.title" = "Kern";
+
+/* Class = "NSMenuItem"; title = "\tRight to Left"; ObjectID = "jFq-tB-4Kx"; */
+"jFq-tB-4Kx.title" = "\tRight to Left";
+
+/* Class = "NSTabViewItem"; label = "Ethernet"; ObjectID = "jN4-l8-qvI"; */
+"jN4-l8-qvI.label" = "네트워크";
+
+/* Class = "NSTextFieldCell"; placeholderString = "W00000000001"; ObjectID = "jY5-ae-HXf"; */
+"jY5-ae-HXf.placeholderString" = "W00000000001";
+
+/* Class = "NSButtonCell"; title = "Generate EFI"; ObjectID = "jnc-4n-FlM"; */
+"jnc-4n-FlM.title" = "선택한 옵션으로 바탕화면에 'EFI' 만들기";
+
+/* Class = "NSMenuItem"; title = "Format"; ObjectID = "jxT-CU-nIS"; */
+"jxT-CU-nIS.title" = "Format";
+
+/* Class = "NSMenuItem"; title = "Show Sidebar"; ObjectID = "kIP-vf-haE"; */
+"kIP-vf-haE.title" = "Show Sidebar";
+
+/* Class = "NSButtonCell"; title = "SmallTreeIntel82576"; ObjectID = "kOy-2E-PTF"; */
+"kOy-2E-PTF.title" = "SmallTreeIntel82576";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments\nAdd -vsmcdbg to enable debug printing (available in DEBUG binaries).\nAdd -vsmcoff to switch off all the VirtualSMC enhancements.\nAdd -vsmcbeta to enable Lilu enhancements on unsupported os (10.13 and below are enabled by default).\nAdd -vsmcrpt to report about missing SMC keys to the system log.\nAdd -vsmccomp to prefer existing hardware SMC implementation if found.\nAdd vsmcgen=X to force exposing X-gen SMC device (1 and 2 are supported).\nAdd vsmchbkp=X to set HBKP dumping mode (0 - off, 1 - normal, 2 - without encryption).\nAdd vsmcslvl=X to set value serialisation level (0 - off, 1 - normal, 2 - with sensitive data (default)).\nAdd smcdebug=0xff to enable AppleSMC debug information printing.\nAdd watchdog=0 to disable WatchDog timer (if you get accidental reboots)."; ObjectID = "lbr-dO-TxB"; */
+"lbr-dO-TxB.ibShadowedToolTip" = "보다 향상된 커널의 애플 SMC 에뮬레이터이며 모든 기능을 사용하려면 Lilu가 반드시 필요하며 VSMC보다 Lilu가 먼저 로드되어야 하며 디버그 기능은 디버그 바이너리가 설치되어야 사용할 수 있습니다  부트 옵션(Boot-Args):\n-vsmcdbg: 디버그 내용을 출력하려면 추가해 주세요\n-vsmcoff: 디버그 기능을 비활성화 하려면 추가해 주세요\n-vsmcbeta: 미지원 OS에서 사용할 때 추가합니다(10.13이하는 기본 활성화)\n-vsmcrpt: 누락된 SMC키에 대해 시스템 로그에 기록합니다\n-vsmccomp: 기존 하드웨어 SMC 구현을 선호할 때 추가 합니다\nvsmcgen=X: X-Gen SMC 장치를 검출하려면 사용합니다 (1, 2 값을 사용합니다)\nvsmchbkp=X: HBKP 덤핑모드 사용 (0 - 끄기, 1 - 보통, 2 - 암호화 없음)\nvsmcslvl=X: 일련화 수준 설정 (0 - 끄기, 1 - 보통, 2 - 민감한 데이터 포함(기본)\nsmcdebug=0xff: Apple SMC 디버그 정보를 출력하려면 추가해 주세요\n-watchdog=0: 만약 실수로 재부팅되는 경우 WatchDog 타이머를 비활성화 하려면 추가해 주세요";
+
+/* Class = "NSMenuItem"; title = "Check Grammar With Spelling"; ObjectID = "mK6-2p-4JG"; */
+"mK6-2p-4JG.title" = "Check Grammar With Spelling";
+
+/* Class = "NSButtonCell"; title = "Broadwell-E"; ObjectID = "nh7-BO-Meg"; */
+"nh7-BO-Meg.title" = "브로드웰-E";
+
+/* Class = "NSMenuItem"; title = "Ligatures"; ObjectID = "o6e-r0-MWq"; */
+"o6e-r0-MWq.title" = "Ligatures";
+
+/* Class = "NSMenu"; title = "Open Recent"; ObjectID = "oas-Oc-fiZ"; */
+"oas-Oc-fiZ.title" = "Open Recent";
+
+/* Class = "NSMenuItem"; title = "Loosen"; ObjectID = "ogc-rX-tC1"; */
+"ogc-rX-tC1.title" = "Loosen";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "pa3-QI-u2k"; */
+"pa3-QI-u2k.title" = "Delete";
+
+/* Class = "NSButtonCell"; title = "RealtekRTL8111"; ObjectID = "pdO-v3-bFc"; */
+"pdO-v3-bFc.title" = "RealtekRTL8111";
+
+/* Class = "NSTabViewItem"; label = "System Type"; ObjectID = "pdY-nd-ywG"; */
+"pdY-nd-ywG.label" = "시스템 유형";
+
+/* Class = "NSButton"; ibShadowedToolTip = "OS X open source driver for the Realtek RTL8111/8168 family.  Supports: Realtek RTL8111/8168 B/C/D/E/F/G/H"; ObjectID = "peh-0s-slN"; */
+"peh-0s-slN.ibShadowedToolTip" = "Realtek RTL8111/8168 제품군의 OS X용 오픈소스 드라이버 for the Realtek RTL8111/8168  사용 가능 모델: Realtek RTL8111/8168 B/C/D/E/F/G/H";
+
+/* Class = "NSMenuItem"; title = "Save…"; ObjectID = "pxx-59-PXV"; */
+"pxx-59-PXV.title" = "Save…";
+
+/* Class = "NSMenuItem"; title = "Find Next"; ObjectID = "q09-fT-Sye"; */
+"q09-fT-Sye.title" = "Find Next";
+
+/* Class = "NSMenuItem"; title = "Page Setup…"; ObjectID = "qIS-W8-SiK"; */
+"qIS-W8-SiK.title" = "Page Setup…";
+
+/* Class = "NSMenuItem"; title = "Check Spelling While Typing"; ObjectID = "rbD-Rh-wIN"; */
+"rbD-Rh-wIN.title" = "Check Spelling While Typing";
+
+/* Class = "NSMenuItem"; title = "Smart Dashes"; ObjectID = "rgM-f4-ycn"; */
+"rgM-f4-ycn.title" = "Smart Dashes";
+
+/* Class = "NSMenuItem"; title = "Show Toolbar"; ObjectID = "snW-S8-Cw5"; */
+"snW-S8-Cw5.title" = "Show Toolbar";
+
+/* Class = "NSTextFieldCell"; title = "Serial Number:"; ObjectID = "t8U-2J-bUf"; */
+"t8U-2J-bUf.title" = "시리얼 번호:";
+
+/* Class = "NSButtonCell"; title = "SMCLightSensor"; ObjectID = "tIR-1p-bVa"; */
+"tIR-1p-bVa.title" = "SMCLightSensor";
+
+/* Class = "NSTextFieldCell"; title = "System Model:"; ObjectID = "tR7-sh-igK"; */
+"tR7-sh-igK.title" = "시스템 모델명:";
+
+/* Class = "NSMenuItem"; title = "Data Detectors"; ObjectID = "tRr-pd-1PS"; */
+"tRr-pd-1PS.title" = "Data Detectors";
+
+/* Class = "NSMenuItem"; title = "Open Recent"; ObjectID = "tXI-mr-wws"; */
+"tXI-mr-wws.title" = "Open Recent";
+
+/* Class = "NSMenu"; title = "Kern"; ObjectID = "tlD-Oa-oAM"; */
+"tlD-Oa-oAM.title" = "Kern";
+
+/* Class = "NSButtonCell"; title = "SMCBatteryManager"; ObjectID = "ton-nF-qLw"; */
+"ton-nF-qLw.title" = "SMCBatteryManager";
+
+/* Class = "NSMenu"; title = "OC Gen-X"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "OC Gen-X";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
+"uRl-iY-unG.title" = "Cut";
+
+/* Class = "NSButtonCell"; title = "Coffee Lake"; ObjectID = "v5y-EW-Vvj"; */
+"v5y-EW-Vvj.title" = "커피 레이크";
+
+/* Class = "NSMenuItem"; title = "Paste Style"; ObjectID = "vKC-jM-MkH"; */
+"vKC-jM-MkH.title" = "Paste Style";
+
+/* Class = "NSMenuItem"; title = "Show Ruler"; ObjectID = "vLm-3I-IUL"; */
+"vLm-3I-IUL.title" = "Show Ruler";
+
+/* Class = "NSMenuItem"; title = "Clear Menu"; ObjectID = "vNY-rz-j42"; */
+"vNY-rz-j42.title" = "Clear Menu";
+
+/* Class = "NSMenuItem"; title = "Make Upper Case"; ObjectID = "vmV-6d-7jI"; */
+"vmV-6d-7jI.title" = "Make Upper Case";
+
+/* Class = "NSMenu"; title = "Ligatures"; ObjectID = "w0m-vy-SC9"; */
+"w0m-vy-SC9.title" = "Ligatures";
+
+/* Class = "NSMenuItem"; title = "Align Right"; ObjectID = "wb2-vD-lq4"; */
+"wb2-vD-lq4.title" = "Align Right";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "x3v-GG-iWU"; */
+"x3v-GG-iWU.title" = "Copy";
+
+/* Class = "NSButtonCell"; title = "AppleALC"; ObjectID = "xJc-fW-aKb"; */
+"xJc-fW-aKb.title" = "AppleALC";
+
+/* Class = "NSMenuItem"; title = "Use All"; ObjectID = "xQD-1f-W4t"; */
+"xQD-1f-W4t.title" = "Use All";
+
+/* Class = "NSButton"; ibShadowedToolTip = "Qualcomm Atheros Killer E2200 driver for macOS.  Supports: Qualcomm Atheros AR816x, AR817x, Killer E220x, Killer E2400 and Killer E2500"; ObjectID = "xhE-62-ws7"; */
+"xhE-62-ws7.ibShadowedToolTip" = "macOS용 Qualcomm Atheros Killer E2200 드라이버  사용 가능 모델: Qualcomm Atheros AR816x, AR817x, Killer E220x, Killer E2400과 Killer E2500";
+
+/* Class = "NSMenuItem"; title = "Speech"; ObjectID = "xrE-MZ-jX0"; */
+"xrE-MZ-jX0.title" = "Speech";
+
+/* Class = "NSMenuItem"; title = "Show Substitutions"; ObjectID = "z6F-FW-3nz"; */
+"z6F-FW-3nz.title" = "Show Substitutions";
+
+/* Class = "NSButtonCell"; title = "AirportBrcmFixup"; ObjectID = "zEv-oT-t25"; */
+"zEv-oT-t25.title" = "AirportBrcmFixup";
+
