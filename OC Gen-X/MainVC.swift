@@ -9,11 +9,8 @@ class MainVC: NSViewController {
     @IBOutlet weak var kabylakeChecked: NSButton!
     @IBOutlet weak var haswellEChecked: NSButton!
     @IBOutlet weak var broadwellEChecked: NSButton!
-    @IBOutlet weak var skylakeXChecked: NSButton!
     @IBOutlet weak var ryzenChecked: NSButton!
     @IBOutlet weak var coffeelakeChecked: NSButton!
-    @IBOutlet weak var bulldozerChecked: NSButton!
-    @IBOutlet weak var threadripperChecked: NSButton!
     @IBOutlet weak var liluChecked: NSButton!
     @IBOutlet weak var virtualSMCChecked: NSButton!
     @IBOutlet weak var smcProcessorChecked: NSButton!
@@ -27,7 +24,6 @@ class MainVC: NSViewController {
     @IBOutlet weak var atherosChecked: NSButton!
     @IBOutlet weak var realTekChecked: NSButton!
     @IBOutlet weak var usbInjectAllChecked: NSButton!
-    @IBOutlet weak var xhciUnsupportedChecked: NSButton!
     @IBOutlet weak var airportBrcmChecked: NSButton!
     @IBOutlet weak var fxXlncUSBChecked: NSButton!
     @IBOutlet weak var appleMCEReporterChecked: NSButton!
@@ -214,6 +210,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
@@ -246,6 +244,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
@@ -278,6 +278,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -310,6 +312,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -342,6 +346,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -366,7 +372,7 @@ class MainVC: NSViewController {
             break
         }
         
-        switch coffeelakeChecked.state {
+        switch cometLakeChecked.state {
         case .on:
             config.acpi.add.removeAll()
             config.acpi.delete.removeAll()
@@ -375,6 +381,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
@@ -412,6 +420,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.disableVariableWrite = true
@@ -447,6 +457,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.disableVariableWrite = true
@@ -482,6 +494,8 @@ class MainVC: NSViewController {
             config.kernel.kBlock.removeAll()
             config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
@@ -517,6 +531,8 @@ class MainVC: NSViewController {
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
             config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
