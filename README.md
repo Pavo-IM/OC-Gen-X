@@ -1,4 +1,4 @@
-![logo](https://i.imgur.com/ArRajCS.png)
+![logo](https://i.imgur.com/GQ3l8dn.png)
 # Opencore Gen-X [![Build Status](https://app.bitrise.io/app/c2a4e7ccf1e23c7f/status.svg?token=pb-dIZ8cTFQ88IjrXjJw9Q&branch=master)](https://app.bitrise.io/app/c2a4e7ccf1e23c7f)
 ## All-In-One Opencore EFI Creation Utility
 
