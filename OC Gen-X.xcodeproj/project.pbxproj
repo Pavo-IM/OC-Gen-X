@@ -52,6 +52,7 @@
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEA3A7C249E3FB500EDE7CB /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
+		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
+		D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				CF4C2008243D067000D2F187 /* Kexts */,
 				CF4C2035243D077E00D2F187 /* OC Files */,
 				CF4C200A243D069000D2F187 /* Drivers */,
+				D5B5BBF924A7B6FB004E5D7C /* Views */,
 				CF59E727241DA2D500A7C5EC /* AppDelegate.swift */,
 				CF59E739241DA57A00A7C5EC /* MainVC.swift */,
 				CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */,
@@ -217,6 +220,14 @@
 				CFC7C52524983D4C000CEF89 /* default_config_settings.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		D5B5BBF924A7B6FB004E5D7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +338,7 @@
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
 				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
 				CF6F1122241E971E00B70805 /* Misc.swift in Sources */,
+				D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */,
 				CF6F1124241E972600B70805 /* NVRAM.swift in Sources */,
 				CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */,
 				CF6F1128241E973E00B70805 /* UEFI.swift in Sources */,
