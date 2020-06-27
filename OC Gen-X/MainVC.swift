@@ -31,7 +31,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var openUSBChecked: NSButton!
     @IBOutlet weak var nvmExpressChecked: NSButton!
     @IBOutlet weak var xhciChecked: NSButton!
-    @IBOutlet weak var textfield: NSTextField!
+    @IBOutlet weak var textfield: HyperlinkTextField!
     @IBOutlet weak var hfsPlusChecked: NSButton!
     @IBOutlet weak var snInput: NSTextField!
     @IBOutlet weak var mlbInput: NSTextField!
@@ -56,6 +56,17 @@ class MainVC: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         generateButton.isEnabled = false
+        applyDesktopGuideHyperlink()
+    }
+    
+    private func applyDesktopGuideHyperlink() {
+        // Keep it centered
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        let attributes: [NSAttributedString.Key: Any] = [.paragraphStyle : paragraphStyle, .font: textfield.font ?? NSFont.systemFontSize]
+        
+        guard let url = NSURL(string: "https://dortania.github.io/OpenCore-Desktop-Guide/") else { return }
+        textfield.setHyperlinkWithTitle(title: "https://dortania.github.io/OpenCore-Desktop-Guide/", URL: url, additionalAttributes: attributes)
     }
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
