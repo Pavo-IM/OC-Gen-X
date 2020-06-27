@@ -23,7 +23,7 @@ i.e: Haswell, Skylake, Coffeelake etc..
 ### Credits
 
 * App is made and designed and copyrighted by *Pavo-IM*
-* *Acidanthea Development Team* for Opencore (This app is not endorsed or promoted by Acidanthea)
+* *Acidanthera Development Team* for Opencore (This app is not endorsed or promoted by Acidanthera)
 * *Dortania Team* for the Opencore Guide.
 * *Hackintosh x86* for testing and logo's
 
