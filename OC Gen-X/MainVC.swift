@@ -50,6 +50,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
     @IBOutlet weak var cometLakeChecked: NSButton!
     @IBOutlet weak var casecadeChecked: NSButton!
+    @IBOutlet weak var proxintoshChecked: NSButton!
     
     
     
@@ -541,6 +542,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -584,6 +586,41 @@ class MainVC: NSViewController {
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
+            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
+        default:
+            break
+        }
+        
+        switch proxintoshChecked.state {
+        case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch?.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.setupVirtualMap = false
+            config.kernel.emulate.cpuid1Data = Data([0xEC,0x06,0x09,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
+            config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
+            config.kernel.kPatch?.append(secondRyzenPatch)
+            config.kernel.kPatch?.append(twelfthRyzenPatch)
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
