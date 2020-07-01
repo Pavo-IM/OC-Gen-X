@@ -715,11 +715,11 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="699"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="409"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="338" y="108" width="124" height="32"/>
+                                <rect key="frame" x="337" y="108" width="124" height="33"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -729,7 +729,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Z7c-dp-thl">
-                                <rect key="frame" x="18" y="75" width="764" height="32"/>
+                                <rect key="frame" x="18" y="75" width="761" height="32"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="center" title="*Disclaimer* The config.plist is based off the settings on" id="5gZ-sK-sE9">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -737,7 +737,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-fp-3dO" customClass="HyperlinkTextField" customModule="OC_Gen_X" customModuleProvider="target">
-                                <rect key="frame" x="18" y="57" width="764" height="16"/>
+                                <rect key="frame" x="18" y="57" width="761" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" alignment="center" title="https://dortania.github.io/OpenCore-Desktop-Guide/" id="O9I-Ci-F3S">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -745,7 +745,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="165" width="814" height="423"/>
+                                <rect key="frame" x="-7" y="166" width="811" height="132"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -963,11 +963,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="190"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="86"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="206"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="102"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -975,11 +975,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="160"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="82"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="124" width="44" height="18"/>
+                                                                        <rect key="frame" x="8" y="45" width="48" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -998,7 +998,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="100" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="95" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1319,34 +1319,13 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                 </constraints>
                                                             </view>
                                                         </tabViewItem>
-                                                        <tabViewItem label="AMD Specific" identifier="" id="ga0-uj-po8">
-                                                            <view key="view" id="N7A-Ev-hwK">
-                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
-                                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                <subviews>
-                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="u7Y-Ij-CXE">
-                                                                        <rect key="frame" x="8" y="18" width="103" height="18"/>
-                                                                        <buttonCell key="cell" type="check" title="XLNCUSBFIX" bezelStyle="regularSquare" imagePosition="left" inset="2" id="58Z-iD-hyi">
-                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                            <font key="font" metaFont="system"/>
-                                                                        </buttonCell>
-                                                                    </button>
-                                                                </subviews>
-                                                                <constraints>
-                                                                    <constraint firstItem="u7Y-Ij-CXE" firstAttribute="leading" secondItem="N7A-Ev-hwK" secondAttribute="leading" constant="10" id="PH2-pd-FUt"/>
-                                                                    <constraint firstAttribute="bottom" secondItem="u7Y-Ij-CXE" secondAttribute="bottom" constant="20" id="bYW-jm-G8O"/>
-                                                                    <constraint firstItem="u7Y-Ij-CXE" firstAttribute="top" secondItem="N7A-Ev-hwK" secondAttribute="top" constant="20" id="oLb-uw-qTC"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="u7Y-Ij-CXE" secondAttribute="trailing" constant="20" symbolic="YES" id="sNa-77-OvR"/>
-                                                                </constraints>
-                                                            </view>
-                                                        </tabViewItem>
                                                         <tabViewItem label="Extra's" identifier="" id="4t3-PM-pAl">
                                                             <view key="view" id="KX3-xG-Ws2">
-                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="56"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LBK-Ws-KvM">
-                                                                        <rect key="frame" x="8" y="18" width="188" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="192" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AppleMCEReporterDisabler" bezelStyle="regularSquare" imagePosition="left" inset="2" id="PvA-e7-VmS">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1600,7 +1579,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="564" y="145" width="218" height="15"/>
+                                <rect key="frame" x="563" y="145" width="216" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.5.9" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1608,14 +1587,14 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
-                                <rect key="frame" x="184" y="578" width="433" height="114"/>
+                                <rect key="frame" x="182" y="288" width="433" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="433" id="O7n-w9-UZS"/>
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="genx" id="0kh-i3-vbn"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLc-rs-VxX">
-                                <rect key="frame" x="18" y="33" width="764" height="16"/>
+                                <rect key="frame" x="18" y="33" width="761" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="User Notice: This Application is not endorsed by the Opencore Development team." id="MCU-YO-XvG">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
@@ -1623,7 +1602,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j04-3g-RJW">
-                                <rect key="frame" x="18" y="20" width="764" height="16"/>
+                                <rect key="frame" x="18" y="20" width="761" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Support and bugs should be reported direct to the apps github repo" id="uic-lw-BZa">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1677,7 +1656,6 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="casecadeChecked" destination="2kH-rr-uNc" id="nLK-07-iev"/>
                         <outlet property="coffeelakeChecked" destination="NbE-uy-4f2" id="AXE-h1-CZx"/>
                         <outlet property="cometLakeChecked" destination="GuR-Jk-C6I" id="vZK-KM-a1v"/>
-                        <outlet property="fxXlncUSBChecked" destination="u7Y-Ij-CXE" id="bkO-LJ-yjq"/>
                         <outlet property="generateButton" destination="Wcy-uw-NdK" id="Oo3-OM-ng4"/>
                         <outlet property="haswellChecked" destination="y2r-xg-ybM" id="214-JQ-IcP"/>
                         <outlet property="haswellEChecked" destination="Rhr-Fz-70Q" id="TF8-i5-Z6x"/>
@@ -1713,7 +1691,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="66.5" y="1780.5"/>
+            <point key="canvasLocation" x="234" y="1682"/>
         </scene>
     </scenes>
     <resources>

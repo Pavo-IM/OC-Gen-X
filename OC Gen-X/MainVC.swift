@@ -25,7 +25,6 @@ class MainVC: NSViewController {
     @IBOutlet weak var realTekChecked: NSButton!
     @IBOutlet weak var usbInjectAllChecked: NSButton!
     @IBOutlet weak var airportBrcmChecked: NSButton!
-    @IBOutlet weak var fxXlncUSBChecked: NSButton!
     @IBOutlet weak var appleMCEReporterChecked: NSButton!
     @IBOutlet weak var openRuntimeChecked: NSButton!
     @IBOutlet weak var openUSBChecked: NSButton!
@@ -774,13 +773,6 @@ class MainVC: NSViewController {
             break
         }
         
-        switch fxXlncUSBChecked.state {
-        case .on:
-            addKextToConfig(item: "XLNCUSBFix")
-        default:
-            break
-        }
-        
         switch appleMCEReporterChecked.state {
         case .on:
             addKextToConfig(item: "AppleMCEReporterDisabler")
@@ -927,9 +919,6 @@ class MainVC: NSViewController {
                 }
                 if brcmPatchRam3Checked.state == .on {
                     kextCopy(kextname: "BrcmPatchRAM3", item: "BrcmPatchRAM3", location: ocKextsDir)
-                }
-                if fxXlncUSBChecked.state == .on {
-                    kextCopy(kextname: "fxXlncUSB", item: "XLNCUSBFix", location: ocKextsDir)
                 }
                 if appleMCEReporterChecked.state == .on {
                     kextCopy(kextname: "appleMCEReporter", item: "AppleMCEReporterDisabler", location: ocKextsDir)
