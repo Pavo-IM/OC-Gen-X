@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CF039FA8249DA1C400C3622E /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF039FA7249DA1C400C3622E /* HfsPlus.efi */; };
+		CF2F509924ACD5DC003AAD00 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2F509824ACD5DC003AAD00 /* Sparkle.framework */; };
+		CF2F509B24ACD738003AAD00 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF2F509824ACD5DC003AAD00 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */; };
 		CF4B04A3249EBD6400690FB2 /* BrcmPatchRAM3.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4B049F249EBD6400690FB2 /* BrcmPatchRAM3.kext */; };
 		CF4B04A4249EBD6400690FB2 /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4B04A0249EBD6400690FB2 /* BrcmFirmwareData.kext */; };
@@ -55,9 +57,23 @@
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CF2F509A24ACD723003AAD00 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CF2F509B24ACD738003AAD00 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		B896CFA1249F24E50061F934 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		CF039FA7249DA1C400C3622E /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
+		CF2F509824ACD5DC003AAD00 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = LucyRTL8125Ethernet.kext; sourceTree = "<group>"; };
 		CF4B049F249EBD6400690FB2 /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
 		CF4B04A0249EBD6400690FB2 /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
@@ -113,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF2F509924ACD5DC003AAD00 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +217,7 @@
 				CF59E730241DA2D600A7C5EC /* Info.plist */,
 				CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */,
 				CFE8A22F249E662400D72669 /* AppIcon.xcassets */,
+				CF2F509824ACD5DC003AAD00 /* Sparkle.framework */,
 			);
 			path = "OC Gen-X";
 			sourceTree = "<group>";
@@ -240,6 +258,7 @@
 				CF59E720241DA2D500A7C5EC /* Sources */,
 				CF59E721241DA2D500A7C5EC /* Frameworks */,
 				CF59E722241DA2D500A7C5EC /* Resources */,
+				CF2F509A24ACD723003AAD00 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -490,12 +509,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "OC Gen-X/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"$(PROJECT_DIR)/OC\\ Gen-X",
 				);
-				MARKETING_VERSION = 1.8;
+				INFOPLIST_FILE = "OC Gen-X/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -513,12 +533,13 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = "OC Gen-X/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
+				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"$(PROJECT_DIR)/OC\\ Gen-X",
 				);
-				MARKETING_VERSION = 1.8;
+				INFOPLIST_FILE = "OC Gen-X/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
