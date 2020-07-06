@@ -208,6 +208,11 @@ class MainVC: NSViewController {
         config.kernel.kAdd.append(kext)
     }
     
+    func addKextInjectorToConfig (item: String) {
+        let kext = kAdd(bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+        config.kernel.kAdd.append(kext)
+    }
+    
     @IBAction func generateClicked(_ sender: NSButton) {
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
@@ -747,7 +752,7 @@ class MainVC: NSViewController {
         
         switch brcmBtInjectorChecked.state {
         case .on:
-            addKextToConfig(item: "BrcmBluetoothInjector")
+            addKextInjectorToConfig(item: "BrcmBluetoothInjector")
         default:
             break
         }
