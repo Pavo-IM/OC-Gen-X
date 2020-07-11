@@ -48,6 +48,7 @@
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
+		CFA5444B24BA493000CBEEB2 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFA5444A24BA493000CBEEB2 /* AirportBrcmFixup.kext */; };
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEA3A7C249E3FB500EDE7CB /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */; };
@@ -112,8 +113,8 @@
 		CF6F1123241E972600B70805 /* NVRAM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVRAM.swift; sourceTree = "<group>"; };
 		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
-		CF79C9B124B8AC930015E444 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
+		CFA5444A24BA493000CBEEB2 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEA3A7B249E3FB500EDE7CB /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
@@ -136,7 +137,7 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
-				CF79C9B124B8AC930015E444 /* AirportBrcmFixup.kext */,
+				CFA5444A24BA493000CBEEB2 /* AirportBrcmFixup.kext */,
 				CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */,
 				CF4C2013243D06D300D2F187 /* USBInjectAll.kext */,
 				CF4B04A2249EBD6400690FB2 /* BrcmBluetoothInjector.kext */,
@@ -320,6 +321,7 @@
 				CFEA3A7C249E3FB500EDE7CB /* Bootstrap.efi in Resources */,
 				CF039FA8249DA1C400C3622E /* HfsPlus.efi in Resources */,
 				CF4C201A243D06FD00D2F187 /* WhateverGreen.kext in Resources */,
+				CFA5444B24BA493000CBEEB2 /* AirportBrcmFixup.kext in Resources */,
 				CF4C2034243D076000D2F187 /* OpenRuntime.efi in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF4C2021243D070E00D2F187 /* SMCSuperIO.kext in Resources */,
@@ -509,7 +511,7 @@
 				);
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -533,7 +535,7 @@
 				);
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
