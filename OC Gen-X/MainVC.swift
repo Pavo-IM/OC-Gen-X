@@ -780,7 +780,7 @@ class MainVC: NSViewController {
         
         switch appleMCEReporterChecked.state {
         case .on:
-            addKextToConfig(item: "AppleMCEReporterDisabler")
+            addKextInjectorToConfig(item: "AppleMCEReporterDisabler")
         default:
             break
         }
