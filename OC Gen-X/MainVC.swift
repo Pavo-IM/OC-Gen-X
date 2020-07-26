@@ -65,8 +65,8 @@ class MainVC: NSViewController {
         paragraphStyle.alignment = .center
         let attributes: [NSAttributedString.Key: Any] = [.paragraphStyle : paragraphStyle, .font: textfield.font ?? NSFont.systemFontSize]
         
-        guard let url = NSURL(string: "https://dortania.github.io/OpenCore-Desktop-Guide/") else { return }
-        textfield.setHyperlinkWithTitle(title: "https://dortania.github.io/OpenCore-Desktop-Guide/", URL: url, additionalAttributes: attributes)
+        guard let url = NSURL(string: "https://dortania.github.io/OpenCore-Install-Guide/") else { return }
+        textfield.setHyperlinkWithTitle(title: "https://dortania.github.io/OpenCore-Install-Guide/", URL: url, additionalAttributes: attributes)
     }
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
