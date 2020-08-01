@@ -52,14 +52,12 @@ struct addAppleBootVariableGuid: Codable {
     var systemAudioVolume: Data
     var bootArgs: String
     var csrActiveConfig: Data
-    var nvdaDrv: Data
     var prevLangKbd: Data
     
     enum CodingKeys: String, CodingKey {
         case systemAudioVolume = "SystemAudioVolume"
         case bootArgs = "boot-args"
         case csrActiveConfig = "csr-active-config"
-        case nvdaDrv = "nvda_drv"
         case prevLangKbd = "prev-lang:kbd"
     }
 }

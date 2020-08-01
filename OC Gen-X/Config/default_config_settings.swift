@@ -26,7 +26,7 @@ var config = Root(
           security: security(allowNvramReset: false, allowSetDefault: false, authRestart: false, blacklistAppleUpdate: true, bootProtect: "Bootstrap", exposeSensitiveData: 6, haltLevel: 2147483650, scanPolicy: 17760515, vault: "Secure"),
           tools: [tools()]),
                 
-    nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(defaultBackgroundColor: Data(), uiScale: Data()), addAppleVendorGuid: addAppleVendorGuid(rtcBlacklist: Data()), addAppleBootVariableGuid: addAppleBootVariableGuid(systemAudioVolume: Data(), bootArgs: "-v keepsyms=1", csrActiveConfig: Data(), nvdaDrv: Data(), prevLangKbd: Data())),
+    nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(defaultBackgroundColor: Data(), uiScale: Data()), addAppleVendorGuid: addAppleVendorGuid(rtcBlacklist: Data()), addAppleBootVariableGuid: addAppleBootVariableGuid(systemAudioVolume: Data(), bootArgs: "-v keepsyms=1", csrActiveConfig: Data(), prevLangKbd: Data())),
            delete: nDelete(blockAppleVendorVariableGuid: ["UIScale", "DefaultBackgroundColor"], blockAppleVendorGuid: ["rtc-blacklist"], blockAppleBootVariableGuid: ["boot-args"]),
            legacyEnable: false, legacyOverwrite: false,
            legacySchema: legacySchema(legacyAppleBootVariableGuid: ["EFILoginHiDPI", "EFIBluetoothDelay", "LocationServicesEnabled", "SystemAudioVolume", "SystemAudioVolumeDB", "SystemAudioVolumeSaved", "bluetoothActiveControllerInfo", "bluetoothInternalControllerInfo", "flagstate", "fmm-computer-name", "nvda_drv", "prev-lang:kbd"], legacyEfiGlobalVariable: ["Boot0080", "Boot0081", "Boot0082", "BootNext", "BootOrder"]),

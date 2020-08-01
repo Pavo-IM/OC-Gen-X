@@ -553,6 +553,7 @@ class MainVC: NSViewController {
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
+            config.booter.quirks.setupVirtualMap = false
             config.kernel.kPatch = [firstRyzenPatch]
             config.kernel.kPatch?.append(secondRyzenPatch)
             config.kernel.kPatch?.append(thirdRyzenPatch)
@@ -590,18 +591,21 @@ class MainVC: NSViewController {
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
-            config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
+            config.misc.security.haltLevel = 2147483648
             config.misc.security.scanPolicy = 0
             config.misc.security.exposeSensitiveData = 6
             config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleBootVariableGuid.systemAudioVolume = Data([0x46])
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
             config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
+            config.platFormInfo.generic.spoofVendor = true
+            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
+            config.uefi.input.pointerSupportMode = ""
         default:
             break
         }
