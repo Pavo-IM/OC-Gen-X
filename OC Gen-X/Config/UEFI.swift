@@ -26,6 +26,7 @@ struct uefi: Codable {
 
 struct apfs: Codable {
     var enableJumpstart: Bool
+    var globalConnect: Bool
     var hideVerbose: Bool
     var jumpstartHotPlug: Bool
     var minDate: Int
@@ -33,6 +34,7 @@ struct apfs: Codable {
     
     enum CodingKeys: String, CodingKey {
         case enableJumpstart = "EnableJumpstart"
+        case globalConnect = "GlobalConnect"
         case hideVerbose = "HideVerbose"
         case jumpstartHotPlug = "JumpstartHotPlug"
         case minDate = "MinDate"
@@ -95,6 +97,7 @@ struct output: Codable {
     var resolution: String
     var sanitiseClearScreen: Bool
     var textRenderer: String
+    var ugaPassThrough: Bool
     
     enum CodingKeys: String, CodingKey {
         case clearScreenOnModeSwitch = "ClearScreenOnModeSwitch"
@@ -107,6 +110,7 @@ struct output: Codable {
         case resolution = "Resolution"
         case sanitiseClearScreen = "SanitiseClearScreen"
         case textRenderer = "TextRenderer"
+        case ugaPassThrough = "UgaPassThrough"
     }
 }
 
@@ -115,6 +119,7 @@ struct protocols: Codable {
     var appleBootPolicy: Bool
     var appleDebugLog: Bool
     var appleEvent: Bool
+    var appleFramebufferInfo: Bool
     var appleImageConversion: Bool
     var appleKeyMap: Bool
     var appleRtcRam: Bool
@@ -132,6 +137,7 @@ struct protocols: Codable {
         case appleBootPolicy = "AppleBootPolicy"
         case appleDebugLog = "AppleDebugLog"
         case appleEvent = "AppleEvent"
+        case appleFramebufferInfo = "AppleFramebufferInfo"
         case appleImageConversion = "AppleImageConversion"
         case appleKeyMap = "AppleKeyMap"
         case appleRtcRam = "AppleRtcRam"

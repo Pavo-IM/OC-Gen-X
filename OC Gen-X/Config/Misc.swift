@@ -54,6 +54,7 @@ struct debug: Codable {
     var disableWatchDog: Bool
     var displayDelay: Int
     var displayLevel: Int
+    var serialInit: Bool
     var sysReport: Bool
     var target: Int
     
@@ -63,6 +64,7 @@ struct debug: Codable {
         case disableWatchDog = "DisableWatchDog"
         case displayDelay = "DisplayDelay"
         case displayLevel = "DisplayLevel"
+        case serialInit = "SerialInit"
         case sysReport = "SysReport"
         case target = "Target"
     }
@@ -76,7 +78,6 @@ struct security: Codable {
     var allowNvramReset: Bool
     var allowSetDefault: Bool
     var authRestart: Bool
-    var blacklistAppleUpdate: Bool
     var bootProtect: String
     var exposeSensitiveData: Int
     var haltLevel: Int
@@ -87,7 +88,6 @@ struct security: Codable {
         case allowNvramReset = "AllowNvramReset"
         case allowSetDefault = "AllowSetDefault"
         case authRestart = "AuthRestart"
-        case blacklistAppleUpdate = "BlacklistAppleUpdate"
         case bootProtect = "BootProtect"
         case exposeSensitiveData = "ExposeSensitiveData"
         case haltLevel = "HaltLevel"

@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.7</string>
+	<string>2.0.8</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.0.7</string>
+	<string>2.0.8</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -42,54 +42,20 @@
 	<string>10E1001</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>Airport_Brcm4360</key>
+		<key>as.lvs1974.AirportBrcmFixup</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AirPort.Brcm4360</string>
+			<string>as.lvs1974.AirportBrcmFixup</string>
 			<key>IOClass</key>
-			<string>AirPort_Brcm4360</string>
+			<string>AirportBrcmFixup</string>
 			<key>IOMatchCategory</key>
-			<string>IODefaultMatchCategory</string>
-			<key>IONameMatch</key>
-			<array>
-				<string>pci14e4,4331</string>
-				<string>pci14e4,4353</string>
-				<string>pci14e4,4357</string>
-				<string>pci14e4,43a3</string>
-				<string>pci14e4,43b1</string>
-				<string>pci14e4,43b2</string>
-			</array>
-			<key>IOProbeScore</key>
-			<integer>1110</integer>
+			<string>AirportBrcmFixup</string>
 			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>TruePowerOff</key>
-			<true/>
+			<string>IOResources</string>
+			<key>IOResourceMatch</key>
+			<string>IOKit</string>
 		</dict>
-		<key>Airport_BrcmNIC</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>com.apple.driver.AirPort.BrcmNIC</string>
-			<key>IOClass</key>
-			<string>AirPort_BrcmNIC</string>
-			<key>IOMatchCategory</key>
-			<string>IODefaultMatchCategory</string>
-			<key>IONameMatch</key>
-			<array>
-				<string>pci14e4,43ba</string>
-				<string>pci14e4,43a3</string>
-				<string>pci14e4,43a0</string>
-				<string>pci14e4,43b1</string>
-				<string>pci14e4,43b2</string>
-			</array>
-			<key>IOProbeScore</key>
-			<integer>2048</integer>
-			<key>IOProviderClass</key>
-			<string>IOPCIDevice</string>
-			<key>TruePowerOff</key>
-			<true/>
-		</dict>
-		<key>Broadcom 802.11 PCI</key>
+		<key>as.lvs1974.FakeAirportBrcmFixup</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>as.lvs1974.AirportBrcmFixup</string>
@@ -128,19 +94,6 @@
 			<key>TruePowerOff</key>
 			<true/>
 		</dict>
-		<key>as.lvs1974.AirportBrcmFixup</key>
-		<dict>
-			<key>CFBundleIdentifier</key>
-			<string>as.lvs1974.AirportBrcmFixup</string>
-			<key>IOClass</key>
-			<string>AirportBrcmFixup</string>
-			<key>IOMatchCategory</key>
-			<string>AirportBrcmFixup</string>
-			<key>IOProviderClass</key>
-			<string>IOResources</string>
-			<key>IOResourceMatch</key>
-			<string>IOKit</string>
-		</dict>
 	</dict>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 lvs1974. All rights reserved.</string>
@@ -150,6 +103,8 @@
 	<dict>
 		<key>as.vit9696.Lilu</key>
 		<string>1.2.6</string>
+		<key>com.apple.driver.corecapture</key>
+		<string>1.0.0</string>
 		<key>com.apple.iokit.IONetworkingFamily</key>
 		<string>1.5</string>
 		<key>com.apple.iokit.IOPCIFamily</key>
