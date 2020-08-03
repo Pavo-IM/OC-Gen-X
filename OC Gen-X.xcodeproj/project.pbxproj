@@ -31,6 +31,7 @@
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
 		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
+		CFA02CB424D86F3800AB1967 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFA02CB324D86F3800AB1967 /* AirportBrcmFixup.kext */; };
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
 		CFCEF97524D86BBD00B396C8 /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFCEF97424D86BBD00B396C8 /* BOOTx64.efi */; };
 		CFCEF97724D86BCD00B396C8 /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFCEF97624D86BCD00B396C8 /* Bootstrap.efi */; };
@@ -41,7 +42,6 @@
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 		CFF17A9E24D8631E00978A9A /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17A9D24D8631E00978A9A /* Lilu.kext */; };
-		CFF17AA024D8633000978A9A /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17A9F24D8633000978A9A /* AirportBrcmFixup.kext */; };
 		CFF17AA224D8635500978A9A /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA124D8635500978A9A /* AppleALC.kext */; };
 		CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */; };
 		CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */; };
@@ -98,6 +98,7 @@
 		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
 		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
+		CFA02CB324D86F3800AB1967 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
 		CFCEF97424D86BBD00B396C8 /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
 		CFCEF97624D86BCD00B396C8 /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
@@ -108,7 +109,6 @@
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CFF17A9D24D8631E00978A9A /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
-		CFF17A9F24D8633000978A9A /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFF17AA124D8635500978A9A /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
 		CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
@@ -139,6 +139,7 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CFA02CB324D86F3800AB1967 /* AirportBrcmFixup.kext */,
 				CFF17AB724D863BC00978A9A /* WhateverGreen.kext */,
 				CFF17AAE24D863A700978A9A /* SMCBatteryManager.kext */,
 				CFF17AB024D863A700978A9A /* SMCDellSensors.kext */,
@@ -151,7 +152,6 @@
 				CFF17AA624D8638800978A9A /* BrcmPatchRAM2.kext */,
 				CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */,
 				CFF17AA124D8635500978A9A /* AppleALC.kext */,
-				CFF17A9F24D8633000978A9A /* AirportBrcmFixup.kext */,
 				CFF17A9D24D8631E00978A9A /* Lilu.kext */,
 				CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */,
 				CF4C2013243D06D300D2F187 /* USBInjectAll.kext */,
@@ -322,7 +322,6 @@
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
 				CFF17AB824D863BC00978A9A /* WhateverGreen.kext in Resources */,
 				CF039FA8249DA1C400C3622E /* HfsPlus.efi in Resources */,
-				CFF17AA024D8633000978A9A /* AirportBrcmFixup.kext in Resources */,
 				CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */,
 				CFCEF97F24D86C1C00B396C8 /* XhciDxe.efi in Resources */,
 				CFF17AB124D863A700978A9A /* SMCSuperIO.kext in Resources */,
@@ -336,6 +335,7 @@
 				CFF17AA924D8638800978A9A /* BrcmBluetoothInjector.kext in Resources */,
 				CFCEF97524D86BBD00B396C8 /* BOOTx64.efi in Resources */,
 				CF4C2032243D076000D2F187 /* NvmExpressDxe.efi in Resources */,
+				CFA02CB424D86F3800AB1967 /* AirportBrcmFixup.kext in Resources */,
 				CFF17AA224D8635500978A9A /* AppleALC.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
 				CFCEF97724D86BCD00B396C8 /* Bootstrap.efi in Resources */,
