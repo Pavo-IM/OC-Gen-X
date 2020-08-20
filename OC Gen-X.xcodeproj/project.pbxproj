@@ -502,6 +502,7 @@
 		CF59E735241DA2D600A7C5EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "OC Gen-X/OC_Gen_X.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -527,6 +528,7 @@
 		CF59E736241DA2D600A7C5EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "OC Gen-X/OC_Gen_X.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
