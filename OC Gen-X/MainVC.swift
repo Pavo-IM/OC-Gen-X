@@ -331,8 +331,7 @@ class MainVC: NSViewController {
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
-            config.booter.quirks.rebuildAppleMemoryMap = true
-            config.booter.quirks.syncRuntimePermissions = true
+            config.booter.quirks.enableWriteUnprotector = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.disableIoMapper = true

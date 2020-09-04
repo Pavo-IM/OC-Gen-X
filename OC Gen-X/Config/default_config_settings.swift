@@ -21,18 +21,18 @@ var config = Root(
                 
     misc: misc(blessOverRide: [blessOverRide()],
           boot: boot(consoleAttributes: 0, hibernateMode: "None", hideAuxiliary: false, pickerAttributes: 1, pickerAudioAssist: false, pickerMode: "Builtin", pollAppleHotKeys: false, showPicker: true, takeoffDelay: 0, timeout: 5),
-          debug: debug(appleDebug: false, applePanic: false, disableWatchDog: false, displayDelay: 0, displayLevel: 2147483650, serialInit: false, sysReport: false, target: 3),
+          debug: debug(appleDebug: false, applePanic: false, disableWatchDog: false, displayDelay: 0, displayLevel: 2147483648, serialInit: false, sysReport: false, target: 3),
           entries: [entries()],
-          security: security(allowNvramReset: false, allowSetDefault: false, authRestart: false, bootProtect: "Bootstrap", exposeSensitiveData: 6, haltLevel: 2147483650, scanPolicy: 17760515, vault: "Secure"),
+          security: security(allowNvramReset: false, allowSetDefault: false, authRestart: false, bootProtect: "Bootstrap", exposeSensitiveData: 6, haltLevel: 2147483648, scanPolicy: 17760515, vault: "Secure"),
           tools: [tools()]),
                 
-    nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(defaultBackgroundColor: Data(), uiScale: Data()), addAppleVendorGuid: addAppleVendorGuid(rtcBlacklist: Data()), addAppleBootVariableGuid: addAppleBootVariableGuid(systemAudioVolume: Data(), bootArgs: "-v keepsyms=1", csrActiveConfig: Data(), prevLangKbd: Data(), runefiupdater: "No")),
+    nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(defaultBackgroundColor: Data(), uiScale: Data()), addAppleVendorGuid: addAppleVendorGuid(rtcBlacklist: Data()), addAppleBootVariableGuid: addAppleBootVariableGuid(systemAudioVolume: Data([0x46]), bootArgs: "-v keepsyms=1", csrActiveConfig: Data(), prevLangKbd: Data(), runefiupdater: "No")),
            delete: nDelete(blockAppleVendorVariableGuid: ["UIScale", "DefaultBackgroundColor"], blockAppleVendorGuid: ["rtc-blacklist"], blockAppleBootVariableGuid: ["boot-args"]),
            legacyEnable: false, legacyOverwrite: false,
            legacySchema: legacySchema(legacyAppleBootVariableGuid: ["EFILoginHiDPI", "EFIBluetoothDelay", "LocationServicesEnabled", "SystemAudioVolume", "SystemAudioVolumeDB", "SystemAudioVolumeSaved", "bluetoothActiveControllerInfo", "bluetoothInternalControllerInfo", "flagstate", "fmm-computer-name", "nvda_drv", "prev-lang:kbd"], legacyEfiGlobalVariable: ["Boot0080", "Boot0081", "Boot0082", "BootNext", "BootOrder"]),
            writeFlash: true),
                 
-    platFormInfo: platFormInfo(automatic: true, generic: generic(adviseWindows: false, mlb: "", rom: Data(), spoofVendor: false, systemProductName: "", systemSerialNumber: "", systemUUID: ""), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: "Create"),
+    platFormInfo: platFormInfo(automatic: true, generic: generic(adviseWindows: false, mlb: "", rom: Data(), spoofVendor: true, systemProductName: "", systemSerialNumber: "", systemUUID: ""), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: "Create"),
                 
     uefi: uefi(apfs: apfs(enableJumpstart: true, globalConnect: false, hideVerbose: true, jumpstartHotPlug: false, minDate: 0, minVersion: 0),
           audio: audio(audioCodec: 0, audioDevice: "PciRoot(0x0)/Pci(0x1b,0x0)", audioOut: 0, audioSupport: false, minimumVolume: 20, playChime: false, volumeAmplifier: 0),
