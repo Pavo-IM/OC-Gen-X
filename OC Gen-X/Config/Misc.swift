@@ -71,31 +71,71 @@ struct debug: Codable {
 }
 
 struct entries: Codable {
+    var arguments: String
+    var auxiliary: Bool
+    var comment: String
+    var enabled: Bool
+    var name: String
+    var path: String
     
+    enum CodingKeys: String, CodingKey {
+        case arguments = "Arguments"
+        case auxiliary = "Auxiliary"
+        case comment = "Comment"
+        case enabled = "Enabled"
+        case name = "Name"
+        case path = "Path"
+    }
 }
 
 struct security: Codable {
     var allowNvramReset: Bool
     var allowSetDefault: Bool
+    var apECID: Int
     var authRestart: Bool
     var bootProtect: String
+    var dmgLoading: String
+    var enablePassword: Bool
     var exposeSensitiveData: Int
     var haltLevel: Int
+    var passwordHash: Data
+    var passwordSalt: Data
     var scanPolicy: Int
+    var secureBootModel: String
     var vault: String
     
     enum CodingKeys: String, CodingKey {
         case allowNvramReset = "AllowNvramReset"
         case allowSetDefault = "AllowSetDefault"
+        case apECID = "ApECID"
         case authRestart = "AuthRestart"
         case bootProtect = "BootProtect"
+        case dmgLoading = "DmgLoading"
+        case enablePassword = "EnablePassword"
         case exposeSensitiveData = "ExposeSensitiveData"
         case haltLevel = "HaltLevel"
+        case passwordHash = "PasswordHash"
+        case passwordSalt = "PasswordSalt"
         case scanPolicy = "ScanPolicy"
+        case secureBootModel = "SecureBootModel"
         case vault = "Vault"
     }
 }
 
 struct tools: Codable {
+    var arguments: String
+    var auxiliary: Bool
+    var comment: String
+    var enabled: Bool
+    var name: String
+    var path: String
     
+    enum CodingKeys: String, CodingKey {
+        case arguments = "Arguments"
+        case auxiliary = "Auxiliary"
+        case comment = "Comment"
+        case enabled = "Enabled"
+        case name = "Name"
+        case path = "Path"
+    }
 }

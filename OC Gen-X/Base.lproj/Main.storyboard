@@ -719,7 +719,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="337" y="108" width="124" height="33"/>
+                                <rect key="frame" x="336" y="108" width="125" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -745,12 +745,12 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="166" width="811" height="158"/>
+                                <rect key="frame" x="-7" y="165" width="811" height="423"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
                                         <view key="view" id="C1C-xa-78L">
-                                            <rect key="frame" x="10" y="33" width="796" height="377"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="377"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="arC-k3-phI">
@@ -824,10 +824,10 @@
                                                     </connections>
                                                 </button>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="hlu-wH-ii6">
-                                                    <rect key="frame" x="10" y="338" width="776" height="5"/>
+                                                    <rect key="frame" x="10" y="338" width="771" height="5"/>
                                                 </box>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="h8w-7F-qHq">
-                                                    <rect key="frame" x="10" y="197" width="776" height="5"/>
+                                                    <rect key="frame" x="10" y="197" width="771" height="5"/>
                                                 </box>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NbE-uy-4f2">
                                                     <rect key="frame" x="8" y="209" width="99" height="18"/>
@@ -840,7 +840,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rg6-Ud-Ml9">
-                                                    <rect key="frame" x="364" y="173" width="68" height="16"/>
+                                                    <rect key="frame" x="362" y="173" width="68" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Intel HEDT" id="NuB-U2-9fd">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -848,13 +848,13 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="We0-KK-fmZ">
-                                                    <rect key="frame" x="10" y="160" width="776" height="5"/>
+                                                    <rect key="frame" x="10" y="160" width="771" height="5"/>
                                                 </box>
                                                 <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="T1A-26-MGn">
-                                                    <rect key="frame" x="10" y="71" width="776" height="5"/>
+                                                    <rect key="frame" x="10" y="71" width="771" height="5"/>
                                                 </box>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nf9-hV-dOz">
-                                                    <rect key="frame" x="381" y="47" width="34" height="16"/>
+                                                    <rect key="frame" x="379" y="47" width="34" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="AMD" id="Z9R-gJ-Gnm">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -862,10 +862,10 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <box hidden="YES" verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="4ot-SR-6YO">
-                                                    <rect key="frame" x="10" y="34" width="776" height="5"/>
+                                                    <rect key="frame" x="10" y="34" width="771" height="5"/>
                                                 </box>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GuR-Jk-C6I">
-                                                    <rect key="frame" x="153" y="313" width="99" height="18"/>
+                                                    <rect key="frame" x="148" y="313" width="99" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Comet Lake" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="6WF-b2-qWH">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -885,7 +885,7 @@
                                                     </connections>
                                                 </button>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Yb-zy-Quz">
-                                                    <rect key="frame" x="350" y="351" width="96" height="16"/>
+                                                    <rect key="frame" x="348" y="351" width="96" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Intel Consumer" id="dJk-VA-o4e">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -893,7 +893,7 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NqK-Bd-7Dl">
-                                                    <rect key="frame" x="153" y="9" width="176" height="18"/>
+                                                    <rect key="frame" x="148" y="9" width="176" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Proxintosh (Qemu+KVM)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Xoh-yM-aTv">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
@@ -963,11 +963,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="112"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="164"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="128"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="180"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -975,11 +975,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="82"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="134"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="45" width="48" height="18"/>
+                                                                        <rect key="frame" x="8" y="97" width="48" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -998,7 +998,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="19" width="95" height="18"/>
+                                                                        <rect key="frame" x="8" y="71" width="95" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1029,32 +1029,32 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="VirtualSMC Plugins" identifier="" id="GBT-cr-FfU">
                                                             <view key="view" id="LuR-rU-oM9">
-                                                                <rect key="frame" x="10" y="33" width="785" height="126"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="134"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-Dt-rSe">
-                                                                        <rect key="frame" x="8" y="90" width="112" height="18"/>
+                                                                        <rect key="frame" x="8" y="97" width="116" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SMCProcessor" bezelStyle="regularSquare" imagePosition="left" inset="2" id="DA7-8c-MgT">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0Ws-sH-cwr">
-                                                                        <rect key="frame" x="8" y="66" width="100" height="18"/>
+                                                                        <rect key="frame" x="8" y="71" width="104" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SMCSuperIO" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Ee7-82-v3F">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iEi-Wb-cLO">
-                                                                        <rect key="frame" x="8" y="42" width="124" height="18"/>
+                                                                        <rect key="frame" x="8" y="45" width="128" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SMCLightSensor" bezelStyle="regularSquare" imagePosition="left" inset="2" id="tIR-1p-bVa">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oG6-xM-fb1">
-                                                                        <rect key="frame" x="8" y="18" width="148" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="152" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="SMCBatteryManager" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ton-nF-qLw">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1073,7 +1073,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                     <constraint firstItem="oG6-xM-fb1" firstAttribute="leading" secondItem="hgp-Dt-rSe" secondAttribute="leading" id="cv5-cI-fox"/>
                                                                     <constraint firstItem="0Ws-sH-cwr" firstAttribute="top" secondItem="hgp-Dt-rSe" secondAttribute="bottom" constant="10" id="hUj-s3-JHT"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hgp-Dt-rSe" secondAttribute="trailing" constant="20" symbolic="YES" id="kwd-44-TAp"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Ws-sH-cwr" secondAttribute="trailing" symbolic="YES" id="sw1-fi-mmX"/>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0Ws-sH-cwr" secondAttribute="trailing" constant="20" symbolic="YES" id="sw1-fi-mmX"/>
                                                                     <constraint firstItem="hgp-Dt-rSe" firstAttribute="leading" secondItem="LuR-rU-oM9" secondAttribute="leading" constant="10" id="zlA-eH-KX6"/>
                                                                 </constraints>
                                                             </view>
@@ -1579,15 +1579,15 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="563" y="145" width="216" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.0" id="c09-ms-Iid">
+                                <rect key="frame" x="563" y="145" width="216" height="15"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.1" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
-                                <rect key="frame" x="182" y="314" width="433" height="114"/>
+                                <rect key="frame" x="182" y="578" width="433" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="433" id="O7n-w9-UZS"/>
                                 </constraints>

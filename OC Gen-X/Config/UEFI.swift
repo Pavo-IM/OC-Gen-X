@@ -121,8 +121,10 @@ struct protocols: Codable {
     var appleEvent: Bool
     var appleFramebufferInfo: Bool
     var appleImageConversion: Bool
+    var appleImg4Verification: Bool
     var appleKeyMap: Bool
     var appleRtcRam: Bool
+    var appleSecureBoot: Bool
     var appleSmcIo: Bool
     var appleUserInterfaceTheme: Bool
     var dataHub: Bool
@@ -139,8 +141,10 @@ struct protocols: Codable {
         case appleEvent = "AppleEvent"
         case appleFramebufferInfo = "AppleFramebufferInfo"
         case appleImageConversion = "AppleImageConversion"
+        case appleImg4Verification = "AppleImg4Verification"
         case appleKeyMap = "AppleKeyMap"
         case appleRtcRam = "AppleRtcRam"
+        case appleSecureBoot = "AppleSecureBoot"
         case appleSmcIo = "AppleSmcIo"
         case appleUserInterfaceTheme = "AppleUserInterfaceTheme"
         case dataHub = "DataHub"

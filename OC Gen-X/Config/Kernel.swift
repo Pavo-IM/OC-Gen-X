@@ -4,19 +4,24 @@ struct kernel: Codable {
     var kAdd: [kAdd]
     var kBlock: [kBlock]
     var emulate: emulate
+    var force: [force]
     var kPatch: [kPatch]?
     var kQuirks: kQuirks
+    var scheme: scheme
     
     enum CodingKeys: String, CodingKey {
         case kAdd = "Add"
         case kBlock = "Block"
         case emulate = "Emulate"
+        case force = "Force"
         case kPatch = "Patch"
         case kQuirks = "Quirks"
+        case scheme = "Scheme"
     }
 }
 
 struct kAdd: Codable {
+    var arch: String = "x86_64"
     var bundlePath: String
     var comment: String
     var enabled: Bool
@@ -26,6 +31,7 @@ struct kAdd: Codable {
     var plistPath: String
     
     enum CodingKeys: String, CodingKey {
+        case arch = "Arch"
         case bundlePath = "BundlePath"
         case comment = "Comment"
         case enabled = "Enabled"
@@ -37,7 +43,21 @@ struct kAdd: Codable {
 }
 
 struct kBlock: Codable {
+    var arch: String = "Any"
+    var comment: String
+    var enabled: Bool
+    var identifier: String
+    var maxKernel: String
+    var minKernel: String
     
+    enum CodingKeys: String, CodingKey {
+        case arch = "Arch"
+        case comment = "Comment"
+        case enabled = "Enabled"
+        case identifier = "Identifier"
+        case maxKernel = "MaxKernel"
+        case minKernel = "MinKernel"
+    }
 }
 
 struct emulate: Codable {
@@ -50,7 +70,32 @@ struct emulate: Codable {
     }
 }
 
+struct force: Codable {
+    var arch: String
+    var bundlePath: String
+    var comment: String
+    var enabled: Bool
+    var executablePath: String
+    var identifier: String
+    var maxKernel: String
+    var minKernel: String
+    var plistPath: String
+    
+    enum CodingKeys: String, CodingKey {
+        case arch = "Arch"
+        case bundlePath = "bundlePath"
+        case comment = "Comment"
+        case enabled = "Enabled"
+        case executablePath = "ExecutablePath"
+        case identifier = "Identifier"
+        case maxKernel = "MaxKernel"
+        case minKernel = "MinKernel"
+        case plistPath = "PlistPath"
+    }
+}
+
 struct kPatch: Codable {
+    var arch: String = "Any"
     var base: String
     var comment: String
     var count: Int
@@ -66,6 +111,7 @@ struct kPatch: Codable {
     var skip: Int
     
     enum CodingKeys: String, CodingKey {
+        case arch = "Arch"
         case base = "Base"
         case comment = "Comment"
         case count = "Count"
@@ -89,6 +135,7 @@ struct kQuirks: Codable {
     var appleXcpmForceBoost: Bool = false
     var customSMBIOSGuid: Bool = false
     var disableIoMapper: Bool = false
+    var disableLinkeditJettison: Bool = true
     var disableRtcChecksum: Bool = false
     var dummyPowerManagement: Bool = false
     var externalDiskIcons: Bool = false
@@ -106,6 +153,7 @@ struct kQuirks: Codable {
         case appleXcpmForceBoost = "AppleXcpmForceBoost"
         case customSMBIOSGuid = "CustomSMBIOSGuid"
         case disableIoMapper = "DisableIoMapper"
+        case disableLinkeditJettison = "DisableLinkeditJettison"
         case disableRtcChecksum = "DisableRtcChecksum"
         case dummyPowerManagement = "DummyPowerManagement"
         case externalDiskIcons = "ExternalDiskIcons"
@@ -115,5 +163,17 @@ struct kQuirks: Codable {
         case powerTimeoutKernelPanic = "PowerTimeoutKernelPanic"
         case thirdPartyDrives = "ThirdPartyDrives"
         case xhciPortLimit = "XhciPortLimit"
+    }
+}
+
+struct scheme: Codable {
+    var fuzzyMatch: Bool = true
+    var kernelArch: String = "x86_64"
+    var kernelCache: String = "Auto"
+    
+    enum CodingKeys: String, CodingKey {
+        case fuzzyMatch = "FuzzyMatch"
+        case kernelArch = "KernelArch"
+        case kernelCache = "KernelCache"
     }
 }

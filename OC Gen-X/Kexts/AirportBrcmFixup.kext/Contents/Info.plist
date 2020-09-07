@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20A5323l</string>
+	<string>18E226</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.8</string>
+	<string>2.0.9</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,23 +25,21 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.0.8</string>
+	<string>2.0.9</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12A8169g</string>
-	<key>DTPlatformName</key>
-	<string>macosx</string>
+	<string>10E1001</string>
 	<key>DTPlatformVersion</key>
-	<string>11.0</string>
+	<string>GM</string>
 	<key>DTSDKBuild</key>
-	<string>20A5323l</string>
+	<string>18E219</string>
 	<key>DTSDKName</key>
-	<string>macosx11.0</string>
+	<string>macosx10.14</string>
 	<key>DTXcode</key>
-	<string>1200</string>
+	<string>1020</string>
 	<key>DTXcodeBuild</key>
-	<string>12A8169g</string>
+	<string>10E1001</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>as.lvs1974.AirportBrcmFixup</key>
@@ -97,8 +95,6 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>LSMinimumSystemVersion</key>
-	<string>10.8</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017 lvs1974. All rights reserved.</string>
 	<key>OSBundleCompatibleVersion</key>
@@ -107,10 +103,6 @@
 	<dict>
 		<key>as.vit9696.Lilu</key>
 		<string>1.2.6</string>
-		<key>com.apple.driver.corecapture</key>
-		<string>1.0.0</string>
-		<key>com.apple.iokit.IONetworkingFamily</key>
-		<string>1.5</string>
 		<key>com.apple.iokit.IOPCIFamily</key>
 		<string>2.7</string>
 		<key>com.apple.kpi.bsd</key>
