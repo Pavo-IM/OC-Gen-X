@@ -22,7 +22,6 @@
 		CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */; };
 		CF5C17B325066A8700F81BDC /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5C17B225066A8700F81BDC /* Lilu.kext */; };
 		CF5C17B525066A9100F81BDC /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5C17B425066A9100F81BDC /* WhateverGreen.kext */; };
-		CF5C17B725066A9A00F81BDC /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5C17B625066A9A00F81BDC /* AirportBrcmFixup.kext */; };
 		CF5C17B925066AA300F81BDC /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5C17B825066AA300F81BDC /* AppleALC.kext */; };
 		CF5C17BD25066AC100F81BDC /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5C17BA25066AC100F81BDC /* SMCSuperIO.kext */; };
 		CF5C17BE25066AC100F81BDC /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5C17BB25066AC100F81BDC /* SMCProcessor.kext */; };
@@ -49,6 +48,7 @@
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
+		CFECDCFA2506994700541F18 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFECDCF92506994700541F18 /* AirportBrcmFixup.kext */; };
 		CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */; };
 		CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */; };
 		CFF17AA924D8638800978A9A /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */; };
@@ -88,7 +88,6 @@
 		CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		CF5C17B225066A8700F81BDC /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
 		CF5C17B425066A9100F81BDC /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
-		CF5C17B625066A9A00F81BDC /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CF5C17B825066AA300F81BDC /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CF5C17BA25066AC100F81BDC /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
 		CF5C17BB25066AC100F81BDC /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
+		CFECDCF92506994700541F18 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
 		CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
 		CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmBluetoothInjector.kext; sourceTree = "<group>"; };
@@ -137,13 +137,13 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CFECDCF92506994700541F18 /* AirportBrcmFixup.kext */,
 				CF5C17C125066AFA00F81BDC /* SMCBatteryManager.kext */,
 				CF5C17C025066AFA00F81BDC /* SMCLightSensor.kext */,
 				CF5C17BB25066AC100F81BDC /* SMCProcessor.kext */,
 				CF5C17BA25066AC100F81BDC /* SMCSuperIO.kext */,
 				CF5C17BC25066AC100F81BDC /* VirtualSMC.kext */,
 				CF5C17B825066AA300F81BDC /* AppleALC.kext */,
-				CF5C17B625066A9A00F81BDC /* AirportBrcmFixup.kext */,
 				CF5C17B425066A9100F81BDC /* WhateverGreen.kext */,
 				CF5C17B225066A8700F81BDC /* Lilu.kext */,
 				CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */,
@@ -322,6 +322,7 @@
 				CF039FA8249DA1C400C3622E /* HfsPlus.efi in Resources */,
 				CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */,
 				CF5C17B325066A8700F81BDC /* Lilu.kext in Resources */,
+				CFECDCFA2506994700541F18 /* AirportBrcmFixup.kext in Resources */,
 				CFBCAFE62506974700D854BC /* OpenUsbKbDxe.efi in Resources */,
 				CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */,
 				CFBCAFE82506974700D854BC /* XhciDxe.efi in Resources */,
@@ -330,7 +331,6 @@
 				CF5C17BD25066AC100F81BDC /* SMCSuperIO.kext in Resources */,
 				CFBCAFE52506974700D854BC /* OpenRuntime.efi in Resources */,
 				CF5C17C225066AFA00F81BDC /* SMCLightSensor.kext in Resources */,
-				CF5C17B725066A9A00F81BDC /* AirportBrcmFixup.kext in Resources */,
 				CF5C17B925066AA300F81BDC /* AppleALC.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
