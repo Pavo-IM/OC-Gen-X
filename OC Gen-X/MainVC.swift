@@ -587,6 +587,7 @@ class MainVC: NSViewController {
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.booter.quirks.setupVirtualMap = false
@@ -666,16 +667,16 @@ class MainVC: NSViewController {
             config.misc.tools.removeAll()
             config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
-            config.booter.quirks.syncRuntimePermissions = true
             config.booter.quirks.setupVirtualMap = false
+            config.booter.quirks.syncRuntimePermissions = true
             for i in threadripperPatches {
                 config.kernel.kPatch.append(i)
             }
-            config.kernel.kQuirks.dummyPowerManagement = true
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
-            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
