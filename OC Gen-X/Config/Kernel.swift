@@ -5,7 +5,7 @@ struct kernel: Codable {
     var kBlock: [kBlock]
     var emulate: emulate
     var force: [force]
-    var kPatch: [kPatch]?
+    var kPatch: [kPatch]
     var kQuirks: kQuirks
     var scheme: scheme
     
@@ -83,7 +83,7 @@ struct force: Codable {
     
     enum CodingKeys: String, CodingKey {
         case arch = "Arch"
-        case bundlePath = "bundlePath"
+        case bundlePath = "BundlePath"
         case comment = "Comment"
         case enabled = "Enabled"
         case executablePath = "ExecutablePath"
