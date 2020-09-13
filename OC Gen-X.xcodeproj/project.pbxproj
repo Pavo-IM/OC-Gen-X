@@ -37,7 +37,6 @@
 		CF6F1124241E972600B70805 /* NVRAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1123241E972600B70805 /* NVRAM.swift */; };
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
-		CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7D661224983B3F006333B6 /* 17H_Patches.swift */; };
 		CFBCAFDC2506970500D854BC /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFBCAFDB2506970500D854BC /* BOOTx64.efi */; };
 		CFBCAFDE2506971000D854BC /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFBCAFDD2506971000D854BC /* Bootstrap.efi */; };
 		CFBCAFE02506971800D854BC /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFBCAFDF2506971800D854BC /* OpenCore.efi */; };
@@ -45,6 +44,7 @@
 		CFBCAFE62506974700D854BC /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFBCAFE22506974600D854BC /* OpenUsbKbDxe.efi */; };
 		CFBCAFE72506974700D854BC /* NvmExpressDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFBCAFE32506974600D854BC /* NvmExpressDxe.efi */; };
 		CFBCAFE82506974700D854BC /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFBCAFE42506974600D854BC /* XhciDxe.efi */; };
+		CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE7045250E796300D2D332 /* 17H_Patches.swift */; };
 		CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC7C52524983D4C000CEF89 /* default_config_settings.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
@@ -103,7 +103,6 @@
 		CF6F1123241E972600B70805 /* NVRAM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVRAM.swift; sourceTree = "<group>"; };
 		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
-		CF7D661224983B3F006333B6 /* 17H_Patches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFBCAFDB2506970500D854BC /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
 		CFBCAFDD2506971000D854BC /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
 		CFBCAFDF2506971800D854BC /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
@@ -111,6 +110,7 @@
 		CFBCAFE22506974600D854BC /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
 		CFBCAFE32506974600D854BC /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
 		CFBCAFE42506974600D854BC /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
+		CFBE7045250E796300D2D332 /* 17H_Patches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC7C52524983D4C000CEF89 /* default_config_settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = default_config_settings.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 				CF6F1123241E972600B70805 /* NVRAM.swift */,
 				CF6F1125241E973600B70805 /* PlatformInfo.swift */,
 				CF6F1127241E973E00B70805 /* UEFI.swift */,
-				CF7D661224983B3F006333B6 /* 17H_Patches.swift */,
+				CFBE7045250E796300D2D332 /* 17H_Patches.swift */,
 				CFC7C52524983D4C000CEF89 /* default_config_settings.swift */,
 			);
 			path = Config;
@@ -347,8 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */,
-				CF7D661324983B3F006333B6 /* 17H_Patches.swift in Sources */,
 				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
+				CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */,
 				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
 				CFC7C52624983D4C000CEF89 /* default_config_settings.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
@@ -514,7 +514,7 @@
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -540,7 +540,7 @@
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

@@ -714,12 +714,12 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="435"/>
+                    <view key="view" id="ZeK-sO-E8j">
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="700"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="336" y="108" width="125" height="32"/>
+                                <rect key="frame" x="336" y="108" width="125" height="33"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -745,7 +745,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="165" width="811" height="423"/>
+                                <rect key="frame" x="-7" y="166" width="811" height="423"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -893,13 +893,23 @@
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NqK-Bd-7Dl">
-                                                    <rect key="frame" x="148" y="9" width="176" height="18"/>
+                                                    <rect key="frame" x="155" y="9" width="176" height="18"/>
                                                     <buttonCell key="cell" type="radio" title="Proxintosh (Qemu+KVM)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Xoh-yM-aTv">
                                                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
                                                         <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="QrA-ys-74K"/>
+                                                    </connections>
+                                                </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PhR-gn-wnG">
+                                                    <rect key="frame" x="349" y="9" width="196" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="Gen3 Threadripper (TRX40)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="QnF-8z-VBf">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="IK4-ES-CpR"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -909,8 +919,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="eeX-Ee-gPO" secondAttribute="bottom" constant="10" id="23K-Ka-ald"/>
                                                 <constraint firstAttribute="trailing" secondItem="4ot-SR-6YO" secondAttribute="trailing" constant="10" id="2DX-Nd-OXS"/>
                                                 <constraint firstItem="y2r-xg-ybM" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="2GM-b9-Jvc"/>
+                                                <constraint firstItem="NqK-Bd-7Dl" firstAttribute="leading" secondItem="eeX-Ee-gPO" secondAttribute="trailing" constant="20" id="4Sq-HD-dnl"/>
                                                 <constraint firstItem="fQy-FH-F4E" firstAttribute="top" secondItem="y2r-xg-ybM" secondAttribute="bottom" constant="10" id="4mN-tL-4sr"/>
-                                                <constraint firstItem="NqK-Bd-7Dl" firstAttribute="leading" secondItem="GuR-Jk-C6I" secondAttribute="leading" id="5cx-GY-9GQ"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="6Mp-Vd-ShY"/>
                                                 <constraint firstItem="2kH-rr-uNc" firstAttribute="top" secondItem="p55-Fb-A4q" secondAttribute="bottom" constant="10" id="6ym-po-Z8w"/>
                                                 <constraint firstItem="h8w-7F-qHq" firstAttribute="top" secondItem="NbE-uy-4f2" secondAttribute="bottom" constant="10" id="7On-LQ-IoE"/>
@@ -921,6 +931,7 @@
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDG-g2-WWY" secondAttribute="trailing" constant="20" symbolic="YES" id="DjY-s9-GJX"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="FD5-xM-x6B"/>
                                                 <constraint firstItem="2kH-rr-uNc" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="KcP-Bl-CnT"/>
+                                                <constraint firstItem="PhR-gn-wnG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NqK-Bd-7Dl" secondAttribute="trailing" symbolic="YES" id="M3l-YX-xMA"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="NIP-2u-BKE"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="top" secondItem="h8w-7F-qHq" secondAttribute="bottom" constant="10" id="NfV-F3-IYi"/>
                                                 <constraint firstItem="GuR-Jk-C6I" firstAttribute="top" secondItem="hlu-wH-ii6" secondAttribute="bottom" constant="10" id="PVs-7B-2mm"/>
@@ -932,10 +943,10 @@
                                                 <constraint firstItem="eeX-Ee-gPO" firstAttribute="top" secondItem="4ot-SR-6YO" secondAttribute="bottom" constant="10" id="X5r-iv-mBE"/>
                                                 <constraint firstAttribute="trailing" secondItem="We0-KK-fmZ" secondAttribute="trailing" constant="10" id="XjW-pJ-09M"/>
                                                 <constraint firstItem="gDG-g2-WWY" firstAttribute="top" secondItem="fQy-FH-F4E" secondAttribute="bottom" constant="10" id="YSP-7y-Orb"/>
+                                                <constraint firstItem="PhR-gn-wnG" firstAttribute="centerY" secondItem="eeX-Ee-gPO" secondAttribute="centerY" id="ZDx-FT-d3M"/>
                                                 <constraint firstItem="hlu-wH-ii6" firstAttribute="top" secondItem="0Yb-zy-Quz" secondAttribute="bottom" constant="10" id="ZIP-0e-Rhv"/>
                                                 <constraint firstItem="NbE-uy-4f2" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="ZzC-o5-Hso"/>
                                                 <constraint firstItem="4ot-SR-6YO" firstAttribute="top" secondItem="Nf9-hV-dOz" secondAttribute="bottom" constant="10" id="a8r-fg-ykz"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eeX-Ee-gPO" secondAttribute="trailing" constant="20" symbolic="YES" id="cGI-Yo-U3Z"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="cwx-Qc-7xQ"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rhr-Fz-70Q" secondAttribute="trailing" constant="20" symbolic="YES" id="dWU-nh-DzA"/>
                                                 <constraint firstAttribute="trailing" secondItem="hlu-wH-ii6" secondAttribute="trailing" constant="10" id="dgh-JF-1fO"/>
@@ -953,6 +964,7 @@
                                                 <constraint firstItem="y2r-xg-ybM" firstAttribute="top" secondItem="arC-k3-phI" secondAttribute="bottom" constant="10" id="p4C-hm-OFt"/>
                                                 <constraint firstAttribute="trailing" secondItem="GuR-Jk-C6I" secondAttribute="trailing" constant="544" id="pmS-nP-Wgr"/>
                                                 <constraint firstItem="NqK-Bd-7Dl" firstAttribute="centerY" secondItem="eeX-Ee-gPO" secondAttribute="centerY" id="qwT-KF-5CJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="PhR-gn-wnG" secondAttribute="trailing" constant="246" id="qxn-AE-LeN"/>
                                                 <constraint firstItem="0Yb-zy-Quz" firstAttribute="centerX" secondItem="C1C-xa-78L" secondAttribute="centerX" id="uA7-za-v3R"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="top" secondItem="rg6-Ud-Ml9" secondAttribute="bottom" constant="10" id="upm-J8-b9h"/>
                                                 <constraint firstItem="GuR-Jk-C6I" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="arC-k3-phI" secondAttribute="trailing" constant="8" symbolic="YES" id="wKp-Ju-R7f"/>
@@ -1579,7 +1591,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="563" y="145" width="216" height="15"/>
+                                <rect key="frame" x="563" y="145" width="216" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.1" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1587,7 +1599,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
-                                <rect key="frame" x="182" y="578" width="433" height="114"/>
+                                <rect key="frame" x="182" y="579" width="433" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="433" id="O7n-w9-UZS"/>
                                 </constraints>
@@ -1682,6 +1694,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="smuuidInput" destination="Wpt-Ki-nzt" id="RT8-6d-rFv"/>
                         <outlet property="snInput" destination="Ver-Sx-K2G" id="e5I-xX-EtB"/>
                         <outlet property="textfield" destination="Y5K-fp-3dO" id="atc-DC-SWQ"/>
+                        <outlet property="threadripperChecked" destination="PhR-gn-wnG" id="hbt-5q-VUM"/>
                         <outlet property="usbInjectAllChecked" destination="h3S-sl-6lV" id="65K-pl-1TZ"/>
                         <outlet property="virtualSMCChecked" destination="lbr-dO-TxB" id="Gkr-Uk-vTU"/>
                         <outlet property="wegBootargsTextfield" destination="gOy-PJ-qmO" id="6r5-n4-hv3"/>
@@ -1691,7 +1704,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="234" y="1682"/>
+            <point key="canvasLocation" x="75.5" y="935.5"/>
         </scene>
     </scenes>
     <resources>

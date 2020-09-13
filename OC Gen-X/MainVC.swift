@@ -50,13 +50,40 @@ class MainVC: NSViewController {
     @IBOutlet weak var cometLakeChecked: NSButton!
     @IBOutlet weak var casecadeChecked: NSButton!
     @IBOutlet weak var proxintoshChecked: NSButton!
-    
-    
+    @IBOutlet weak var threadripperChecked: NSButton!
+    var ryzenPatches = [kPatch]()
+    var threadripperPatches = [kPatch]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateButton.isEnabled = false
         applyDesktopGuideHyperlink()
+        let ryzenUrlString = "https://raw.githubusercontent.com/Pavo-IM/trx40_amd_macos/master/EFI/OC/ryzen_17h_sample.plist"
+        if let url = URL(string: ryzenUrlString) {
+            if let data = try? Data(contentsOf: url) {
+                ryzenParse(plist: data)
+            }
+        }
+        let threadripperUrlString = "https://raw.githubusercontent.com/Pavo-IM/trx40_amd_macos/master/EFI/OC/threadripper_Gen3_sample.plist"
+        if let url = URL(string: threadripperUrlString) {
+            if let data = try? Data(contentsOf: url) {
+                threadripperParse(plist: data)
+            }
+        }
+    }
+    
+    func ryzenParse(plist: Data) {
+        let decoder = PropertyListDecoder()
+        if let plist = try? decoder.decode(Root.self, from: plist) {
+            ryzenPatches = plist.kernel.kPatch
+        }
+    }
+    
+    func threadripperParse(plist: Data) {
+        let decoder = PropertyListDecoder()
+        if let plist = try? decoder.decode(Root.self, from: plist) {
+            threadripperPatches = plist.kernel.kPatch
+        }
     }
     
     private func applyDesktopGuideHyperlink() {
@@ -224,7 +251,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -258,7 +285,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -292,7 +319,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -326,7 +353,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -359,7 +386,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -394,7 +421,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -433,7 +460,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -470,7 +497,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -507,7 +534,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -545,7 +572,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -553,39 +580,9 @@ class MainVC: NSViewController {
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.booter.quirks.setupVirtualMap = false
-            config.kernel.kPatch = [firstRyzenPatch]
-            config.kernel.kPatch?.append(secondRyzenPatch)
-            config.kernel.kPatch?.append(thirdRyzenPatch)
-            config.kernel.kPatch?.append(forthRyzenPatch)
-            config.kernel.kPatch?.append(fifthRyzenPatch)
-            config.kernel.kPatch?.append(sixthRyzenPatch)
-            config.kernel.kPatch?.append(seventhRyzenPatch)
-            config.kernel.kPatch?.append(eigthRyzenPatch)
-            config.kernel.kPatch?.append(ninthRyzenPatch)
-            config.kernel.kPatch?.append(tenthRyzenPatch)
-            config.kernel.kPatch?.append(eleventhRyzenPatch)
-            config.kernel.kPatch?.append(twelfthRyzenPatch)
-            config.kernel.kPatch?.append(thirteenthRyzenPatch)
-            config.kernel.kPatch?.append(fourteenthRyzenPatch)
-            config.kernel.kPatch?.append(fiftheenthRyzenPatch)
-            config.kernel.kPatch?.append(sixthteenthRyzenPatch)
-            config.kernel.kPatch?.append(seventeethRyzenPatch)
-            config.kernel.kPatch?.append(eigthteethRyzenPatch)
-            config.kernel.kPatch?.append(ninthteenthRyzenPatch)
-            config.kernel.kPatch?.append(twentiethRyzenPatch)
-            config.kernel.kPatch?.append(twentiefirstRyzenPatch)
-            config.kernel.kPatch?.append(twentiesecondRyzenPatch)
-            config.kernel.kPatch?.append(twentiethirdRyzenPatch)
-            config.kernel.kPatch?.append(twentieforthRyzenPatch)
-            config.kernel.kPatch?.append(twentiefifthRyzenPatch)
-            config.kernel.kPatch?.append(twentiesixthRyzenPatch)
-            config.kernel.kPatch?.append(twentieseventhRyzenPatch)
-            config.kernel.kPatch?.append(twentieeigthRyzenPatch)
-            config.kernel.kPatch?.append(twentieninthRyzenPatch)
-            config.kernel.kPatch?.append(thirtiethRyzenPatch)
-            config.kernel.kPatch?.append(thirtiefirstRyzenPatch)
-            config.kernel.kPatch?.append(thirtiesecondRyzenPatch)
-            config.kernel.kPatch?.append(thirtiethirdRyzenPatch)
+            for i in ryzenPatches {
+                config.kernel.kPatch.append(i)
+            }
             config.kernel.kQuirks.dummyPowerManagement = true
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
@@ -616,7 +613,7 @@ class MainVC: NSViewController {
             config.acpi.patch.removeAll()
             config.booter.mmioWhitelist.removeAll()
             config.kernel.kBlock.removeAll()
-            config.kernel.kPatch?.removeAll()
+            config.kernel.kPatch.removeAll()
             config.misc.blessOverRide.removeAll()
             config.misc.entries.removeAll()
             config.misc.tools.removeAll()
@@ -624,8 +621,8 @@ class MainVC: NSViewController {
             config.booter.quirks.setupVirtualMap = false
             config.kernel.emulate.cpuid1Data = Data([0xEC,0x06,0x09,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
-            config.kernel.kPatch?.append(secondRyzenPatch)
-            config.kernel.kPatch?.append(twelfthRyzenPatch)
+            config.kernel.kPatch.append(secondRyzenPatch)
+            config.kernel.kPatch.append(twelfthRyzenPatch)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.misc.debug.appleDebug = true
@@ -640,6 +637,48 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
             config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
+        default:
+            break
+        }
+        
+        switch threadripperChecked.state {
+        case .on:
+            config.acpi.add.removeAll()
+            config.acpi.delete.removeAll()
+            config.acpi.patch.removeAll()
+            config.booter.mmioWhitelist.removeAll()
+            config.kernel.kBlock.removeAll()
+            config.kernel.kPatch.removeAll()
+            config.misc.blessOverRide.removeAll()
+            config.misc.entries.removeAll()
+            config.misc.tools.removeAll()
+            config.uefi.reservedMemory.removeAll()
+            config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.booter.quirks.setupVirtualMap = false
+            for i in threadripperPatches {
+                config.kernel.kPatch.append(i)
+            }
+            config.kernel.kQuirks.dummyPowerManagement = true
+            config.kernel.kQuirks.panicNoKextDump = true
+            config.kernel.kQuirks.powerTimeoutKernelPanic = true
+            config.kernel.kQuirks.xhciPortLimit = true
+            config.misc.debug.applePanic = true
+            config.misc.debug.disableWatchDog = true
+            config.misc.security.allowNvramReset = true
+            config.misc.security.allowSetDefault = true
+            config.misc.security.haltLevel = 2147483648
+            config.misc.security.scanPolicy = 0
+            config.misc.security.exposeSensitiveData = 6
+            config.misc.security.vault = "Optional"
+            config.nvram.add.addAppleBootVariableGuid.systemAudioVolume = Data([0x46])
+            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
+            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
+            config.platFormInfo.generic.spoofVendor = true
+            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
+            config.uefi.input.pointerSupportMode = ""
         default:
             break
         }
@@ -955,7 +994,7 @@ class MainVC: NSViewController {
                     try data.write(to: configFilePath)
                     config.uefi.drivers.removeAll()
                     config.kernel.kAdd.removeAll()
-                    config.kernel.kPatch?.removeAll()
+                    config.kernel.kPatch.removeAll()
                     saveAlert()
                 }
                 catch {
