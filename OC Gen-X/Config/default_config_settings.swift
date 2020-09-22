@@ -25,7 +25,7 @@ var config = Root(
           boot: boot(consoleAttributes: 0, hibernateMode: "None", hideAuxiliary: false, pickerAttributes: 1, pickerAudioAssist: false, pickerMode: "Builtin", pollAppleHotKeys: false, showPicker: true, takeoffDelay: 0, timeout: 5),
           debug: debug(appleDebug: false, applePanic: false, disableWatchDog: false, displayDelay: 0, displayLevel: 2147483648, serialInit: false, sysReport: false, target: 3),
           entries: [entries(arguments: "", auxiliary: false, comment: "", enabled: false, name: "", path: "")],
-          security: security(allowNvramReset: false, allowSetDefault: false, apECID: 0, authRestart: false, bootProtect: "Bootstrap", dmgLoading: "Signed", enablePassword: false, exposeSensitiveData: 6, haltLevel: 2147483648, passwordHash: Data(), passwordSalt: Data(), scanPolicy: 17760515, secureBootModel: "Default", vault: "Secure"),
+          security: security(allowNvramReset: false, allowSetDefault: false, apECID: 0, authRestart: false, bootProtect: "Bootstrap", dmgLoading: "Signed", enablePassword: false, exposeSensitiveData: 6, haltLevel: 2147483648, passwordHash: Data(), passwordSalt: Data(), scanPolicy: 17760515, secureBootModel: "Disabled", vault: "Secure"),
           tools: [tools(arguments: "", auxiliary: false, comment: "", enabled: false, name: "", path: "")]),
                 
     nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(defaultBackgroundColor: Data(), uiScale: Data()), addAppleVendorGuid: addAppleVendorGuid(rtcBlacklist: Data()), addAppleBootVariableGuid: addAppleBootVariableGuid(systemAudioVolume: Data([0x46]), bootArgs: "-v keepsyms=1", csrActiveConfig: Data(), prevLangKbd: Data(), runefiupdater: "No")),
