@@ -243,20 +243,21 @@ class MainVC: NSViewController {
     @IBAction func generateClicked(_ sender: NSButton) {
         //TODO: Add UI element with dropdown menu to mount ESP of selected drive.
         //TODO: Add methods to copy items from Bundle to ESP.
+        config.acpi.add.removeAll()
+        config.acpi.delete.removeAll()
+        config.acpi.patch.removeAll()
+        config.booter.mmioWhitelist.removeAll()
+        config.kernel.kAdd.removeAll()
+        config.kernel.kBlock.removeAll()
+        config.kernel.force.removeAll()
+        config.kernel.kPatch.removeAll()
+        config.misc.blessOverRide.removeAll()
+        config.misc.entries.removeAll()
+        config.misc.tools.removeAll()
+        config.uefi.reservedMemory.removeAll()
         
         switch ivyBridgeChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -274,6 +275,7 @@ class MainVC: NSViewController {
             config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.removeAll()
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
@@ -281,17 +283,6 @@ class MainVC: NSViewController {
         
         switch haswellChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -316,17 +307,6 @@ class MainVC: NSViewController {
         
         switch skylakeChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
@@ -351,17 +331,6 @@ class MainVC: NSViewController {
         
         switch kabylakeChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.enableWriteUnprotector = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -385,17 +354,6 @@ class MainVC: NSViewController {
         
         switch coffeelakeChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -421,17 +379,6 @@ class MainVC: NSViewController {
         
         switch cometLakeChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.protectUefiServices = true
@@ -461,17 +408,6 @@ class MainVC: NSViewController {
         
         switch haswellEChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.disableVariableWrite = true
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -499,17 +435,6 @@ class MainVC: NSViewController {
         
         switch broadwellEChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.disableVariableWrite = true
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -537,17 +462,6 @@ class MainVC: NSViewController {
         
         switch casecadeChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.provideCustomSlide = true
@@ -576,17 +490,6 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -609,26 +512,15 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleBootVariableGuid.systemAudioVolume = Data([0x46])
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
+            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000"
             config.platFormInfo.generic.spoofVendor = true
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
-            config.uefi.input.pointerSupportMode = ""
         default:
             break
         }
         
         switch proxintoshChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.setupVirtualMap = false
             config.kernel.emulate.cpuid1Data = Data([0xEC,0x06,0x09,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
@@ -648,24 +540,12 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
-            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
         default:
             break
         }
         
         switch threadripperChecked.state {
         case .on:
-            config.acpi.add.removeAll()
-            config.acpi.delete.removeAll()
-            config.acpi.patch.removeAll()
-            config.booter.mmioWhitelist.removeAll()
-            config.kernel.kBlock.removeAll()
-            config.kernel.force.removeAll()
-            config.kernel.kPatch.removeAll()
-            config.misc.blessOverRide.removeAll()
-            config.misc.entries.removeAll()
-            config.misc.tools.removeAll()
-            config.uefi.reservedMemory.removeAll()
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
@@ -688,10 +568,8 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleBootVariableGuid.systemAudioVolume = Data([0x46])
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000 keepsyms=1 debug=0x1000 -v "
             config.platFormInfo.generic.spoofVendor = true
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
-            config.uefi.input.pointerSupportMode = ""
         default:
             break
         }
@@ -699,7 +577,6 @@ class MainVC: NSViewController {
         switch liluChecked.state {
         case .on:
             let liluAdd = kAdd(bundlePath: "Lilu.kext", comment: "", enabled: true, executablePath: "Contents/MacOS/Lilu", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
-            config.kernel.kAdd.removeAll()
             config.kernel.kAdd.append(liluAdd)
         default:
             break
@@ -743,7 +620,7 @@ class MainVC: NSViewController {
         switch whatevergreenChecked.state {
         case .on:
             addKextToConfig(item: "WhateverGreen")
-            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: wegBootargsTextfield.stringValue + " ")
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + wegBootargsTextfield.stringValue)
         default:
             break
         }
@@ -751,7 +628,7 @@ class MainVC: NSViewController {
         switch appleALCChecked.state {
         case .on:
             addKextToConfig(item: "AppleALC")
-            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: appleALCInputfield.stringValue + " ")
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + appleALCInputfield.stringValue)
         default:
             break
         }
@@ -905,7 +782,7 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
                 if (bootargsInputfield != nil) {
-                    config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: bootargsInputfield.stringValue + " ")
+                    config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
                 }
                 if (modelInput != nil) {
                     config.platFormInfo.generic.systemProductName = modelInput.stringValue

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17156"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -715,11 +715,11 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="699"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="336" y="108" width="125" height="33"/>
+                                <rect key="frame" x="336" y="108" width="125" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -745,7 +745,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="166" width="811" height="423"/>
+                                <rect key="frame" x="-7" y="165" width="811" height="423"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -975,11 +975,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="164"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="86"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-10" width="805" height="180"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="102"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="791" id="hDH-0b-jcV"/>
                                                     </constraints>
@@ -1245,11 +1245,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="USB" identifier="" id="RqG-Fc-xie">
                                                             <view key="view" id="F3O-yf-zdV">
-                                                                <rect key="frame" x="10" y="33" width="785" height="54"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="56"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="h3S-sl-6lV">
-                                                                        <rect key="frame" x="8" y="18" width="97" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="101" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="USBInjectAll" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ONZ-We-spM">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1591,7 +1591,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="563" y="145" width="216" height="16"/>
+                                <rect key="frame" x="563" y="145" width="216" height="15"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.1" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1599,7 +1599,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </textFieldCell>
                             </textField>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
-                                <rect key="frame" x="182" y="579" width="433" height="114"/>
+                                <rect key="frame" x="182" y="578" width="433" height="114"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="433" id="O7n-w9-UZS"/>
                                 </constraints>
@@ -1704,7 +1704,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75.5" y="935.5"/>
+            <point key="canvasLocation" x="76" y="885"/>
         </scene>
     </scenes>
     <resources>
