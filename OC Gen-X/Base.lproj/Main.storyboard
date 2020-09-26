@@ -715,11 +715,11 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="699"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="583"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="336" y="108" width="125" height="32"/>
+                                <rect key="frame" x="336" y="108" width="125" height="33"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -745,7 +745,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="165" width="811" height="423"/>
+                                <rect key="frame" x="-7" y="166" width="811" height="423"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -987,11 +987,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="785" height="134"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="56"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="97" width="48" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="48" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -1010,7 +1010,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="71" width="95" height="18"/>
+                                                                        <rect key="frame" x="8" y="-7" width="95" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1591,20 +1591,13 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="563" y="145" width="216" height="15"/>
+                                <rect key="frame" x="563" y="145" width="216" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.1" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-TH-BfI">
-                                <rect key="frame" x="182" y="578" width="433" height="114"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="433" id="O7n-w9-UZS"/>
-                                </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="genx" id="0kh-i3-vbn"/>
-                            </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLc-rs-VxX">
                                 <rect key="frame" x="18" y="33" width="761" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="User Notice: This Application is not endorsed by the Opencore Development team." id="MCU-YO-XvG">
@@ -1630,12 +1623,10 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                             <constraint firstItem="Y5K-fp-3dO" firstAttribute="centerX" secondItem="ZeK-sO-E8j" secondAttribute="centerX" id="AHp-yt-g0w"/>
                             <constraint firstItem="iLc-rs-VxX" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="F3w-MQ-OHm"/>
                             <constraint firstAttribute="trailing" secondItem="iLc-rs-VxX" secondAttribute="trailing" constant="20" id="HNT-vB-pdT"/>
+                            <constraint firstItem="UIh-RX-3Ag" firstAttribute="top" secondItem="ZeK-sO-E8j" secondAttribute="top" id="J72-f5-Evn"/>
                             <constraint firstItem="Y5K-fp-3dO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="J9t-67-JyJ"/>
-                            <constraint firstItem="m6I-TH-BfI" firstAttribute="top" secondItem="ZeK-sO-E8j" secondAttribute="top" constant="7" id="KP4-Rk-q7d"/>
-                            <constraint firstItem="UIh-RX-3Ag" firstAttribute="top" secondItem="m6I-TH-BfI" secondAttribute="bottom" constant="-4" id="LMp-Th-T6E"/>
                             <constraint firstAttribute="trailing" secondItem="JJY-uW-evJ" secondAttribute="trailing" constant="20" id="N8f-sI-xxF"/>
                             <constraint firstItem="Y5K-fp-3dO" firstAttribute="top" secondItem="Z7c-dp-thl" secondAttribute="bottom" constant="2" id="Pns-vu-SDf"/>
-                            <constraint firstItem="m6I-TH-BfI" firstAttribute="centerX" secondItem="Wcy-uw-NdK" secondAttribute="centerX" id="Vzk-HI-IJn"/>
                             <constraint firstItem="j04-3g-RJW" firstAttribute="leading" secondItem="ZeK-sO-E8j" secondAttribute="leading" constant="20" id="bFa-xx-P66"/>
                             <constraint firstItem="Z7c-dp-thl" firstAttribute="top" secondItem="JJY-uW-evJ" secondAttribute="bottom" constant="38" id="bld-ML-nII"/>
                             <constraint firstAttribute="trailing" secondItem="Z7c-dp-thl" secondAttribute="trailing" constant="20" id="cL5-jR-qzA"/>
@@ -1647,7 +1638,6 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                             <constraint firstAttribute="trailing" secondItem="j04-3g-RJW" secondAttribute="trailing" constant="20" id="nb8-3q-xyw"/>
                             <constraint firstItem="iLc-rs-VxX" firstAttribute="top" secondItem="Y5K-fp-3dO" secondAttribute="bottom" constant="8" symbolic="YES" id="nfY-cU-1o6"/>
                             <constraint firstAttribute="bottom" secondItem="Y5K-fp-3dO" secondAttribute="bottom" constant="57" id="qo8-DW-Voe"/>
-                            <constraint firstItem="UIh-RX-3Ag" firstAttribute="top" secondItem="ZeK-sO-E8j" secondAttribute="top" constant="117" id="rXX-3V-hvg"/>
                             <constraint firstItem="Wcy-uw-NdK" firstAttribute="centerX" secondItem="ZeK-sO-E8j" secondAttribute="centerX" id="zbL-aw-JLi"/>
                         </constraints>
                     </view>
@@ -1704,10 +1694,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="76" y="885"/>
+            <point key="canvasLocation" x="76" y="847"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="genx" width="1200" height="350"/>
-    </resources>
 </document>

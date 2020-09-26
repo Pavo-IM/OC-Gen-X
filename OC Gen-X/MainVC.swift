@@ -217,9 +217,6 @@ class MainVC: NSViewController {
             switch returnCode {
             case NSApplication.ModalResponse.alertFirstButtonReturn: do {
                 try fileManager.removeItem(at: kextUrl)
-                config.kernel.kAdd.removeAll()
-                config.uefi.drivers.removeAll()
-                config.nvram.add.addAppleBootVariableGuid.bootArgs = ""
             }
             catch {
                 print(error.localizedDescription)
@@ -231,12 +228,22 @@ class MainVC: NSViewController {
     }
     
     func addKextToConfig (item: String) {
-        let kext = kAdd(bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(item)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+        let kext = kAdd(arch: "x86_64", bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(item)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
         config.kernel.kAdd.append(kext)
     }
     
     func addKextInjectorToConfig (item: String) {
-        let kext = kAdd(bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+        let kext = kAdd(arch: "x86_64", bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+        config.kernel.kAdd.append(kext)
+    }
+    
+    func addKextInjectorPluginToConfig (pluginfor: String, injector: String) {
+        let kext = kAdd(arch: "x86_64", bundlePath: "\(pluginfor).kext/Contents/PlugIns/\(injector).kext", comment: "", enabled: true, executablePath: "", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+        config.kernel.kAdd.append(kext)
+    }
+    
+    func addKextPluginToConfig (pluginfor: String, pluginName: String) {
+        let kext = kAdd(arch: "x86_64", bundlePath: "\(pluginfor).kext/Contents/PlugIns/\(pluginName).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(pluginName)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
         config.kernel.kAdd.append(kext)
     }
     
@@ -254,6 +261,7 @@ class MainVC: NSViewController {
         config.misc.blessOverRide.removeAll()
         config.misc.entries.removeAll()
         config.misc.tools.removeAll()
+        config.uefi.drivers.removeAll()
         config.uefi.reservedMemory.removeAll()
         
         switch ivyBridgeChecked.state {
@@ -677,6 +685,7 @@ class MainVC: NSViewController {
         
         switch airportBrcmChecked.state {
         case .on:
+            addKextInjectorPluginToConfig(pluginfor: "AirportBrcmFixup", injector: "AirPortBrcmNIC_Injector")
             addKextToConfig(item: "AirportBrcmFixup")
         default:
             break
