@@ -4,7 +4,7 @@ struct uefi: Codable {
     var apfs: apfs
     var audio: audio
     var connectDrivers: Bool = true
-    var drivers: [String]
+    var drivers: [String] = []
     var input: input
     var output: output
     var protocols: protocols
@@ -25,12 +25,12 @@ struct uefi: Codable {
 }
 
 struct apfs: Codable {
-    var enableJumpstart: Bool
-    var globalConnect: Bool
-    var hideVerbose: Bool
-    var jumpstartHotPlug: Bool
-    var minDate: Int
-    var minVersion: Int
+    var enableJumpstart: Bool = true
+    var globalConnect: Bool = false
+    var hideVerbose: Bool = true
+    var jumpstartHotPlug: Bool = false
+    var minDate: Int = 0
+    var minVersion: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case enableJumpstart = "EnableJumpstart"
@@ -43,13 +43,13 @@ struct apfs: Codable {
 }
 
 struct audio: Codable {
-    var audioCodec: Int
-    var audioDevice: String
-    var audioOut: Int
+    var audioCodec: Int = 0
+    var audioDevice: String = "PciRoot(0x0)/Pci(0x1b,0x0)"
+    var audioOut: Int = 0
     var audioSupport: Bool = false
-    var minimumVolume: Int
-    var playChime: Bool
-    var volumeAmplifier: Int
+    var minimumVolume: Int = 20
+    var playChime: Bool = false
+    var volumeAmplifier: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case audioCodec = "AudioCodec"
@@ -63,15 +63,15 @@ struct audio: Codable {
 }
 
 struct input: Codable {
-    var keyFiltering: Bool
-    var keyForgetThreshold: Int
-    var keyMergeThreshold: Int
-    var keySupport: Bool
-    var keySupportMode: String
-    var keySwap: Bool
-    var pointerSupport: Bool
-    var pointerSupportMode: String
-    var timerResolution: Int
+    var keyFiltering: Bool = false
+    var keyForgetThreshold: Int = 5
+    var keyMergeThreshold: Int = 2
+    var keySupport: Bool = true
+    var keySupportMode: String = "Auto"
+    var keySwap: Bool = false
+    var pointerSupport: Bool = false
+    var pointerSupportMode: String = "ASUS"
+    var timerResolution: Int = 50000
     
     enum CodingKeys: String, CodingKey {
         case keyFiltering = "KeyFiltering"
@@ -87,17 +87,17 @@ struct input: Codable {
 }
 
 struct output: Codable {
-    var clearScreenOnModeSwitch: Bool
-    var consoleMode: String
-    var directGopRendering: Bool
-    var ignoreTextInGraphics: Bool
-    var provideConsoleGop: Bool
-    var reconnectOnResChange: Bool
-    var replaceTabWithSpace: Bool
-    var resolution: String
-    var sanitiseClearScreen: Bool
-    var textRenderer: String
-    var ugaPassThrough: Bool
+    var clearScreenOnModeSwitch: Bool = false
+    var consoleMode: String = ""
+    var directGopRendering: Bool = false
+    var ignoreTextInGraphics: Bool = false
+    var provideConsoleGop: Bool = true
+    var reconnectOnResChange: Bool = false
+    var replaceTabWithSpace: Bool = false
+    var resolution: String = "Max"
+    var sanitiseClearScreen: Bool = false
+    var textRenderer: String = "BuiltinGraphics"
+    var ugaPassThrough: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case clearScreenOnModeSwitch = "ClearScreenOnModeSwitch"
@@ -157,12 +157,12 @@ struct protocols: Codable {
 }
 
 struct uQuirks: Codable {
-    var deduplicateBootOrder: Bool = false
-    var exitBootServicesDelay: Int
+    var deduplicateBootOrder: Bool = true
+    var exitBootServicesDelay: Int = 0
     var ignoreInvalidFlexRatio: Bool = false
     var releaseUsbOwnership: Bool = false
-    var requestBootVarRouting: Bool = false
-    var tscSyncTimeout: Int
+    var requestBootVarRouting: Bool = true
+    var tscSyncTimeout: Int = 0
     var unblockFsConnect: Bool = false
     
     enum CodingKeys: String, CodingKey {

@@ -22,13 +22,13 @@ struct kernel: Codable {
 
 struct kAdd: Codable {
     var arch: String = "x86_64"
-    var bundlePath: String
-    var comment: String
-    var enabled: Bool
-    var executablePath: String
-    var maxKernel: String
-    var minKernel: String
-    var plistPath: String
+    var bundlePath: String = ""
+    var comment: String = ""
+    var enabled: Bool = false
+    var executablePath: String = ""
+    var maxKernel: String = ""
+    var minKernel: String = ""
+    var plistPath: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arch = "Arch"
@@ -44,11 +44,11 @@ struct kAdd: Codable {
 
 struct kBlock: Codable {
     var arch: String = "Any"
-    var comment: String
-    var enabled: Bool
-    var identifier: String
-    var maxKernel: String
-    var minKernel: String
+    var comment: String = ""
+    var enabled: Bool = false
+    var identifier: String = ""
+    var maxKernel: String = ""
+    var minKernel: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arch = "Arch"
@@ -61,11 +61,11 @@ struct kBlock: Codable {
 }
 
 struct emulate: Codable {
-    var cpuid1Data: Data
-    var cpuid1Mask: Data
+    var cpuid1Data: Data = Data()
+    var cpuid1Mask: Data = Data()
     var dummyPowerManagement: Bool = false
-    var maxKernel: String
-    var minKernel: String
+    var maxKernel: String = ""
+    var minKernel: String = ""
     
     enum CodingKeys: String, CodingKey {
         case cpuid1Data = "Cpuid1Data"
@@ -77,15 +77,15 @@ struct emulate: Codable {
 }
 
 struct force: Codable {
-    var arch: String
-    var bundlePath: String
-    var comment: String
-    var enabled: Bool
-    var executablePath: String
-    var identifier: String
-    var maxKernel: String
-    var minKernel: String
-    var plistPath: String
+    var arch: String = ""
+    var bundlePath: String = ""
+    var comment: String = ""
+    var enabled: Bool = false
+    var executablePath: String = ""
+    var identifier: String = ""
+    var maxKernel: String = ""
+    var minKernel: String = ""
+    var plistPath: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arch = "Arch"
@@ -102,19 +102,19 @@ struct force: Codable {
 
 struct kPatch: Codable {
     var arch: String = "Any"
-    var base: String
-    var comment: String
-    var count: Int
-    var enabled: Bool
-    var find: Data
-    var identifier: String
-    var limit: Int
-    var mask: Data
-    var maxKernel: String
-    var minKernel: String
-    var replace: Data
-    var replaceMask: Data
-    var skip: Int
+    var base: String = ""
+    var comment: String = ""
+    var count: Int = 0
+    var enabled: Bool = false
+    var find: Data = Data()
+    var identifier: String = ""
+    var limit: Int = 0
+    var mask: Data = Data()
+    var maxKernel: String = ""
+    var minKernel: String = ""
+    var replace: Data = Data()
+    var replaceMask: Data = Data()
+    var skip: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case arch = "Arch"

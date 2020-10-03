@@ -6,7 +6,7 @@ struct platFormInfo: Codable {
     var updateDataHub: Bool = true
     var updateNVRAM: Bool = true
     var updateSMBIOS: Bool = true
-    var updateSMBIOSMode: String
+    var updateSMBIOSMode: String = "Create"
     
     enum CodingKeys: String, CodingKey {
         case automatic = "Automatic"
@@ -20,14 +20,14 @@ struct platFormInfo: Codable {
 
 struct generic: Codable {
     var adviseWindows: Bool = false
-    var mlb: String
-    var rom: Data
+    var mlb: String = ""
+    var rom: Data = Data()
     var processorType: Int = 0
     var spoofVendor: Bool = false
     var systemMemoryStatus: String = "Auto"
-    var systemProductName: String
-    var systemSerialNumber: String
-    var systemUUID: String
+    var systemProductName: String = ""
+    var systemSerialNumber: String = ""
+    var systemUUID: String = ""
     
     enum CodingKeys: String, CodingKey {
         case adviseWindows = "AdviseWindows"

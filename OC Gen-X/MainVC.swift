@@ -53,6 +53,23 @@ class MainVC: NSViewController {
     @IBOutlet weak var threadripperChecked: NSButton!
     var ryzenPatches = [kPatch]()
     var threadripperPatches = [kPatch]()
+    var config = Root(
+        acpi: acpi(add: [acpiAdd()], delete: [acpiDelete()], patch: [acpiPatch()], quirks: acpuQuirks()),
+                      
+        booter: booter(mmioWhitelist: [mmioWhitelist()], quirks: booterQuirks()),
+        
+        deviceProperties: deviceProperties(add: dpAdd(), delete: dpDelete()),
+                    
+        kernel: kernel(kAdd: [kAdd()], kBlock: [kBlock()], emulate: emulate(), force: [force()], kPatch: [kPatch()], kQuirks: kQuirks(), scheme: scheme()),
+                    
+        misc: misc(blessOverRide: [blessOverRide()], boot: boot(), debug: debug(), entries: [entries()], security: security(), tools: [tools()]),
+                    
+        nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(), addAppleVendorGuid: addAppleVendorGuid(), addAppleBootVariableGuid: addAppleBootVariableGuid()), delete: nDelete(), legacySchema: legacySchema()),
+                    
+        platFormInfo: platFormInfo(generic: generic()),
+                    
+        uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -278,9 +295,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.nvram.add.addAppleBootVariableGuid.bootArgs.removeAll()
@@ -303,9 +317,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
@@ -328,9 +339,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
@@ -351,9 +359,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
@@ -376,9 +381,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
@@ -405,9 +407,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
@@ -431,9 +430,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
@@ -458,9 +454,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
@@ -487,9 +480,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
@@ -498,10 +488,10 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
-            config.booter.quirks.enableWriteUnprotector = false
+            config.booter.quirks.enableSafeModeSlide = true
+            config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
-            config.booter.quirks.setupVirtualMap = false
             for i in ryzenPatches {
                 config.kernel.kPatch.append(i)
             }
@@ -512,15 +502,9 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.haltLevel = 2147483648
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
-            config.nvram.add.addAppleBootVariableGuid.systemAudioVolume = Data([0x46])
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000"
-            config.platFormInfo.generic.spoofVendor = true
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
         default:
             break
@@ -529,7 +513,6 @@ class MainVC: NSViewController {
         switch proxintoshChecked.state {
         case .on:
             config.booter.quirks.avoidRuntimeDefrag = true
-            config.booter.quirks.setupVirtualMap = false
             config.kernel.emulate.cpuid1Data = Data([0xEC,0x06,0x09,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.kPatch.append(secondRyzenPatch)
@@ -541,9 +524,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
@@ -553,10 +533,11 @@ class MainVC: NSViewController {
         
         switch threadripperChecked.state {
         case .on:
+            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
-            config.booter.quirks.enableWriteUnprotector = false
+            config.booter.quirks.enableSafeModeSlide = true
+            config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
-            config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
             for i in threadripperPatches {
                 config.kernel.kPatch.append(i)
@@ -568,14 +549,8 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.misc.security.haltLevel = 2147483648
-            config.misc.security.scanPolicy = 0
-            config.misc.security.exposeSensitiveData = 6
-            config.misc.security.vault = "Optional"
-            config.nvram.add.addAppleBootVariableGuid.systemAudioVolume = Data([0x46])
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.platFormInfo.generic.spoofVendor = true
             config.platFormInfo.generic.systemProductName = "iMacPro1,1"
         default:
             break

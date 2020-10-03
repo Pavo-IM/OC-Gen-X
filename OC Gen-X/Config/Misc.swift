@@ -23,16 +23,16 @@ struct blessOverRide: Codable {
 }
 
 struct boot: Codable {
-    var consoleAttributes: Int
-    var hibernateMode: String
+    var consoleAttributes: Int = 0
+    var hibernateMode: String = "None"
     var hideAuxiliary: Bool = false
-    var pickerAttributes: Int
+    var pickerAttributes: Int = 1
     var pickerAudioAssist: Bool = false
-    var pickerMode: String
+    var pickerMode: String = "Builtin"
     var pollAppleHotKeys: Bool = false
-    var showPicker: Bool = false
-    var takeoffDelay: Int
-    var timeout: Int
+    var showPicker: Bool = true
+    var takeoffDelay: Int = 0
+    var timeout: Int = 5
     
     enum CodingKeys: String, CodingKey {
         case consoleAttributes = "ConsoleAttributes"
@@ -52,11 +52,11 @@ struct debug: Codable {
     var appleDebug: Bool = false
     var applePanic: Bool = false
     var disableWatchDog: Bool = false
-    var displayDelay: Int
-    var displayLevel: Int
+    var displayDelay: Int = 0
+    var displayLevel: Int = 2147483648
     var serialInit: Bool = false
     var sysReport: Bool = false
-    var target: Int
+    var target: Int = 3
     
     enum CodingKeys: String, CodingKey {
         case appleDebug = "AppleDebug"
@@ -71,12 +71,12 @@ struct debug: Codable {
 }
 
 struct entries: Codable {
-    var arguments: String
+    var arguments: String = ""
     var auxiliary: Bool = false
-    var comment: String
+    var comment: String = ""
     var enabled: Bool = false
-    var name: String
-    var path: String
+    var name: String = ""
+    var path: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arguments = "Arguments"
@@ -91,18 +91,18 @@ struct entries: Codable {
 struct security: Codable {
     var allowNvramReset: Bool = false
     var allowSetDefault: Bool = false
-    var apECID: Int
+    var apECID: Int = 0
     var authRestart: Bool = false
-    var bootProtect: String
-    var dmgLoading: String
+    var bootProtect: String = "Bootstrap"
+    var dmgLoading: String = "Signed"
     var enablePassword: Bool = false
-    var exposeSensitiveData: Int
-    var haltLevel: Int
-    var passwordHash: Data
-    var passwordSalt: Data
-    var scanPolicy: Int
-    var secureBootModel: String
-    var vault: String
+    var exposeSensitiveData: Int = 8
+    var haltLevel: Int = 2147483648
+    var passwordHash: Data = Data()
+    var passwordSalt: Data = Data()
+    var scanPolicy: Int = 0
+    var secureBootModel: String = "Disabled"
+    var vault: String = "Optional"
     
     enum CodingKeys: String, CodingKey {
         case allowNvramReset = "AllowNvramReset"
@@ -123,12 +123,12 @@ struct security: Codable {
 }
 
 struct tools: Codable {
-    var arguments: String
+    var arguments: String = ""
     var auxiliary: Bool = false
-    var comment: String
+    var comment: String = ""
     var enabled: Bool = false
-    var name: String
-    var path: String
+    var name: String = ""
+    var path: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arguments = "Arguments"

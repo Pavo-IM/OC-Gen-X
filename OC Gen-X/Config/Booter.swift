@@ -11,9 +11,9 @@ struct booter: Codable {
 }
 
 struct mmioWhitelist: Codable {
-    var address: Int
-    var comment: String
-    var enabled: Bool
+    var address: Int = 0
+    var comment: String = ""
+    var enabled: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case address = "Address"
@@ -35,7 +35,7 @@ struct booterQuirks: Codable {
     var protectSecureBoot: Bool = false
     var protectUefiServices: Bool = false
     var provideCustomSlide: Bool = false
-    var provideMaxSlide: Int
+    var provideMaxSlide: Int = 0
     var rebuildAppleMemoryMap: Bool = false
     var setupVirtualMap: Bool = false
     var signalAppleOS: Bool = false
