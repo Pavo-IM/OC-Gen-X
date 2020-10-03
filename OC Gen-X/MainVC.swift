@@ -283,7 +283,9 @@ class MainVC: NSViewController {
         
         switch ivyBridgeChecked.state {
         case .on:
-            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.enableWriteUnprotector = true
+            config.booter.quirks.setupVirtualMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.disableIoMapper = true
@@ -488,6 +490,7 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
+            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.enableSafeModeSlide = true
             config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
