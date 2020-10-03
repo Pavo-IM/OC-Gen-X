@@ -505,7 +505,6 @@ class MainVC: NSViewController {
             for i in ryzenPatches {
                 config.kernel.kPatch.append(i)
             }
-            config.kernel.kQuirks.dummyPowerManagement = true
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true

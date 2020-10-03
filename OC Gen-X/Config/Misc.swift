@@ -25,12 +25,12 @@ struct blessOverRide: Codable {
 struct boot: Codable {
     var consoleAttributes: Int
     var hibernateMode: String
-    var hideAuxiliary: Bool
+    var hideAuxiliary: Bool = false
     var pickerAttributes: Int
-    var pickerAudioAssist: Bool
+    var pickerAudioAssist: Bool = false
     var pickerMode: String
-    var pollAppleHotKeys: Bool
-    var showPicker: Bool
+    var pollAppleHotKeys: Bool = false
+    var showPicker: Bool = false
     var takeoffDelay: Int
     var timeout: Int
     
@@ -49,13 +49,13 @@ struct boot: Codable {
 }
 
 struct debug: Codable {
-    var appleDebug: Bool
-    var applePanic: Bool
-    var disableWatchDog: Bool
+    var appleDebug: Bool = false
+    var applePanic: Bool = false
+    var disableWatchDog: Bool = false
     var displayDelay: Int
     var displayLevel: Int
-    var serialInit: Bool
-    var sysReport: Bool
+    var serialInit: Bool = false
+    var sysReport: Bool = false
     var target: Int
     
     enum CodingKeys: String, CodingKey {
@@ -72,9 +72,9 @@ struct debug: Codable {
 
 struct entries: Codable {
     var arguments: String
-    var auxiliary: Bool
+    var auxiliary: Bool = false
     var comment: String
-    var enabled: Bool
+    var enabled: Bool = false
     var name: String
     var path: String
     
@@ -89,13 +89,13 @@ struct entries: Codable {
 }
 
 struct security: Codable {
-    var allowNvramReset: Bool
-    var allowSetDefault: Bool
+    var allowNvramReset: Bool = false
+    var allowSetDefault: Bool = false
     var apECID: Int
-    var authRestart: Bool
+    var authRestart: Bool = false
     var bootProtect: String
     var dmgLoading: String
-    var enablePassword: Bool
+    var enablePassword: Bool = false
     var exposeSensitiveData: Int
     var haltLevel: Int
     var passwordHash: Data
@@ -124,9 +124,9 @@ struct security: Codable {
 
 struct tools: Codable {
     var arguments: String
-    var auxiliary: Bool
+    var auxiliary: Bool = false
     var comment: String
-    var enabled: Bool
+    var enabled: Bool = false
     var name: String
     var path: String
     

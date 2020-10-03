@@ -63,10 +63,16 @@ struct kBlock: Codable {
 struct emulate: Codable {
     var cpuid1Data: Data
     var cpuid1Mask: Data
+    var dummyPowerManagement: Bool = false
+    var maxKernel: String
+    var minKernel: String
     
     enum CodingKeys: String, CodingKey {
         case cpuid1Data = "Cpuid1Data"
         case cpuid1Mask = "Cpuid1Mask"
+        case dummyPowerManagement = "DummyPowerManagement"
+        case maxKernel = "MaxKernel"
+        case minKernel = "MinKernel"
     }
 }
 
@@ -137,7 +143,7 @@ struct kQuirks: Codable {
     var disableIoMapper: Bool = false
     var disableLinkeditJettison: Bool = true
     var disableRtcChecksum: Bool = false
-    var dummyPowerManagement: Bool = false
+    var extendBTFeatureFlags: Bool = false
     var externalDiskIcons: Bool = false
     var increasePciBarSize: Bool = false
     var lapicKernelPanic: Bool = false
@@ -155,7 +161,7 @@ struct kQuirks: Codable {
         case disableIoMapper = "DisableIoMapper"
         case disableLinkeditJettison = "DisableLinkeditJettison"
         case disableRtcChecksum = "DisableRtcChecksum"
-        case dummyPowerManagement = "DummyPowerManagement"
+        case extendBTFeatureFlags = "ExtendBTFeatureFlags"
         case externalDiskIcons = "ExternalDiskIcons"
         case increasePciBarSize = "IncreasePciBarSize"
         case lapicKernelPanic = "LapicKernelPanic"

@@ -3,10 +3,10 @@ import Foundation
 struct nvram: Codable {
     var add: nAdd
     var delete: nDelete
-    var legacyEnable: Bool
-    var legacyOverwrite: Bool
+    var legacyEnable: Bool = false
+    var legacyOverwrite: Bool = false
     var legacySchema: legacySchema
-    var writeFlash: Bool
+    var writeFlash: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case add = "Add"

@@ -75,11 +75,11 @@ struct acpiPatch: Codable {
 }
 
 struct acpuQuirks: Codable {
-    var fadtEnableReset: Bool
-    var normalizeHeader: Bool
-    var rebaseRegions: Bool
-    var resetHwSig: Bool
-    var resetLogoStatus: Bool
+    var fadtEnableReset: Bool = false
+    var normalizeHeader: Bool = false
+    var rebaseRegions: Bool = false
+    var resetHwSig: Bool = false
+    var resetLogoStatus: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case fadtEnableReset = "FadtEnableReset"

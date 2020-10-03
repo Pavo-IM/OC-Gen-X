@@ -3,7 +3,7 @@ import Foundation
 struct uefi: Codable {
     var apfs: apfs
     var audio: audio
-    var connectDrivers: Bool
+    var connectDrivers: Bool = true
     var drivers: [String]
     var input: input
     var output: output
@@ -46,7 +46,7 @@ struct audio: Codable {
     var audioCodec: Int
     var audioDevice: String
     var audioOut: Int
-    var audioSupport: Bool
+    var audioSupport: Bool = false
     var minimumVolume: Int
     var playChime: Bool
     var volumeAmplifier: Int
@@ -115,24 +115,24 @@ struct output: Codable {
 }
 
 struct protocols: Codable {
-    var appleAudio: Bool
-    var appleBootPolicy: Bool
-    var appleDebugLog: Bool
-    var appleEvent: Bool
-    var appleFramebufferInfo: Bool
-    var appleImageConversion: Bool
-    var appleImg4Verification: Bool
-    var appleKeyMap: Bool
-    var appleRtcRam: Bool
-    var appleSecureBoot: Bool
-    var appleSmcIo: Bool
-    var appleUserInterfaceTheme: Bool
-    var dataHub: Bool
-    var deviceProperties: Bool
-    var firmwareVolume: Bool
-    var hashServices: Bool
-    var osInfo: Bool
-    var unicodeCollation: Bool
+    var appleAudio: Bool = false
+    var appleBootPolicy: Bool = false
+    var appleDebugLog: Bool = false
+    var appleEvent: Bool = false
+    var appleFramebufferInfo: Bool = false
+    var appleImageConversion: Bool = false
+    var appleImg4Verification: Bool = false
+    var appleKeyMap: Bool = false
+    var appleRtcRam: Bool = false
+    var appleSecureBoot: Bool = false
+    var appleSmcIo: Bool = false
+    var appleUserInterfaceTheme: Bool = false
+    var dataHub: Bool = false
+    var deviceProperties: Bool = false
+    var firmwareVolume: Bool = false
+    var hashServices: Bool = false
+    var osInfo: Bool = false
+    var unicodeCollation: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case appleAudio = "AppleAudio"
@@ -157,13 +157,13 @@ struct protocols: Codable {
 }
 
 struct uQuirks: Codable {
-    var deduplicateBootOrder: Bool
+    var deduplicateBootOrder: Bool = false
     var exitBootServicesDelay: Int
-    var ignoreInvalidFlexRatio: Bool
-    var releaseUsbOwnership: Bool
-    var requestBootVarRouting: Bool
+    var ignoreInvalidFlexRatio: Bool = false
+    var releaseUsbOwnership: Bool = false
+    var requestBootVarRouting: Bool = false
     var tscSyncTimeout: Int
-    var unblockFsConnect: Bool
+    var unblockFsConnect: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case deduplicateBootOrder = "DeduplicateBootOrder"

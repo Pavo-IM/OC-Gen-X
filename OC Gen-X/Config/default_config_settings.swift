@@ -15,10 +15,10 @@ var config = Root(
                 
     kernel: kernel(kAdd: [kAdd(bundlePath: "", comment: "", enabled: false, executablePath: "", maxKernel: "", minKernel: "", plistPath: "")],
             kBlock: [kBlock(arch: "Any", comment: "", enabled: false, identifier: "", maxKernel: "", minKernel: "")],
-            emulate: emulate(cpuid1Data: Data(), cpuid1Mask: Data()),
+            emulate: emulate(cpuid1Data: Data(), cpuid1Mask: Data(), dummyPowerManagement: false, maxKernel: "", minKernel: ""),
             force: [force(arch: "", bundlePath: "", comment: "", enabled: false, executablePath: "", identifier: "", maxKernel: "", minKernel: "", plistPath: "")],
             kPatch: [kPatch(base: "", comment: "", count: 0, enabled: false, find: Data(), identifier: "", limit: 0, mask: Data(), maxKernel: "", minKernel: "", replace: Data(), replaceMask: Data(), skip: 0)],
-            kQuirks: kQuirks(appleCpuPmCfgLock: false, appleXcpmCfgLock: false, appleXcpmExtraMsrs: false, appleXcpmForceBoost: false, customSMBIOSGuid: false, disableIoMapper: false, disableRtcChecksum: false, dummyPowerManagement: false, externalDiskIcons: false, increasePciBarSize: false, lapicKernelPanic: false, panicNoKextDump: false, powerTimeoutKernelPanic: false, thirdPartyDrives: false, xhciPortLimit: false),
+            kQuirks: kQuirks(appleCpuPmCfgLock: false, appleXcpmCfgLock: false, appleXcpmExtraMsrs: false, appleXcpmForceBoost: false, customSMBIOSGuid: false, disableIoMapper: false, disableRtcChecksum: false, externalDiskIcons: false, increasePciBarSize: false, lapicKernelPanic: false, panicNoKextDump: false, powerTimeoutKernelPanic: false, thirdPartyDrives: false, xhciPortLimit: false),
             scheme: scheme(fuzzyMatch: true, kernelArch: "x86_64", kernelCache: "Auto")),
                 
     misc: misc(blessOverRide: [blessOverRide()],
