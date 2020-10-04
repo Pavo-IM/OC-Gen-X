@@ -147,6 +147,7 @@ struct kQuirks: Codable {
     var externalDiskIcons: Bool = false
     var increasePciBarSize: Bool = false
     var lapicKernelPanic: Bool = false
+    var legacyCommpage: Bool = false
     var panicNoKextDump: Bool = false
     var powerTimeoutKernelPanic: Bool = false
     var thirdPartyDrives: Bool = false
@@ -165,6 +166,7 @@ struct kQuirks: Codable {
         case externalDiskIcons = "ExternalDiskIcons"
         case increasePciBarSize = "IncreasePciBarSize"
         case lapicKernelPanic = "LapicKernelPanic"
+        case legacyCommpage = "LegacyCommpage"
         case panicNoKextDump = "PanicNoKextDump"
         case powerTimeoutKernelPanic = "PowerTimeoutKernelPanic"
         case thirdPartyDrives = "ThirdPartyDrives"
