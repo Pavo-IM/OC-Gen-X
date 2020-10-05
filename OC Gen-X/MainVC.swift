@@ -765,7 +765,7 @@ class MainVC: NSViewController {
                 try fm.createDirectory(at: ocResourcesDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocToolsDir, withIntermediateDirectories: false, attributes: nil)
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
-                efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
+                efiCopy(efiname: "bootefi", item: "BOOTX64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
                 if (bootargsInputfield != nil) {
                     config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
