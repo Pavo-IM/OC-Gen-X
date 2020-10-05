@@ -3,10 +3,10 @@ import Foundation
 struct nvram: Codable {
     var add: nAdd
     var delete: nDelete
-    var legacyEnable: Bool
-    var legacyOverwrite: Bool
+    var legacyEnable: Bool = false
+    var legacyOverwrite: Bool = false
     var legacySchema: legacySchema
-    var writeFlash: Bool
+    var writeFlash: Bool = true
     
     enum CodingKeys: String, CodingKey {
         case add = "Add"
@@ -31,8 +31,8 @@ struct nAdd: Codable {
 }
 
 struct addAppleVendorVariableGuid: Codable {
-    var defaultBackgroundColor: Data
-    var uiScale: Data
+    var defaultBackgroundColor: Data = Data()
+    var uiScale: Data = Data()
     
     enum CodingKeys: String, CodingKey {
         case defaultBackgroundColor = "DefaultBackgroundColor"
@@ -41,7 +41,7 @@ struct addAppleVendorVariableGuid: Codable {
 }
 
 struct addAppleVendorGuid: Codable {
-    var rtcBlacklist: Data
+    var rtcBlacklist: Data = Data()
     
     enum CodingKeys: String, CodingKey {
         case rtcBlacklist = "rtc-blacklist"
@@ -49,11 +49,11 @@ struct addAppleVendorGuid: Codable {
 }
 
 struct addAppleBootVariableGuid: Codable {
-    var systemAudioVolume: Data
-    var bootArgs: String
-    var csrActiveConfig: Data
-    var prevLangKbd: Data
-    var runefiupdater: String
+    var systemAudioVolume: Data = Data([0x46])
+    var bootArgs: String = ""
+    var csrActiveConfig: Data = Data()
+    var prevLangKbd: Data = Data()
+    var runefiupdater: String = "No"
     
     enum CodingKeys: String, CodingKey {
         case systemAudioVolume = "SystemAudioVolume"
@@ -65,9 +65,9 @@ struct addAppleBootVariableGuid: Codable {
 }
 
 struct nDelete: Codable {
-    var blockAppleVendorVariableGuid: [String]
-    var blockAppleVendorGuid: [String]
-    var blockAppleBootVariableGuid: [String]
+    var blockAppleVendorVariableGuid: [String] = ["UIScale", "DefaultBackgroundColor"]
+    var blockAppleVendorGuid: [String] = ["rtc-blacklist"]
+    var blockAppleBootVariableGuid: [String] = ["boot-args"]
     
     enum CodingKeys: String, CodingKey {
         case blockAppleVendorVariableGuid = "4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14"
@@ -77,8 +77,8 @@ struct nDelete: Codable {
 }
 
 struct legacySchema: Codable {
-    var legacyAppleBootVariableGuid: [String]
-    var legacyEfiGlobalVariable: [String]
+    var legacyAppleBootVariableGuid: [String] = ["EFILoginHiDPI", "EFIBluetoothDelay", "LocationServicesEnabled", "SystemAudioVolume", "SystemAudioVolumeDB", "SystemAudioVolumeSaved", "bluetoothActiveControllerInfo", "bluetoothInternalControllerInfo", "flagstate", "fmm-computer-name", "nvda_drv", "prev-lang:kbd"]
+    var legacyEfiGlobalVariable: [String] = ["Boot0080", "Boot0081", "Boot0082", "BootNext", "BootOrder"]
     
     enum CodingKeys: String, CodingKey {
         case legacyAppleBootVariableGuid = "7C436110-AB2A-4BBB-A880-FE41995C9F82"

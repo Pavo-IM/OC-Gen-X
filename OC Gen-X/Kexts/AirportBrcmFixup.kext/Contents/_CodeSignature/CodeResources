@@ -10,19 +10,19 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			RJ2ZUOQ9JKN7Eoc8o4TuLgLxEXU=
+			6ppjTZDCxn/7f7nKEIIsmBno/cA=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"49f05751cbfda6ba640bea88ab47654cf1fea459" or cdhash H"449d9950e43d24a37b12873ca384ee2e02f11175"</string>
+			<string>identifier "as.lvs1974.AirportBrcm4360Injector" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Henry Brock (4EJ5YAENFF)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 		</dict>
 		<key>PlugIns/AirPortBrcmNIC_Injector.kext</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			OzqYJA7+l+C2d6LxXozby55MhMg=
+			gBM8Y4+JJ6LmdvK7nu6TeCpgV5g=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"ea90bb042b73934b0644dbd3cbcf53372455878a" or cdhash H"3b3a98240efe97e0b677a2f15e8cdbcb9e4c84c8"</string>
+			<string>identifier "as.lvs1974.AirportBrcmNICInjector" and anchor apple generic and certificate leaf[subject.CN] = "Mac Developer: Henry Brock (4EJ5YAENFF)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
 		</dict>
 	</dict>
 	<key>rules</key>

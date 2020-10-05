@@ -1,12 +1,12 @@
 import Foundation
 
 struct platFormInfo: Codable {
-    var automatic: Bool
+    var automatic: Bool = true
     var generic: generic
-    var updateDataHub: Bool
-    var updateNVRAM: Bool
-    var updateSMBIOS: Bool
-    var updateSMBIOSMode: String
+    var updateDataHub: Bool = true
+    var updateNVRAM: Bool = true
+    var updateSMBIOS: Bool = true
+    var updateSMBIOSMode: String = "Create"
     
     enum CodingKeys: String, CodingKey {
         case automatic = "Automatic"
@@ -19,19 +19,23 @@ struct platFormInfo: Codable {
 }
 
 struct generic: Codable {
-    var adviseWindows: Bool
-    var mlb: String
-    var rom: Data
-    var spoofVendor: Bool
-    var systemProductName: String
-    var systemSerialNumber: String
-    var systemUUID: String
+    var adviseWindows: Bool = false
+    var mlb: String = ""
+    var rom: Data = Data()
+    var processorType: Int = 0
+    var spoofVendor: Bool = false
+    var systemMemoryStatus: String = "Auto"
+    var systemProductName: String = ""
+    var systemSerialNumber: String = ""
+    var systemUUID: String = ""
     
     enum CodingKeys: String, CodingKey {
         case adviseWindows = "AdviseWindows"
         case mlb = "MLB"
         case rom = "ROM"
+        case processorType = "ProcessorType"
         case spoofVendor = "SpoofVendor"
+        case systemMemoryStatus = "SystemMemoryStatus"
         case systemProductName = "SystemProductName"
         case systemSerialNumber = "SystemSerialNumber"
         case systemUUID = "SystemUUID"

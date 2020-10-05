@@ -11,9 +11,9 @@ struct booter: Codable {
 }
 
 struct mmioWhitelist: Codable {
-    var address: Int
-    var comment: String
-    var enabled: Bool
+    var address: Int = 0
+    var comment: String = ""
+    var enabled: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case address = "Address"
@@ -23,23 +23,23 @@ struct mmioWhitelist: Codable {
 }
 
 struct booterQuirks: Codable {
-    var avoidRuntimeDefrag: Bool
-    var devirtualiseMmio: Bool
-    var disableSingleUser: Bool
-    var disableVariableWrite: Bool
-    var discardHibernateMap: Bool
-    var enableSafeModeSlide: Bool
-    var enableWriteUnprotector: Bool
-    var forceExitBootServices: Bool
-    var protectMemoryRegion: Bool
-    var protectSecureBoot: Bool
-    var protectUefiServices: Bool
-    var provideCustomSlide: Bool
-    var provideMaxSlide: Int
-    var rebuildAppleMemoryMap: Bool
-    var setupVirtualMap: Bool
-    var signalAppleOS: Bool
-    var syncRuntimePermissions: Bool
+    var avoidRuntimeDefrag: Bool = false
+    var devirtualiseMmio: Bool = false
+    var disableSingleUser: Bool = false
+    var disableVariableWrite: Bool = false
+    var discardHibernateMap: Bool = false
+    var enableSafeModeSlide: Bool = false
+    var enableWriteUnprotector: Bool = false
+    var forceExitBootServices: Bool = false
+    var protectMemoryRegion: Bool = false
+    var protectSecureBoot: Bool = false
+    var protectUefiServices: Bool = false
+    var provideCustomSlide: Bool = false
+    var provideMaxSlide: Int = 0
+    var rebuildAppleMemoryMap: Bool = false
+    var setupVirtualMap: Bool = false
+    var signalAppleOS: Bool = false
+    var syncRuntimePermissions: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case avoidRuntimeDefrag = "AvoidRuntimeDefrag"

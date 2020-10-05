@@ -23,16 +23,16 @@ struct blessOverRide: Codable {
 }
 
 struct boot: Codable {
-    var consoleAttributes: Int
-    var hibernateMode: String
-    var hideAuxiliary: Bool
-    var pickerAttributes: Int
-    var pickerAudioAssist: Bool
-    var pickerMode: String
-    var pollAppleHotKeys: Bool
-    var showPicker: Bool
-    var takeoffDelay: Int
-    var timeout: Int
+    var consoleAttributes: Int = 0
+    var hibernateMode: String = "None"
+    var hideAuxiliary: Bool = false
+    var pickerAttributes: Int = 1
+    var pickerAudioAssist: Bool = false
+    var pickerMode: String = "Builtin"
+    var pollAppleHotKeys: Bool = false
+    var showPicker: Bool = true
+    var takeoffDelay: Int = 0
+    var timeout: Int = 5
     
     enum CodingKeys: String, CodingKey {
         case consoleAttributes = "ConsoleAttributes"
@@ -49,14 +49,14 @@ struct boot: Codable {
 }
 
 struct debug: Codable {
-    var appleDebug: Bool
-    var applePanic: Bool
-    var disableWatchDog: Bool
-    var displayDelay: Int
-    var displayLevel: Int
-    var serialInit: Bool
-    var sysReport: Bool
-    var target: Int
+    var appleDebug: Bool = false
+    var applePanic: Bool = false
+    var disableWatchDog: Bool = false
+    var displayDelay: Int = 0
+    var displayLevel: Int = 2147483648
+    var serialInit: Bool = false
+    var sysReport: Bool = false
+    var target: Int = 3
     
     enum CodingKeys: String, CodingKey {
         case appleDebug = "AppleDebug"
@@ -71,12 +71,12 @@ struct debug: Codable {
 }
 
 struct entries: Codable {
-    var arguments: String
-    var auxiliary: Bool
-    var comment: String
-    var enabled: Bool
-    var name: String
-    var path: String
+    var arguments: String = ""
+    var auxiliary: Bool = false
+    var comment: String = ""
+    var enabled: Bool = false
+    var name: String = ""
+    var path: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arguments = "Arguments"
@@ -89,20 +89,20 @@ struct entries: Codable {
 }
 
 struct security: Codable {
-    var allowNvramReset: Bool
-    var allowSetDefault: Bool
-    var apECID: Int
-    var authRestart: Bool
-    var bootProtect: String
-    var dmgLoading: String
-    var enablePassword: Bool
-    var exposeSensitiveData: Int
-    var haltLevel: Int
-    var passwordHash: Data
-    var passwordSalt: Data
-    var scanPolicy: Int
-    var secureBootModel: String
-    var vault: String
+    var allowNvramReset: Bool = false
+    var allowSetDefault: Bool = false
+    var apECID: Int = 0
+    var authRestart: Bool = false
+    var bootProtect: String = "Bootstrap"
+    var dmgLoading: String = "Signed"
+    var enablePassword: Bool = false
+    var exposeSensitiveData: Int = 8
+    var haltLevel: Int = 2147483648
+    var passwordHash: Data = Data()
+    var passwordSalt: Data = Data()
+    var scanPolicy: Int = 0
+    var secureBootModel: String = "Disabled"
+    var vault: String = "Optional"
     
     enum CodingKeys: String, CodingKey {
         case allowNvramReset = "AllowNvramReset"
@@ -123,12 +123,12 @@ struct security: Codable {
 }
 
 struct tools: Codable {
-    var arguments: String
-    var auxiliary: Bool
-    var comment: String
-    var enabled: Bool
-    var name: String
-    var path: String
+    var arguments: String = ""
+    var auxiliary: Bool = false
+    var comment: String = ""
+    var enabled: Bool = false
+    var name: String = ""
+    var path: String = ""
     
     enum CodingKeys: String, CodingKey {
         case arguments = "Arguments"

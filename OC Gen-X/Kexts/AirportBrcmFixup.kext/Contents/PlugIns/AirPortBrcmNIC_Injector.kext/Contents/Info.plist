@@ -30,6 +30,9 @@
 			<string>IODefaultMatchCategory</string>
 			<key>IONameMatch</key>
 			<array>
+				<string>pci14e4,4331</string>
+				<string>pci14e4,4353</string>
+				<string>pci14e4,4357</string>
 				<string>pci14e4,43ba</string>
 				<string>pci14e4,43a3</string>
 				<string>pci14e4,43a0</string>

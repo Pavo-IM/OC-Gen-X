@@ -15,9 +15,9 @@ struct acpi: Codable {
 }
 
 struct acpiAdd: Codable {
-    var comment: String
-    var enabled: Bool
-    var path: String
+    var comment: String = ""
+    var enabled: Bool = false
+    var path: String = ""
     
     enum CodingKeys: String, CodingKey {
         case comment = "Comment"
@@ -27,12 +27,12 @@ struct acpiAdd: Codable {
 }
 
 struct acpiDelete: Codable {
-    var all: Bool
-    var comment: String
-    var enabled: Bool
-    var oemTableId: Data
-    var tableLength: Int
-    var tableSignature: Data
+    var all: Bool = false
+    var comment: String = ""
+    var enabled: Bool = false
+    var oemTableId: Data = Data()
+    var tableLength: Int = 0
+    var tableSignature: Data = Data()
     
     enum CodingKeys: String, CodingKey {
         case all = "All"
@@ -45,18 +45,18 @@ struct acpiDelete: Codable {
 }
 
 struct acpiPatch: Codable {
-    var comment: String
-    var count: Int
-    var enabled: Bool
-    var find: Data
-    var limit: Int
-    var mask: Data
-    var oemTableId: Data
-    var replace: Data
-    var replaceMask: Data
-    var skip: Int
-    var tableLength: Int
-    var tableSignature: Data
+    var comment: String = ""
+    var count: Int = 0
+    var enabled: Bool = false
+    var find: Data = Data()
+    var limit: Int = 0
+    var mask: Data = Data()
+    var oemTableId: Data = Data()
+    var replace: Data = Data()
+    var replaceMask: Data = Data()
+    var skip: Int = 0
+    var tableLength: Int = 0
+    var tableSignature: Data = Data()
     
     enum CodingKeys: String, CodingKey {
         case comment = "Comment"
@@ -75,11 +75,11 @@ struct acpiPatch: Codable {
 }
 
 struct acpuQuirks: Codable {
-    var fadtEnableReset: Bool
-    var normalizeHeader: Bool
-    var rebaseRegions: Bool
-    var resetHwSig: Bool
-    var resetLogoStatus: Bool
+    var fadtEnableReset: Bool = false
+    var normalizeHeader: Bool = false
+    var rebaseRegions: Bool = false
+    var resetHwSig: Bool = false
+    var resetLogoStatus: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case fadtEnableReset = "FadtEnableReset"
