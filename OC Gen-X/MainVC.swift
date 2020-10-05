@@ -75,32 +75,6 @@ class MainVC: NSViewController {
         super.viewDidLoad()
         generateButton.isEnabled = false
         applyDesktopGuideHyperlink()
-        let ryzenUrlString = "https://raw.githubusercontent.com/Pavo-IM/trx40_amd_macos/master/EFI/OC/ryzen_17h_sample.plist"
-        if let url = URL(string: ryzenUrlString) {
-            if let data = try? Data(contentsOf: url) {
-                ryzenParse(plist: data)
-            }
-        }
-        let threadripperUrlString = "https://raw.githubusercontent.com/Pavo-IM/trx40_amd_macos/master/EFI/OC/threadripper_Gen3_sample.plist"
-        if let url = URL(string: threadripperUrlString) {
-            if let data = try? Data(contentsOf: url) {
-                threadripperParse(plist: data)
-            }
-        }
-    }
-    
-    func ryzenParse(plist: Data) {
-        let decoder = PropertyListDecoder()
-        if let plist = try? decoder.decode(Root.self, from: plist) {
-            ryzenPatches = plist.kernel.kPatch
-        }
-    }
-    
-    func threadripperParse(plist: Data) {
-        let decoder = PropertyListDecoder()
-        if let plist = try? decoder.decode(Root.self, from: plist) {
-            threadripperPatches = plist.kernel.kPatch
-        }
     }
     
     private func applyDesktopGuideHyperlink() {
@@ -495,9 +469,39 @@ class MainVC: NSViewController {
             config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
-            for i in ryzenPatches {
-                config.kernel.kPatch.append(i)
-            }
+            config.kernel.kPatch = [firstRyzenPatch]
+            config.kernel.kPatch.append(secondRyzenPatch)
+            config.kernel.kPatch.append(thirdRyzenPatch)
+            config.kernel.kPatch.append(forthRyzenPatch)
+            config.kernel.kPatch.append(fifthRyzenPatch)
+            config.kernel.kPatch.append(sixthRyzenPatch)
+            config.kernel.kPatch.append(seventhRyzenPatch)
+            config.kernel.kPatch.append(eigthRyzenPatch)
+            config.kernel.kPatch.append(ninthRyzenPatch)
+            config.kernel.kPatch.append(tenthRyzenPatch)
+            config.kernel.kPatch.append(eleventhRyzenPatch)
+            config.kernel.kPatch.append(twelfthRyzenPatch)
+            config.kernel.kPatch.append(thirteenthRyzenPatch)
+            config.kernel.kPatch.append(fourteenthRyzenPatch)
+            config.kernel.kPatch.append(fiftheenthRyzenPatch)
+            config.kernel.kPatch.append(sixthteenthRyzenPatch)
+            config.kernel.kPatch.append(seventeethRyzenPatch)
+            config.kernel.kPatch.append(eigthteethRyzenPatch)
+            config.kernel.kPatch.append(ninthteenthRyzenPatch)
+            config.kernel.kPatch.append(twentiethRyzenPatch)
+            config.kernel.kPatch.append(twentiefirstRyzenPatch)
+            config.kernel.kPatch.append(twentiesecondRyzenPatch)
+            config.kernel.kPatch.append(twentiethirdRyzenPatch)
+            config.kernel.kPatch.append(twentieforthRyzenPatch)
+            config.kernel.kPatch.append(twentiefifthRyzenPatch)
+            config.kernel.kPatch.append(twentiesixthRyzenPatch)
+            config.kernel.kPatch.append(twentieseventhRyzenPatch)
+            config.kernel.kPatch.append(twentieeigthRyzenPatch)
+            config.kernel.kPatch.append(twentieninthRyzenPatch)
+            config.kernel.kPatch.append(thirtiethRyzenPatch)
+            config.kernel.kPatch.append(thirtiefirstRyzenPatch)
+            config.kernel.kPatch.append(thirtiesecondRyzenPatch)
+            config.kernel.kPatch.append(thirtiethirdRyzenPatch)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
@@ -542,9 +546,38 @@ class MainVC: NSViewController {
             config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
-            for i in threadripperPatches {
-                config.kernel.kPatch.append(i)
-            }
+            config.kernel.kPatch = [firstRyzenPatch]
+            config.kernel.kPatch.append(secondRyzenPatch)
+            config.kernel.kPatch.append(thirdRyzenPatch)
+            config.kernel.kPatch.append(forthRyzenPatch)
+            config.kernel.kPatch.append(fifthRyzenPatch)
+            config.kernel.kPatch.append(sixthRyzenPatch)
+            config.kernel.kPatch.append(seventhRyzenPatch)
+            config.kernel.kPatch.append(eigthRyzenPatch)
+            config.kernel.kPatch.append(ninthRyzenPatch)
+            config.kernel.kPatch.append(tenthRyzenPatch)
+            config.kernel.kPatch.append(eleventhRyzenPatch)
+            config.kernel.kPatch.append(twelfthRyzenPatch)
+            config.kernel.kPatch.append(thirteenthRyzenPatch)
+            config.kernel.kPatch.append(fourteenthRyzenPatch)
+            config.kernel.kPatch.append(fiftheenthRyzenPatch)
+            config.kernel.kPatch.append(sixthteenthRyzenPatch)
+            config.kernel.kPatch.append(seventeethRyzenPatch)
+            config.kernel.kPatch.append(eigthteethRyzenPatch)
+            config.kernel.kPatch.append(ninthteenthRyzenPatch)
+            config.kernel.kPatch.append(twentiethRyzenPatch)
+            config.kernel.kPatch.append(twentiefirstRyzenPatch)
+            config.kernel.kPatch.append(twentiesecondRyzenPatch)
+            config.kernel.kPatch.append(twentiethirdRyzenPatch)
+            config.kernel.kPatch.append(twentieforthRyzenPatch)
+            config.kernel.kPatch.append(twentiefifthRyzenPatch)
+            config.kernel.kPatch.append(twentiesixthRyzenPatch)
+            config.kernel.kPatch.append(twentieseventhRyzenPatch)
+            config.kernel.kPatch.append(twentieeigthRyzenPatch)
+            config.kernel.kPatch.append(twentieninthRyzenPatch)
+            config.kernel.kPatch.append(thirtiethRyzenPatch)
+            config.kernel.kPatch.append(thirtiefirstRyzenPatch)
+            config.kernel.kPatch.append(thirtiesecondRyzenPatch)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.misc.debug.appleDebug = true
