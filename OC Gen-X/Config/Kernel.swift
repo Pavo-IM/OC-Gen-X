@@ -145,6 +145,7 @@ struct kQuirks: Codable {
     var disableRtcChecksum: Bool = false
     var extendBTFeatureFlags: Bool = false
     var externalDiskIcons: Bool = false
+    var forceSecureBootScheme: Bool = false
     var increasePciBarSize: Bool = false
     var lapicKernelPanic: Bool = false
     var legacyCommpage: Bool = false
@@ -164,6 +165,7 @@ struct kQuirks: Codable {
         case disableRtcChecksum = "DisableRtcChecksum"
         case extendBTFeatureFlags = "ExtendBTFeatureFlags"
         case externalDiskIcons = "ExternalDiskIcons"
+        case forceSecureBootScheme = "ForceSecureBootScheme"
         case increasePciBarSize = "IncreasePciBarSize"
         case lapicKernelPanic = "LapicKernelPanic"
         case legacyCommpage = "LegacyCommpage"
