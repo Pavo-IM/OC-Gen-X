@@ -66,7 +66,7 @@ class MainVC: NSViewController {
                     
         nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(), addAppleVendorGuid: addAppleVendorGuid(), addAppleBootVariableGuid: addAppleBootVariableGuid()), delete: nDelete(), legacySchema: legacySchema()),
                     
-        platFormInfo: platFormInfo(generic: generic()),
+        platFormInfo: platFormInfo(automatic: true, customMemory: false, generic: generic(adviseWindows: false, mlb: "", rom: Data(), processorType: 0, spoofVendor: false, systemMemoryStatus: "", systemProductName: "", systemSerialNumber: "", systemUUID: ""), memory: memory(dataWidth: 0, devices: [devices()], errorCorrection: 0, formFactor: 0, maxCapacity: 0, totalWidth: 0, type: 0, typeDetail: 0), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: ""),
                     
         uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
