@@ -502,6 +502,11 @@ class MainVC: NSViewController {
             config.kernel.kPatch.append(thirtiefirstRyzenPatch)
             config.kernel.kPatch.append(thirtiesecondRyzenPatch)
             config.kernel.kPatch.append(thirtiethirdRyzenPatch)
+            config.kernel.kPatch.append(thirtieforthRyzenPatch)
+            config.kernel.kPatch.append(thirtiefifthRyzenPatch)
+            config.kernel.kPatch.append(thirtiesixthRyzenPatch)
+            config.kernel.kPatch.append(thirtieseventhRyzenPatch)
+            config.kernel.kPatch.append(thirtieeigthRyzenPatch)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
@@ -578,6 +583,11 @@ class MainVC: NSViewController {
             config.kernel.kPatch.append(thirtiethRyzenPatch)
             config.kernel.kPatch.append(thirtiefirstRyzenPatch)
             config.kernel.kPatch.append(thirtiesecondRyzenPatch)
+            config.kernel.kPatch.append(thirtiethirdRyzenPatch)
+            config.kernel.kPatch.append(thirtieforthRyzenPatch)
+            config.kernel.kPatch.append(thirtiefifthRyzenPatch)
+            config.kernel.kPatch.append(thirtiesixthRyzenPatch)
+            config.kernel.kPatch.append(thirtieseventhRyzenPatch)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.misc.debug.appleDebug = true
