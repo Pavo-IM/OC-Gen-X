@@ -96,7 +96,7 @@ struct security: Codable {
     var bootProtect: String = "Bootstrap"
     var dmgLoading: String = "Signed"
     var enablePassword: Bool = false
-    var exposeSensitiveData: Int = 8
+    var exposeSensitiveData: Int = 10
     var haltLevel: Int = 2147483648
     var passwordHash: Data = Data()
     var passwordSalt: Data = Data()
