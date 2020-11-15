@@ -1,0 +1,17 @@
+import Foundation
+
+let devirtE2100000 = mmioWhitelist(address: 3792699392, comment: "MMIO devirt 0xE2100000", enabled: true)
+let devirtE3180000 = mmioWhitelist(address: 3810000896, comment: "MMIO devirt 0xE3180000", enabled: true)
+let devirtEF100000 = mmioWhitelist(address: 4010803200, comment: "MMIO devirt 0xEF100000", enabled: true)
+let devirtFA180000 = mmioWhitelist(address: 4195876864, comment: "MMIO devirt 0xFA180000", enabled: true)
+let devirtFA300000 = mmioWhitelist(address: 4197449728, comment: "MMIO devirt 0xFA300000", enabled: true)
+let devirtFEA00000 = mmioWhitelist(address: 4271898624, comment: "MMIO devirt 0xFEA00000", enabled: true)
+let devirtFEC00000 = mmioWhitelist(address: 4273995776, comment: "MMIO devirt 0xFEC00000", enabled: true)
+let devirtFEC10000 = mmioWhitelist(address: 4274061312, comment: "MMIO devirt 0xFEC10000", enabled: true)
+let devirtFED00000 = mmioWhitelist(address: 4275044352, comment: "MMIO devirt 0xFED00000", enabled: true)
+let devirtFED40000 = mmioWhitelist(address: 4275306496, comment: "MMIO devirt 0xFED40000", enabled: true)
+let devirtFED80000 = mmioWhitelist(address: 4275568640, comment: "MMIO devirt 0xFED80000", enabled: true)
+let devirtFEDC2000 = mmioWhitelist(address: 4275838976, comment: "MMIO devirt 0xFEDC2000", enabled: true)
+let devirtFEDD4000 = mmioWhitelist(address: 4275912704, comment: "MMIO devirt 0xFEDD4000", enabled: true)
+let devirtFEE00000 = mmioWhitelist(address: 4276092928, comment: "MMIO devirt 0xFEE00000", enabled: true)
+let devirtFF000000 = mmioWhitelist(address: 4278190080, comment: "MMIO devirt 0xFF000000", enabled: true)

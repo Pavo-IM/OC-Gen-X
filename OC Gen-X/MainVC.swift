@@ -545,6 +545,21 @@ class MainVC: NSViewController {
         
         switch threadripperChecked.state {
         case .on:
+            config.booter.mmioWhitelist.append(devirtE2100000)
+            config.booter.mmioWhitelist.append(devirtE3180000)
+            config.booter.mmioWhitelist.append(devirtEF100000)
+            config.booter.mmioWhitelist.append(devirtFA180000)
+            config.booter.mmioWhitelist.append(devirtFA300000)
+            config.booter.mmioWhitelist.append(devirtFEA00000)
+            config.booter.mmioWhitelist.append(devirtFEC00000)
+            config.booter.mmioWhitelist.append(devirtFEC10000)
+            config.booter.mmioWhitelist.append(devirtFED00000)
+            config.booter.mmioWhitelist.append(devirtFED40000)
+            config.booter.mmioWhitelist.append(devirtFED80000)
+            config.booter.mmioWhitelist.append(devirtFEDC2000)
+            config.booter.mmioWhitelist.append(devirtFEDD4000)
+            config.booter.mmioWhitelist.append(devirtFEE00000)
+            config.booter.mmioWhitelist.append(devirtFF000000)
             config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.enableSafeModeSlide = true
