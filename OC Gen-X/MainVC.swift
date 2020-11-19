@@ -281,10 +281,14 @@ class MainVC: NSViewController {
         
         switch haswellChecked.state {
         case .on:
-            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.enableWriteUnprotector = true
+            config.booter.quirks.setupVirtualMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.disableIoMapper = true
+            config.kernel.kQuirks.disableLinkeditJettison = true
+            config.kernel.kQuirks.lapicKernelPanic = false
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
@@ -295,7 +299,9 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.uefi.quirks.deduplicateBootOrder = true
             config.uefi.quirks.ignoreInvalidFlexRatio = true
+            config.uefi.quirks.requestBootVarRouting = true
         default:
             break
         }
