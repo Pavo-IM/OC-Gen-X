@@ -349,7 +349,9 @@ class MainVC: NSViewController {
         
         switch coffeelakeChecked.state {
         case .on:
+            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.protectUefiServices = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
@@ -365,6 +367,7 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.platFormInfo.generic.systemMemoryStatus = "Auto"
         default:
             break
         }
