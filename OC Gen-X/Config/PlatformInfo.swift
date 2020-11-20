@@ -27,7 +27,7 @@ struct generic: Codable {
     var mlb: String = ""
     var rom: Data = Data()
     var processorType: Int = 0
-    var spoofVendor: Bool = false
+    var spoofVendor: Bool = true
     var systemMemoryStatus: String = "Auto"
     var systemProductName: String = ""
     var systemSerialNumber: String = ""

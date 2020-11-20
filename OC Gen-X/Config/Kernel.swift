@@ -77,7 +77,7 @@ struct emulate: Codable {
 }
 
 struct force: Codable {
-    var arch: String = ""
+    var arch: String = "Any"
     var bundlePath: String = ""
     var comment: String = ""
     var enabled: Bool = false
@@ -149,8 +149,8 @@ struct kQuirks: Codable {
     var increasePciBarSize: Bool = false
     var lapicKernelPanic: Bool = false
     var legacyCommpage: Bool = false
-    var panicNoKextDump: Bool = false
-    var powerTimeoutKernelPanic: Bool = false
+    var panicNoKextDump: Bool = true
+    var powerTimeoutKernelPanic: Bool = true
     var thirdPartyDrives: Bool = false
     var xhciPortLimit: Bool = false
     

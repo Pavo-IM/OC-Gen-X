@@ -31,8 +31,8 @@ struct nAdd: Codable {
 }
 
 struct addAppleVendorVariableGuid: Codable {
-    var defaultBackgroundColor: Data = Data()
-    var uiScale: Data = Data()
+    var defaultBackgroundColor: Data = Data([0x00,0x00,0x00,0x00])
+    var uiScale: Data = Data([0x01])
     
     enum CodingKeys: String, CodingKey {
         case defaultBackgroundColor = "DefaultBackgroundColor"
@@ -50,9 +50,9 @@ struct addAppleVendorGuid: Codable {
 
 struct addAppleBootVariableGuid: Codable {
     var systemAudioVolume: Data = Data([0x46])
-    var bootArgs: String = ""
-    var csrActiveConfig: Data = Data()
-    var prevLangKbd: Data = Data()
+    var bootArgs: String = "-v keepsyms=1"
+    var csrActiveConfig: Data = Data([0x00,0x00,0x00,0x00])
+    var prevLangKbd: Data = Data([0x72,0x75,0x2D,0x52,0x55,0x3A,0x32,0x35,0x32])
     var runefiupdater: String = "No"
     
     enum CodingKeys: String, CodingKey {

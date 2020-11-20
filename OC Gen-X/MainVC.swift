@@ -66,7 +66,7 @@ class MainVC: NSViewController {
                     
         nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(), addAppleVendorGuid: addAppleVendorGuid(), addAppleBootVariableGuid: addAppleBootVariableGuid()), delete: nDelete(), legacySchema: legacySchema()),
                     
-        platFormInfo: platFormInfo(automatic: true, customMemory: false, generic: generic(adviseWindows: false, mlb: "", rom: Data(), processorType: 0, spoofVendor: false, systemMemoryStatus: "", systemProductName: "", systemSerialNumber: "", systemUUID: ""), memory: memory(dataWidth: 0, devices: [devices()], errorCorrection: 0, formFactor: 0, maxCapacity: 0, totalWidth: 0, type: 0, typeDetail: 0), updateDataHub: true, updateNVRAM: true, updateSMBIOS: true, updateSMBIOSMode: ""),
+        platFormInfo: platFormInfo(generic: generic(), memory: memory(devices: [devices()])),
                     
         uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
@@ -261,7 +261,7 @@ class MainVC: NSViewController {
             config.booter.quirks.enableWriteUnprotector = true
             config.booter.quirks.setupVirtualMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
-            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = false
             config.kernel.kQuirks.disableIoMapper = true
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
@@ -287,7 +287,6 @@ class MainVC: NSViewController {
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.disableIoMapper = true
-            config.kernel.kQuirks.disableLinkeditJettison = true
             config.kernel.kQuirks.lapicKernelPanic = false
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
@@ -301,7 +300,6 @@ class MainVC: NSViewController {
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.deduplicateBootOrder = true
             config.uefi.quirks.ignoreInvalidFlexRatio = true
-            config.uefi.quirks.requestBootVarRouting = true
         default:
             break
         }
@@ -329,7 +327,6 @@ class MainVC: NSViewController {
         
         switch kabylakeChecked.state {
         case .on:
-            config.booter.quirks.enableWriteUnprotector = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.disableIoMapper = true
@@ -349,8 +346,8 @@ class MainVC: NSViewController {
         
         switch coffeelakeChecked.state {
         case .on:
-            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.protectUefiServices = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -367,19 +364,17 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.platFormInfo.generic.systemMemoryStatus = "Auto"
         default:
             break
         }
         
         switch cometLakeChecked.state {
         case .on:
-            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.protectUefiServices = true
-            config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
-            config.booter.quirks.setupVirtualMap = true
+            config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -401,8 +396,6 @@ class MainVC: NSViewController {
         switch haswellEChecked.state {
         case .on:
             config.booter.quirks.devirtualiseMmio = true
-            config.booter.quirks.disableVariableWrite = true
-            config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.appleXcpmExtraMsrs = true
@@ -425,8 +418,6 @@ class MainVC: NSViewController {
         switch broadwellEChecked.state {
         case .on:
             config.booter.quirks.devirtualiseMmio = true
-            config.booter.quirks.disableVariableWrite = true
-            config.booter.quirks.rebuildAppleMemoryMap = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.appleXcpmExtraMsrs = true
@@ -448,11 +439,9 @@ class MainVC: NSViewController {
         
         switch casecadeChecked.state {
         case .on:
-            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
-            config.booter.quirks.provideCustomSlide = true
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
-            config.booter.quirks.setupVirtualMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
@@ -473,9 +462,8 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
-            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.enableSafeModeSlide = true
-            config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kPatch = [firstRyzenPatch]
@@ -525,21 +513,17 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.nvram.add.addAppleBootVariableGuid.bootArgs = "npci=0x2000"
-            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
+            config.nvram.add.addAppleBootVariableGuid.bootArgs.append(" npci=0x2000")
         default:
             break
         }
         
         switch proxintoshChecked.state {
         case .on:
-            config.booter.quirks.avoidRuntimeDefrag = true
             config.kernel.emulate.cpuid1Data = Data([0xEC,0x06,0x09,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.kPatch.append(secondRyzenPatch)
             config.kernel.kPatch.append(twelfthRyzenPatch)
-            config.kernel.kQuirks.panicNoKextDump = true
-            config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
@@ -547,7 +531,6 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
         default:
             break
         }
@@ -569,10 +552,7 @@ class MainVC: NSViewController {
             config.booter.mmioWhitelist.append(devirtFEDD4000)
             config.booter.mmioWhitelist.append(devirtFEE00000)
             config.booter.mmioWhitelist.append(devirtFF000000)
-            config.booter.quirks.avoidRuntimeDefrag = true
             config.booter.quirks.devirtualiseMmio = true
-            config.booter.quirks.enableSafeModeSlide = true
-            config.booter.quirks.provideCustomSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kPatch = [firstRyzenPatch]
@@ -612,8 +592,6 @@ class MainVC: NSViewController {
             config.kernel.kPatch.append(thirtiefifthRyzenPatch)
             config.kernel.kPatch.append(thirtiesixthRyzenPatch)
             config.kernel.kPatch.append(thirtieseventhRyzenPatch)
-            config.kernel.kQuirks.panicNoKextDump = true
-            config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
@@ -621,7 +599,6 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.platFormInfo.generic.systemProductName = "iMacPro1,1"
         default:
             break
         }

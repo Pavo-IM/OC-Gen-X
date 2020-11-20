@@ -23,21 +23,21 @@ struct mmioWhitelist: Codable {
 }
 
 struct booterQuirks: Codable {
-    var avoidRuntimeDefrag: Bool = false
+    var avoidRuntimeDefrag: Bool = true
     var devirtualiseMmio: Bool = false
     var disableSingleUser: Bool = false
     var disableVariableWrite: Bool = false
     var discardHibernateMap: Bool = false
-    var enableSafeModeSlide: Bool = false
-    var enableWriteUnprotector: Bool = false
+    var enableSafeModeSlide: Bool = true
+    var enableWriteUnprotector: Bool = true
     var forceExitBootServices: Bool = false
     var protectMemoryRegion: Bool = false
     var protectSecureBoot: Bool = false
     var protectUefiServices: Bool = false
-    var provideCustomSlide: Bool = false
+    var provideCustomSlide: Bool = true
     var provideMaxSlide: Int = 0
     var rebuildAppleMemoryMap: Bool = false
-    var setupVirtualMap: Bool = false
+    var setupVirtualMap: Bool = true
     var signalAppleOS: Bool = false
     var syncRuntimePermissions: Bool = false
     
