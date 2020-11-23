@@ -552,8 +552,10 @@ class MainVC: NSViewController {
             config.booter.mmioWhitelist.append(devirtFEDD4000)
             config.booter.mmioWhitelist.append(devirtFEE00000)
             config.booter.mmioWhitelist.append(devirtFF000000)
+            config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.devirtualiseMmio = true
             config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kPatch = [firstRyzenPatch]
             config.kernel.kPatch.append(secondRyzenPatch)
