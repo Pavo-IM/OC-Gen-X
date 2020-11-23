@@ -50,14 +50,17 @@ class MainVC: NSViewController {
     @IBOutlet weak var appleALCInputfield: NSTextField!
     @IBOutlet weak var bootargsLabel: NSTextField!
     @IBOutlet weak var bootargsInputfield: NSTextField!
+    @IBOutlet weak var agpmVerticalLine: NSBox!
     @IBOutlet weak var lucyRTLChecked: NSButton!
     @IBOutlet weak var brcmPatchRam3Checked: NSButton!
     @IBOutlet weak var agpmChecked: NSButton!
     @IBOutlet weak var brcmPatchRam2Checked: NSButton!
     @IBOutlet weak var brcmBtInjectorChecked: NSButton!
     @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
+    @IBOutlet weak var gpuTextfield: NSTextField!
     @IBOutlet weak var cometLakeChecked: NSButton!
     @IBOutlet weak var casecadeChecked: NSButton!
+    @IBOutlet weak var smbiosTextfield: NSTextField!
     @IBOutlet weak var proxintoshChecked: NSButton!
     @IBOutlet weak var threadripperChecked: NSButton!
     var ryzenPatches = [kPatch]()
@@ -80,10 +83,95 @@ class MainVC: NSViewController {
         uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
     
+    var agpmSmbiosList = ["MacPro4,1", "MacPro5,1", "MacPro6,1", "MacPro7,1", "iMac10,1", "iMac11,1", "iMac11,2", "iMac11,3", "iMac12,1", "iMac12,2", "iMac13,1", "iMac13,2", "iMac13,3", "iMac14,1", "iMac14,2", "iMac14,3", "iMac14,4", "iMac15,1", "iMac15,2", "iMac16,1", "iMac16,2", "iMac17,1", "iMac18,1", "iMac18,2", "iMac18,3", "iMac19,1", "iMac19,2", "iMac20,1", "iMac20,2", "iMacPro1,1",]
+    
+    var AMDDictionary = [
+        "RX 5600XT": "Vendor1002Device731F",
+        "RX 5500XT": "Vendor1002Device7340",
+        "Radeon VII": "Vendor1002Device66af",
+        "R9 270": "Vendor1002Device6811",
+        "R9 270X": "Vendor1002Device6810",
+        "R9 280": "Vendor1002Device679a",
+        "R9 280X": "Vendor1002Device6798",
+        "R9 295 X2": "Vendor1002Device67b9",
+        "R9 380": "Vendor1002Device6939",
+        "R9 380X": "Vendor1002Device6938",
+        "R9 290": "Vendor1002Device67b1",
+        "R9 390": "Vendor1002Device67b1",
+        "R9 290X": "Vendor1002Device67b0",
+        "R9 390X": "Vendor1002Device67b0",
+        "R9 Fury": "Vendor1002Device7300",
+        "RX 460": "Vendor1002Device67ef",
+        "RX 550": "Vendor1002Device699f",
+        "RX 560": "Vendor1002Device67ff",
+        "RX 470": "Vendor1002Device67df",
+        "RX 480": "Vendor1002Device67df",
+        "RX 570": "Vendor1002Device67df",
+        "RX 580": "Vendor1002Device67df",
+        "RX 590": "Vendor1002Device67df",
+        "Vega 56": "Vendor1002Device687f",
+        "Vega 64": "Vendor1002Device687f",
+        "Vega Frontier": "Vendor1002Device6863",
+        "Pro Duo": "Vendor1002Device67c4",
+        "W 7100": "Vendor1002Device692b",
+        "W 9100": "Vendor1002Device67a0",
+        "RX 5700XT": "Vendor1002Device731f"
+    ]
+    
+    var NvidiaDictionary = [
+        "GT 710": "Vendor10deDevice128b",
+        "GT 730": "Vendor10deDevice1287",
+        "GTX 650": "Vendor10deDevice8428",
+        "GTX 650 Ti": "Vendor10deDevice11c6",
+        "GTX 650 TI Boost": "Vendor10deDevice11c2",
+        "GTX 760": "Vendor10deDevice1187",
+        "GTX 760 Ti": "Vendor10deDevice1189",
+        "GTX 770": "Vendor10deDevice1184",
+        "GTX 780": "Vendor10deDevice1004",
+        "GTX 780 Ti": "Vendor10deDevice100a",
+        "GTX 950": "Vendor10deDevice1402",
+        "GTX 960": "Vendor10deDevice1401",
+        "GTX 970": "Vendor10deDevice13c2",
+        "GTX 980": "Vendor10deDevice13c0",
+        "GTX 980 Ti": "Vendor10deDevice17c8",
+        "GTX 1050": "Vendor10deDevice1c81",
+        "GTX 1050 Ti": "Vendor10deDevice1c82",
+        "GTX 1060": "Vendor10deDevice1c02",
+        "GTX 1070": "Vendor10deDevice1b81",
+        "GTX 1070 Ti": "Vendor10deDevice1b82",
+        "GTX 1080": "Vendor10deDevice1b80",
+        "GTX 1080 Ti": "Vendor10deDevice1b06",
+        "GTX Titan": "Vendor10deDevice1005",
+        "Titan V": "Vendor10deDevice1d81",
+        "Titan X": "Vendor10deDevice1b00",
+        "Titan XP": "Vendor10deDevice1b02",
+        "GTX Titan Black": "Vendor10deDevice100c"
+    ]
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateButton.isEnabled = false
         applyDesktopGuideHyperlink()
+        smbiosImage.isHidden = true
+        smbiosList.isHidden = true
+        amdImage.isHidden = true
+        amdGPUList.isHidden = true
+        smbiosTextfield.isHidden = true
+        agpmVerticalLine.isHidden = true
+        nvidiaImage.isHidden = true
+        nvidiaGPUList.isHidden = true
+        nvidiaGPUChecked.isHidden = true
+        amdGPUChecked.isHidden = true
+        gpuTextfield.isHidden = true
+        smbiosList.removeAllItems()
+        amdGPUList.removeAllItems()
+        nvidiaGPUList.removeAllItems()
+        let sortedAMDDictionary = AMDDictionary.keys.sorted()
+        let sortedNvidiaDictionary = NvidiaDictionary.keys.sorted()
+        smbiosList.addItems(withTitles: agpmSmbiosList)
+        amdGPUList.addItems(withTitles: sortedAMDDictionary)
+        nvidiaGPUList.addItems(withTitles: sortedNvidiaDictionary)
     }
     
     private func applyDesktopGuideHyperlink() {
@@ -127,9 +215,6 @@ class MainVC: NSViewController {
         case .on:
             appleALCBootargs.isHidden = (sender.isHidden == true)
             appleALCInputfield.isHidden = (sender.isHidden == true)
-        case .off:
-            appleALCBootargs.isHidden = (sender.isHidden == false)
-            appleALCInputfield.isHidden = (sender.isHidden == false)
         default:
             appleALCBootargs.isHidden = (sender.isHidden == false)
             appleALCInputfield.isHidden = (sender.isHidden == false)
@@ -141,9 +226,6 @@ class MainVC: NSViewController {
         case .on:
             wegLabel.isHidden = (sender.isHidden == true)
             wegBootargsTextfield.isHidden = (sender.isHidden == true)
-        case .off:
-            wegLabel.isHidden = (sender.isHidden == false)
-            wegBootargsTextfield.isHidden = (sender.isHidden == false)
         default:
             wegLabel.isHidden = (sender.isHidden == false)
             wegBootargsTextfield.isHidden = (sender.isHidden == false)
@@ -151,6 +233,56 @@ class MainVC: NSViewController {
         
     }
     
+    @IBAction func agpmInjectorClicked(_ sender: NSButton) {
+        switch agpmChecked.state {
+        case .on:
+            smbiosImage.isHidden = (sender.isHidden == true)
+            smbiosList.isHidden = (sender.isHidden == true)
+            amdImage.isHidden = (sender.isHidden == true)
+            smbiosTextfield.isHidden = (sender.isHidden == true)
+            agpmVerticalLine.isHidden = (sender.isHidden == true)
+            nvidiaImage.isHidden = (sender.isHidden == true)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == true)
+            gpuTextfield.isHidden = (sender.isHidden == true)
+            amdGPUChecked.isHidden = (sender.isHidden == true)
+        default:
+            smbiosImage.isHidden = (sender.isHidden == false)
+            smbiosList.isHidden = (sender.isHidden == false)
+            amdImage.isHidden = (sender.isHidden == false)
+            smbiosTextfield.isHidden = (sender.isHidden == false)
+            agpmVerticalLine.isHidden = (sender.isHidden == false)
+            nvidiaImage.isHidden = (sender.isHidden == false)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == false)
+            amdGPUChecked.isHidden = (sender.isHidden == false)
+            gpuTextfield.isHidden = (sender.isHidden == false)
+        }
+    }
+    
+    
+    @IBAction func amdChecked(_ sender: NSButton) {
+        switch amdGPUChecked.state {
+        case .on:
+            nvidiaImage.isHidden = (sender.isHidden == false)
+            amdGPUList.isHidden = (sender.isHidden == true)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == false)
+        default:
+            nvidiaImage.isHidden = (sender.isHidden == true)
+            amdGPUList.isHidden = (sender.isHidden == false)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == true)
+        }
+    }
+    @IBAction func nvidiaChecked(_ sender: NSButton) {
+        switch nvidiaGPUChecked.state {
+        case .on:
+            amdImage.isHidden = (sender.isHidden == false)
+            nvidiaGPUList.isHidden = (sender.isHidden == true)
+            amdGPUChecked.isHidden = (sender.isHidden == false)
+        default:
+            amdImage.isHidden = (sender.isHidden == true)
+            nvidiaGPUList.isHidden = (sender.isHidden == false)
+            amdGPUChecked.isHidden = (sender.isHidden == true)
+        }
+    }
     
     func kextCopy (kextname: String, item: String, location: URL) {
         let bundle = Bundle.main
