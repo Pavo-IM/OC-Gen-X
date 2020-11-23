@@ -27,6 +27,11 @@
 		CF6F1124241E972600B70805 /* NVRAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1123241E972600B70805 /* NVRAM.swift */; };
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
+		CF77A0B6256C2D100082464D /* macpro61.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B1256C2D100082464D /* macpro61.png */; };
+		CF77A0B7256C2D100082464D /* macpro71.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B2256C2D100082464D /* macpro71.png */; };
+		CF77A0B8256C2D100082464D /* macpro.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B3256C2D100082464D /* macpro.png */; };
+		CF77A0B9256C2D100082464D /* imacpro.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B4256C2D100082464D /* imacpro.png */; };
+		CF77A0BA256C2D100082464D /* imac.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B5256C2D100082464D /* imac.png */; };
 		CF88AB442550A5A9008B99EB /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF88AB432550A5A9008B99EB /* OpenCore.efi */; };
 		CFA900682550A6A000765F7B /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFA900672550A6A000765F7B /* BOOTx64.efi */; };
 		CFA9006A2550A6AD00765F7B /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFA900692550A6AD00765F7B /* Bootstrap.efi */; };
@@ -95,6 +100,11 @@
 		CF6F1123241E972600B70805 /* NVRAM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVRAM.swift; sourceTree = "<group>"; };
 		CF6F1125241E973600B70805 /* PlatformInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformInfo.swift; sourceTree = "<group>"; };
 		CF6F1127241E973E00B70805 /* UEFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UEFI.swift; sourceTree = "<group>"; };
+		CF77A0B1256C2D100082464D /* macpro61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macpro61.png; sourceTree = "<group>"; };
+		CF77A0B2256C2D100082464D /* macpro71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macpro71.png; sourceTree = "<group>"; };
+		CF77A0B3256C2D100082464D /* macpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macpro.png; sourceTree = "<group>"; };
+		CF77A0B4256C2D100082464D /* imacpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imacpro.png; sourceTree = "<group>"; };
+		CF77A0B5256C2D100082464D /* imac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imac.png; sourceTree = "<group>"; };
 		CF88AB432550A5A9008B99EB /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
 		CFA900672550A6A000765F7B /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
 		CFA900692550A6AD00765F7B /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
@@ -205,6 +215,7 @@
 		CF59E726241DA2D500A7C5EC /* OC Gen-X */ = {
 			isa = PBXGroup;
 			children = (
+				CF77A0B0256C2CFF0082464D /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
 				CF4C2008243D067000D2F187 /* Kexts */,
 				CF4C2035243D077E00D2F187 /* OC Files */,
@@ -238,6 +249,18 @@
 				CF2D771F256196BF00D7507C /* trx40.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		CF77A0B0256C2CFF0082464D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CF77A0B5256C2D100082464D /* imac.png */,
+				CF77A0B4256C2D100082464D /* imacpro.png */,
+				CF77A0B3256C2D100082464D /* macpro.png */,
+				CF77A0B1256C2D100082464D /* macpro61.png */,
+				CF77A0B2256C2D100082464D /* macpro71.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		D5B5BBF924A7B6FB004E5D7C /* Views */ = {
@@ -312,28 +335,33 @@
 				CFA9008D2550A8AB00765F7B /* Lilu.kext in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
 				CFA9007B2550A88800765F7B /* WhateverGreen.kext in Resources */,
+				CF77A0B7256C2D100082464D /* macpro71.png in Resources */,
 				CFA900922550A92F00765F7B /* OpenRuntime.efi in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CFA900862550A89300765F7B /* SMCLightSensor.kext in Resources */,
 				CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */,
 				CFA900682550A6A000765F7B /* BOOTx64.efi in Resources */,
+				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
 				CFA900872550A89300765F7B /* SMCProcessor.kext in Resources */,
 				CF88AB442550A5A9008B99EB /* OpenCore.efi in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
 				CFA900822550A89300765F7B /* SMCSuperIO.kext in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CFF17AAA24D8638800978A9A /* BrcmPatchRAM2.kext in Resources */,
+				CF77A0B9256C2D100082464D /* imacpro.png in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
 				CFA900842550A89300765F7B /* SMCDellSensors.kext in Resources */,
 				CFA900952550A92F00765F7B /* XhciDxe.efi in Resources */,
 				CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */,
 				CFA9008B2550A8A300765F7B /* AppleALC.kext in Resources */,
+				CF77A0B8256C2D100082464D /* macpro.png in Resources */,
 				CFA900932550A92F00765F7B /* NvmExpressDxe.efi in Resources */,
 				CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFA900942550A92F00765F7B /* OpenUsbKbDxe.efi in Resources */,
 				CFA9006A2550A6AD00765F7B /* Bootstrap.efi in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
+				CF77A0BA256C2D100082464D /* imac.png in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
 				CFA900832550A89300765F7B /* SMCBatteryManager.kext in Resources */,
 				CFBDB38B2550AB8A000270FD /* AirportBrcmFixup.kext in Resources */,

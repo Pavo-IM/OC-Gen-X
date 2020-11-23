@@ -25,10 +25,18 @@ class MainVC: NSViewController {
     @IBOutlet weak var realTekChecked: NSButton!
     @IBOutlet weak var usbInjectAllChecked: NSButton!
     @IBOutlet weak var airportBrcmChecked: NSButton!
+    @IBOutlet weak var smbiosList: NSPopUpButton!
     @IBOutlet weak var appleMCEReporterChecked: NSButton!
     @IBOutlet weak var openRuntimeChecked: NSButton!
+    @IBOutlet weak var smbiosImage: NSImageView!
+    @IBOutlet weak var amdImage: NSImageView!
+    @IBOutlet weak var amdGPUList: NSPopUpButton!
+    @IBOutlet weak var nvidiaImage: NSImageView!
     @IBOutlet weak var openUSBChecked: NSButton!
     @IBOutlet weak var nvmExpressChecked: NSButton!
+    @IBOutlet weak var nvidiaGPUList: NSPopUpButton!
+    @IBOutlet weak var amdGPUChecked: NSButton!
+    @IBOutlet weak var nvidiaGPUChecked: NSButton!
     @IBOutlet weak var xhciChecked: NSButton!
     @IBOutlet weak var textfield: HyperlinkTextField!
     @IBOutlet weak var hfsPlusChecked: NSButton!
@@ -44,6 +52,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var bootargsInputfield: NSTextField!
     @IBOutlet weak var lucyRTLChecked: NSButton!
     @IBOutlet weak var brcmPatchRam3Checked: NSButton!
+    @IBOutlet weak var agpmChecked: NSButton!
     @IBOutlet weak var brcmPatchRam2Checked: NSButton!
     @IBOutlet weak var brcmBtInjectorChecked: NSButton!
     @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
