@@ -816,37 +816,6 @@ class MainVC: NSViewController {
             break
         }
         
-        switch agpmChecked.state {
-        case .on:
-            let getAGPMFilePath = "/System/Library/Extensions/AppleGraphicsPowerManagement.kext/Contents/Info.plist"
-            let bundleID = "com.apple.driver.AGPMInjector"
-            let bundleName = "AGPMInjector"
-            let bundleShortVersionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
-            let bundleSig = "????"
-            let setAGPMInjectorDirectory = "AGPMInjector.kext/Contents"
-            let setInfoPlistName = "Info.plist"
-            let AgdcEnabled = 1
-            let controlID = 17
-            let maxPState = 15
-            let miniPState = 0
-            let setID = -1
-            let getAGPMFilePathURL = URL.init(fileURLWithPath: getAGPMFilePath)
-            // Decoder the AppleGraphicsPowerManagement.kext Info.plist and get some information to save as variable
-            let data = try! Data(contentsOf: getAGPMFilePathURL)
-            let plistDecoder = PropertyListDecoder()
-            let plistData = try! plistDecoder.decode(PlistGet.self, from: data)
-            if amdGPUChecked.state == NSControl.StateValue.on {
-                let amdGpu = AMDDictionary[amdGPUList.titleOfSelectedItem!]
-                let agpmInfoPlistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: amdGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
-            }
-            if nvidiaGPUChecked.state == NSControl.StateValue.on {
-                let nvidiaGpu = NvidiaDictionary[nvidiaGPUList.titleOfSelectedItem!]
-                let agpmInfoPlistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
-            }
-        default:
-            break
-        }
-        
         switch appleALCChecked.state {
         case .on:
             addKextToConfig(item: "AppleALC")
@@ -995,6 +964,14 @@ class MainVC: NSViewController {
                 let ocKextsDir = ocDir.appendingPathComponent("Kexts")
                 let ocResourcesDir = ocDir.appendingPathComponent("Resources")
                 let ocToolsDir = ocDir.appendingPathComponent("Tools")
+                let getAGPMFilePath = "/System/Library/Extensions/AppleGraphicsPowerManagement.kext/Contents/Info.plist"
+                let bundleID = "com.apple.driver.AGPMInjector"
+                let bundleName = "AGPMInjector"
+                let bundleShortVersionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+                let bundleSig = "????"
+                let agpmInjectorDir = ocKextsDir.appendingPathComponent("AGPMInjector.kext/Contents")
+                let setDocumentDirectory = ocKextsDir
+                let setInfoPlistName = "Info.plist"
                 try fm.createDirectory(at: ocACPIDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocBootstrapDir, withIntermediateDirectories: false, attributes: nil)
                 try fm.createDirectory(at: ocDriversDir, withIntermediateDirectories: false, attributes: nil)
@@ -1004,6 +981,20 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
+                func savePlist<EncodableType: Encodable>(encodable: EncodableType) {
+                    let plistEncoder = PropertyListEncoder()
+                    plistEncoder.outputFormat = .xml
+                    let filePath =  setDocumentDirectory.appendingPathComponent("\(agpmInjectorDir)")
+                    do {
+                        try fm.createDirectory(at: agpmInjectorDir, withIntermediateDirectories: false, attributes: nil)
+                        let InfoPlistfilePath =  filePath.appendingPathComponent("\(setInfoPlistName)")
+                        let data = try plistEncoder.encode(encodable)
+                        try data.write(to: InfoPlistfilePath)
+                    }
+                    catch {
+                        print(error.localizedDescription)
+                    }
+                }
                 if (bootargsInputfield != nil) {
                     config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
                 }
@@ -1043,6 +1034,30 @@ class MainVC: NSViewController {
                 }
                 if whatevergreenChecked.state == .on {
                     kextCopy(kextname: "whatevergreen", item: "WhateverGreen", location: ocKextsDir)
+                }
+                if amdGPUChecked.state == .on {
+                    let AgdcEnabled = 1
+                    let controlID = 17
+                    let maxPState = 15
+                    let miniPState = 0
+                    let setID = -1
+                    let getAGPMFilePathURL = URL.init(fileURLWithPath: getAGPMFilePath)
+                    let data = try! Data(contentsOf: getAGPMFilePathURL)
+                    let plistDecoder = PropertyListDecoder()
+                    let plistData = try! plistDecoder.decode(PlistGet.self, from: data)
+                    if amdGPUChecked.state == NSControl.StateValue.on {
+                        let amdGpu = AMDDictionary[amdGPUList.titleOfSelectedItem!]
+                        let agpmInfoPlistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: amdGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+                        
+                        savePlist(encodable: agpmInfoPlistToEncode)
+                    }
+                    if nvidiaGPUChecked.state == NSControl.StateValue.on {
+                        let nvidiaGpu = NvidiaDictionary[nvidiaGPUList.titleOfSelectedItem!]
+                        let agpmInfoPlistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+                        
+                        savePlist(encodable: agpmInfoPlistToEncode)
+                    }
+                    
                 }
                 if appleALCChecked.state == .on {
                     kextCopy(kextname: "appleALC", item: "AppleALC", location: ocKextsDir)
