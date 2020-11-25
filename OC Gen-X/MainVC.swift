@@ -258,7 +258,6 @@ class MainVC: NSViewController {
         }
     }
     
-    
     @IBAction func amdChecked(_ sender: NSButton) {
         switch amdGPUChecked.state {
         case .on:
@@ -271,6 +270,7 @@ class MainVC: NSViewController {
             nvidiaGPUChecked.isHidden = (sender.isHidden == true)
         }
     }
+    
     @IBAction func nvidiaChecked(_ sender: NSButton) {
         switch nvidiaGPUChecked.state {
         case .on:
@@ -281,6 +281,25 @@ class MainVC: NSViewController {
             amdImage.isHidden = (sender.isHidden == true)
             nvidiaGPUList.isHidden = (sender.isHidden == false)
             amdGPUChecked.isHidden = (sender.isHidden == true)
+        }
+    }
+    
+    @IBAction func smbiosSelected(_ sender: Any) {
+        let userSelected = smbiosList.titleOfSelectedItem
+        switch userSelected {
+        case "iMacPro1,1":
+            smbiosImage.image = NSImage(named: "imacpro.png")
+        case "MacPro4,1", "MacPro5,1":
+            smbiosImage.image = NSImage(named: "macpro.png")
+        case "iMac19,1", "iMac11,3", "iMac18,1", "iMac17,1", "iMac16,1", "iMac15,1", "iMac14,1", "iMac13,1", "iMac12,1", "iMac11,1", "iMac10,1", "iMac19,2", "iMac18,2",
+             "iMac18,3", "iMac16,2", "iMac15,2", "iMac14,2", "iMac14,3", "iMac14,4", "iMac13,2", "iMac13,3", "iMac12,2", "iMac11,2", "iMac20,1", "iMac20,2":
+            smbiosImage.image = NSImage(named: "imac.png")
+        case "MacPro6,1":
+            smbiosImage.image = NSImage(named: "macpro61.png")
+        case "MacPro7,1":
+            smbiosImage.image = NSImage(named: "macpro71.png")
+        default:
+            smbiosImage.image = NSImage(named: "")
         }
     }
     
@@ -793,6 +812,37 @@ class MainVC: NSViewController {
         case .on:
             addKextToConfig(item: "WhateverGreen")
             config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + wegBootargsTextfield.stringValue)
+        default:
+            break
+        }
+        
+        switch agpmChecked.state {
+        case .on:
+            let getAGPMFilePath = "/System/Library/Extensions/AppleGraphicsPowerManagement.kext/Contents/Info.plist"
+            let bundleID = "com.apple.driver.AGPMInjector"
+            let bundleName = "AGPMInjector"
+            let bundleShortVersionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+            let bundleSig = "????"
+            let setAGPMInjectorDirectory = "AGPMInjector.kext/Contents"
+            let setInfoPlistName = "Info.plist"
+            let AgdcEnabled = 1
+            let controlID = 17
+            let maxPState = 15
+            let miniPState = 0
+            let setID = -1
+            let getAGPMFilePathURL = URL.init(fileURLWithPath: getAGPMFilePath)
+            // Decoder the AppleGraphicsPowerManagement.kext Info.plist and get some information to save as variable
+            let data = try! Data(contentsOf: getAGPMFilePathURL)
+            let plistDecoder = PropertyListDecoder()
+            let plistData = try! plistDecoder.decode(PlistGet.self, from: data)
+            if amdGPUChecked.state == NSControl.StateValue.on {
+                let amdGpu = AMDDictionary[amdGPUList.titleOfSelectedItem!]
+                let agpmInfoPlistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: amdGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+            }
+            if nvidiaGPUChecked.state == NSControl.StateValue.on {
+                let nvidiaGpu = NvidiaDictionary[nvidiaGPUList.titleOfSelectedItem!]
+                let agpmInfoPlistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+            }
         default:
             break
         }

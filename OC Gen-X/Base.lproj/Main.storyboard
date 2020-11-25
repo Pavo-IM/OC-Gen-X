@@ -1138,6 +1138,9 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                                 </items>
                                                                             </menu>
                                                                         </popUpButtonCell>
+                                                                        <connections>
+                                                                            <action selector="smbiosSelected:" target="7uK-TB-ntZ" id="k2H-gb-bSi"/>
+                                                                        </connections>
                                                                     </popUpButton>
                                                                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-Hl-ocT">
                                                                         <rect key="frame" x="392" y="0.0" width="5" height="248"/>
