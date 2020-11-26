@@ -25,10 +25,18 @@ class MainVC: NSViewController {
     @IBOutlet weak var realTekChecked: NSButton!
     @IBOutlet weak var usbInjectAllChecked: NSButton!
     @IBOutlet weak var airportBrcmChecked: NSButton!
+    @IBOutlet weak var smbiosList: NSPopUpButton!
     @IBOutlet weak var appleMCEReporterChecked: NSButton!
     @IBOutlet weak var openRuntimeChecked: NSButton!
+    @IBOutlet weak var smbiosImage: NSImageView!
+    @IBOutlet weak var amdImage: NSImageView!
+    @IBOutlet weak var amdGPUList: NSPopUpButton!
+    @IBOutlet weak var nvidiaImage: NSImageView!
     @IBOutlet weak var openUSBChecked: NSButton!
     @IBOutlet weak var nvmExpressChecked: NSButton!
+    @IBOutlet weak var nvidiaGPUList: NSPopUpButton!
+    @IBOutlet weak var amdGPUChecked: NSButton!
+    @IBOutlet weak var nvidiaGPUChecked: NSButton!
     @IBOutlet weak var xhciChecked: NSButton!
     @IBOutlet weak var textfield: HyperlinkTextField!
     @IBOutlet weak var hfsPlusChecked: NSButton!
@@ -42,39 +50,140 @@ class MainVC: NSViewController {
     @IBOutlet weak var appleALCInputfield: NSTextField!
     @IBOutlet weak var bootargsLabel: NSTextField!
     @IBOutlet weak var bootargsInputfield: NSTextField!
+    @IBOutlet weak var agpmVerticalLine: NSBox!
     @IBOutlet weak var lucyRTLChecked: NSButton!
     @IBOutlet weak var brcmPatchRam3Checked: NSButton!
+    @IBOutlet weak var agpmChecked: NSButton!
     @IBOutlet weak var brcmPatchRam2Checked: NSButton!
     @IBOutlet weak var brcmBtInjectorChecked: NSButton!
     @IBOutlet weak var brcmFirmwareDataChecked: NSButton!
+    @IBOutlet weak var gpuTextfield: NSTextField!
     @IBOutlet weak var cometLakeChecked: NSButton!
     @IBOutlet weak var casecadeChecked: NSButton!
+    @IBOutlet weak var smbiosTextfield: NSTextField!
     @IBOutlet weak var proxintoshChecked: NSButton!
     @IBOutlet weak var threadripperChecked: NSButton!
     var ryzenPatches = [kPatch]()
     var threadripperPatches = [kPatch]()
     var config = Root(
         acpi: acpi(add: [acpiAdd()], delete: [acpiDelete()], patch: [acpiPatch()], quirks: acpuQuirks()),
-                      
+        
         booter: booter(mmioWhitelist: [mmioWhitelist()], quirks: booterQuirks()),
         
         deviceProperties: deviceProperties(add: dpAdd(), delete: dpDelete()),
-                    
+        
         kernel: kernel(kAdd: [kAdd()], kBlock: [kBlock()], emulate: emulate(), force: [force()], kPatch: [kPatch()], kQuirks: kQuirks(), scheme: scheme()),
-                    
+        
         misc: misc(blessOverRide: [blessOverRide()], boot: boot(), debug: debug(), entries: [entries()], security: security(), tools: [tools()]),
-                    
+        
         nvram: nvram(add: nAdd(addAppleVendorVariableGuid: addAppleVendorVariableGuid(), addAppleVendorGuid: addAppleVendorGuid(), addAppleBootVariableGuid: addAppleBootVariableGuid()), delete: nDelete(), legacySchema: legacySchema()),
-                    
+        
         platFormInfo: platFormInfo(generic: generic(), memory: memory(devices: [devices()])),
-                    
+        
         uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
+    
+    var agpmSmbiosList = ["MacPro4,1", "MacPro5,1", "MacPro6,1", "MacPro7,1", "iMac10,1", "iMac11,1", "iMac11,2", "iMac11,3", "iMac12,1", "iMac12,2", "iMac13,1", "iMac13,2", "iMac13,3", "iMac14,1", "iMac14,2", "iMac14,3", "iMac14,4", "iMac15,1", "iMac15,2", "iMac16,1", "iMac16,2", "iMac17,1", "iMac18,1", "iMac18,2", "iMac18,3", "iMac19,1", "iMac19,2", "iMac20,1", "iMac20,2", "iMacPro1,1",]
+    
+    var AMDDictionary = [
+        "RX 5600XT": "Vendor1002Device731F",
+        "RX 5500XT": "Vendor1002Device7340",
+        "Radeon VII": "Vendor1002Device66af",
+        "R9 270": "Vendor1002Device6811",
+        "R9 270X": "Vendor1002Device6810",
+        "R9 280": "Vendor1002Device679a",
+        "R9 280X": "Vendor1002Device6798",
+        "R9 295 X2": "Vendor1002Device67b9",
+        "R9 380": "Vendor1002Device6939",
+        "R9 380X": "Vendor1002Device6938",
+        "R9 290": "Vendor1002Device67b1",
+        "R9 390": "Vendor1002Device67b1",
+        "R9 290X": "Vendor1002Device67b0",
+        "R9 390X": "Vendor1002Device67b0",
+        "R9 Fury": "Vendor1002Device7300",
+        "RX 460": "Vendor1002Device67ef",
+        "RX 550": "Vendor1002Device699f",
+        "RX 560": "Vendor1002Device67ff",
+        "RX 470": "Vendor1002Device67df",
+        "RX 480": "Vendor1002Device67df",
+        "RX 570": "Vendor1002Device67df",
+        "RX 580": "Vendor1002Device67df",
+        "RX 590": "Vendor1002Device67df",
+        "Vega 56": "Vendor1002Device687f",
+        "Vega 64": "Vendor1002Device687f",
+        "Vega Frontier": "Vendor1002Device6863",
+        "Pro Duo": "Vendor1002Device67c4",
+        "W 7100": "Vendor1002Device692b",
+        "W 9100": "Vendor1002Device67a0",
+        "RX 5700XT": "Vendor1002Device731f"
+    ]
+    
+    var NvidiaDictionary = [
+        "GT 710": "Vendor10deDevice128b",
+        "GT 730": "Vendor10deDevice1287",
+        "GTX 650": "Vendor10deDevice0fc6",
+        "GTX 650 Ti": "Vendor10deDevice11c6",
+        "GTX 650 TI Boost": "Vendor10deDevice11c2",
+        "GTX 760": "Vendor10deDevice1187",
+        "GTX 760 Ti": "Vendor10deDevice1189",
+        "GTX 770": "Vendor10deDevice1184",
+        "GTX 780": "Vendor10deDevice1004",
+        "GTX 780 Ti": "Vendor10deDevice100a",
+        "GTX 950": "Vendor10deDevice1402",
+        "GTX 960": "Vendor10deDevice1401",
+        "GTX 970": "Vendor10deDevice13c2",
+        "GTX 980": "Vendor10deDevice13c0",
+        "GTX 980 Ti": "Vendor10deDevice17c8",
+        "GTX 1050": "Vendor10deDevice1c81",
+        "GTX 1050 Ti": "Vendor10deDevice1c82",
+        "GTX 1060": "Vendor10deDevice1c02",
+        "GTX 1070": "Vendor10deDevice1b81",
+        "GTX 1070 Ti": "Vendor10deDevice1b82",
+        "GTX 1080": "Vendor10deDevice1b80",
+        "GTX 1080 Ti": "Vendor10deDevice1b06",
+        "GTX Titan": "Vendor10deDevice1005",
+        "Titan V": "Vendor10deDevice1d81",
+        "Titan X": "Vendor10deDevice1b00",
+        "Titan XP": "Vendor10deDevice1b02",
+        "GTX Titan Black": "Vendor10deDevice100c"
+    ]
+    
+    let getAGPMFilePath = "/System/Library/Extensions/AppleGraphicsPowerManagement.kext/Contents/Info.plist"
+    let bundleID = "com.apple.driver.AGPMInjector"
+    let bundleName = "AGPMInjector"
+    let bundleShortVersionName = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+    let bundleSig = "????"
+    let AgdcEnabled = 1
+    let controlID = 17
+    let maxPState = 15
+    let miniPState = 0
+    let setID = -1
+    let plistEncoder = PropertyListEncoder()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         generateButton.isEnabled = false
         applyDesktopGuideHyperlink()
+        smbiosImage.isHidden = true
+        smbiosList.isHidden = true
+        amdImage.isHidden = true
+        amdGPUList.isHidden = true
+        smbiosTextfield.isHidden = true
+        agpmVerticalLine.isHidden = true
+        nvidiaImage.isHidden = true
+        nvidiaGPUList.isHidden = true
+        nvidiaGPUChecked.isHidden = true
+        amdGPUChecked.isHidden = true
+        gpuTextfield.isHidden = true
+        smbiosList.removeAllItems()
+        amdGPUList.removeAllItems()
+        nvidiaGPUList.removeAllItems()
+        let sortedAMDDictionary = AMDDictionary.keys.sorted()
+        let sortedNvidiaDictionary = NvidiaDictionary.keys.sorted()
+        smbiosList.addItems(withTitles: agpmSmbiosList)
+        amdGPUList.addItems(withTitles: sortedAMDDictionary)
+        nvidiaGPUList.addItems(withTitles: sortedNvidiaDictionary)
     }
     
     private func applyDesktopGuideHyperlink() {
@@ -118,9 +227,6 @@ class MainVC: NSViewController {
         case .on:
             appleALCBootargs.isHidden = (sender.isHidden == true)
             appleALCInputfield.isHidden = (sender.isHidden == true)
-        case .off:
-            appleALCBootargs.isHidden = (sender.isHidden == false)
-            appleALCInputfield.isHidden = (sender.isHidden == false)
         default:
             appleALCBootargs.isHidden = (sender.isHidden == false)
             appleALCInputfield.isHidden = (sender.isHidden == false)
@@ -132,9 +238,6 @@ class MainVC: NSViewController {
         case .on:
             wegLabel.isHidden = (sender.isHidden == true)
             wegBootargsTextfield.isHidden = (sender.isHidden == true)
-        case .off:
-            wegLabel.isHidden = (sender.isHidden == false)
-            wegBootargsTextfield.isHidden = (sender.isHidden == false)
         default:
             wegLabel.isHidden = (sender.isHidden == false)
             wegBootargsTextfield.isHidden = (sender.isHidden == false)
@@ -142,6 +245,75 @@ class MainVC: NSViewController {
         
     }
     
+    @IBAction func agpmInjectorClicked(_ sender: NSButton) {
+        switch agpmChecked.state {
+        case .on:
+            smbiosImage.isHidden = (sender.isHidden == true)
+            smbiosList.isHidden = (sender.isHidden == true)
+            amdImage.isHidden = (sender.isHidden == true)
+            smbiosTextfield.isHidden = (sender.isHidden == true)
+            agpmVerticalLine.isHidden = (sender.isHidden == true)
+            nvidiaImage.isHidden = (sender.isHidden == true)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == true)
+            gpuTextfield.isHidden = (sender.isHidden == true)
+            amdGPUChecked.isHidden = (sender.isHidden == true)
+        default:
+            smbiosImage.isHidden = (sender.isHidden == false)
+            smbiosList.isHidden = (sender.isHidden == false)
+            amdImage.isHidden = (sender.isHidden == false)
+            smbiosTextfield.isHidden = (sender.isHidden == false)
+            agpmVerticalLine.isHidden = (sender.isHidden == false)
+            nvidiaImage.isHidden = (sender.isHidden == false)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == false)
+            amdGPUChecked.isHidden = (sender.isHidden == false)
+            gpuTextfield.isHidden = (sender.isHidden == false)
+        }
+    }
+    
+    @IBAction func amdChecked(_ sender: NSButton) {
+        switch amdGPUChecked.state {
+        case .on:
+            nvidiaImage.isHidden = (sender.isHidden == false)
+            amdGPUList.isHidden = (sender.isHidden == true)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == false)
+        default:
+            nvidiaImage.isHidden = (sender.isHidden == true)
+            amdGPUList.isHidden = (sender.isHidden == false)
+            nvidiaGPUChecked.isHidden = (sender.isHidden == true)
+        }
+    }
+    
+    @IBAction func nvidiaChecked(_ sender: NSButton) {
+        switch nvidiaGPUChecked.state {
+        case .on:
+            amdImage.isHidden = (sender.isHidden == false)
+            nvidiaGPUList.isHidden = (sender.isHidden == true)
+            amdGPUChecked.isHidden = (sender.isHidden == false)
+        default:
+            amdImage.isHidden = (sender.isHidden == true)
+            nvidiaGPUList.isHidden = (sender.isHidden == false)
+            amdGPUChecked.isHidden = (sender.isHidden == true)
+        }
+    }
+    
+    @IBAction func smbiosSelected(_ sender: Any) {
+        let userSelected = smbiosList.titleOfSelectedItem
+        switch userSelected {
+        case "iMacPro1,1":
+            smbiosImage.image = NSImage(named: "imacpro.png")
+        case "MacPro4,1", "MacPro5,1":
+            smbiosImage.image = NSImage(named: "macpro.png")
+        case "iMac19,1", "iMac11,3", "iMac18,1", "iMac17,1", "iMac16,1", "iMac15,1", "iMac14,1", "iMac13,1", "iMac12,1", "iMac11,1", "iMac10,1", "iMac19,2", "iMac18,2",
+             "iMac18,3", "iMac16,2", "iMac15,2", "iMac14,2", "iMac14,3", "iMac14,4", "iMac13,2", "iMac13,3", "iMac12,2", "iMac11,2", "iMac20,1", "iMac20,2":
+            smbiosImage.image = NSImage(named: "imac.png")
+        case "MacPro6,1":
+            smbiosImage.image = NSImage(named: "macpro61.png")
+        case "MacPro7,1":
+            smbiosImage.image = NSImage(named: "macpro71.png")
+        default:
+            smbiosImage.image = NSImage(named: "")
+        }
+    }
     
     func kextCopy (kextname: String, item: String, location: URL) {
         let bundle = Bundle.main
@@ -211,7 +383,7 @@ class MainVC: NSViewController {
             }
             catch {
                 print(error.localizedDescription)
-                }
+            }
             default:
                 return
             }
@@ -783,7 +955,7 @@ class MainVC: NSViewController {
         default:
             break
         }
-        
+        plistEncoder.outputFormat = .xml
         let efidirName = "Desktop/EFI"
         let fm = FileManager.default
         let destDirURL = fm.homeDirectoryForCurrentUser
@@ -813,6 +985,31 @@ class MainVC: NSViewController {
                 efiCopy(efiname: "opencore", item: "OpenCore", location: ocDir)
                 efiCopy(efiname: "bootefi", item: "BOOTx64", location: ocBootDir)
                 efiCopy(efiname: "bootstrap", item: "Bootstrap", location: ocBootstrapDir)
+                if agpmChecked.state == .on {
+                    let plistDecoder = PropertyListDecoder()
+                    let getAGPMFilePathURL = URL.init(fileURLWithPath: getAGPMFilePath)
+                    let getData = try! Data(contentsOf: getAGPMFilePathURL)
+                    let plistData = try! plistDecoder.decode(PlistGet.self, from: getData)
+                    let agpmInjectorDir = ocKextsDir.appendingPathComponent("AGPMInjector.kext")
+                    let agpmInjectorContentsDir = agpmInjectorDir.appendingPathComponent("Contents")
+                    let agpmInjectorInfoPlistFilename = agpmInjectorContentsDir.appendingPathComponent("Info.plist")
+                    try fm.createDirectory(at: agpmInjectorDir, withIntermediateDirectories: false, attributes: nil)
+                    try fm.createDirectory(at: agpmInjectorContentsDir, withIntermediateDirectories: false, attributes: nil)
+                    if amdGPUChecked.state == .on {
+                        let amdGpu = AMDDictionary[amdGPUList.titleOfSelectedItem!]
+                        let plistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: amdGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+                        let setData = try plistEncoder.encode(plistToEncode)
+                        try setData.write(to: agpmInjectorInfoPlistFilename)
+                    }
+                    if nvidiaGPUChecked.state == .on {
+                        let nvidiaGpu = NvidiaDictionary[nvidiaGPUList.titleOfSelectedItem!]
+                        let plistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+                        let setData = try plistEncoder.encode(plistToEncode)
+                        try setData.write(to: agpmInjectorInfoPlistFilename)
+                    }
+                    let agpmInjector = kAdd(arch: "x86_64", bundlePath: "AGPMInjector.kext", comment: "", enabled: true, executablePath: "", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
+                    config.kernel.kAdd.append(agpmInjector)
+                }
                 if (bootargsInputfield != nil) {
                     config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
                 }
@@ -908,8 +1105,6 @@ class MainVC: NSViewController {
                     driverCopy(drivername: "xhci", item: "XhciDxe", location: ocDriversDir)
                 }
                 do {
-                    let plistEncoder = PropertyListEncoder()
-                    plistEncoder.outputFormat = .xml
                     let configFilePath =  ocDir.appendingPathComponent("config.plist")
                     let configToEncode = config
                     let data = try plistEncoder.encode(configToEncode)
