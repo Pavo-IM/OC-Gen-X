@@ -25,17 +25,17 @@ struct mmioWhitelist: Codable {
 }
 
 struct patch: Codable {
-    var arch: String
-    var comment: String
-    var count: Int
-    var enabled: Bool
-    var find: Data
-    var identifier: String
-    var limit: Int
-    var mask: Data
-    var replace: Data
-    var replaceMask: Data
-    var skip: Int
+    var arch: String = ""
+    var comment: String = ""
+    var count: Int = 0
+    var enabled: Bool = false
+    var find: Data = Data()
+    var identifier: String = ""
+    var limit: Int = 0
+    var mask: Data = Data()
+    var replace: Data = Data()
+    var replaceMask: Data = Data()
+    var skip: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case arch = "Arch"

@@ -68,7 +68,7 @@ class MainVC: NSViewController {
     var config = Root(
         acpi: acpi(add: [acpiAdd()], delete: [acpiDelete()], patch: [acpiPatch()], quirks: acpuQuirks()),
         
-        booter: booter(mmioWhitelist: [mmioWhitelist()], quirks: booterQuirks()),
+        booter: booter(mmioWhitelist: [mmioWhitelist()], patch: [patch()], quirks: booterQuirks()),
         
         deviceProperties: deviceProperties(add: dpAdd(), delete: dpDelete()),
         
@@ -417,6 +417,7 @@ class MainVC: NSViewController {
         config.acpi.delete.removeAll()
         config.acpi.patch.removeAll()
         config.booter.mmioWhitelist.removeAll()
+        config.booter.patch.removeAll()
         config.kernel.kAdd.removeAll()
         config.kernel.kBlock.removeAll()
         config.kernel.force.removeAll()
