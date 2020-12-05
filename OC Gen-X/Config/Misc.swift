@@ -93,6 +93,7 @@ struct security: Codable {
     var allowSetDefault: Bool = false
     var apECID: Int = 0
     var authRestart: Bool = false
+    var blacklistAppleUpdate: Bool = true
     var bootProtect: String = "Bootstrap"
     var dmgLoading: String = "Signed"
     var enablePassword: Bool = false
@@ -109,6 +110,7 @@ struct security: Codable {
         case allowSetDefault = "AllowSetDefault"
         case apECID = "ApECID"
         case authRestart = "AuthRestart"
+        case blacklistAppleUpdate = "BlacklistAppleUpdate"
         case bootProtect = "BootProtect"
         case dmgLoading = "DmgLoading"
         case enablePassword = "EnablePassword"

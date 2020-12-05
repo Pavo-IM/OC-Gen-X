@@ -77,7 +77,7 @@ struct nDelete: Codable {
 }
 
 struct legacySchema: Codable {
-    var legacyAppleBootVariableGuid: [String] = ["EFILoginHiDPI", "EFIBluetoothDelay", "LocationServicesEnabled", "SystemAudioVolume", "SystemAudioVolumeDB", "SystemAudioVolumeSaved", "bluetoothActiveControllerInfo", "bluetoothInternalControllerInfo", "flagstate", "fmm-computer-name", "nvda_drv", "prev-lang:kbd"]
+    var legacyAppleBootVariableGuid: [String] = ["EFILoginHiDPI", "EFIBluetoothDelay", "LocationServicesEnabled", "SystemAudioVolume", "SystemAudioVolumeDB", "SystemAudioVolumeSaved", "bluetoothActiveControllerInfo", "bluetoothInternalControllerInfo", "flagstate", "fmm-computer-name", "fmm-mobileme-token-FMM", "fmm-mobileme-token-FMM-BridgeHasAccount", "nvda_drv", "prev-lang:kbd"]
     var legacyEfiGlobalVariable: [String] = ["Boot0080", "Boot0081", "Boot0082", "BootNext", "BootOrder"]
     
     enum CodingKeys: String, CodingKey {

@@ -2,10 +2,12 @@ import Foundation
 
 struct booter: Codable {
     var mmioWhitelist: [mmioWhitelist]
+    var patch: [patch]
     var quirks: booterQuirks
     
     enum CodingKeys: String, CodingKey {
         case mmioWhitelist = "MmioWhitelist"
+        case patch = "Patch"
         case quirks = "Quirks"
     }
 }
@@ -22,7 +24,36 @@ struct mmioWhitelist: Codable {
     }
 }
 
+struct patch: Codable {
+    var arch: String
+    var comment: String
+    var count: Int
+    var enabled: Bool
+    var find: Data
+    var identifier: String
+    var limit: Int
+    var mask: Data
+    var replace: Data
+    var replaceMask: Data
+    var skip: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case arch = "Arch"
+        case comment = "Comment"
+        case count = "Count"
+        case enabled = "Enabled"
+        case find = "Find"
+        case identifier = "Identifier"
+        case limit = "Limit"
+        case mask = "Mask"
+        case replace = "Replace"
+        case replaceMask = "ReplaceMask"
+        case skip = "Skip"
+    }
+}
+
 struct booterQuirks: Codable {
+    var allowRelocationBlock: Bool = false
     var avoidRuntimeDefrag: Bool = true
     var devirtualiseMmio: Bool = false
     var disableSingleUser: Bool = false
@@ -42,6 +73,7 @@ struct booterQuirks: Codable {
     var syncRuntimePermissions: Bool = false
     
     enum CodingKeys: String, CodingKey {
+        case allowRelocationBlock = "AllowRelocationBlock"
         case avoidRuntimeDefrag = "AvoidRuntimeDefrag"
         case devirtualiseMmio = "DevirtualiseMmio"
         case disableSingleUser = "DisableSingleUser"
