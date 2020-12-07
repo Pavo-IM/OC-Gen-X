@@ -48,7 +48,7 @@ struct audio: Codable {
     var audioOut: Int = 0
     var audioSupport: Bool = false
     var minimumVolume: Int = 20
-    var playChime: Bool = false
+    var playChime: String = "Auto"
     var volumeAmplifier: Int = 0
     
     enum CodingKeys: String, CodingKey {

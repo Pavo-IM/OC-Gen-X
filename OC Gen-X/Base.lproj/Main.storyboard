@@ -1736,7 +1736,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
                                 <rect key="frame" x="560" y="145" width="219" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.3" id="c09-ms-Iid">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.4" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
