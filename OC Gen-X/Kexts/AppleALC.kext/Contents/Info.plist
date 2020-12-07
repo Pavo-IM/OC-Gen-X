@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19H2</string>
+	<string>19H15</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5.4</string>
+	<string>1.5.5</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,21 +25,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.5.4</string>
+	<string>1.5.5</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>11E708</string>
+	<string>12B45b</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>11.0</string>
 	<key>DTSDKBuild</key>
-	<string>19G68</string>
+	<string>20A2408</string>
 	<key>DTSDKName</key>
-	<string>macosx10.15</string>
+	<string>macosx11.0</string>
 	<key>DTXcode</key>
-	<string>1160</string>
+	<string>1220</string>
 	<key>DTXcodeBuild</key>
-	<string>11E708</string>
+	<string>12B45b</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>ALCUserClientProvider</key>
@@ -53,9 +55,7 @@
 			<key>IOProbeScore</key>
 			<integer>1000</integer>
 			<key>IOProviderClass</key>
-			<string>IOResources</string>
-			<key>IOResourceMatch</key>
-			<string>IOKit</string>
+			<string>IOHDACodecDevice</string>
 			<key>IOUserClientClass</key>
 			<string>ALCUserClient</string>
 		</dict>
@@ -152,12 +152,13 @@
 					<key>CodecID</key>
 					<integer>351359128</integer>
 					<key>Comment</key>
-					<string>phucnguyen2411 - HP Elitedesk 800 G5 mini</string>
+					<string>phucnguyen2411 - CX20632 HP Elitedesk 800 G5 mini</string>
 					<key>ConfigData</key>
 					<data>
-					AcccIAHHHREBxx4BAccfAQH3HFEB9x0BAfce
-					HwH3H5EBlxxAAZcdEAGXHiEBlx8BAaccMAGn
-					HRABpx6LAacfAQHXHBEB1x0RAdceoQHXHwE=
+					AXcMAAG3DAAB1xwRAdcdEQHXHoEB1x8CAdcM
+					AgHHHCABxx0RAcceAQHHHwIBpwckAaccMAGn
+					HRABpx6BAacfAgGXHEABlx0QAZceIQGXHwIB
+					9xxRAfcdAQH3Hh8B9x+Q
 					</data>
 					<key>FuncGroup</key>
 					<integer>1</integer>
@@ -165,7 +166,7 @@
 					<integer>20</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AccMAAH3DAABlwwAAacMAAHXDAA=
+					AXcMAAGnByQBtwwAAdcMAA==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -814,6 +815,31 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>ALC221 for HP ProDesk 400 G2 Desktop Mini PC by dragonbbc</string>
+					<key>CodecID</key>
+					<integer>283902497</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4XAXcfkAF3DAICFxwgAhcd
+					EAIXHiECFx8CAaccMAGnHRABpx6BAacfAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>88</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AXcMAgGnByQCFwwC
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -1692,7 +1718,7 @@
 					<integer>14</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AUcMAgIXDAI=
+					AUcMAgIXDAIBlwcl
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -1937,6 +1963,28 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>Codec</key>
+					<string>ALC255 for Dell Optiplex7060/7070MT(Separate LineOut)</string>
+					<key>CodecID</key>
+					<integer>283902549</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHQEBRx4XAUcfkAGXHEABlx0QAZce
+					iwGXHwIBtxwgAbcdEAG3HgEBtx8BAhccMAIX
+					HRACFx4rAhcfAgFHDAIBtwwCAhcMAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>66</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAICFwwC
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -4113,6 +4161,29 @@
 					<key>CodecID</key>
 					<integer>283902569</integer>
 					<key>Comment</key>
+					<string>Custom ALC269 for Chuwi CoreBox by Luca91</string>
+					<key>ConfigData</key>
+					<data>
+					AVccHwFXHRABVx4hAVcfBAFXDAIBhxwgAYcd
+					EAGHHoEBhx8E
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>91</integer>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>ALC269</string>
+					<key>CodecID</key>
+					<integer>283902569</integer>
+					<key>Comment</key>
 					<string>ALC269 Asus K53SJ, Asus G73s Mod by Andrey1970 (No input boost - no noise in Siri)</string>
 					<key>ConfigData</key>
 					<data>
@@ -5304,6 +5375,26 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>ALC283 for AlldoCube/Cube Mix Plus by Aldo97</string>
+					<key>CodecID</key>
+					<integer>283902595</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6gAScfkAFHHCABRx0BAUce
+					FwFHH5ABlxwwAZcdAAGXHosBlx8AAhccQAIX
+					HRACFx4rAhcfAQFHDAICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>MacPeet - alc283 for LENOVO IDEAPAD 14</string>
 					<key>CodecID</key>
 					<integer>283902595</integer>
@@ -5563,6 +5654,33 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>61</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgIXDAIBlwcl
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>jpuxdev - Realtek ALC285 for Spectre x360 13-ap0xxx</string>
+					<key>CodecID</key>
+					<integer>283902597</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6mAScfkAFHHDABRx0BAUce
+					FwFHH5ABRwwCAXccQAF3HQEBdx4XAXcfkAGX
+					HAABlx0QAZceiwGXHwEB1xxQAdcdgAHXHmYB
+					1x9AAhccIAIXHRACFx4rAhcfAQIXDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>71</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAgIXDAIBlwcl
@@ -6487,6 +6605,38 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>21</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC295 by aleix</string>
+					<key>CodecID</key>
+					<integer>283902613</integer>
+					<key>ConfigData</key>
+					<data>
+					ATccAAE3HQABNx4AATcfQAHXHAEB1x0AAdce
+					YAHXH0ABRxwQAUcdAQFHHhcBRx+RAUcMAgIX
+					HCACFx0QAhceIQIXHwMCFwwCASccMAEnHQEB
+					Jx6mAScftwGXHEABlx0QAZcegQGXHwMBZxzw
+					AWcdEQFnHhEBZx9BAXcc8AF3HREBdx4RAXcf
+					QQGHHPABhx0RAYceEQGHH0EBpxzwAacdEQGn
+					HhEBpx9BAbcc8AG3HREBtx4RAbcfQQG3DAIB
+					5xzwAecdEQHnHhEB5x9B
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>22</integer>
+					<key>WakeConfigData</key>
+					<data>
+					ATcMAAHXDAABRwwCAhcMAgEnDAABlwwAAWcM
+					AAF3DAABhwwAAacMAAG3DAIB5wwA
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
 				</dict>
 				<dict>
 					<key>AFGLowPowerState</key>
@@ -7562,6 +7712,32 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>15</integer>
+					<key>WakeConfigData</key>
+					<data>
+					IhcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>CodecID</key>
+					<integer>283903601</integer>
+					<key>Comment</key>
+					<string>Sisumara - ALC671 for Fujitsu Q558</string>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4TAXcfmQF3DAIBRxwgAUcd
+					EAFHHiEBRx8CAUcMAgIXHDACFx0QAhceAQIX
+					HwECFwwCAZccUAGXHRABlx6BAZcfAg==
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>16</integer>
 					<key>WakeConfigData</key>
 					<data>
 					IhcMAg==
@@ -10826,6 +11002,32 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>rdmitry0911 - Conexant CX8200 for LG Gram 17 17z990</string>
+					<key>CodecID</key>
+					<integer>351346696</integer>
+					<key>ConfigData</key>
+					<data>
+					AXccEAF3HQEBdx4XAXcfkQF3DAIBpxwgAacd
+					AQGnHqcBpx+VAZccMAGXHRABlx6BAZcfBAFn
+					HEABZx0QAWceIQFnHwQBZwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>80</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AWcMAgF3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>Conexant CX8400</string>
 					<key>CodecID</key>
 					<integer>351346896</integer>
@@ -12277,6 +12479,29 @@
 				<dict>
 					<key>AFGLowPowerState</key>
 					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Enrico - GA-Z77X-D3Hrev1.0 - VIA VT2020/2021</string>
+					<key>CodecID</key>
+					<integer>285606977</integer>
+					<key>ConfigData</key>
+					<data>
+					IkccECJHHUAiRx4RIkcfASJXHCAiVx0QIlce
+					ASJXHwEiZxwwImcdYCJnHgEiZx8BInccQCJ3
+					HSAidx4BIncfASKHHFAihx1AIoceISKHHwEi
+					lxxgIpcdkCKXHqEilx8CIqcccCKnHTAipx6B
+					IqcfASK3HIAitx2QIrcegSK3HwEi5xygIucd
+					ECLnHkUi5x8A
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>13</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
 					AQAAAA==
 					</data>
 					<key>Codec</key>
@@ -12407,8 +12632,8 @@
 					<key>ConfigData</key>
 					<data>
 					AUccEAFHHUABRx4RAUcfAQFHDAIBtxwgAbcd
-					EAG3HiEBtx8CAbcMAgGHHDABhx2QAYcegAGH
-					HwEBlxxAAZcdEAGXHoABlx8CAaccXwGnHTAB
+					EAG3HiEBtx8CAbcMAgGHHDABhx2QAYceoAGH
+					H5EBlxxAAZcdEAGXHoABlx8CAaccXwGnHTAB
 					px6BAacfAQ==
 					</data>
 					<key>FuncGroup</key>
