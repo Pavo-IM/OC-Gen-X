@@ -911,6 +911,16 @@
                                                         <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="IK4-ES-CpR"/>
                                                     </connections>
                                                 </button>
+                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-JN-SXp">
+                                                    <rect key="frame" x="274" y="135" width="101" height="18"/>
+                                                    <buttonCell key="cell" type="radio" title="Ivy Bridge-E" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="ODx-jh-rtH">
+                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                        <font key="font" metaFont="system"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="systemTypeChecked:" target="7uK-TB-ntZ" id="vTh-hg-tfW"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fQy-FH-F4E" secondAttribute="trailing" constant="20" symbolic="YES" id="0LP-ma-KQy"/>
@@ -919,6 +929,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="4ot-SR-6YO" secondAttribute="trailing" constant="10" id="2DX-Nd-OXS"/>
                                                 <constraint firstItem="y2r-xg-ybM" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="2GM-b9-Jvc"/>
                                                 <constraint firstItem="NqK-Bd-7Dl" firstAttribute="leading" secondItem="eeX-Ee-gPO" secondAttribute="trailing" constant="20" id="4Sq-HD-dnl"/>
+                                                <constraint firstItem="hkg-JN-SXp" firstAttribute="leading" secondItem="2kH-rr-uNc" secondAttribute="trailing" constant="20" id="4VY-Qu-0ry"/>
                                                 <constraint firstItem="fQy-FH-F4E" firstAttribute="top" secondItem="y2r-xg-ybM" secondAttribute="bottom" constant="10" id="4mN-tL-4sr"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="6Mp-Vd-ShY"/>
                                                 <constraint firstItem="2kH-rr-uNc" firstAttribute="top" secondItem="p55-Fb-A4q" secondAttribute="bottom" constant="10" id="6ym-po-Z8w"/>
@@ -927,10 +938,12 @@
                                                 <constraint firstItem="Rhr-Fz-70Q" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="9CU-at-fqf"/>
                                                 <constraint firstItem="gDG-g2-WWY" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="Be8-NZ-HKa"/>
                                                 <constraint firstItem="hlu-wH-ii6" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="Bmf-mY-cop"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hkg-JN-SXp" secondAttribute="trailing" constant="20" symbolic="YES" id="C3w-ik-Uth"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDG-g2-WWY" secondAttribute="trailing" constant="20" symbolic="YES" id="DjY-s9-GJX"/>
                                                 <constraint firstItem="We0-KK-fmZ" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="FD5-xM-x6B"/>
                                                 <constraint firstItem="2kH-rr-uNc" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="KcP-Bl-CnT"/>
-                                                <constraint firstItem="PhR-gn-wnG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NqK-Bd-7Dl" secondAttribute="trailing" symbolic="YES" id="M3l-YX-xMA"/>
+                                                <constraint firstItem="PhR-gn-wnG" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NqK-Bd-7Dl" secondAttribute="trailing" constant="8" symbolic="YES" id="M3l-YX-xMA"/>
+                                                <constraint firstItem="hkg-JN-SXp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rhr-Fz-70Q" secondAttribute="trailing" constant="8" symbolic="YES" id="Mtd-42-Q4e"/>
                                                 <constraint firstItem="T1A-26-MGn" firstAttribute="leading" secondItem="C1C-xa-78L" secondAttribute="leading" constant="10" id="NIP-2u-BKE"/>
                                                 <constraint firstItem="rg6-Ud-Ml9" firstAttribute="top" secondItem="h8w-7F-qHq" secondAttribute="bottom" constant="10" id="NfV-F3-IYi"/>
                                                 <constraint firstItem="GuR-Jk-C6I" firstAttribute="top" secondItem="hlu-wH-ii6" secondAttribute="bottom" constant="10" id="PVs-7B-2mm"/>
@@ -947,7 +960,7 @@
                                                 <constraint firstItem="NbE-uy-4f2" firstAttribute="leading" secondItem="arC-k3-phI" secondAttribute="leading" id="ZzC-o5-Hso"/>
                                                 <constraint firstItem="4ot-SR-6YO" firstAttribute="top" secondItem="Nf9-hV-dOz" secondAttribute="bottom" constant="10" id="a8r-fg-ykz"/>
                                                 <constraint firstItem="Nf9-hV-dOz" firstAttribute="centerX" secondItem="0Yb-zy-Quz" secondAttribute="centerX" id="cwx-Qc-7xQ"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rhr-Fz-70Q" secondAttribute="trailing" constant="20" symbolic="YES" id="dWU-nh-DzA"/>
+                                                <constraint firstItem="hkg-JN-SXp" firstAttribute="top" secondItem="Rhr-Fz-70Q" secondAttribute="top" id="dWe-W3-PwR"/>
                                                 <constraint firstAttribute="trailing" secondItem="hlu-wH-ii6" secondAttribute="trailing" constant="10" id="dgh-JF-1fO"/>
                                                 <constraint firstItem="Rhr-Fz-70Q" firstAttribute="top" secondItem="We0-KK-fmZ" secondAttribute="bottom" constant="10" id="e7S-mP-wBr"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="2kH-rr-uNc" secondAttribute="trailing" constant="20" symbolic="YES" id="fFp-as-k7v"/>
@@ -1814,6 +1827,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                         <outlet property="hfsPlusChecked" destination="Q1Z-HB-msw" id="dA4-sP-Kdg"/>
                         <outlet property="intelMausiChecked" destination="q76-Th-577" id="mT4-VO-kW1"/>
                         <outlet property="ivyBridgeChecked" destination="arC-k3-phI" id="kU8-dn-rw5"/>
+                        <outlet property="ivyBridgeEChecked" destination="hkg-JN-SXp" id="1hr-WG-Eim"/>
                         <outlet property="kabylakeChecked" destination="gDG-g2-WWY" id="t5i-si-MCo"/>
                         <outlet property="liluChecked" destination="JsS-MV-XBV" id="mxh-Yf-dFo"/>
                         <outlet property="lucyRTLChecked" destination="0Qj-MH-Oax" id="m4i-Pa-fTY"/>

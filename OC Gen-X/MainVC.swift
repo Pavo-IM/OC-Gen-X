@@ -62,6 +62,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var casecadeChecked: NSButton!
     @IBOutlet weak var smbiosTextfield: NSTextField!
     @IBOutlet weak var proxintoshChecked: NSButton!
+    @IBOutlet weak var ivyBridgeEChecked: NSButton!
     @IBOutlet weak var threadripperChecked: NSButton!
     var ryzenPatches = [kPatch]()
     var threadripperPatches = [kPatch]()
@@ -605,6 +606,20 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
+            config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
+        switch ivyBridgeEChecked.state {
+        case .on:
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.enableWriteUnprotector = true
+            config.booter.quirks.setupVirtualMap = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.appleXcpmCfgLock = true
+            config.kernel.kQuirks.appleXcpmExtraMsrs = true
+            config.kernel.kQuirks.disableIoMapper = true
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
