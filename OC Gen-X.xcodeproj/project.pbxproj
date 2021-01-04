@@ -40,7 +40,6 @@
 		CFB89F9B25A3C01E008F2274 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F9525A3C01E008F2274 /* SMCSuperIO.kext */; };
 		CFB89F9C25A3C01E008F2274 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F9625A3C01E008F2274 /* SMCDellSensors.kext */; };
 		CFB89F9E25A3C02F008F2274 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F9D25A3C02F008F2274 /* AppleALC.kext */; };
-		CFB89FA025A3C049008F2274 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F9F25A3C049008F2274 /* AirportBrcmFixup.kext */; };
 		CFB89FA225A3C06A008F2274 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89FA125A3C06A008F2274 /* Lilu.kext */; };
 		CFB89FA425A3C094008F2274 /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB89FA325A3C094008F2274 /* OpenCore.efi */; };
 		CFB89FA625A3C0A2008F2274 /* Bootstrap.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB89FA525A3C0A2008F2274 /* Bootstrap.efi */; };
@@ -54,6 +53,7 @@
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
+		CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */; };
 		CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */; };
 		CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */; };
 		CFF17AA924D8638800978A9A /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */; };
@@ -114,7 +114,6 @@
 		CFB89F9525A3C01E008F2274 /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
 		CFB89F9625A3C01E008F2274 /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
 		CFB89F9D25A3C02F008F2274 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
-		CFB89F9F25A3C049008F2274 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFB89FA125A3C06A008F2274 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
 		CFB89FA325A3C094008F2274 /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
 		CFB89FA525A3C0A2008F2274 /* Bootstrap.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bootstrap.efi; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
+		CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
 		CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
 		CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmBluetoothInjector.kext; sourceTree = "<group>"; };
@@ -151,8 +151,8 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */,
 				CFB89FA125A3C06A008F2274 /* Lilu.kext */,
-				CFB89F9F25A3C049008F2274 /* AirportBrcmFixup.kext */,
 				CFB89F9D25A3C02F008F2274 /* AppleALC.kext */,
 				CFB89F9125A3C01D008F2274 /* SMCBatteryManager.kext */,
 				CFB89F9625A3C01E008F2274 /* SMCDellSensors.kext */,
@@ -363,7 +363,7 @@
 				CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
-				CFB89FA025A3C049008F2274 /* AirportBrcmFixup.kext in Resources */,
+				CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */,
 				CFB89FA625A3C0A2008F2274 /* Bootstrap.efi in Resources */,
 				CFB89FB025A3C0D8008F2274 /* XhciDxe.efi in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
