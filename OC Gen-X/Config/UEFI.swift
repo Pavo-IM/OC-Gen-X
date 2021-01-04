@@ -49,6 +49,7 @@ struct audio: Codable {
     var audioSupport: Bool = false
     var minimumVolume: Int = 20
     var playChime: String = "Auto"
+    var setupDelay: Int = 0
     var volumeAmplifier: Int = 0
     
     enum CodingKeys: String, CodingKey {
@@ -58,6 +59,7 @@ struct audio: Codable {
         case audioSupport = "AudioSupport"
         case minimumVolume = "MinimumVolume"
         case playChime = "PlayChime"
+        case setupDelay = "SetupDelay"
         case volumeAmplifier = "VolumeAmplifier"
     }
 }
@@ -159,7 +161,6 @@ struct protocols: Codable {
 }
 
 struct uQuirks: Codable {
-    var deduplicateBootOrder: Bool = true
     var exitBootServicesDelay: Int = 0
     var ignoreInvalidFlexRatio: Bool = false
     var releaseUsbOwnership: Bool = false
@@ -168,7 +169,6 @@ struct uQuirks: Codable {
     var unblockFsConnect: Bool = false
     
     enum CodingKeys: String, CodingKey {
-        case deduplicateBootOrder = "DeduplicateBootOrder"
         case exitBootServicesDelay = "ExitBootServicesDelay"
         case ignoreInvalidFlexRatio = "IgnoreInvalidFlexRatio"
         case releaseUsbOwnership = "ReleaseUsbOwnership"

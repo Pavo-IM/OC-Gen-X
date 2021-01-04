@@ -29,6 +29,7 @@ struct boot: Codable {
     var pickerAttributes: Int = 1
     var pickerAudioAssist: Bool = false
     var pickerMode: String = "Builtin"
+    var pickerVariant: String = "Auto"
     var pollAppleHotKeys: Bool = false
     var showPicker: Bool = true
     var takeoffDelay: Int = 0
@@ -41,6 +42,7 @@ struct boot: Codable {
         case pickerAttributes = "PickerAttributes"
         case pickerAudioAssist = "PickerAudioAssist"
         case pickerMode = "PickerMode"
+        case pickerVariant = "PickerVariant"
         case pollAppleHotKeys = "PollAppleHotKeys"
         case showPicker = "ShowPicker"
         case takeoffDelay = "TakeoffDelay"

@@ -472,7 +472,6 @@ class MainVC: NSViewController {
             config.misc.security.allowSetDefault = true
             config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
             config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.uefi.quirks.deduplicateBootOrder = true
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
