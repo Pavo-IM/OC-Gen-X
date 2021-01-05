@@ -38,6 +38,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var amdGPUChecked: NSButton!
     @IBOutlet weak var nvidiaGPUChecked: NSButton!
     @IBOutlet weak var xhciChecked: NSButton!
+    @IBOutlet weak var openCanopyChecked: NSButton!
     @IBOutlet weak var textfield: HyperlinkTextField!
     @IBOutlet weak var hfsPlusChecked: NSButton!
     @IBOutlet weak var snInput: NSTextField!
@@ -707,10 +708,12 @@ class MainVC: NSViewController {
         
         switch proxintoshChecked.state {
         case .on:
-            config.kernel.emulate.cpuid1Data = Data([0xEC,0x06,0x09,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
+            config.booter.quirks.enableWriteUnprotector = false
+            config.booter.quirks.rebuildAppleMemoryMap = true
+            config.booter.quirks.syncRuntimePermissions = true
+            config.kernel.emulate.cpuid1Data = Data([0x57,0x06,0x05,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
-            config.kernel.kPatch.append(secondRyzenPatch)
-            config.kernel.kPatch.append(twelfthRyzenPatch)
+            config.kernel.kPatch.append(sixthRyzenPatch)
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true

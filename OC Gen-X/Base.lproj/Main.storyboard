@@ -714,7 +714,7 @@
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="583"/>
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="298"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
@@ -744,7 +744,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="166" width="811" height="423"/>
+                                <rect key="frame" x="-7" y="166" width="811" height="138"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -987,11 +987,11 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="377"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="183"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-13" width="809" height="396"/>
+                                                    <rect key="frame" x="-7" y="-207" width="809" height="396"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
@@ -1522,27 +1522,27 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="Firmware Drivers" identifier="" id="ZPE-fT-6Cu">
                                         <view key="view" id="UVk-Ia-OKZ">
-                                            <rect key="frame" x="10" y="33" width="791" height="314"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="92"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="gac-5f-5uI">
-                                                    <rect key="frame" x="-7" y="216" width="805" height="104"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="108"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="UEFI" identifier="" id="igs-eO-j1W">
                                                             <view key="view" id="Jq2-Uk-wCu">
-                                                                <rect key="frame" x="10" y="33" width="785" height="58"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="62"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-be-75d">
-                                                                        <rect key="frame" x="8" y="32" width="124" height="18"/>
+                                                                        <rect key="frame" x="8" y="35" width="128" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="OpenRuntime.efi" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Z9V-d8-hyP">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Z-HB-msw">
-                                                                        <rect key="frame" x="8" y="8" width="87" height="18"/>
+                                                                        <rect key="frame" x="8" y="9" width="91" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="HfsPlus.efi" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="JEy-dk-rTY">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1550,8 +1550,8 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                     </button>
                                                                 </subviews>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLn-be-75d" secondAttribute="trailing" constant="20" symbolic="YES" id="0iH-W0-CYe"/>
                                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Q1Z-HB-msw" secondAttribute="trailing" constant="20" symbolic="YES" id="EKp-6l-MyC"/>
-                                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gLn-be-75d" secondAttribute="trailing" constant="20" symbolic="YES" id="Rsg-eV-Hmq"/>
                                                                     <constraint firstAttribute="bottom" secondItem="Q1Z-HB-msw" secondAttribute="bottom" constant="10" id="Sco-XN-gf9"/>
                                                                     <constraint firstItem="Q1Z-HB-msw" firstAttribute="leading" secondItem="gLn-be-75d" secondAttribute="leading" id="tkQ-Rj-3H3"/>
                                                                     <constraint firstItem="Q1Z-HB-msw" firstAttribute="top" secondItem="gLn-be-75d" secondAttribute="bottom" constant="10" id="u07-ZJ-Nm7"/>
@@ -1614,11 +1614,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="SMBIOS" identifier="" id="5pE-yU-lCV">
                                         <view key="view" id="yfq-k4-YvT">
-                                            <rect key="frame" x="10" y="33" width="791" height="314"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="183"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="748" translatesAutoresizingMaskIntoConstraints="NO" id="Rn5-Rb-FJJ">
-                                                    <rect key="frame" x="8" y="212" width="94" height="17"/>
+                                                    <rect key="frame" x="8" y="81" width="94" height="17"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Serial Number:" id="t8U-2J-bUf">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1626,7 +1626,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ow1-AX-04H">
-                                                    <rect key="frame" x="8" y="146" width="174" height="16"/>
+                                                    <rect key="frame" x="8" y="15" width="174" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Board Serial Number (MLB):" id="6I2-HK-yp8">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1634,7 +1634,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Rmb-Iy-rlL">
-                                                    <rect key="frame" x="8" y="79" width="59" height="17"/>
+                                                    <rect key="frame" x="8" y="-52" width="59" height="17"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="SmUUID:" id="PFB-BZ-IJ5">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1642,7 +1642,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ver-Sx-K2G">
-                                                    <rect key="frame" x="120" y="210" width="651" height="21"/>
+                                                    <rect key="frame" x="120" y="79" width="651" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="W00000000001" drawsBackground="YES" id="jY5-ae-HXf">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1650,7 +1650,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-dV-vxW">
-                                                    <rect key="frame" x="200" y="143" width="571" height="22"/>
+                                                    <rect key="frame" x="200" y="12" width="571" height="22"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="M0000000000000001" drawsBackground="YES" id="0Eb-bB-POy">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1658,7 +1658,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wpt-Ki-nzt">
-                                                    <rect key="frame" x="85" y="77" width="686" height="21"/>
+                                                    <rect key="frame" x="85" y="-54" width="686" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="00000000-0000-0000-0000-000000000000" drawsBackground="YES" id="NmB-Qp-bLW">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1666,7 +1666,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="Ui7-hI-HOe">
-                                                    <rect key="frame" x="8" y="279" width="94" height="15"/>
+                                                    <rect key="frame" x="8" y="148" width="94" height="15"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="System Model:" id="tR7-sh-igK">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1674,7 +1674,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oOV-TR-Goe">
-                                                    <rect key="frame" x="120" y="276" width="651" height="21"/>
+                                                    <rect key="frame" x="120" y="145" width="651" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="iMac19,1" drawsBackground="YES" id="DML-Mx-U6W">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1715,11 +1715,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="Additional BootArgs" identifier="" id="RFV-rz-T1j">
                                         <view key="view" id="Lkv-HC-bpx">
-                                            <rect key="frame" x="10" y="33" width="791" height="314"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="183"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IeY-sN-Q1c">
-                                                    <rect key="frame" x="8" y="276" width="65" height="16"/>
+                                                    <rect key="frame" x="8" y="145" width="65" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="BootArgs:" id="fDJ-bw-FI2">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1727,7 +1727,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-nW-w58">
-                                                    <rect key="frame" x="81" y="273" width="690" height="21"/>
+                                                    <rect key="frame" x="81" y="142" width="690" height="21"/>
                                                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="keepsyms=1 debug=0x100 -v npci=0x2000" drawsBackground="YES" id="4nm-7t-p3D">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1864,7 +1864,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="75.5" y="983.5"/>
+            <point key="canvasLocation" x="75.5" y="992.5"/>
         </scene>
     </scenes>
     <resources>
