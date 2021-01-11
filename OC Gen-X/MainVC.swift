@@ -85,7 +85,7 @@ class MainVC: NSViewController {
         uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
     
-    var agpmSmbiosList = ["MacPro4,1", "MacPro5,1", "MacPro6,1", "MacPro7,1", "iMac10,1", "iMac11,1", "iMac11,2", "iMac11,3", "iMac12,1", "iMac12,2", "iMac13,1", "iMac13,2", "iMac13,3", "iMac14,1", "iMac14,2", "iMac14,3", "iMac14,4", "iMac15,1", "iMac15,2", "iMac16,1", "iMac16,2", "iMac17,1", "iMac18,1", "iMac18,2", "iMac18,3", "iMac19,1", "iMac19,2", "iMac20,1", "iMac20,2", "iMacPro1,1",]
+    var agpmSmbiosList = ["MacPro4,1", "MacPro5,1", "MacPro6,1", "MacPro7,1", "iMac10,1", "iMac11,1", "iMac11,2", "iMac11,3", "iMac12,1", "iMac12,2", "iMac13,1", "iMac13,2", "iMac13,3", "iMac14,1", "iMac14,2", "iMac14,3", "iMac14,4", "iMac15,1", "iMac16,1", "iMac16,2", "iMac17,1", "iMac18,1", "iMac18,2", "iMac18,3", "iMac19,1", "iMac19,2", "iMac20,1", "iMac20,2", "iMacPro1,1",]
     
     var AMDDictionary = [
         "RX 5600XT": "Vendor1002Device731F",
@@ -1068,7 +1068,7 @@ class MainVC: NSViewController {
                 }
                 
                 if (snInput != nil) {
-                    config.platFormInfo.generic.systemSerialNumber = snInput.stringValue
+                    config.platFormInfo.generic.systemSerialNumber = modelInput.titleOfSelectedItem!
                 }
                 
                 if (mlbInput != nil) {
