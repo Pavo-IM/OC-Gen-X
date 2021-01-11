@@ -14,6 +14,7 @@
 		CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2013243D06D300D2F187 /* USBInjectAll.kext */; };
 		CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */; };
 		CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */; };
+		CF591D2925ACA3A400AEEE1F /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFAB750625AC9A970012A4B3 /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E727241DA2D500A7C5EC /* AppDelegate.swift */; };
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
@@ -32,6 +33,7 @@
 		CF77A0B8256C2D100082464D /* macpro.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B3256C2D100082464D /* macpro.png */; };
 		CF77A0B9256C2D100082464D /* imacpro.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B4256C2D100082464D /* imacpro.png */; };
 		CF77A0BA256C2D100082464D /* imac.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B5256C2D100082464D /* imac.png */; };
+		CFAB750825AC9EB20012A4B3 /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CFAB750625AC9A970012A4B3 /* macserial */; };
 		CFB89F9025A3BFEF008F2274 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F8F25A3BFEF008F2274 /* WhateverGreen.kext */; };
 		CFB89F9725A3C01E008F2274 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F9125A3C01D008F2274 /* SMCBatteryManager.kext */; };
 		CFB89F9825A3C01E008F2274 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFB89F9225A3C01D008F2274 /* VirtualSMC.kext */; };
@@ -59,18 +61,29 @@
 		CFF17AA924D8638800978A9A /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */; };
 		CFF17AAA24D8638800978A9A /* BrcmPatchRAM2.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA624D8638800978A9A /* BrcmPatchRAM2.kext */; };
 		CFFCD3CC2516599600D8D448 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; };
-		CFFCD3CD2516599600D8D448 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFFCD3CD2516599600D8D448 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CF2F509A24ACD723003AAD00 /* CopyFiles */ = {
+		CF2F509A24ACD723003AAD00 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CFFCD3CD2516599600D8D448 /* Sparkle.framework in CopyFiles */,
+				CFFCD3CD2516599600D8D448 /* Sparkle.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF591D2825ACA38500AEEE1F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				CF591D2925ACA3A400AEEE1F /* macserial in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +119,7 @@
 		CF77A0B3256C2D100082464D /* macpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macpro.png; sourceTree = "<group>"; };
 		CF77A0B4256C2D100082464D /* imacpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imacpro.png; sourceTree = "<group>"; };
 		CF77A0B5256C2D100082464D /* imac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imac.png; sourceTree = "<group>"; };
+		CFAB750625AC9A970012A4B3 /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		CFB89F8F25A3BFEF008F2274 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
 		CFB89F9125A3C01D008F2274 /* SMCBatteryManager.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCBatteryManager.kext; sourceTree = "<group>"; };
 		CFB89F9225A3C01D008F2274 /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
@@ -191,6 +205,7 @@
 		CF4C2035243D077E00D2F187 /* OC Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFAB750625AC9A970012A4B3 /* macserial */,
 				CFB89FA725A3C0B1008F2274 /* BOOTx64.efi */,
 				CFB89FA325A3C094008F2274 /* OpenCore.efi */,
 				CFB89FA525A3C0A2008F2274 /* Bootstrap.efi */,
@@ -282,9 +297,10 @@
 			buildConfigurationList = CF59E734241DA2D600A7C5EC /* Build configuration list for PBXNativeTarget "OC Gen-X" */;
 			buildPhases = (
 				CF59E720241DA2D500A7C5EC /* Sources */,
+				CF591D2825ACA38500AEEE1F /* CopyFiles */,
 				CF59E721241DA2D500A7C5EC /* Frameworks */,
 				CF59E722241DA2D500A7C5EC /* Resources */,
-				CF2F509A24ACD723003AAD00 /* CopyFiles */,
+				CF2F509A24ACD723003AAD00 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -335,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFAB750825AC9EB20012A4B3 /* macserial in Resources */,
 				CFB89F9925A3C01E008F2274 /* SMCProcessor.kext in Resources */,
 				CFB89FA425A3C094008F2274 /* OpenCore.efi in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
@@ -555,7 +572,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.7.5;
+				MARKETING_VERSION = 2.7.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -586,7 +603,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.7.5;
+				MARKETING_VERSION = 2.7.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

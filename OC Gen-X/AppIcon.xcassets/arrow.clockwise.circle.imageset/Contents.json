@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Screen Shot 2021-01-11 at 10.04.15 AM.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

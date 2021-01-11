@@ -44,7 +44,6 @@ class MainVC: NSViewController {
     @IBOutlet weak var snInput: NSTextField!
     @IBOutlet weak var mlbInput: NSTextField!
     @IBOutlet weak var smuuidInput: NSTextField!
-    @IBOutlet weak var modelInput: NSTextField!
     @IBOutlet weak var wegLabel: NSTextField!
     @IBOutlet weak var wegBootargsTextfield: NSTextField!
     @IBOutlet weak var appleALCBootargs: NSTextField!
@@ -65,6 +64,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var proxintoshChecked: NSButton!
     @IBOutlet weak var ivyBridgeEChecked: NSButton!
     @IBOutlet weak var threadripperChecked: NSButton!
+    @IBOutlet weak var modelInput: NSPopUpButton!
     var ryzenPatches = [kPatch]()
     var threadripperPatches = [kPatch]()
     var config = Root(
@@ -186,6 +186,7 @@ class MainVC: NSViewController {
         smbiosList.addItems(withTitles: agpmSmbiosList)
         amdGPUList.addItems(withTitles: sortedAMDDictionary)
         nvidiaGPUList.addItems(withTitles: sortedNvidiaDictionary)
+        modelInput.addItems(withTitles: agpmSmbiosList)
     }
     
     private func applyDesktopGuideHyperlink() {
@@ -392,6 +393,22 @@ class MainVC: NSViewController {
         })
     }
     
+    func shell(launchPath: String, arguments: [String]) -> String?
+    {
+        let task = Process()
+        task.launchPath = launchPath
+        task.arguments = arguments
+        
+        let pipe = Pipe()
+        task.standardOutput = pipe
+        task.launch()
+        
+        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: String.Encoding.utf8)
+        
+        return output
+    }
+    
     func addKextToConfig (item: String) {
         let kext = kAdd(arch: "x86_64", bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(item)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
         config.kernel.kAdd.append(kext)
@@ -410,6 +427,21 @@ class MainVC: NSViewController {
     func addKextPluginToConfig (pluginfor: String, pluginName: String) {
         let kext = kAdd(arch: "x86_64", bundlePath: "\(pluginfor).kext/Contents/PlugIns/\(pluginName).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(pluginName)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
         config.kernel.kAdd.append(kext)
+    }
+    
+    
+    @IBAction func serialRefresh(_ sender: NSButton) {
+        let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
+        let modelName = modelInput.titleOfSelectedItem!
+        let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
+        let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
+        let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
+        snInput.placeholderString = sn[0]
+        snInput.stringValue = snInput.placeholderString!
+        mlbInput.placeholderString = mlb[0]
+        mlbInput.stringValue = mlbInput.placeholderString!
+        smuuidInput.placeholderString = uuid[0]
+        smuuidInput.stringValue = smuuidInput.placeholderString!
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
