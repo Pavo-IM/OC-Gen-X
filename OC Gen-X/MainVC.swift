@@ -1127,7 +1127,7 @@ class MainVC: NSViewController {
                 
                 if (romInput != nil) {
                     let rom = romInput.stringValue.components(separatedBy: ":")
-                    let romData = rom[0].data(using: .utf8)! + rom[1].data(using: .utf8)! + rom[2].data(using: .utf8)!
+                    let romData = Data(rom.map { UInt8($0, radix: 16)! })
                     config.platFormInfo.generic.rom = romData
                 }
                 

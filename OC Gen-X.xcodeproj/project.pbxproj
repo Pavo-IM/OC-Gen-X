@@ -572,7 +572,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.7.8;
+				MARKETING_VERSION = 2.7.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -603,7 +603,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.7.8;
+				MARKETING_VERSION = 2.7.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
