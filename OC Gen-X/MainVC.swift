@@ -1110,11 +1110,11 @@ class MainVC: NSViewController {
                     config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
                 }
                 if (modelInput != nil) {
-                    config.platFormInfo.generic.systemProductName = modelInput.stringValue
+                    config.platFormInfo.generic.systemProductName = modelInput.titleOfSelectedItem!
                 }
                 
                 if (snInput != nil) {
-                    config.platFormInfo.generic.systemSerialNumber = modelInput.titleOfSelectedItem!
+                    config.platFormInfo.generic.systemSerialNumber = snInput.stringValue
                 }
                 
                 if (mlbInput != nil) {
