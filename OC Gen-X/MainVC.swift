@@ -65,6 +65,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var ivyBridgeEChecked: NSButton!
     @IBOutlet weak var threadripperChecked: NSButton!
     @IBOutlet weak var modelInput: NSPopUpButton!
+    @IBOutlet weak var romInput: NSTextField!
     var ryzenPatches = [kPatch]()
     var threadripperPatches = [kPatch]()
     var config = Root(
@@ -409,6 +410,42 @@ class MainVC: NSViewController {
         return output
     }
     
+    func shellPipe(launchPath1: String, arguments1: [String], launchPath2: String, arguments2: [String], launchPath3: String, arguments3: [String]) -> String?
+    {
+        let pipe1 = Pipe()
+        let pipe2 = Pipe()
+        let pipe3 = Pipe()
+        
+        let task1 = Process()
+        task1.launchPath = launchPath1
+        task1.arguments = arguments1
+        task1.standardOutput = pipe1
+        
+        let task2 = Process()
+        task2.launchPath = launchPath2
+        task2.arguments = arguments2
+        task2.standardInput = pipe1
+        task2.standardOutput = pipe2
+        
+        let task3 = Process()
+        task3.launchPath = launchPath3
+        task3.arguments = arguments3
+        task3.standardInput = pipe2
+        task3.standardOutput = pipe3
+        
+        task1.launch()
+        task2.launch()
+        task3.launch()
+        task1.waitUntilExit()
+        task2.waitUntilExit()
+        task3.waitUntilExit()
+        
+        let data = pipe3.fileHandleForReading.readDataToEndOfFile()
+        let output = String(data: data, encoding: .utf8)
+        
+        return output
+    }
+    
     func addKextToConfig (item: String) {
         let kext = kAdd(arch: "x86_64", bundlePath: "\(item).kext", comment: "", enabled: true, executablePath: "Contents/MacOS/\(item)", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
         config.kernel.kAdd.append(kext)
@@ -429,19 +466,28 @@ class MainVC: NSViewController {
         config.kernel.kAdd.append(kext)
     }
     
-    
     @IBAction func serialRefresh(_ sender: NSButton) {
         let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
         let modelName = modelInput.titleOfSelectedItem!
         let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
         let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
         let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
+        var getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])!.components(separatedBy: "\n")
+
+        if getrom.first == "N/A" {
+            getrom.removeFirst()
+        }
+
+        if getrom.last == "" {
+            getrom.removeLast()
+        }
         snInput.placeholderString = sn[0]
         snInput.stringValue = snInput.placeholderString!
         mlbInput.placeholderString = mlb[0]
         mlbInput.stringValue = mlbInput.placeholderString!
         smuuidInput.placeholderString = uuid[0]
         smuuidInput.stringValue = smuuidInput.placeholderString!
+        romInput.stringValue = getrom[0]
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
@@ -1077,6 +1123,12 @@ class MainVC: NSViewController {
                 
                 if (smuuidInput != nil) {
                     config.platFormInfo.generic.systemUUID = smuuidInput.stringValue
+                }
+                
+                if (romInput != nil) {
+                    let rom = romInput.stringValue.components(separatedBy: ":")
+                    let romData = rom[0].data(using: .utf8)! + rom[1].data(using: .utf8)! + rom[2].data(using: .utf8)!
+                    config.platFormInfo.generic.rom = romData
                 }
                 
                 if liluChecked.state == .on {
