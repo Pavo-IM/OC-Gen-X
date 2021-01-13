@@ -179,14 +179,19 @@ class MainVC: NSViewController {
         nvidiaGPUChecked.isHidden = true
         amdGPUChecked.isHidden = true
         gpuTextfield.isHidden = true
-        smbiosList.removeAllItems()
-        amdGPUList.removeAllItems()
-        nvidiaGPUList.removeAllItems()
+        let sortedArray = agpmSmbiosList.sorted()
         let sortedAMDDictionary = AMDDictionary.keys.sorted()
         let sortedNvidiaDictionary = NvidiaDictionary.keys.sorted()
-        smbiosList.addItems(withTitles: agpmSmbiosList)
+        
+        amdGPUList.removeAllItems()
         amdGPUList.addItems(withTitles: sortedAMDDictionary)
+        amdGPUList.selectItem(at: 0)
+        nvidiaGPUList.removeAllItems()
         nvidiaGPUList.addItems(withTitles: sortedNvidiaDictionary)
+        nvidiaGPUList.selectItem(at: 0)
+        smbiosList.removeAllItems()
+        smbiosList.addItems(withTitles: sortedArray)
+        smbiosList.selectItem(at: 0)
         modelInput.addItems(withTitles: agpmSmbiosList)
     }
     
@@ -1097,9 +1102,12 @@ class MainVC: NSViewController {
                         let setData = try plistEncoder.encode(plistToEncode)
                         try setData.write(to: agpmInjectorInfoPlistFilename)
                     }
-                    if nvidiaGPUChecked.state == .on {
+                    if nvidiaGPUChecked.state == NSControl.StateValue.on {
+                        amdGPUList.state = NSControl.StateValue.off
                         let nvidiaGpu = NvidiaDictionary[nvidiaGPUList.titleOfSelectedItem!]
+                        
                         let plistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+                        
                         let setData = try plistEncoder.encode(plistToEncode)
                         try setData.write(to: agpmInjectorInfoPlistFilename)
                     }
