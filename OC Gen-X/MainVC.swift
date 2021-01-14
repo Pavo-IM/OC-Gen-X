@@ -1133,10 +1133,13 @@ class MainVC: NSViewController {
                     config.platFormInfo.generic.systemUUID = smuuidInput.stringValue
                 }
                 
-                if (romInput != nil) {
+                if romInput != nil {
                     let rom = romInput.stringValue.components(separatedBy: ":")
-                    let romData = Data(rom.map { UInt8($0, radix: 16)! })
-                    config.platFormInfo.generic.rom = romData
+                    let wrappedRomData: Data? = nil
+                    if var unwrappedRomData = wrappedRomData {
+                        unwrappedRomData = Data(rom.map { UInt8($0, radix: 16)! })
+                        config.platFormInfo.generic.rom = unwrappedRomData
+                    }
                 }
                 
                 if liluChecked.state == .on {
