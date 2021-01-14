@@ -206,7 +206,6 @@ class MainVC: NSViewController {
     }
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
-        generateButton.isEnabled = (sender.isEnabled == true)
     }
     
     @IBAction func brcmPatchRam3Clicked(_ sender: NSButton) {
@@ -477,14 +476,14 @@ class MainVC: NSViewController {
         let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
         let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
         let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
-        var getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])!.components(separatedBy: "\n")
+        var getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
 
-        if getrom.first == "N/A" {
-            getrom.removeFirst()
+        if getrom?.first == "N/A" {
+            getrom?.removeFirst()
         }
 
-        if getrom.last == "" {
-            getrom.removeLast()
+        if getrom?.last == "" {
+            getrom?.removeLast()
         }
         snInput.placeholderString = sn[0]
         snInput.stringValue = snInput.placeholderString!
@@ -492,7 +491,8 @@ class MainVC: NSViewController {
         mlbInput.stringValue = mlbInput.placeholderString!
         smuuidInput.placeholderString = uuid[0]
         smuuidInput.stringValue = smuuidInput.placeholderString!
-        romInput.stringValue = getrom[0]
+        romInput.stringValue = (getrom?[0])!
+        generateButton.isEnabled = (sender.isEnabled == true)
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
@@ -1135,11 +1135,8 @@ class MainVC: NSViewController {
                 
                 if romInput != nil {
                     let rom = romInput.stringValue.components(separatedBy: ":")
-                    let wrappedRomData: Data? = nil
-                    if var unwrappedRomData = wrappedRomData {
-                        unwrappedRomData = Data(rom.map { UInt8($0, radix: 16)! })
-                        config.platFormInfo.generic.rom = unwrappedRomData
-                    }
+                    let unwrappedRomData = Data(rom.map { (UInt8($0, radix: 16)!) })
+                    config.platFormInfo.generic.rom = unwrappedRomData
                 }
                 
                 if liluChecked.state == .on {
