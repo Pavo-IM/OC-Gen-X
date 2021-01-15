@@ -60,23 +60,12 @@
 		CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */; };
 		CFF17AA924D8638800978A9A /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */; };
 		CFF17AAA24D8638800978A9A /* BrcmPatchRAM2.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA624D8638800978A9A /* BrcmPatchRAM2.kext */; };
-		CFFCD3CC2516599600D8D448 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; };
-		CFFCD3CD2516599600D8D448 /* Sparkle.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CFF4F9BA25B0B34D00265C5C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; };
+		CFF4F9BB25B0B34D00265C5C /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CFFCD3CA2516598C00D8D448 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CF2F509A24ACD723003AAD00 /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CFFCD3CD2516599600D8D448 /* Sparkle.framework in Copy Files */,
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		CF591D2825ACA38500AEEE1F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,6 +74,17 @@
 			files = (
 				CF591D2925ACA3A400AEEE1F /* macserial in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFF4F9BC25B0B34D00265C5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CFF4F9BB25B0B34D00265C5C /* Sparkle.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -155,7 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFFCD3CC2516599600D8D448 /* Sparkle.framework in Frameworks */,
+				CFF4F9BA25B0B34D00265C5C /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +218,7 @@
 			children = (
 				CF59E726241DA2D500A7C5EC /* OC Gen-X */,
 				CF59E725241DA2D500A7C5EC /* Products */,
+				CFF4F9B925B0B34D00265C5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -281,6 +282,13 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		CFF4F9B925B0B34D00265C5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D5B5BBF924A7B6FB004E5D7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,7 +308,7 @@
 				CF591D2825ACA38500AEEE1F /* CopyFiles */,
 				CF59E721241DA2D500A7C5EC /* Frameworks */,
 				CF59E722241DA2D500A7C5EC /* Resources */,
-				CF2F509A24ACD723003AAD00 /* Copy Files */,
+				CFF4F9BC25B0B34D00265C5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -565,6 +573,8 @@
 					"$(PROJECT_DIR)/OC\\ Gen-X",
 					"$(PROJECT_DIR)/OC\\ Gen-X",
 					"$(PROJECT_DIR)/OC\\ Gen-X",
+					"$(PROJECT_DIR)/OC\\ Gen-X",
+					"$(PROJECT_DIR)/OC\\ Gen-X",
 				);
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,7 +582,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.8.2;
+				MARKETING_VERSION = 2.8.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -596,6 +606,8 @@
 					"$(PROJECT_DIR)/OC\\ Gen-X",
 					"$(PROJECT_DIR)/OC\\ Gen-X",
 					"$(PROJECT_DIR)/OC\\ Gen-X",
+					"$(PROJECT_DIR)/OC\\ Gen-X",
+					"$(PROJECT_DIR)/OC\\ Gen-X",
 				);
 				INFOPLIST_FILE = "OC Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -603,7 +615,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.8.2;
+				MARKETING_VERSION = 2.8.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

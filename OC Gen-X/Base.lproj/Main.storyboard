@@ -713,12 +713,12 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="ZeK-sO-E8j">
-                        <rect key="frame" x="0.0" y="0.0" width="797" height="582"/>
+                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="338" y="108" width="121" height="33"/>
+                                <rect key="frame" x="338" y="108" width="121" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -744,7 +744,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="166" width="811" height="422"/>
+                                <rect key="frame" x="-7" y="165" width="811" height="417"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -987,20 +987,20 @@
                                     </tabViewItem>
                                     <tabViewItem label="Kext" identifier="" id="9mi-No-NeI">
                                         <view key="view" id="LRE-jA-RHI">
-                                            <rect key="frame" x="10" y="33" width="791" height="376"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="371"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="iVY-nQ-w4Y">
-                                                    <rect key="frame" x="-7" y="-13" width="809" height="395"/>
+                                                    <rect key="frame" x="-7" y="-13" width="809" height="390"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="789" height="350"/>
+                                                                <rect key="frame" x="10" y="33" width="789" height="349"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="313" width="48" height="18"/>
+                                                                        <rect key="frame" x="8" y="312" width="48" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -1019,7 +1019,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="287" width="95" height="18"/>
+                                                                        <rect key="frame" x="8" y="286" width="95" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1101,11 +1101,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="Graphics" identifier="" id="CsQ-iK-bJm">
                                                             <view key="view" id="0Jc-f5-SUh">
-                                                                <rect key="frame" x="10" y="33" width="789" height="349"/>
+                                                                <rect key="frame" x="10" y="33" width="789" height="344"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button toolTip="Lilu plugin providing patches to select GPUs on macOS. Requires Lilu 1.4.0 or newer.  Boot Args:" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hIN-Qd-vMG">
-                                                                        <rect key="frame" x="8" y="312" width="121" height="18"/>
+                                                                        <rect key="frame" x="8" y="307" width="121" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="WhateverGreen" bezelStyle="regularSquare" imagePosition="left" inset="2" id="iDh-wY-X4B">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1115,7 +1115,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </button>
                                                                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NI0-4Z-WL9">
-                                                                        <rect key="frame" x="8" y="268" width="168" height="25"/>
+                                                                        <rect key="frame" x="8" y="263" width="168" height="25"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="WhateverGreen Boot-Args:" id="DhZ-jd-01r">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1123,22 +1123,22 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <textField hidden="YES" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOy-PJ-qmO">
-                                                                        <rect key="frame" x="184" y="268" width="585" height="25"/>
+                                                                        <rect key="frame" x="184" y="263" width="585" height="25"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="25" id="Gfp-F4-rpj"/>
                                                                         </constraints>
-                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" placeholderString="agdpmod=pikera" drawsBackground="YES" usesSingleLineMode="YES" id="bA5-tk-VSa">
+                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" usesSingleLineMode="YES" id="bA5-tk-VSa">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="yJa-nM-hOu">
-                                                                        <rect key="frame" x="74" y="81" width="100" height="100"/>
+                                                                        <rect key="frame" x="74" y="76" width="100" height="100"/>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="macpro" id="fKH-JT-Ih4"/>
                                                                     </imageView>
                                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YcY-Lh-1Ee">
-                                                                        <rect key="frame" x="191" y="121" width="78" height="25"/>
+                                                                        <rect key="frame" x="191" y="116" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="g9P-ij-Ojp" id="jrx-Mu-18x">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                             <font key="font" metaFont="menu"/>
@@ -1155,10 +1155,10 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </popUpButton>
                                                                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="RbS-Hl-ocT">
-                                                                        <rect key="frame" x="392" y="0.0" width="5" height="247"/>
+                                                                        <rect key="frame" x="392" y="0.0" width="5" height="242"/>
                                                                     </box>
                                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ky-8V-ol0">
-                                                                        <rect key="frame" x="415" y="90" width="50" height="55"/>
+                                                                        <rect key="frame" x="415" y="90" width="50" height="50"/>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="amd-radeon" id="prT-mc-Ngf"/>
                                                                     </imageView>
                                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="2pH-I6-VSF">
@@ -1166,7 +1166,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="nvidia-icon" id="wy1-vZ-aLL"/>
                                                                     </imageView>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yK2-cQ-P0G">
-                                                                        <rect key="frame" x="483" y="109" width="197" height="18"/>
+                                                                        <rect key="frame" x="483" y="106" width="197" height="18"/>
                                                                         <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="VpY-hY-XxO">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1186,7 +1186,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </button>
                                                                     <popUpButton horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BA7-zX-VLT">
-                                                                        <rect key="frame" x="695" y="104" width="78" height="25"/>
+                                                                        <rect key="frame" x="695" y="101" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Jao-8p-7vd" id="Jt7-G1-It3">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                             <font key="font" metaFont="menu"/>
@@ -1200,7 +1200,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </popUpButtonCell>
                                                                     </popUpButton>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SrQ-id-QaZ">
-                                                                        <rect key="frame" x="192" y="165" width="99" height="16"/>
+                                                                        <rect key="frame" x="192" y="160" width="99" height="16"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Select SMBIOS:" id="Njp-By-ZrO">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1208,7 +1208,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KZH-69-5OJ">
-                                                                        <rect key="frame" x="413" y="165" width="143" height="16"/>
+                                                                        <rect key="frame" x="413" y="160" width="143" height="16"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Select Dedicated GPU:" id="UX4-mU-bJK">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1216,7 +1216,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WJb-lD-UZf">
-                                                                        <rect key="frame" x="8" y="210" width="110" height="18"/>
+                                                                        <rect key="frame" x="8" y="205" width="110" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AGPMInjector" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Mbx-pR-O0W">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1226,7 +1226,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </button>
                                                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="PIP-zA-VJE">
-                                                                        <rect key="frame" x="0.0" y="245" width="785" height="5"/>
+                                                                        <rect key="frame" x="0.0" y="240" width="785" height="5"/>
                                                                     </box>
                                                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v9M-9n-Jdn">
                                                                         <rect key="frame" x="695" y="31" width="78" height="25"/>
@@ -1294,12 +1294,12 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="Audio" identifier="" id="cDA-bd-Nu2">
                                                             <view key="view" id="zNn-Hb-Zsg">
-                                                                <rect key="frame" x="10" y="33" width="789" height="287"/>
+                                                                <rect key="frame" x="10" y="33" width="789" height="85"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tdD-cl-Nki">
                                                                         <string key="identifier">An open source kernel extension enabling native macOS HD audio for not officially supported codecs without any filesystem modifications.</string>
-                                                                        <rect key="frame" x="8" y="251" width="82" height="18"/>
+                                                                        <rect key="frame" x="8" y="48" width="86" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AppleALC" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xJc-fW-aKb">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1309,7 +1309,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </button>
                                                                     <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dUi-gb-vfW">
-                                                                        <rect key="frame" x="8" y="227" width="128" height="16"/>
+                                                                        <rect key="frame" x="8" y="23" width="128" height="16"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="AppleALC BootArgs:" id="RQy-GJ-ofV">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1317,8 +1317,8 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <textField hidden="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="whw-8O-jP3">
-                                                                        <rect key="frame" x="144" y="224" width="621" height="21"/>
-                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="alcid=1" drawsBackground="YES" id="Xab-li-tWz">
+                                                                        <rect key="frame" x="144" y="20" width="625" height="21"/>
+                                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Xab-li-tWz">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1756,11 +1756,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="Additional BootArgs" identifier="" id="RFV-rz-T1j">
                                         <view key="view" id="Lkv-HC-bpx">
-                                            <rect key="frame" x="10" y="33" width="791" height="383"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="61"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IeY-sN-Q1c">
-                                                    <rect key="frame" x="8" y="345" width="65" height="16"/>
+                                                    <rect key="frame" x="8" y="23" width="65" height="16"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="BootArgs:" id="fDJ-bw-FI2">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1768,8 +1768,8 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     </textFieldCell>
                                                 </textField>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uB2-nW-w58">
-                                                    <rect key="frame" x="81" y="342" width="690" height="21"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="keepsyms=1 debug=0x100 -v npci=0x2000" drawsBackground="YES" id="4nm-7t-p3D">
+                                                    <rect key="frame" x="81" y="20" width="690" height="21"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="4nm-7t-p3D">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1789,7 +1789,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="561" y="145" width="218" height="16"/>
+                                <rect key="frame" x="561" y="145" width="218" height="15"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.5" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

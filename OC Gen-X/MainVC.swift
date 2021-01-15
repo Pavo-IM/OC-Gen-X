@@ -86,7 +86,37 @@ class MainVC: NSViewController {
         uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
     
-    var agpmSmbiosList = ["MacPro4,1", "MacPro5,1", "MacPro6,1", "MacPro7,1", "iMac10,1", "iMac11,1", "iMac11,2", "iMac11,3", "iMac12,1", "iMac12,2", "iMac13,1", "iMac13,2", "iMac13,3", "iMac14,1", "iMac14,2", "iMac14,3", "iMac14,4", "iMac15,1", "iMac16,1", "iMac16,2", "iMac17,1", "iMac18,1", "iMac18,2", "iMac18,3", "iMac19,1", "iMac19,2", "iMac20,1", "iMac20,2", "iMacPro1,1",]
+    var agpmSmbiosList = [
+        "MacPro4,1",
+        "MacPro5,1",
+        "MacPro6,1",
+        "MacPro7,1",
+        "iMac10,1",
+        "iMac11,1",
+        "iMac11,2",
+        "iMac11,3",
+        "iMac12,1",
+        "iMac12,2",
+        "iMac13,1",
+        "iMac13,2",
+        "iMac13,3",
+        "iMac14,1",
+        "iMac14,2",
+        "iMac14,3",
+        "iMac14,4",
+        "iMac15,1",
+        "iMac16,1",
+        "iMac16,2",
+        "iMac17,1",
+        "iMac18,1",
+        "iMac18,2",
+        "iMac18,3",
+        "iMac19,1",
+        "iMac19,2",
+        "iMac20,1",
+        "iMac20,2",
+        "iMacPro1,1",
+    ]
     
     var AMDDictionary = [
         "RX 5600XT": "Vendor1002Device731F",
@@ -182,7 +212,6 @@ class MainVC: NSViewController {
         let sortedArray = agpmSmbiosList.sorted()
         let sortedAMDDictionary = AMDDictionary.keys.sorted()
         let sortedNvidiaDictionary = NvidiaDictionary.keys.sorted()
-        
         amdGPUList.removeAllItems()
         amdGPUList.addItems(withTitles: sortedAMDDictionary)
         amdGPUList.selectItem(at: 0)
@@ -476,22 +505,27 @@ class MainVC: NSViewController {
         let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
         let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
         let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
-        var getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
+        let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
 
-        if getrom?.first == "N/A" {
-            getrom?.removeFirst()
-        }
-
-        if getrom?.last == "" {
-            getrom?.removeLast()
-        }
         snInput.placeholderString = sn[0]
         snInput.stringValue = snInput.placeholderString!
         mlbInput.placeholderString = mlb[0]
         mlbInput.stringValue = mlbInput.placeholderString!
         smuuidInput.placeholderString = uuid[0]
         smuuidInput.stringValue = smuuidInput.placeholderString!
-        romInput.stringValue = (getrom?[0])!
+        romInput.placeholderString = getrom?[0]
+        
+        switch romInput.placeholderString {
+        case "":
+            romInput.placeholderString = "00:00:00:00:00:00"
+            romInput.stringValue = romInput.placeholderString!
+        case "N/A":
+            romInput.placeholderString = "00:00:00:00:00:00"
+            romInput.stringValue = romInput.placeholderString!
+        default:
+            romInput.stringValue = romInput.placeholderString!
+        }
+        
         generateButton.isEnabled = (sender.isEnabled == true)
     }
     
@@ -1114,30 +1148,15 @@ class MainVC: NSViewController {
                     let agpmInjector = kAdd(arch: "x86_64", bundlePath: "AGPMInjector.kext", comment: "", enabled: true, executablePath: "", maxKernel: "", minKernel: "", plistPath: "Contents/Info.plist")
                     config.kernel.kAdd.append(agpmInjector)
                 }
-                if (bootargsInputfield != nil) {
-                    config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
-                }
-                if (modelInput != nil) {
-                    config.platFormInfo.generic.systemProductName = modelInput.titleOfSelectedItem!
-                }
                 
-                if (snInput != nil) {
-                    config.platFormInfo.generic.systemSerialNumber = snInput.stringValue
-                }
-                
-                if (mlbInput != nil) {
-                    config.platFormInfo.generic.mlb = mlbInput.stringValue
-                }
-                
-                if (smuuidInput != nil) {
-                    config.platFormInfo.generic.systemUUID = smuuidInput.stringValue
-                }
-                
-                if romInput != nil {
-                    let rom = romInput.stringValue.components(separatedBy: ":")
-                    let unwrappedRomData = Data(rom.map { (UInt8($0, radix: 16)!) })
-                    config.platFormInfo.generic.rom = unwrappedRomData
-                }
+                config.nvram.add.addAppleBootVariableGuid.bootArgs.append(contentsOf: " " + bootargsInputfield.stringValue)
+                config.platFormInfo.generic.systemProductName = modelInput.titleOfSelectedItem!
+                config.platFormInfo.generic.systemSerialNumber = snInput.stringValue
+                config.platFormInfo.generic.mlb = mlbInput.stringValue
+                config.platFormInfo.generic.systemUUID = smuuidInput.stringValue
+                let rom = romInput.stringValue.components(separatedBy: ":")
+                let unwrappedRomData = Data(rom.map { (UInt8($0, radix: 16)!) })
+                config.platFormInfo.generic.rom = unwrappedRomData
                 
                 if liluChecked.state == .on {
                     kextCopy(kextname: "lilu", item: "Lilu", location: ocKextsDir)
