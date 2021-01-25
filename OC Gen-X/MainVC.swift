@@ -261,6 +261,7 @@ class MainVC: NSViewController {
     }
     
     @IBAction func systemTypeChecked(_ sender: NSButton) {
+        generateButton.isEnabled = (sender.isEnabled == true)
     }
     
     @IBAction func brcmPatchRam3Clicked(_ sender: NSButton) {
@@ -538,8 +539,6 @@ class MainVC: NSViewController {
         mlbInput.stringValue = mlbInput.placeholderString!
         smuuidInput.placeholderString = uuid[0]
         smuuidInput.stringValue = smuuidInput.placeholderString!
-        
-        generateButton.isEnabled = (sender.isEnabled == true)
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
