@@ -222,6 +222,32 @@ class MainVC: NSViewController {
         smbiosList.addItems(withTitles: sortedArray)
         smbiosList.selectItem(at: 0)
         modelInput.addItems(withTitles: agpmSmbiosList)
+        let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
+        let readSystem = shell(launchPath: macSerial, arguments: ["-s"])!.components(separatedBy: "\n")
+        let systemModel = readSystem[0].components(separatedBy: " ")
+        let seperateSystemSn = readSystem[5].components(separatedBy: " ")
+        let systemSmUUID = readSystem[14].components(separatedBy: " ")
+        let systemMLB = readSystem[16].components(separatedBy: " ")
+        let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
+        snInput.stringValue = seperateSystemSn.last!
+        smuuidInput.stringValue = systemSmUUID.last!
+        mlbInput.stringValue = systemMLB.last!
+        romInput.placeholderString = getrom?[0]
+        
+        switch romInput.placeholderString {
+        case "":
+            romInput.placeholderString = "00:00:00:00:00:00"
+            romInput.stringValue = romInput.placeholderString!
+        case "N/A":
+            romInput.placeholderString = "00:00:00:00:00:00"
+            romInput.stringValue = romInput.placeholderString!
+        default:
+            romInput.stringValue = romInput.placeholderString!
+        }
+        
+        if agpmSmbiosList.contains(systemModel.last!) {
+            modelInput.title = systemModel.last!
+        }
     }
     
     private func applyDesktopGuideHyperlink() {
@@ -505,7 +531,6 @@ class MainVC: NSViewController {
         let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
         let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
         let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
-        let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
 
         snInput.placeholderString = sn[0]
         snInput.stringValue = snInput.placeholderString!
@@ -513,18 +538,6 @@ class MainVC: NSViewController {
         mlbInput.stringValue = mlbInput.placeholderString!
         smuuidInput.placeholderString = uuid[0]
         smuuidInput.stringValue = smuuidInput.placeholderString!
-        romInput.placeholderString = getrom?[0]
-        
-        switch romInput.placeholderString {
-        case "":
-            romInput.placeholderString = "00:00:00:00:00:00"
-            romInput.stringValue = romInput.placeholderString!
-        case "N/A":
-            romInput.placeholderString = "00:00:00:00:00:00"
-            romInput.stringValue = romInput.placeholderString!
-        default:
-            romInput.stringValue = romInput.placeholderString!
-        }
         
         generateButton.isEnabled = (sender.isEnabled == true)
     }
