@@ -247,6 +247,7 @@ class MainVC: NSViewController {
         
         if agpmSmbiosList.contains(systemModel.last!) {
             modelInput.title = systemModel.last!
+            smbiosList.title = systemModel.last!
         }
     }
     
