@@ -54,6 +54,7 @@
 		CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0F3B9256EA9BF00549048 /* AGPM.swift */; };
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
+		CFE91A2525C5C940007F5434 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CFE91A2425C5C940007F5434 /* generate_appcast */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 		CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */; };
 		CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */; };
@@ -140,6 +141,7 @@
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
+		CFE91A2425C5C940007F5434 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CFF17AA324D8638700978A9A /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 		CF59E726241DA2D500A7C5EC /* OC Gen-X */ = {
 			isa = PBXGroup;
 			children = (
+				CFE91A2425C5C940007F5434 /* generate_appcast */,
 				CF77A0B0256C2CFF0082464D /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
 				CF4C2008243D067000D2F187 /* Kexts */,
@@ -326,7 +329,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1220;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = Pavo;
 				TargetAttributes = {
 					CF59E723241DA2D500A7C5EC = {
@@ -383,6 +386,7 @@
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
 				CFB89F9E25A3C02F008F2274 /* AppleALC.kext in Resources */,
 				CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */,
+				CFE91A2525C5C940007F5434 /* generate_appcast in Resources */,
 				CFB89F9025A3BFEF008F2274 /* WhateverGreen.kext in Resources */,
 				CF77A0B8256C2D100082464D /* macpro.png in Resources */,
 				CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */,
@@ -567,7 +571,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OC\\ Gen-X",
@@ -582,7 +587,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.8.6;
+				MARKETING_VERSION = 2.8.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -600,7 +605,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
+				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/OC\\ Gen-X",
@@ -615,7 +621,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.8.6;
+				MARKETING_VERSION = 2.8.7;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
