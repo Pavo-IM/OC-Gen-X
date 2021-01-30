@@ -32,15 +32,7 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
-	<key>SUEnableAutomaticChecks</key>
-	<true/>
 	<key>SUFeedURL</key>
-	<string>https://github.com/Pavo-IM/OC-Gen-X/releases/latest/download/appcast.xml</string>
-	<key>SUScheduledCheckInterval</key>
-	<integer>3600</integer>
-	<key>SUShowReleaseNotes</key>
-	<false/>
-	<key>SUPublicEDKey</key>
-	<string>LJXTO8igZ2gkGR9RPZpVS4l7KBcHBCXQrre1ighBKN0=</string>
+	<string>https://oc-gen-x.herokuapp.com/OC-Gen-X/appcast.xml</string>
 </dict>
 </plist>
