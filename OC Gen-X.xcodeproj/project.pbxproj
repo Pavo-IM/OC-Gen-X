@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF11FBD325C6043C00149C02 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CF11FBD225C6043C00149C02 /* generate_appcast */; };
 		CF12199725C5E3DC006A07B0 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF12199525C5E3BD006A07B0 /* Sparkle.framework */; };
 		CF12199825C5E3DC006A07B0 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF12199525C5E3BD006A07B0 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF2D7720256196BF00D7507C /* trx40.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2D771F256196BF00D7507C /* trx40.swift */; };
@@ -91,6 +92,7 @@
 
 /* Begin PBXFileReference section */
 		B896CFA1249F24E50061F934 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		CF11FBD225C6043C00149C02 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		CF12199525C5E3BD006A07B0 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CF2D771F256196BF00D7507C /* trx40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trx40.swift; sourceTree = "<group>"; };
 		CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = LucyRTL8125Ethernet.kext; sourceTree = "<group>"; };
@@ -162,6 +164,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF11FBD125C6042500149C02 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				CF11FBD225C6043C00149C02 /* generate_appcast */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		CF12199125C5E368006A07B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +251,7 @@
 		CF59E726241DA2D500A7C5EC /* OC Gen-X */ = {
 			isa = PBXGroup;
 			children = (
+				CF11FBD125C6042500149C02 /* Tools */,
 				CF77A0B0256C2CFF0082464D /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
 				CF4C2008243D067000D2F187 /* Kexts */,
@@ -383,6 +394,7 @@
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
 				CFB89F9E25A3C02F008F2274 /* AppleALC.kext in Resources */,
 				CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */,
+				CF11FBD325C6043C00149C02 /* generate_appcast in Resources */,
 				CFB89F9025A3BFEF008F2274 /* WhateverGreen.kext in Resources */,
 				CF77A0B8256C2D100082464D /* macpro.png in Resources */,
 				CFF17AA724D8638800978A9A /* BrcmPatchRAM3.kext in Resources */,

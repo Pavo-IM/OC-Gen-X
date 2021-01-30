@@ -34,5 +34,7 @@
 	<true/>
 	<key>SUFeedURL</key>
 	<string>https://oc-gen-x.herokuapp.com/OC-Gen-X/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>B3Y9YYu6cR/lnB9DO6MPqEhOxe/7f6bCDFqx+TOfxU8=</string>
 </dict>
 </plist>
