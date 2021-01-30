@@ -1,5 +1,5 @@
 ![logo](https://i.imgur.com/GQ3l8dn.png)
-# Opencore Gen-X [![Build Status](https://app.bitrise.io/app/473fb5331e0f3e0b/status.svg?token=eSaO284QaMqmUOe497QpTQ&branch=master)](https://app.bitrise.io/app/473fb5331e0f3e0b)
+# Opencore Gen-X [![Build Status](https://app.bitrise.io/app/238af7d6d17e430d/status.svg?token=OB_4SKVRPqbgPPQCqLX_DA&branch=master)](https://app.bitrise.io/app/238af7d6d17e430d)
 ## All-In-One Opencore EFI Creation Utility
 
 First Ever Beta is now released to the Public for Testing.  Bugs or Issues please submit bug reports via the github page!  Also tell us what you think and what future features you would like to see in the release, we want to make hackintoshing a breeze!
