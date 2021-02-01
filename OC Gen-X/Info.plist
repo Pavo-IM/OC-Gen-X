@@ -33,7 +33,7 @@
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
 	<key>SUFeedURL</key>
-	<string>https://oc-gen-x.herokuapp.com/OC-Gen-X/appcast.xml</string>
+	<string>https://github.com/Pavo-IM/OC-Gen-X/releases/latest/download/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>B3Y9YYu6cR/lnB9DO6MPqEhOxe/7f6bCDFqx+TOfxU8=</string>
 </dict>
