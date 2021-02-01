@@ -65,6 +65,7 @@
 		CFF17AA824D8638800978A9A /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */; };
 		CFF17AA924D8638800978A9A /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */; };
 		CFF17AAA24D8638800978A9A /* BrcmPatchRAM2.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFF17AA624D8638800978A9A /* BrcmPatchRAM2.kext */; };
+		CFFFBEBB25C7860E00D774AD /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CFFFBEBA25C7860E00D774AD /* generate_appcast */; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -153,6 +154,7 @@
 		CFF17AA424D8638700978A9A /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
 		CFF17AA524D8638700978A9A /* BrcmBluetoothInjector.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmBluetoothInjector.kext; sourceTree = "<group>"; };
 		CFF17AA624D8638800978A9A /* BrcmPatchRAM2.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM2.kext; sourceTree = "<group>"; };
+		CFFFBEBA25C7860E00D774AD /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +310,7 @@
 		CF8B211525C781E800596150 /* Support_Files */ = {
 			isa = PBXGroup;
 			children = (
+				CFFFBEBA25C7860E00D774AD /* generate_appcast */,
 				CF8B211625C781FE00596150 /* Sparkle.framework */,
 				CF8B211725C781FE00596150 /* XPCServices */,
 			);
@@ -386,6 +389,7 @@
 			files = (
 				CFAB750825AC9EB20012A4B3 /* macserial in Resources */,
 				CFB89F9925A3C01E008F2274 /* SMCProcessor.kext in Resources */,
+				CFFFBEBB25C7860E00D774AD /* generate_appcast in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CFB89FA425A3C094008F2274 /* OpenCore.efi in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
