@@ -682,7 +682,7 @@
                     </connections>
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="OC_Gen_X" customModuleProvider="target"/>
-                <customObject id="y9k-Qv-oTu" customClass="SUUpdater"/>
+                <customObject id="y9k-Qv-oTu" customClass="SPUStandardUpdaterController"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -713,7 +713,7 @@
             <objects>
                 <customObject id="ISc-R2-Unv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController id="7uK-TB-ntZ" customClass="MainVC" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="ZeK-sO-E8j">
+                    <view key="view" id="ZeK-sO-E8j">
                         <rect key="frame" x="0.0" y="0.0" width="797" height="576"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -1423,18 +1423,18 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="WiFi and Bluetooth" identifier="" id="Yj4-FR-J1v">
                                                             <view key="view" id="rPW-aE-Bjy">
-                                                                <rect key="frame" x="10" y="33" width="789" height="287"/>
+                                                                <rect key="frame" x="10" y="33" width="789" height="160"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T1u-1S-rZh">
-                                                                        <rect key="frame" x="8" y="251" width="129" height="18"/>
+                                                                        <rect key="frame" x="8" y="123" width="133" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="AirportBrcmFixup" bezelStyle="regularSquare" imagePosition="left" inset="2" id="zEv-oT-t25">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5aF-3i-FQP">
-                                                                        <rect key="frame" x="8" y="227" width="461" height="18"/>
+                                                                        <rect key="frame" x="8" y="97" width="464" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="BrcmPatchRAM3 for 10.14+ (must be paired with BrcmBluetoothInjector)" bezelStyle="regularSquare" imagePosition="left" inset="2" id="WCB-vf-Sn9">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1444,7 +1444,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fiJ-Iz-9U3">
-                                                                        <rect key="frame" x="8" y="203" width="215" height="18"/>
+                                                                        <rect key="frame" x="8" y="71" width="219" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="BrcmPatchRAM2 for 10.11-10.14" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Bfe-UG-B4k">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1454,14 +1454,14 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         </connections>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mTX-gT-fpn">
-                                                                        <rect key="frame" x="8" y="179" width="158" height="18"/>
+                                                                        <rect key="frame" x="8" y="45" width="162" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="BrcmBluetoothInjector" bezelStyle="regularSquare" imagePosition="left" inset="2" id="O1L-D8-db8">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bF9-HP-03l">
-                                                                        <rect key="frame" x="8" y="155" width="138" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="142" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="BrcmFirmwareData" bezelStyle="regularSquare" imagePosition="left" inset="2" id="arU-pS-rWH">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
@@ -1522,11 +1522,11 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                     </tabViewItem>
                                     <tabViewItem label="Firmware Drivers" identifier="" id="ZPE-fT-6Cu">
                                         <view key="view" id="UVk-Ia-OKZ">
-                                            <rect key="frame" x="10" y="33" width="791" height="383"/>
+                                            <rect key="frame" x="10" y="33" width="791" height="138"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tabView translatesAutoresizingMaskIntoConstraints="NO" id="gac-5f-5uI">
-                                                    <rect key="frame" x="-7" y="281" width="805" height="108"/>
+                                                    <rect key="frame" x="-7" y="-10" width="805" height="154"/>
                                                     <font key="font" metaFont="system"/>
                                                     <tabViewItems>
                                                         <tabViewItem label="UEFI" identifier="" id="igs-eO-j1W">
@@ -1562,25 +1562,25 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                         </tabViewItem>
                                                         <tabViewItem label="Legacy (BIOS)" identifier="" id="iEV-2n-Bnf">
                                                             <view key="view" id="wr8-j1-shI">
-                                                                <rect key="frame" x="10" y="33" width="785" height="102"/>
+                                                                <rect key="frame" x="10" y="33" width="785" height="108"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Be6-Nu-Zck">
-                                                                        <rect key="frame" x="8" y="66" width="137" height="18"/>
+                                                                        <rect key="frame" x="8" y="71" width="141" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="OpenUsbKbDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Fnr-dc-RFu">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UuB-sS-39W">
-                                                                        <rect key="frame" x="8" y="42" width="140" height="18"/>
+                                                                        <rect key="frame" x="8" y="45" width="144" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="NvmExpressDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Is1-0J-fVS">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="phe-xo-PUR">
-                                                                        <rect key="frame" x="8" y="18" width="91" height="18"/>
+                                                                        <rect key="frame" x="8" y="19" width="95" height="18"/>
                                                                         <buttonCell key="cell" type="check" title="XhciDxe.efi" bezelStyle="regularSquare" imagePosition="left" inset="2" id="TJs-qc-bOt">
                                                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                             <font key="font" metaFont="system"/>
