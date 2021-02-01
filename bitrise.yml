@@ -22,7 +22,7 @@ workflows:
 
             # ---- Get Current Bundle Version:
             build_version="$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" $BITRISE_SOURCE_DIR/OC\ Gen-X/Info.plist)"
-            short_bundle_version=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' $BITRISE_SOURCE_DIR/OC\ Gen-X.xcodeproj/project.pbxproj`
+            short_bundle_version=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' OC\ Gen-X.xcodeproj/project.pbxproj`
             CONFIG_build_version=${build_version}
             CONFIG_short_bundle_version=${short_bundle_version}
 
@@ -36,7 +36,7 @@ workflows:
         inputs:
         - build_short_version_string: ''
         - build_version: "$CURRENT_SHORT_BUNDLE_VERSION"
-        - plist_path: "$BITRISE_SOURCE_DIR/OC Gen-X/Info.plist"
+        - plist_path: "$BITRISE_SOURCE_DIR/OC\ Gen-X/Info.plist"
     - xcode-archive-mac:
         inputs:
         - project_path: "$BITRISE_PROJECT_PATH"
