@@ -62,7 +62,6 @@
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 		CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */; };
-		CFFFBEBB25C7860E00D774AD /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CFFFBEBA25C7860E00D774AD /* generate_appcast */; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -148,7 +147,6 @@
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
-		CFFFBEBA25C7860E00D774AD /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,7 +291,6 @@
 		CF8B211525C781E800596150 /* Support_Files */ = {
 			isa = PBXGroup;
 			children = (
-				CFFFBEBA25C7860E00D774AD /* generate_appcast */,
 				CF8B211625C781FE00596150 /* Sparkle.framework */,
 				CF8B211725C781FE00596150 /* XPCServices */,
 			);
@@ -373,7 +370,6 @@
 				CFAB750825AC9EB20012A4B3 /* macserial in Resources */,
 				CF0E480E25C9C7C0002BEE7B /* BrcmFirmwareData.kext in Resources */,
 				CF0E481925C9D105002BEE7B /* OpenUsbKbDxe.efi in Resources */,
-				CFFFBEBB25C7860E00D774AD /* generate_appcast in Resources */,
 				CF0E480625C9C5AF002BEE7B /* SMCSuperIO.kext in Resources */,
 				CF0E481B25C9D105002BEE7B /* OpenRuntime.efi in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
