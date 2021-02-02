@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18E226</string>
+	<string>20C69</string>
 	<key>CFBundleIdentifier</key>
 	<string>as.acidanthera.injector.BrcmBluetoothInjector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -13,7 +13,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.5.4</string>
+	<string>2.5.6</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -21,21 +21,23 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.5.4</string>
+	<string>2.5.6</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>10E1001</string>
+	<string>12C33</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>GM</string>
+	<string>11.1</string>
 	<key>DTSDKBuild</key>
-	<string>18E219</string>
+	<string>20C63</string>
 	<key>DTSDKName</key>
-	<string>macosx10.14</string>
+	<string>macosx11.1</string>
 	<key>DTXcode</key>
-	<string>1020</string>
+	<string>1230</string>
 	<key>DTXcodeBuild</key>
-	<string>10E1001</string>
+	<string>12C33</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>03f0_231d no firmware</key>
@@ -53,7 +55,7 @@
 			<key>idVendor</key>
 			<integer>1008</integer>
 		</dict>
-		<key>0489_e030</key>
+		<key>0489_e030 no firmware</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
 			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
@@ -247,6 +249,21 @@
 			<integer>57505</integer>
 			<key>idVendor</key>
 			<integer>1161</integer>
+		</dict>
+		<key>04b4_f901</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.iokit.BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOClass</key>
+			<string>BroadcomBluetoothHostControllerUSBTransport</string>
+			<key>IOProbeScore</key>
+			<integer>3000</integer>
+			<key>IOProviderClass</key>
+			<string>IOUSBHostDevice</string>
+			<key>idProduct</key>
+			<integer>63745</integer>
+			<key>idVendor</key>
+			<integer>1204</integer>
 		</dict>
 		<key>04ca_2003</key>
 		<dict>
@@ -1449,6 +1466,8 @@
 			<integer>16700</integer>
 		</dict>
 	</dict>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.8</string>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
 </dict>
