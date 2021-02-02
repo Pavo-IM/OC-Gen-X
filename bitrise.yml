@@ -32,16 +32,13 @@ workflows:
 
             # ---- Generate Sparkle EdDSA key:
              APPCAST_KEY=$($BITRISE_SOURCE_DIR/Support_Files/generate_keys -p)
-            echo $APPCAST_KEY
 
             # ---- Set the SUPublicEDKey to the generated EdDSA key:
             /usr/libexec/PlistBuddy -c "Set SUPublicEDKey $APPCAST_KEY" $BITRISE_SOURCE_DIR/OC_Gen-X/Info.plist
 
             # ---- Get Current Bundle Version:
             build_version="$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" $BITRISE_SOURCE_DIR/OC_Gen-X/Info.plist)"
-            echo $build_version
             short_bundle_version=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' OC_Gen-X.xcodeproj/project.pbxproj`
-            echo $short_bundle_version
             CONFIG_build_version=${build_version}
             CONFIG_short_bundle_version=${short_bundle_version}
 
@@ -67,11 +64,13 @@ workflows:
         - content: |
             #!/bin/bash
 
-            # ---- Remove DsYM file:
-            rm -rf $BITRISE_DSYM_PATH
+            # ---- Remove Sparkle_generate_appcast cache:
+            rm -rf /Users/henrybrock/Library/Caches/Sparkle_generate_appcast
+            #rm -rf $BITRISE_DEPLOY_DIR/OC_Gen-X.dSYM.zip
+            #rm -rf $BITRISE_DEPLOY_DIR/export_options.plist
 
             # ---- Generate Sparkle appacast.xml:
-            /Volumes/Storage/Sparkle-2.0.0/bin/generate_appcast $BITRISE_DEPLOY_DIR
+            #$BITRISE_SOURCE_DIR/Support_Files/generate_appcast $BITRISE_DEPLOY_DIR
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
@@ -86,8 +85,8 @@ workflows:
         - name: $CURRENT_SHORT_BUNDLE_VERSION
         - body: $BITRISE_CHANGELOG
         - files_to_upload: |-
-            $BITRISE_EXPORTED_FILE_PATH
-            $BITRISE_DEPLOY_DIR/appcast.xml
+            $NEWBITRISE_EXPORTED_FILE_PATH
+            $APPCASTFILEPATH
         - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
         - commit: master
         - draft: "no"
