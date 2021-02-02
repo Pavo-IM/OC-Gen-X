@@ -31,7 +31,7 @@ workflows:
             #!/bin/bash
 
             # ---- Generate Sparkle EdDSA key:
-            APPCAST_KEY=$($BITRISE_SOURCE_DIR/Support_Files/generate_keys -p)
+            APPCAST_KEY=$(/Volumes/Storage/Sparkle-2.0.0/bin/generate_keys -p)
 
             # ---- Set the SUPublicEDKey to the generated EdDSA key:
             /usr/libexec/PlistBuddy -c "Set SUPublicEDKey $APPCAST_KEY" $BITRISE_SOURCE_DIR/OCBuilder/Info.plist
@@ -68,7 +68,7 @@ workflows:
             rm -rf $BITRISE_DSYM_PATH
 
             # ---- Generate Sparkle appacast.xml:
-            Support_Files/generate_appcast $BITRISE_DEPLOY_DIR
+            /Volumes/Storage/Sparkle-2.0.0/bin/generate_appcast $BITRISE_DEPLOY_DIR
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
