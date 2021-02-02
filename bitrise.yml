@@ -30,6 +30,12 @@ workflows:
         - content: |-
             #!/bin/bash
 
+            # ---- Generate Sparkle EdDSA key:
+            APPCAST_KEY=$($BITRISE_SOURCE_DIR/Support_Files/generate_keys -p)
+
+            # ---- Set the SUPublicEDKey to the generated EdDSA key:
+            /usr/libexec/PlistBuddy -c "Set SUPublicEDKey $APPCAST_KEY" $BITRISE_SOURCE_DIR/OCBuilder/Info.plist
+
             # ---- Get Current Bundle Version:
             build_version="$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" $BITRISE_SOURCE_DIR/OC\ Gen-X/Info.plist)"
             short_bundle_version=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' OC\ Gen-X.xcodeproj/project.pbxproj`
