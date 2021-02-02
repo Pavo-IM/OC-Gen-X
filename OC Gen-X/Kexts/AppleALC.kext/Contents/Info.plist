@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19H15</string>
+	<string>19H114</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5.6</string>
+	<string>1.5.7</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -25,7 +25,7 @@
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.5.6</string>
+	<string>1.5.7</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -869,7 +869,7 @@
 					<integer>88</integer>
 					<key>WakeConfigData</key>
 					<data>
-					AXcMAgGnByQCFwwC
+					AXcMAg==
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -979,6 +979,32 @@
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Custom ALC225/ALC3253 for Dell Inspiron 15-5379 by fast900</string>
+					<key>CodecID</key>
+					<integer>283902501</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccUAEnHQABJx6gAScfkAFHHEABRx0AAUce
+					FwFHH5ABlxxwAZcdEAGXHoEBlx8AAhccIAIX
+					HRACFx4hAhcfAAFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>90</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgIXDAI=
 					</data>
 					<key>WakeVerbReinit</key>
 					<true/>
@@ -4792,6 +4818,26 @@
 					AwAAAA==
 					</data>
 					<key>Codec</key>
+					<string>Andres ZeroCross - Realtek ALC274 for Dell Inspiron 27-7777 AIO Series</string>
+					<key>CodecID</key>
+					<integer>283902580</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6gAScfkAF3HCABdx0BAXce
+					FwF3H5ABdwwCAaccMAGnHRABpx6BAacfAgIX
+					HEACFx0QAhceIQIXHwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>28</integer>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
 					<string>Mirone - Realtek ALC275</string>
 					<key>CodecID</key>
 					<integer>283902581</integer>
@@ -6014,6 +6060,32 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>23</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAICFwwC
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Realtek ALC289 for Dell XPS 13 9300 by DalianSky</string>
+					<key>CodecID</key>
+					<integer>283902601</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccEAEnHQEBJx6mAScfmQF3HDABdx0BAXce
+					FwF3H5kBlxwAAZcdEAGXHosBlx4CAhccIAIX
+					HRACFx4rAhcfAQIXDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>99</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAgG3DAICFwwC
@@ -9515,6 +9587,33 @@
 					<data>
 					AwAAAA==
 					</data>
+					<key>Codec</key>
+					<string>Asus_PRIME_B460M-K_ALC897</string>
+					<key>CodecID</key>
+					<integer>283904151</integer>
+					<key>ConfigData</key>
+					<data>
+					AUccEAFHHUABRx4RAUcfAQGHHFABhx2QAYce
+					oAGHH5ABlxxgAZcdkAGXHoEBlx8CAacccAGn
+					HTABpx6BAacfAQG3HIABtx1AAbceIQG3HwEB
+					twwCARcckAEXHeABFx5FARcfAQFHDAI=
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>66</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAgG3DAI=
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
 					<key>CodecID</key>
 					<integer>283904153</integer>
 					<key>Comment</key>
@@ -12752,6 +12851,58 @@
 					<integer>1</integer>
 					<key>LayoutID</key>
 					<integer>66</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Asus x430_s4300FN by fangf2018</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccMAEnHQEBJx6mAScfkAFHHBABRx0BAUce
+					FwFHH5ABRwwCAZccQAGXHRABlx6BAZcfAgIX
+					HCACFx0QAhceIQIXHwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>77</integer>
+					<key>WakeConfigData</key>
+					<data>
+					AUcMAg==
+					</data>
+					<key>WakeVerbReinit</key>
+					<true/>
+				</dict>
+				<dict>
+					<key>AFGLowPowerState</key>
+					<data>
+					AwAAAA==
+					</data>
+					<key>Codec</key>
+					<string>Asus x430_s4300FN by fangf2018 (mic in and line in  mic in separated)</string>
+					<key>CodecID</key>
+					<integer>283902550</integer>
+					<key>ConfigData</key>
+					<data>
+					ASccQAEnHQEBJx6mAScfkAFHHDABRx0BAUce
+					FwFHH5ABRwwCAZccIAGXHRABlx6BAZcfAgIX
+					HBACFx0QAhceIQIXHwICFwwC
+					</data>
+					<key>FuncGroup</key>
+					<integer>1</integer>
+					<key>LayoutID</key>
+					<integer>88</integer>
 					<key>WakeConfigData</key>
 					<data>
 					AUcMAg==
