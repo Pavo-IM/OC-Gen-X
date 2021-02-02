@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>20D5029f</string>
+	<string>19H114</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -29,19 +29,19 @@
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>12C33</string>
+	<string>12B45b</string>
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>11.1</string>
+	<string>11.0</string>
 	<key>DTSDKBuild</key>
-	<string>20C63</string>
+	<string>20A2408</string>
 	<key>DTSDKName</key>
-	<string>macosx11.1</string>
+	<string>macosx11.0</string>
 	<key>DTXcode</key>
-	<string>1230</string>
+	<string>1220</string>
 	<key>DTXcodeBuild</key>
-	<string>12C33</string>
+	<string>12B45b</string>
 	<key>IOKitPersonalities</key>
 	<dict>
 		<key>as.vit9696.Lilu</key>
