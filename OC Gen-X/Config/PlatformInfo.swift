@@ -9,6 +9,7 @@ struct platFormInfo: Codable {
     var updateNVRAM: Bool = true
     var updateSMBIOS: Bool = true
     var updateSMBIOSMode: String = "Create"
+    var useRawUuidEncoding: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case automatic = "Automatic"
@@ -19,11 +20,13 @@ struct platFormInfo: Codable {
         case updateNVRAM = "UpdateNVRAM"
         case updateSMBIOS = "UpdateSMBIOS"
         case updateSMBIOSMode = "UpdateSMBIOSMode"
+        case useRawUuidEncoding = "UseRawUuidEncoding"
     }
 }
 
 struct generic: Codable {
     var adviseWindows: Bool = false
+    var maxBIOSVersion: Bool = false
     var mlb: String = ""
     var rom: Data = Data()
     var processorType: Int = 0
@@ -35,6 +38,7 @@ struct generic: Codable {
     
     enum CodingKeys: String, CodingKey {
         case adviseWindows = "AdviseWindows"
+        case maxBIOSVersion = "MaxBIOSVersion"
         case mlb = "MLB"
         case rom = "ROM"
         case processorType = "ProcessorType"

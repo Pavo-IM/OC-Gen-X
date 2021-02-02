@@ -26,6 +26,8 @@ struct boot: Codable {
     var consoleAttributes: Int = 0
     var hibernateMode: String = "None"
     var hideAuxiliary: Bool = false
+    var launcherOption: String = "Disabled"
+    var launcherPath: String = "Default"
     var pickerAttributes: Int = 1
     var pickerAudioAssist: Bool = false
     var pickerMode: String = "Builtin"
@@ -39,6 +41,8 @@ struct boot: Codable {
         case consoleAttributes = "ConsoleAttributes"
         case hibernateMode = "HibernateMode"
         case hideAuxiliary = "HideAuxiliary"
+        case launcherOption = "LauncherOption"
+        case launcherPath = "LauncherPath"
         case pickerAttributes = "PickerAttributes"
         case pickerAudioAssist = "PickerAudioAssist"
         case pickerMode = "PickerMode"
@@ -96,7 +100,6 @@ struct security: Codable {
     var apECID: Int = 0
     var authRestart: Bool = false
     var blacklistAppleUpdate: Bool = true
-    var bootProtect: String = "Bootstrap"
     var dmgLoading: String = "Signed"
     var enablePassword: Bool = false
     var exposeSensitiveData: Int = 6
@@ -113,7 +116,6 @@ struct security: Codable {
         case apECID = "ApECID"
         case authRestart = "AuthRestart"
         case blacklistAppleUpdate = "BlacklistAppleUpdate"
-        case bootProtect = "BootProtect"
         case dmgLoading = "DmgLoading"
         case enablePassword = "EnablePassword"
         case exposeSensitiveData = "ExposeSensitiveData"

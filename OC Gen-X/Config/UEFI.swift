@@ -161,6 +161,7 @@ struct protocols: Codable {
 }
 
 struct uQuirks: Codable {
+    var disableSecurityPolicy: Bool = false
     var exitBootServicesDelay: Int = 0
     var ignoreInvalidFlexRatio: Bool = false
     var releaseUsbOwnership: Bool = false
@@ -169,6 +170,7 @@ struct uQuirks: Codable {
     var unblockFsConnect: Bool = false
     
     enum CodingKeys: String, CodingKey {
+        case disableSecurityPolicy = "DisableSecurityPolicy"
         case exitBootServicesDelay = "ExitBootServicesDelay"
         case ignoreInvalidFlexRatio = "IgnoreInvalidFlexRatio"
         case releaseUsbOwnership = "ReleaseUsbOwnership"

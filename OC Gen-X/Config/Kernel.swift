@@ -151,6 +151,7 @@ struct kQuirks: Codable {
     var legacyCommpage: Bool = false
     var panicNoKextDump: Bool = true
     var powerTimeoutKernelPanic: Bool = true
+    var setApfsTrimTimeout: Int = -1
     var thirdPartyDrives: Bool = false
     var xhciPortLimit: Bool = false
     
@@ -172,6 +173,7 @@ struct kQuirks: Codable {
         case panicNoKextDump = "PanicNoKextDump"
         case powerTimeoutKernelPanic = "PowerTimeoutKernelPanic"
         case thirdPartyDrives = "ThirdPartyDrives"
+        case setApfsTrimTimeout = "SetApfsTrimTimeout"
         case xhciPortLimit = "XhciPortLimit"
     }
 }

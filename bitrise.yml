@@ -1,11 +1,21 @@
----
-format_version: '7'
+format_version: "7"
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: macos
+app:
+  envs:
+  - BITRISE_PROJECT_PATH: OC Gen-X.xcodeproj
+    opts:
+      is_expand: false
+  - BITRISE_SCHEME: OC Gen-X
+    opts:
+      is_expand: false
+  - BITRISE_EXPORT_METHOD: development
+    opts:
+      is_expand: false
 trigger_map:
 - push_branch: master
   workflow: primary
-- pull_request_source_branch: "*"
+- pull_request_source_branch: '*'
   workflow: primary
 workflows:
   primary:
@@ -31,30 +41,32 @@ workflows:
             envman add --key "CURRENT_SHORT_BUNDLE_VERSION" --value "${CONFIG_short_bundle_version}"
         outputs:
         - CURRENT_BUILD_VERSION: CURRENT_BUILD_VERSION
+          opts: {}
         - CURRENT_SHORT_BUNDLE_VERSION: CURRENT_SHORT_BUNDLE_VERSION
+          opts: {}
     - set-xcode-build-number:
         inputs:
-        - build_short_version_string: ''
-        - build_version: "$CURRENT_SHORT_BUNDLE_VERSION"
-        - plist_path: "$BITRISE_SOURCE_DIR/OC\ Gen-X/Info.plist"
+        - build_short_version_string: ""
+        - build_version: $CURRENT_SHORT_BUNDLE_VERSION
+        - plist_path: $BITRISE_SOURCE_DIR/OC Gen-X/Info.plist
     - xcode-archive-mac:
         inputs:
-        - project_path: "$BITRISE_PROJECT_PATH"
-        - scheme: "$BITRISE_SCHEME"
+        - project_path: $BITRISE_PROJECT_PATH
+        - scheme: $BITRISE_SCHEME
     - script:
         inputs:
-        - content: |+
+        - content: |
             #!/bin/bash
 
             # ---- Remove DsYM file:
             rm -rf $BITRISE_DSYM_PATH
 
             # ---- Generate Sparkle appacast.xml:
-            $BITRISE_SOURCE_DIR/Support_Files/generate_appcast $BITRISE_DEPLOY_DIR
+            Support_Files/generate_appcast $BITRISE_DEPLOY_DIR
     - deploy-to-bitrise-io: {}
     - cache-push:
         inputs:
-        - compress_archive: 'true'
+        - compress_archive: "true"
     - generate-changelog:
         inputs:
         - new_version: 'new_version: $BITRISE_GIT_TAG'
@@ -69,18 +81,8 @@ workflows:
             $BITRISE_DEPLOY_DIR/appcast.xml
         - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
         - commit: master
+        - draft: "no"
         - api_token: $GIT_ACCESS_TOKEN
     meta:
       bitrise.io:
         stack: osx-xcode-12.3.x
-app:
-  envs:
-  - opts:
-      is_expand: false
-    BITRISE_PROJECT_PATH: OC Gen-X.xcodeproj
-  - opts:
-      is_expand: false
-    BITRISE_SCHEME: OC Gen-X
-  - opts:
-      is_expand: false
-    BITRISE_EXPORT_METHOD: development
