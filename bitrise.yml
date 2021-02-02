@@ -3,10 +3,10 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: macos
 app:
   envs:
-  - BITRISE_PROJECT_PATH: OC Gen-X.xcodeproj
+  - BITRISE_PROJECT_PATH: OC_Gen-X.xcodeproj
     opts:
       is_expand: false
-  - BITRISE_SCHEME: OC Gen-X
+  - BITRISE_SCHEME: OC_Gen-X
     opts:
       is_expand: false
   - BITRISE_EXPORT_METHOD: development
@@ -31,14 +31,17 @@ workflows:
             #!/bin/bash
 
             # ---- Generate Sparkle EdDSA key:
-            APPCAST_KEY=$(/Volumes/Storage/Sparkle-2.0.0/bin/generate_keys -p)
+             APPCAST_KEY=$($BITRISE_SOURCE_DIR/Support_Files/generate_keys -p)
+            echo $APPCAST_KEY
 
             # ---- Set the SUPublicEDKey to the generated EdDSA key:
-            /usr/libexec/PlistBuddy -c "Set SUPublicEDKey $APPCAST_KEY" $BITRISE_SOURCE_DIR/OCBuilder/Info.plist
+            /usr/libexec/PlistBuddy -c "Set SUPublicEDKey $APPCAST_KEY" $BITRISE_SOURCE_DIR/OC_Gen-X/Info.plist
 
             # ---- Get Current Bundle Version:
-            build_version="$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" $BITRISE_SOURCE_DIR/OC\ Gen-X/Info.plist)"
-            short_bundle_version=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' OC\ Gen-X.xcodeproj/project.pbxproj`
+            build_version="$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" $BITRISE_SOURCE_DIR/OC_Gen-X/Info.plist)"
+            echo $build_version
+            short_bundle_version=`sed -n '/MARKETING_VERSION/{s/MARKETING_VERSION = //;s/;//;s/^[[:space:]]*//;p;q;}' OC_Gen-X.xcodeproj/project.pbxproj`
+            echo $short_bundle_version
             CONFIG_build_version=${build_version}
             CONFIG_short_bundle_version=${short_bundle_version}
 
@@ -54,7 +57,7 @@ workflows:
         inputs:
         - build_short_version_string: ""
         - build_version: $CURRENT_SHORT_BUNDLE_VERSION
-        - plist_path: $BITRISE_SOURCE_DIR/OC Gen-X/Info.plist
+        - plist_path: $BITRISE_SOURCE_DIR/OC_Gen-X/Info.plist
     - xcode-archive-mac:
         inputs:
         - project_path: $BITRISE_PROJECT_PATH

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="OC Gen-X" id="1Xt-HY-uBw">
+                            <menuItem title="OC_Gen-X" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="OC Gen-X" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="OC_Gen-X" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About OC Gen-X" id="5kV-Vb-QxS">
+                                        <menuItem title="About OC_Gen-X" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -36,7 +35,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide OC Gen-X" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide OC_Gen-X" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -54,7 +53,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit OC Gen-X" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit OC_Gen-X" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -667,7 +666,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="OC Gen-X Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="OC_Gen-X Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -692,7 +691,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="OC Gen-X" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="OC_Gen-X" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="702" y="426" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
@@ -744,7 +743,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="165" width="811" height="417"/>
+                                <rect key="frame" x="-7" y="165" width="811" height="423"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -996,11 +995,11 @@
                                                     <tabViewItems>
                                                         <tabViewItem label="Essential" identifier="" id="XhX-Gy-OsH">
                                                             <view key="view" id="YQt-GO-VSt">
-                                                                <rect key="frame" x="10" y="33" width="789" height="349"/>
+                                                                <rect key="frame" x="10" y="33" width="789" height="344"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JsS-MV-XBV">
-                                                                        <rect key="frame" x="8" y="312" width="48" height="18"/>
+                                                                        <rect key="frame" x="8" y="307" width="48" height="18"/>
                                                                         <string key="toolTip">An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.  Boot Args: Add -liludbg to enable debug printing (available in DEBUG binaries).
 Add -liludbgall to enable debug printing in Lilu and all loaded plugins (available in DEBUG binaries).
 Add -liluoff to disable Lilu.
@@ -1019,7 +1018,7 @@ Add liludump=N to let Lilu DEBUG version dump log to /var/log/Lilu_VERSION_KERN_
                                                                         </buttonCell>
                                                                     </button>
                                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lbr-dO-TxB">
-                                                                        <rect key="frame" x="8" y="286" width="95" height="18"/>
+                                                                        <rect key="frame" x="8" y="281" width="95" height="18"/>
                                                                         <string key="toolTip">Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.  Boot arguments
 Add -vsmcdbg to enable debug printing (available in DEBUG binaries).
 Add -vsmcoff to switch off all the Lilu enhancements.
@@ -1141,7 +1140,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <rect key="frame" x="191" y="116" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="g9P-ij-Ojp" id="jrx-Mu-18x">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                            <font key="font" metaFont="menu"/>
+                                                                            <font key="font" metaFont="system"/>
                                                                             <menu key="menu" id="3dA-3N-5VA">
                                                                                 <items>
                                                                                     <menuItem title="Item 1" state="on" id="g9P-ij-Ojp"/>
@@ -1189,7 +1188,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <rect key="frame" x="695" y="101" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Jao-8p-7vd" id="Jt7-G1-It3">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                            <font key="font" metaFont="menu"/>
+                                                                            <font key="font" metaFont="system"/>
                                                                             <menu key="menu" id="vC1-Fb-ydV">
                                                                                 <items>
                                                                                     <menuItem title="Item 1" state="on" id="Jao-8p-7vd"/>
@@ -1232,7 +1231,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <rect key="frame" x="695" y="31" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="XEH-Us-vY8" id="JLE-GH-QGr">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                            <font key="font" metaFont="menu"/>
+                                                                            <font key="font" metaFont="system"/>
                                                                             <menu key="menu" id="aHJ-Dm-5JF">
                                                                                 <items>
                                                                                     <menuItem title="Item 1" state="on" id="XEH-Us-vY8"/>
@@ -1691,7 +1690,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     <rect key="frame" x="107" y="280" width="39" height="24"/>
                                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="u10-Ol-eMW">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="menu"/>
+                                                        <font key="font" metaFont="system"/>
                                                         <menu key="menu" id="Pxd-k9-0Lu"/>
                                                     </popUpButtonCell>
                                                 </popUpButton>
@@ -1912,7 +1911,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
     </scenes>
     <resources>
         <image name="amd-radeon" width="50" height="50"/>
-        <image name="arrow.clockwise.circle" catalog="system" width="15" height="15"/>
+        <image name="arrow.clockwise.circle" catalog="system" width="32" height="32"/>
         <image name="macpro" width="100" height="100"/>
         <image name="nvidia-icon" width="50" height="50"/>
     </resources>

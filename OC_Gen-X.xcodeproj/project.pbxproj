@@ -55,6 +55,8 @@
 		CF8B211925C781FE00596150 /* XPCServices in Resources */ = {isa = PBXBuildFile; fileRef = CF8B211725C781FE00596150 /* XPCServices */; };
 		CF8B211A25C7821300596150 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; };
 		CF8B211B25C7821300596150 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CF92213125C9E58A00CBD096 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = CF92212F25C9E58A00CBD096 /* generate_keys */; };
+		CF92213225C9E58A00CBD096 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CF92213025C9E58A00CBD096 /* generate_appcast */; };
 		CFAB750825AC9EB20012A4B3 /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CFAB750625AC9A970012A4B3 /* macserial */; };
 		CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE7045250E796300D2D332 /* 17H_Patches.swift */; };
 		CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0F3B9256EA9BF00549048 /* AGPM.swift */; };
@@ -117,10 +119,10 @@
 		CF4C2013243D06D300D2F187 /* USBInjectAll.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = USBInjectAll.kext; sourceTree = "<group>"; };
 		CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = RealtekRTL8111.kext; sourceTree = "<group>"; };
 		CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AtherosE2200Ethernet.kext; sourceTree = "<group>"; };
-		CF59E724241DA2D500A7C5EC /* OC Gen-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC Gen-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF59E724241DA2D500A7C5EC /* OC_Gen-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC_Gen-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59E727241DA2D500A7C5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF59E72E241DA2D600A7C5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF59E730241DA2D600A7C5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF59E730241DA2D600A7C5EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../../Volumes/Storage/Github/OC_Gen-X/OC_Gen-X/Info.plist"; sourceTree = DEVELOPER_DIR; };
 		CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OC_Gen_X.entitlements; sourceTree = "<group>"; };
 		CF59E739241DA57A00A7C5EC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,8 @@
 		CF77A0B5256C2D100082464D /* imac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imac.png; sourceTree = "<group>"; };
 		CF8B211625C781FE00596150 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CF8B211725C781FE00596150 /* XPCServices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XPCServices; sourceTree = "<group>"; };
+		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
+		CF92213025C9E58A00CBD096 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		CFAB750625AC9A970012A4B3 /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		CFBE7045250E796300D2D332 /* 17H_Patches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
@@ -223,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				CF8B211525C781E800596150 /* Support_Files */,
-				CF59E726241DA2D500A7C5EC /* OC Gen-X */,
+				CF59E726241DA2D500A7C5EC /* OC_Gen-X */,
 				CF59E725241DA2D500A7C5EC /* Products */,
 				CF12199125C5E368006A07B0 /* Frameworks */,
 			);
@@ -232,12 +236,12 @@
 		CF59E725241DA2D500A7C5EC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF59E724241DA2D500A7C5EC /* OC Gen-X.app */,
+				CF59E724241DA2D500A7C5EC /* OC_Gen-X.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF59E726241DA2D500A7C5EC /* OC Gen-X */ = {
+		CF59E726241DA2D500A7C5EC /* OC_Gen-X */ = {
 			isa = PBXGroup;
 			children = (
 				CF77A0B0256C2CFF0082464D /* Images */,
@@ -254,7 +258,7 @@
 				CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */,
 				CFE8A22F249E662400D72669 /* AppIcon.xcassets */,
 			);
-			path = "OC Gen-X";
+			path = "OC_Gen-X";
 			sourceTree = "<group>";
 		};
 		CF6F1116241E96C200B70805 /* Config */ = {
@@ -291,6 +295,8 @@
 		CF8B211525C781E800596150 /* Support_Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF92213025C9E58A00CBD096 /* generate_appcast */,
+				CF92212F25C9E58A00CBD096 /* generate_keys */,
 				CF8B211625C781FE00596150 /* Sparkle.framework */,
 				CF8B211725C781FE00596150 /* XPCServices */,
 			);
@@ -308,9 +314,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF59E723241DA2D500A7C5EC /* OC Gen-X */ = {
+		CF59E723241DA2D500A7C5EC /* OC_Gen-X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF59E734241DA2D600A7C5EC /* Build configuration list for PBXNativeTarget "OC Gen-X" */;
+			buildConfigurationList = CF59E734241DA2D600A7C5EC /* Build configuration list for PBXNativeTarget "OC_Gen-X" */;
 			buildPhases = (
 				CF59E720241DA2D500A7C5EC /* Sources */,
 				CF591D2825ACA38500AEEE1F /* CopyFiles */,
@@ -322,9 +328,9 @@
 			);
 			dependencies = (
 			);
-			name = "OC Gen-X";
+			name = "OC_Gen-X";
 			productName = "OC Gen-X";
-			productReference = CF59E724241DA2D500A7C5EC /* OC Gen-X.app */;
+			productReference = CF59E724241DA2D500A7C5EC /* OC_Gen-X.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -343,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CF59E71F241DA2D500A7C5EC /* Build configuration list for PBXProject "OC Gen-X" */;
+			buildConfigurationList = CF59E71F241DA2D500A7C5EC /* Build configuration list for PBXProject "OC_Gen-X" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -357,7 +363,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF59E723241DA2D500A7C5EC /* OC Gen-X */,
+				CF59E723241DA2D500A7C5EC /* OC_Gen-X */,
 			);
 		};
 /* End PBXProject section */
@@ -383,6 +389,7 @@
 				CF0E481025C9C8CF002BEE7B /* AppleALC.kext in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */,
+				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
 				CF0E480B25C9C7C0002BEE7B /* BrcmPatchRAM3.kext in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
@@ -394,6 +401,7 @@
 				CF0E480125C9C5AF002BEE7B /* SMCDellSensors.kext in Resources */,
 				CF0E480225C9C5AF002BEE7B /* SMCLightSensor.kext in Resources */,
 				CF0E480425C9C5AF002BEE7B /* VirtualSMC.kext in Resources */,
+				CF92213125C9E58A00CBD096 /* generate_keys in Resources */,
 				CF0E481A25C9D105002BEE7B /* NvmExpressDxe.efi in Resources */,
 				CF0E481425C9D0D5002BEE7B /* BOOTx64.efi in Resources */,
 				CF0E481C25C9D105002BEE7B /* XhciDxe.efi in Resources */,
@@ -569,7 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "OC Gen-X/OC_Gen_X.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "OC_Gen-X/OC_Gen_X.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -579,15 +587,15 @@
 				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Support_Files",
 				);
-				INFOPLIST_FILE = "OC Gen-X/Info.plist";
+				INFOPLIST_FILE = "OC_Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path/../Frameworks",
 					"@executable_path/../Frameworks",
@@ -606,7 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "OC Gen-X/OC_Gen_X.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "OC_Gen-X/OC_Gen_X.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -616,15 +624,15 @@
 				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
-					"$(PROJECT_DIR)/OC\\ Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
+					"$(PROJECT_DIR)/OC_Gen-X",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Support_Files",
 				);
-				INFOPLIST_FILE = "OC Gen-X/Info.plist";
+				INFOPLIST_FILE = "OC_Gen-X/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path/../Frameworks",
 					"@executable_path/../Frameworks",
@@ -642,7 +650,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF59E71F241DA2D500A7C5EC /* Build configuration list for PBXProject "OC Gen-X" */ = {
+		CF59E71F241DA2D500A7C5EC /* Build configuration list for PBXProject "OC_Gen-X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF59E732241DA2D600A7C5EC /* Debug */,
@@ -651,7 +659,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF59E734241DA2D600A7C5EC /* Build configuration list for PBXNativeTarget "OC Gen-X" */ = {
+		CF59E734241DA2D600A7C5EC /* Build configuration list for PBXNativeTarget "OC_Gen-X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CF59E735241DA2D600A7C5EC /* Debug */,
