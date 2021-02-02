@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19H15</string>
+	<string>19H114</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -17,13 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1.9</string>
+	<string>1.2.0</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.1.9</string>
+	<string>1.2.0</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -65,6 +65,15 @@
 			<string>IOResources</string>
 			<key>IOResourceMatch</key>
 			<string>IOKit</string>
+			<key>StopFanOffsets</key>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
