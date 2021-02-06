@@ -576,9 +576,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
-            config.nvram.add.addAppleBootVariableGuid.bootArgs.removeAll()
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
@@ -601,8 +598,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
@@ -623,8 +618,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
@@ -642,8 +635,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
@@ -666,8 +657,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
@@ -691,8 +680,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
@@ -712,8 +699,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
@@ -734,8 +719,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
@@ -772,8 +755,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
@@ -829,8 +810,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
             config.nvram.add.addAppleBootVariableGuid.bootArgs.append(" npci=0x2000")
         default:
             break
@@ -849,8 +828,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
@@ -919,8 +896,6 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
-            config.nvram.add.addAppleVendorVariableGuid.defaultBackgroundColor = Data([0x00, 0x00, 0x00, 0x00])
-            config.nvram.add.addAppleVendorVariableGuid.uiScale = Data([0x01])
         default:
             break
         }
