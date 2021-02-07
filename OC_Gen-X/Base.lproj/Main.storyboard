@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -691,7 +692,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="MainWindowController" customModule="OC_Gen_X" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="OC_Gen-X" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="OC Gen-X  2.9.4" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="702" y="426" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1080"/>
@@ -1140,7 +1141,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <rect key="frame" x="191" y="116" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="g9P-ij-Ojp" id="jrx-Mu-18x">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                            <font key="font" metaFont="system"/>
+                                                                            <font key="font" metaFont="menu"/>
                                                                             <menu key="menu" id="3dA-3N-5VA">
                                                                                 <items>
                                                                                     <menuItem title="Item 1" state="on" id="g9P-ij-Ojp"/>
@@ -1188,7 +1189,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <rect key="frame" x="695" y="101" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Jao-8p-7vd" id="Jt7-G1-It3">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                            <font key="font" metaFont="system"/>
+                                                                            <font key="font" metaFont="menu"/>
                                                                             <menu key="menu" id="vC1-Fb-ydV">
                                                                                 <items>
                                                                                     <menuItem title="Item 1" state="on" id="Jao-8p-7vd"/>
@@ -1231,7 +1232,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                                         <rect key="frame" x="695" y="31" width="78" height="25"/>
                                                                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="XEH-Us-vY8" id="JLE-GH-QGr">
                                                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                                            <font key="font" metaFont="system"/>
+                                                                            <font key="font" metaFont="menu"/>
                                                                             <menu key="menu" id="aHJ-Dm-5JF">
                                                                                 <items>
                                                                                     <menuItem title="Item 1" state="on" id="XEH-Us-vY8"/>
@@ -1690,7 +1691,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                     <rect key="frame" x="107" y="280" width="39" height="24"/>
                                                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="u10-Ol-eMW">
                                                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                                        <font key="font" metaFont="system"/>
+                                                        <font key="font" metaFont="menu"/>
                                                         <menu key="menu" id="Pxd-k9-0Lu"/>
                                                     </popUpButtonCell>
                                                 </popUpButton>
@@ -1911,7 +1912,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
     </scenes>
     <resources>
         <image name="amd-radeon" width="50" height="50"/>
-        <image name="arrow.clockwise.circle" catalog="system" width="32" height="32"/>
+        <image name="arrow.clockwise.circle" catalog="system" width="15" height="15"/>
         <image name="macpro" width="100" height="100"/>
         <image name="nvidia-icon" width="50" height="50"/>
     </resources>

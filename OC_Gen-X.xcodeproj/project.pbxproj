@@ -33,7 +33,6 @@
 		CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2013243D06D300D2F187 /* USBInjectAll.kext */; };
 		CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */; };
 		CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */; };
-		CF591D2925ACA3A400AEEE1F /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFAB750625AC9A970012A4B3 /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E727241DA2D500A7C5EC /* AppDelegate.swift */; };
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
@@ -57,13 +56,14 @@
 		CF8B211B25C7821300596150 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF92213125C9E58A00CBD096 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = CF92212F25C9E58A00CBD096 /* generate_keys */; };
 		CF92213225C9E58A00CBD096 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CF92213025C9E58A00CBD096 /* generate_appcast */; };
-		CFAB750825AC9EB20012A4B3 /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CFAB750625AC9A970012A4B3 /* macserial */; };
 		CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE7045250E796300D2D332 /* 17H_Patches.swift */; };
 		CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0F3B9256EA9BF00549048 /* AGPM.swift */; };
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 		CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */; };
+		CFED6D8B25D038F4004EE0DC /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CFED6D8A25D038F4004EE0DC /* macserial */; };
+		CFED6D8C25D03947004EE0DC /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFED6D8A25D038F4004EE0DC /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,7 +85,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				CF591D2925ACA3A400AEEE1F /* macserial in CopyFiles */,
+				CFED6D8C25D03947004EE0DC /* macserial in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,13 +144,13 @@
 		CF8B211725C781FE00596150 /* XPCServices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XPCServices; sourceTree = "<group>"; };
 		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
 		CF92213025C9E58A00CBD096 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
-		CFAB750625AC9A970012A4B3 /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		CFBE7045250E796300D2D332 /* 17H_Patches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
+		CFED6D8A25D038F4004EE0DC /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -218,7 +218,7 @@
 			children = (
 				CF0E481325C9D0D5002BEE7B /* BOOTx64.efi */,
 				CF0E481125C9D0B8002BEE7B /* OpenCore.efi */,
-				CFAB750625AC9A970012A4B3 /* macserial */,
+				CFED6D8A25D038F4004EE0DC /* macserial */,
 			);
 			path = "OC Files";
 			sourceTree = "<group>";
@@ -373,10 +373,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFAB750825AC9EB20012A4B3 /* macserial in Resources */,
 				CF0E480E25C9C7C0002BEE7B /* BrcmFirmwareData.kext in Resources */,
 				CF0E481925C9D105002BEE7B /* OpenUsbKbDxe.efi in Resources */,
 				CF0E480625C9C5AF002BEE7B /* SMCSuperIO.kext in Resources */,
+				CFED6D8B25D038F4004EE0DC /* macserial in Resources */,
 				CF0E481B25C9D105002BEE7B /* OpenRuntime.efi in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CF0E480C25C9C7C0002BEE7B /* BrcmBluetoothInjector.kext in Resources */,
@@ -581,7 +581,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2.9.3;
+				CURRENT_PROJECT_VERSION = 2.9.4;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_ARCHS = arm64;
@@ -601,7 +601,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.9.3;
+				MARKETING_VERSION = 2.9.4;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -618,7 +618,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2.9.3;
+				CURRENT_PROJECT_VERSION = 2.9.4;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_ARCHS = arm64;
@@ -638,7 +638,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.9.3;
+				MARKETING_VERSION = 2.9.4;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
