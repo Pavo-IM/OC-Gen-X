@@ -49,6 +49,7 @@ struct audio: Codable {
     var audioSupport: Bool = false
     var minimumVolume: Int = 20
     var playChime: String = "Auto"
+    var resetTrafficClass: Bool = false
     var setupDelay: Int = 0
     var volumeAmplifier: Int = 0
     
@@ -59,6 +60,7 @@ struct audio: Codable {
         case audioSupport = "AudioSupport"
         case minimumVolume = "MinimumVolume"
         case playChime = "PlayChime"
+        case resetTrafficClass = "ResetTrafficClass"
         case setupDelay = "SetupDelay"
         case volumeAmplifier = "VolumeAmplifier"
     }
@@ -67,7 +69,6 @@ struct audio: Codable {
 struct input: Codable {
     var keyFiltering: Bool = false
     var keyForgetThreshold: Int = 5
-    var keyMergeThreshold: Int = 2
     var keySupport: Bool = true
     var keySupportMode: String = "Auto"
     var keySwap: Bool = false
@@ -78,7 +79,6 @@ struct input: Codable {
     enum CodingKeys: String, CodingKey {
         case keyFiltering = "KeyFiltering"
         case keyForgetThreshold = "KeyForgetThreshold"
-        case keyMergeThreshold = "KeyMergeThreshold"
         case keySupport = "KeySupport"
         case keySupportMode = "KeySupportMode"
         case keySwap = "KeySwap"
@@ -93,6 +93,7 @@ struct output: Codable {
     var consoleMode: String = ""
     var directGopRendering: Bool = false
     var forceResolution: Bool = false
+    var gopPassThrough: Bool = false
     var ignoreTextInGraphics: Bool = false
     var provideConsoleGop: Bool = true
     var reconnectOnResChange: Bool = false
@@ -107,6 +108,7 @@ struct output: Codable {
         case consoleMode = "ConsoleMode"
         case directGopRendering = "DirectGopRendering"
         case forceResolution = "ForceResolution"
+        case gopPassThrough = "GopPassThrough"
         case ignoreTextInGraphics = "IgnoreTextInGraphics"
         case provideConsoleGop = "ProvideConsoleGop"
         case reconnectOnResChange = "ReconnectOnResChange"
@@ -161,6 +163,7 @@ struct protocols: Codable {
 }
 
 struct uQuirks: Codable {
+    var activateHpetSupport: Bool = false
     var disableSecurityPolicy: Bool = false
     var exitBootServicesDelay: Int = 0
     var ignoreInvalidFlexRatio: Bool = false
@@ -170,6 +173,7 @@ struct uQuirks: Codable {
     var unblockFsConnect: Bool = false
     
     enum CodingKeys: String, CodingKey {
+        case activateHpetSupport = "ActivateHpetSupport"
         case disableSecurityPolicy = "DisableSecurityPolicy"
         case exitBootServicesDelay = "ExitBootServicesDelay"
         case ignoreInvalidFlexRatio = "IgnoreInvalidFlexRatio"
