@@ -6,6 +6,8 @@ First Ever Beta is now released to the Public for Testing.  Bugs or Issues pleas
 
 Opencore Generation X is a Utility to create a pre-structured EFI Folder to the Desktop Based on the selection of the user.
 
+**Opencore Gen-X is not very stable for VM Machines **
+
 The config.plist generated is based off the architectures in the Dortania guide.
 i.e: Haswell, Skylake, Coffeelake etc..
 
