@@ -232,10 +232,23 @@ class MainVC: NSViewController {
         snInput.stringValue = seperateSystemSn.last!
         smuuidInput.stringValue = systemSmUUID.last!
         mlbInput.stringValue = systemMLB.last!
-        romInput.placeholderString = getrom?[0]
+        
+        if systemModel.last != "" {
+            modelInput.title = systemModel.last!
+            smbiosList.title = systemModel.last!
+        }
+        
+        if getrom!.count >= 1 {
+            romInput.placeholderString = getrom![1]
+        } else {
+            romInput.placeholderString = getrom![0]
+        }
         
         switch romInput.placeholderString {
         case "":
+            romInput.placeholderString = "00:00:00:00:00:00"
+            romInput.stringValue = romInput.placeholderString!
+        case " ":
             romInput.placeholderString = "00:00:00:00:00:00"
             romInput.stringValue = romInput.placeholderString!
         case "N/A":
@@ -244,15 +257,9 @@ class MainVC: NSViewController {
         default:
             romInput.stringValue = romInput.placeholderString!
         }
-        
-        if agpmSmbiosList.contains(systemModel.last!) {
-            modelInput.title = systemModel.last!
-            smbiosList.title = systemModel.last!
-        }
     }
     
     private func applyDesktopGuideHyperlink() {
-        // Keep it centered
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.alignment = .center
         let attributes: [NSAttributedString.Key: Any] = [.paragraphStyle : paragraphStyle, .font: textfield.font ?? NSFont.systemFontSize]
@@ -533,7 +540,9 @@ class MainVC: NSViewController {
         let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
         let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
         let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
-
+        snInput.stringValue = sn.last!
+        smuuidInput.stringValue = sn.last!
+        mlbInput.stringValue = mlb.first!
         snInput.placeholderString = sn[0]
         snInput.stringValue = snInput.placeholderString!
         mlbInput.placeholderString = mlb[0]

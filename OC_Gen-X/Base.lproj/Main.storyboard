@@ -718,7 +718,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wcy-uw-NdK">
-                                <rect key="frame" x="338" y="108" width="121" height="33"/>
+                                <rect key="frame" x="338" y="108" width="121" height="32"/>
                                 <buttonCell key="cell" type="push" title="Generate EFI" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jnc-4n-FlM">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -744,7 +744,7 @@
                                 </textFieldCell>
                             </textField>
                             <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UIh-RX-3Ag">
-                                <rect key="frame" x="-7" y="166" width="811" height="155"/>
+                                <rect key="frame" x="-7" y="165" width="811" height="378"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="System Type" identifier="" id="pdY-nd-ywG">
@@ -1697,7 +1697,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                                 </popUpButton>
                                                 <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="c96-nh-mEh">
                                                     <rect key="frame" x="110" y="98" width="649" height="21"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="A3Y-Xk-cmM">
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="A3Y-Xk-cmM">
                                                         <font key="font" metaFont="system"/>
                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1789,7 +1789,7 @@ Add watchdog=0 to disable WatchDog timer (if you get accidental reboots).</strin
                                 </tabViewItems>
                             </tabView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JJY-uW-evJ">
-                                <rect key="frame" x="561" y="145" width="218" height="16"/>
+                                <rect key="frame" x="561" y="145" width="218" height="15"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Supported OpenCore version: 0.6.7" id="c09-ms-Iid">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
