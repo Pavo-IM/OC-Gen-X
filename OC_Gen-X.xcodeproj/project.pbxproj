@@ -60,6 +60,7 @@
 		CFDEAAE925EFF8DA003E13E5 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE325EFF8D9003E13E5 /* SMCDellSensors.kext */; };
 		CFDEAAEA25EFF8DA003E13E5 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE425EFF8D9003E13E5 /* SMCBatteryManager.kext */; };
 		CFDEAAEB25EFF8DA003E13E5 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE525EFF8DA003E13E5 /* SMCLightSensor.kext */; };
+		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 		CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */; };
@@ -147,6 +148,7 @@
 		CFDEAAE325EFF8D9003E13E5 /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
 		CFDEAAE425EFF8D9003E13E5 /* SMCBatteryManager.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCBatteryManager.kext; sourceTree = "<group>"; };
 		CFDEAAE525EFF8DA003E13E5 /* SMCLightSensor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCLightSensor.kext; sourceTree = "<group>"; };
+		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
@@ -275,6 +277,7 @@
 				CFBE7045250E796300D2D332 /* 17H_Patches.swift */,
 				CF2D771F256196BF00D7507C /* trx40.swift */,
 				CFC0F3B9256EA9BF00549048 /* AGPM.swift */,
+				CFE16258260CF94D00F4616C /* sandybridge.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */,
+				CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */,
 				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
 				CF2D7720256196BF00D7507C /* trx40.swift in Sources */,
 				CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */,
@@ -579,7 +583,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2.9.7;
+				CURRENT_PROJECT_VERSION = 2.9.8;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_ARCHS = arm64;
@@ -599,7 +603,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.9.7;
+				MARKETING_VERSION = 2.9.8;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -616,7 +620,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2.9.7;
+				CURRENT_PROJECT_VERSION = 2.9.8;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_ARCHS = arm64;
@@ -636,7 +640,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 2.9.7;
+				MARKETING_VERSION = 2.9.8;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";

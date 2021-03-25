@@ -45,6 +45,7 @@ class MainVC: NSViewController {
     @IBOutlet weak var mlbInput: NSTextField!
     @IBOutlet weak var smuuidInput: NSTextField!
     @IBOutlet weak var wegLabel: NSTextField!
+    @IBOutlet weak var sandyBridgeChecked: NSButton!
     @IBOutlet weak var wegBootargsTextfield: NSTextField!
     @IBOutlet weak var appleALCBootargs: NSTextField!
     @IBOutlet weak var appleALCInputfield: NSTextField!
@@ -607,6 +608,21 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
+            config.uefi.quirks.ignoreInvalidFlexRatio = true
+        default:
+            break
+        }
+        
+        switch sandyBridgeChecked.state {
+        case .on:
+            config.acpi.delete.append(deleteCPUPMACPI)
+            config.acpi.delete.append(deleteCpu0Ist)
+            config.booter.quirks.avoidRuntimeDefrag = true
+            config.booter.quirks.enableSafeModeSlide = true
+            config.booter.quirks.enableWriteUnprotector = true
+            config.booter.quirks.setupVirtualMap = true
+            config.kernel.kQuirks.appleCpuPmCfgLock = true
+            config.kernel.kQuirks.disableIoMapper = true
             config.uefi.quirks.ignoreInvalidFlexRatio = true
         default:
             break
