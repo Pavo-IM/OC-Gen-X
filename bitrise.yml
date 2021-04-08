@@ -1,31 +1,26 @@
-format_version: "7"
+format_version: "8"
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 project_type: macos
 app:
   envs:
   - BITRISE_PROJECT_PATH: OC_Gen-X.xcodeproj
-    opts:
-      is_expand: false
   - BITRISE_SCHEME: OC_Gen-X
-    opts:
-      is_expand: false
   - BITRISE_EXPORT_METHOD: development
-    opts:
-      is_expand: false
 trigger_map:
-- push_branch: master
+- push_branch: '*'
   workflow: primary
 - pull_request_source_branch: '*'
   workflow: primary
 workflows:
   primary:
     steps:
-    - activate-ssh-key:
+    - activate-ssh-key@4:
         run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-    - git-clone: {}
-    - cache-pull: {}
-    - certificate-and-profile-installer: {}
-    - script:
+    - git-clone@5: {}
+    - cache-pull@2: {}
+    - certificate-and-profile-installer@1: {}
+    - script@1:
+        title: Do anything with Script step
         inputs:
         - content: |-
             #!/bin/bash
@@ -45,23 +40,14 @@ workflows:
             # ---- Set Build And Bundle Version ENV:
             envman add --key "CURRENT_BUILD_VERSION" --value "${CONFIG_build_version}"
             envman add --key "CURRENT_SHORT_BUNDLE_VERSION" --value "${CONFIG_short_bundle_version}"
-        outputs:
-        - CURRENT_BUILD_VERSION: CURRENT_BUILD_VERSION
-          opts: {}
-        - CURRENT_SHORT_BUNDLE_VERSION: CURRENT_SHORT_BUNDLE_VERSION
-          opts: {}
-    - set-xcode-build-number:
+    - set-xcode-build-number@1:
         inputs:
-        - build_short_version_string: ""
         - build_version: $CURRENT_SHORT_BUNDLE_VERSION
         - plist_path: $BITRISE_SOURCE_DIR/OC_Gen-X/Info.plist
-    - xcode-archive-mac:
+    - xcode-archive-mac@1: {}
+    - script@1:
         inputs:
-        - project_path: $BITRISE_PROJECT_PATH
-        - scheme: $BITRISE_SCHEME
-    - script:
-        inputs:
-        - content: |
+        - content: |-
             #!/bin/bash
 
             # ---- Remove Sparkle_generate_appcast cache:
@@ -70,26 +56,21 @@ workflows:
 
             # ---- Generate Sparkle appacast.xml:
             $BITRISE_SOURCE_DIR/Support_Files/generate_appcast $BITRISE_DEPLOY_DIR
-    - deploy-to-bitrise-io: {}
-    - cache-push:
-        inputs:
-        - compress_archive: "true"
-    - generate-changelog:
+    - deploy-to-bitrise-io@1: {}
+    - cache-push@2: {}
+    - generate-changelog@0:
         inputs:
         - new_version: 'new_version: $BITRISE_GIT_TAG'
-    - github-release:
+    - github-release@0:
         inputs:
         - username: $GITHUB_USER
+        - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
         - tag: $CURRENT_SHORT_BUNDLE_VERSION
-        - name: $CURRENT_SHORT_BUNDLE_VERSION
         - body: $BITRISE_CHANGELOG
+        - commit: master
+        - name: $CURRENT_SHORT_BUNDLE_VERSION
+        - draft: "no"
         - files_to_upload: |-
             $BITRISE_EXPORTED_FILE_PATH
             $BITRISE_DEPLOY_DIR/appcast.xml
-        - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
-        - commit: master
-        - draft: "no"
-        - api_token: $GIT_ACCESS_TOKEN
-    meta:
-      bitrise.io:
-        stack: osx-xcode-12.3.x
+        - api_token: $GITHUB_ACCESS_KEY
