@@ -84,7 +84,7 @@ class MainVC: NSViewController {
         
         platFormInfo: platFormInfo(generic: generic(), memory: memory(devices: [devices()])),
         
-        uefi: uefi(apfs: apfs(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
+        uefi: uefi(apfs: apfs(), appleInput: [appleInput()], audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
     
     var agpmSmbiosList = [
