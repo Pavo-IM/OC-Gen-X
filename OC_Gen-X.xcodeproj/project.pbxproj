@@ -36,6 +36,7 @@
 		CF672593261F3EC600B8A5C3 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258D261F3EC600B8A5C3 /* SMCBatteryManager.kext */; };
 		CF672594261F3EC600B8A5C3 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258E261F3EC600B8A5C3 /* SMCSuperIO.kext */; };
 		CF672595261F3EC600B8A5C3 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258F261F3EC600B8A5C3 /* VirtualSMC.kext */; };
+		CF672597261F3F0900B8A5C3 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF672596261F3F0900B8A5C3 /* WhateverGreen.kext */; };
 		CF6F1118241E96DD00B70805 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1117241E96DD00B70805 /* Root.swift */; };
 		CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1119241E96EB00B70805 /* ACPI.swift */; };
 		CF6F111C241E96F400B70805 /* Booter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F111B241E96F400B70805 /* Booter.swift */; };
@@ -59,7 +60,6 @@
 		CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0F3B9256EA9BF00549048 /* AGPM.swift */; };
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFDEAADD25EFF8A9003E13E5 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAADC25EFF8A9003E13E5 /* AppleALC.kext */; };
-		CFDEAADF25EFF8BD003E13E5 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAADE25EFF8BD003E13E5 /* WhateverGreen.kext */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
@@ -125,6 +125,7 @@
 		CF67258D261F3EC600B8A5C3 /* SMCBatteryManager.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCBatteryManager.kext; sourceTree = "<group>"; };
 		CF67258E261F3EC600B8A5C3 /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
 		CF67258F261F3EC600B8A5C3 /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
+		CF672596261F3F0900B8A5C3 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
 		CF6F1117241E96DD00B70805 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		CF6F1119241E96EB00B70805 /* ACPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPI.swift; sourceTree = "<group>"; };
 		CF6F111B241E96F400B70805 /* Booter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booter.swift; sourceTree = "<group>"; };
@@ -147,7 +148,6 @@
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFDEAADC25EFF8A9003E13E5 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
-		CFDEAADE25EFF8BD003E13E5 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
 		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
@@ -177,13 +177,13 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CF672596261F3F0900B8A5C3 /* WhateverGreen.kext */,
 				CF67258D261F3EC600B8A5C3 /* SMCBatteryManager.kext */,
 				CF67258B261F3EC600B8A5C3 /* SMCDellSensors.kext */,
 				CF67258C261F3EC600B8A5C3 /* SMCLightSensor.kext */,
 				CF67258A261F3EC600B8A5C3 /* SMCProcessor.kext */,
 				CF67258E261F3EC600B8A5C3 /* SMCSuperIO.kext */,
 				CF67258F261F3EC600B8A5C3 /* VirtualSMC.kext */,
-				CFDEAADE25EFF8BD003E13E5 /* WhateverGreen.kext */,
 				CFDEAADC25EFF8A9003E13E5 /* AppleALC.kext */,
 				CF0E480825C9C7BF002BEE7B /* BrcmBluetoothInjector.kext */,
 				CF0E480A25C9C7C0002BEE7B /* BrcmFirmwareData.kext */,
@@ -376,8 +376,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF672590261F3EC600B8A5C3 /* SMCProcessor.kext in Resources */,
+				CF672597261F3F0900B8A5C3 /* WhateverGreen.kext in Resources */,
 				CF672583261F3E1500B8A5C3 /* NvmExpressDxe.efi in Resources */,
-				CFDEAADF25EFF8BD003E13E5 /* WhateverGreen.kext in Resources */,
 				CF0E480E25C9C7C0002BEE7B /* BrcmFirmwareData.kext in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CF0E480C25C9C7C0002BEE7B /* BrcmBluetoothInjector.kext in Resources */,
