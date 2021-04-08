@@ -84,7 +84,7 @@ class MainVC: NSViewController {
         
         platFormInfo: platFormInfo(generic: generic(), memory: memory(devices: [devices()])),
         
-        uefi: uefi(apfs: apfs(), appleInput: [appleInput()], audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
+        uefi: uefi(apfs: apfs(), appleInput: appleInput(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
     
     var agpmSmbiosList = [
@@ -786,48 +786,15 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
+            let patchesPlistURL = Bundle.main.url(forResource: "ryzen", withExtension: "plist")
+            let plistDecoder = PropertyListDecoder()
+            let data = try! Data(contentsOf: patchesPlistURL!)
+            let patchesData = try! plistDecoder.decode(Root.self, from: data)
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.enableSafeModeSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
-            config.kernel.kPatch = [firstRyzenPatch]
-            config.kernel.kPatch.append(secondRyzenPatch)
-            config.kernel.kPatch.append(thirdRyzenPatch)
-            config.kernel.kPatch.append(forthRyzenPatch)
-            config.kernel.kPatch.append(fifthRyzenPatch)
-            config.kernel.kPatch.append(sixthRyzenPatch)
-            config.kernel.kPatch.append(seventhRyzenPatch)
-            config.kernel.kPatch.append(eigthRyzenPatch)
-            config.kernel.kPatch.append(ninthRyzenPatch)
-            config.kernel.kPatch.append(tenthRyzenPatch)
-            config.kernel.kPatch.append(eleventhRyzenPatch)
-            config.kernel.kPatch.append(twelfthRyzenPatch)
-            config.kernel.kPatch.append(thirteenthRyzenPatch)
-            config.kernel.kPatch.append(fourteenthRyzenPatch)
-            config.kernel.kPatch.append(fiftheenthRyzenPatch)
-            config.kernel.kPatch.append(sixthteenthRyzenPatch)
-            config.kernel.kPatch.append(seventeethRyzenPatch)
-            config.kernel.kPatch.append(eigthteethRyzenPatch)
-            config.kernel.kPatch.append(ninthteenthRyzenPatch)
-            config.kernel.kPatch.append(twentiethRyzenPatch)
-            config.kernel.kPatch.append(twentiefirstRyzenPatch)
-            config.kernel.kPatch.append(twentiesecondRyzenPatch)
-            config.kernel.kPatch.append(twentiethirdRyzenPatch)
-            config.kernel.kPatch.append(twentieforthRyzenPatch)
-            config.kernel.kPatch.append(twentiefifthRyzenPatch)
-            config.kernel.kPatch.append(twentiesixthRyzenPatch)
-            config.kernel.kPatch.append(twentieseventhRyzenPatch)
-            config.kernel.kPatch.append(twentieeigthRyzenPatch)
-            config.kernel.kPatch.append(twentieninthRyzenPatch)
-            config.kernel.kPatch.append(thirtiethRyzenPatch)
-            config.kernel.kPatch.append(thirtiefirstRyzenPatch)
-            config.kernel.kPatch.append(thirtiesecondRyzenPatch)
-            config.kernel.kPatch.append(thirtiethirdRyzenPatch)
-            config.kernel.kPatch.append(thirtieforthRyzenPatch)
-            config.kernel.kPatch.append(thirtiefifthRyzenPatch)
-            config.kernel.kPatch.append(thirtiesixthRyzenPatch)
-            config.kernel.kPatch.append(thirtieseventhRyzenPatch)
-            config.kernel.kPatch.append(thirtieeigthRyzenPatch)
+            config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
@@ -842,12 +809,16 @@ class MainVC: NSViewController {
         
         switch proxintoshChecked.state {
         case .on:
+            let patchesPlistURL = Bundle.main.url(forResource: "proxmox", withExtension: "plist")
+            let plistDecoder = PropertyListDecoder()
+            let data = try! Data(contentsOf: patchesPlistURL!)
+            let patchesData = try! plistDecoder.decode(Root.self, from: data)
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.emulate.cpuid1Data = Data([0x57,0x06,0x05,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
-            config.kernel.kPatch.append(sixthRyzenPatch)
+            config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
@@ -859,6 +830,10 @@ class MainVC: NSViewController {
         
         switch threadripperChecked.state {
         case .on:
+            let patchesPlistURL = Bundle.main.url(forResource: "threadripper", withExtension: "plist")
+            let plistDecoder = PropertyListDecoder()
+            let data = try! Data(contentsOf: patchesPlistURL!)
+            let patchesData = try! plistDecoder.decode(Root.self, from: data)
             config.booter.mmioWhitelist.append(devirtE2100000)
             config.booter.mmioWhitelist.append(devirtE3180000)
             config.booter.mmioWhitelist.append(devirtEF100000)
@@ -879,43 +854,7 @@ class MainVC: NSViewController {
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
-            config.kernel.kPatch = [firstRyzenPatch]
-            config.kernel.kPatch.append(secondRyzenPatch)
-            config.kernel.kPatch.append(thirdRyzenPatch)
-            config.kernel.kPatch.append(forthRyzenPatch)
-            config.kernel.kPatch.append(fifthRyzenPatch)
-            config.kernel.kPatch.append(sixthRyzenPatch)
-            config.kernel.kPatch.append(seventhRyzenPatch)
-            config.kernel.kPatch.append(eigthRyzenPatch)
-            config.kernel.kPatch.append(ninthRyzenPatch)
-            config.kernel.kPatch.append(tenthRyzenPatch)
-            config.kernel.kPatch.append(eleventhRyzenPatch)
-            config.kernel.kPatch.append(twelfthRyzenPatch)
-            config.kernel.kPatch.append(thirteenthRyzenPatch)
-            config.kernel.kPatch.append(fourteenthRyzenPatch)
-            config.kernel.kPatch.append(fiftheenthRyzenPatch)
-            config.kernel.kPatch.append(sixthteenthRyzenPatch)
-            config.kernel.kPatch.append(seventeethRyzenPatch)
-            config.kernel.kPatch.append(eigthteethRyzenPatch)
-            config.kernel.kPatch.append(ninthteenthRyzenPatch)
-            config.kernel.kPatch.append(twentiethRyzenPatch)
-            config.kernel.kPatch.append(twentiefirstRyzenPatch)
-            config.kernel.kPatch.append(twentiesecondRyzenPatch)
-            config.kernel.kPatch.append(twentiethirdRyzenPatch)
-            config.kernel.kPatch.append(twentieforthRyzenPatch)
-            config.kernel.kPatch.append(twentiefifthRyzenPatch)
-            config.kernel.kPatch.append(twentiesixthRyzenPatch)
-            config.kernel.kPatch.append(twentieseventhRyzenPatch)
-            config.kernel.kPatch.append(twentieeigthRyzenPatch)
-            config.kernel.kPatch.append(twentieninthRyzenPatch)
-            config.kernel.kPatch.append(thirtiethRyzenPatch)
-            config.kernel.kPatch.append(thirtiefirstRyzenPatch)
-            config.kernel.kPatch.append(thirtiesecondRyzenPatch)
-            config.kernel.kPatch.append(thirtiethirdRyzenPatch)
-            config.kernel.kPatch.append(thirtieforthRyzenPatch)
-            config.kernel.kPatch.append(thirtiefifthRyzenPatch)
-            config.kernel.kPatch.append(thirtiesixthRyzenPatch)
-            config.kernel.kPatch.append(thirtieseventhRyzenPatch)
+            config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true

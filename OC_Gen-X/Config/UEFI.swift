@@ -2,7 +2,7 @@ import Foundation
 
 struct uefi: Codable {
     var apfs: apfs
-    var appleInput: [appleInput]
+    var appleInput: appleInput
     var audio: audio
     var connectDrivers: Bool = true
     var drivers: [String] = []

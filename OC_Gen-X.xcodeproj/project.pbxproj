@@ -57,13 +57,15 @@
 		CF8B211B25C7821300596150 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CF92213125C9E58A00CBD096 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = CF92212F25C9E58A00CBD096 /* generate_keys */; };
 		CF92213225C9E58A00CBD096 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CF92213025C9E58A00CBD096 /* generate_appcast */; };
-		CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBE7045250E796300D2D332 /* 17H_Patches.swift */; };
 		CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0F3B9256EA9BF00549048 /* AGPM.swift */; };
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
 		CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */; };
+		CFEE63DB261F422300F708D3 /* ryzen.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEE63DA261F422300F708D3 /* ryzen.plist */; };
+		CFEE63DD261F571100F708D3 /* proxmox.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEE63DC261F571100F708D3 /* proxmox.plist */; };
+		CFEE63DF261F577D00F708D3 /* threadripper.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEE63DE261F577D00F708D3 /* threadripper.plist */; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,13 +147,15 @@
 		CF8B211725C781FE00596150 /* XPCServices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XPCServices; sourceTree = "<group>"; };
 		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
 		CF92213025C9E58A00CBD096 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
-		CFBE7045250E796300D2D332 /* 17H_Patches.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 17H_Patches.swift; sourceTree = "<group>"; };
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
+		CFEE63DA261F422300F708D3 /* ryzen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ryzen.plist; sourceTree = "<group>"; };
+		CFEE63DC261F571100F708D3 /* proxmox.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = proxmox.plist; sourceTree = "<group>"; };
+		CFEE63DE261F577D00F708D3 /* threadripper.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = threadripper.plist; sourceTree = "<group>"; };
 		D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,6 +249,7 @@
 		CF59E726241DA2D500A7C5EC /* OC_Gen-X */ = {
 			isa = PBXGroup;
 			children = (
+				CFEE63D9261F420E00F708D3 /* AMD Patches */,
 				CF77A0B0256C2CFF0082464D /* Images */,
 				CF6F1116241E96C200B70805 /* Config */,
 				CF4C2008243D067000D2F187 /* Kexts */,
@@ -274,7 +279,6 @@
 				CF6F1123241E972600B70805 /* NVRAM.swift */,
 				CF6F1125241E973600B70805 /* PlatformInfo.swift */,
 				CF6F1127241E973E00B70805 /* UEFI.swift */,
-				CFBE7045250E796300D2D332 /* 17H_Patches.swift */,
 				CF2D771F256196BF00D7507C /* trx40.swift */,
 				CFC0F3B9256EA9BF00549048 /* AGPM.swift */,
 				CFE16258260CF94D00F4616C /* sandybridge.swift */,
@@ -303,6 +307,16 @@
 				CF8B211725C781FE00596150 /* XPCServices */,
 			);
 			path = Support_Files;
+			sourceTree = "<group>";
+		};
+		CFEE63D9261F420E00F708D3 /* AMD Patches */ = {
+			isa = PBXGroup;
+			children = (
+				CFEE63DA261F422300F708D3 /* ryzen.plist */,
+				CFEE63DC261F571100F708D3 /* proxmox.plist */,
+				CFEE63DE261F577D00F708D3 /* threadripper.plist */,
+			);
+			path = "AMD Patches";
 			sourceTree = "<group>";
 		};
 		D5B5BBF924A7B6FB004E5D7C /* Views */ = {
@@ -384,6 +398,7 @@
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CF67259E261F3F9600B8A5C3 /* BrcmPatchRAM2.kext in Resources */,
 				CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */,
+				CFEE63DB261F422300F708D3 /* ryzen.plist in Resources */,
 				CF672594261F3EC600B8A5C3 /* SMCSuperIO.kext in Resources */,
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
@@ -403,6 +418,7 @@
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF672589261F3E4700B8A5C3 /* XhciDxe.efi in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
+				CFEE63DF261F577D00F708D3 /* threadripper.plist in Resources */,
 				CF672593261F3EC600B8A5C3 /* SMCBatteryManager.kext in Resources */,
 				CF672587261F3E3B00B8A5C3 /* OpenUsbKbDxe.efi in Resources */,
 				CF672585261F3E2400B8A5C3 /* OpenRuntime.efi in Resources */,
@@ -410,6 +426,7 @@
 				CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */,
 				CF6725A1261F3F9600B8A5C3 /* BrcmPatchRAM3.kext in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
+				CFEE63DD261F571100F708D3 /* proxmox.plist in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
 				CF672595261F3EC600B8A5C3 /* VirtualSMC.kext in Resources */,
@@ -427,7 +444,6 @@
 				CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */,
 				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
 				CF2D7720256196BF00D7507C /* trx40.swift in Sources */,
-				CFBE7046250E796300D2D332 /* 17H_Patches.swift in Sources */,
 				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
 				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
