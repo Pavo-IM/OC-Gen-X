@@ -61,6 +61,7 @@ struct booterQuirks: Codable {
     var discardHibernateMap: Bool = false
     var enableSafeModeSlide: Bool = true
     var enableWriteUnprotector: Bool = true
+    var forceBooterSignature: Bool = false
     var forceExitBootServices: Bool = false
     var protectMemoryRegion: Bool = false
     var protectSecureBoot: Bool = false
@@ -81,6 +82,7 @@ struct booterQuirks: Codable {
         case discardHibernateMap = "DiscardHibernateMap"
         case enableSafeModeSlide = "EnableSafeModeSlide"
         case enableWriteUnprotector = "EnableWriteUnprotector"
+        case forceBooterSignature = "ForceBooterSignature"
         case forceExitBootServices = "ForceExitBootServices"
         case protectMemoryRegion = "ProtectMemoryRegions"
         case protectSecureBoot = "ProtectSecureBoot"

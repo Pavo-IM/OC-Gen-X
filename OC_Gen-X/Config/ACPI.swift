@@ -45,6 +45,8 @@ struct acpiDelete: Codable {
 }
 
 struct acpiPatch: Codable {
+    var base: String = ""
+    var baseSkip: Int = 0
     var comment: String = ""
     var count: Int = 0
     var enabled: Bool = false
@@ -59,6 +61,8 @@ struct acpiPatch: Codable {
     var tableSignature: Data = Data()
     
     enum CodingKeys: String, CodingKey {
+        case base = "Base"
+        case baseSkip = "BaseSkip"
         case comment = "Comment"
         case count = "Count"
         case enabled = "Enabled"

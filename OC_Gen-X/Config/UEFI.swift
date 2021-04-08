@@ -2,6 +2,7 @@ import Foundation
 
 struct uefi: Codable {
     var apfs: apfs
+    var appleInput: [appleInput]
     var audio: audio
     var connectDrivers: Bool = true
     var drivers: [String] = []
@@ -13,6 +14,7 @@ struct uefi: Codable {
     
     enum CodingKeys: String, CodingKey {
         case apfs = "APFS"
+        case appleInput = "AppleInput"
         case audio = "Audio"
         case connectDrivers = "ConnectDrivers"
         case drivers = "Drivers"
@@ -39,6 +41,24 @@ struct apfs: Codable {
         case jumpstartHotPlug = "JumpstartHotPlug"
         case minDate = "MinDate"
         case minVersion = "MinVersion"
+    }
+}
+
+struct appleInput: Codable {
+    var appleEvent: String = "Builtin"
+    var customDelays: String = "Auto"
+    var keyInitialDelay: Int = 0
+    var keySubsequentDelay: Int = 5
+    var pointerSpeedDiv: Int = 1
+    var pointerSpeedMul: Int = 1
+    
+    enum CodingKeys: String, CodingKey {
+        case appleEvent = "AppleEvent"
+        case customDelays = "CustomDelays"
+        case keyInitialDelay = "KeyInitialDelay"
+        case keySubsequentDelay = "KeySubsequentDelay"
+        case pointerSpeedDiv = "PointerSpeedDiv"
+        case pointerSpeedMul = "PointerSpeedMul"
     }
 }
 
@@ -124,7 +144,6 @@ struct protocols: Codable {
     var appleAudio: Bool = false
     var appleBootPolicy: Bool = false
     var appleDebugLog: Bool = false
-    var appleEvent: Bool = false
     var appleFramebufferInfo: Bool = false
     var appleImageConversion: Bool = false
     var appleImg4Verification: Bool = false
@@ -144,7 +163,6 @@ struct protocols: Codable {
         case appleAudio = "AppleAudio"
         case appleBootPolicy = "AppleBootPolicy"
         case appleDebugLog = "AppleDebugLog"
-        case appleEvent = "AppleEvent"
         case appleFramebufferInfo = "AppleFramebufferInfo"
         case appleImageConversion = "AppleImageConversion"
         case appleImg4Verification = "AppleImg4Verification"
