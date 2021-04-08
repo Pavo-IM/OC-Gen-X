@@ -30,6 +30,12 @@
 		CF672585261F3E2400B8A5C3 /* OpenRuntime.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF672584261F3E2400B8A5C3 /* OpenRuntime.efi */; };
 		CF672587261F3E3B00B8A5C3 /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF672586261F3E3B00B8A5C3 /* OpenUsbKbDxe.efi */; };
 		CF672589261F3E4700B8A5C3 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF672588261F3E4700B8A5C3 /* XhciDxe.efi */; };
+		CF672590261F3EC600B8A5C3 /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258A261F3EC600B8A5C3 /* SMCProcessor.kext */; };
+		CF672591261F3EC600B8A5C3 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258B261F3EC600B8A5C3 /* SMCDellSensors.kext */; };
+		CF672592261F3EC600B8A5C3 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258C261F3EC600B8A5C3 /* SMCLightSensor.kext */; };
+		CF672593261F3EC600B8A5C3 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258D261F3EC600B8A5C3 /* SMCBatteryManager.kext */; };
+		CF672594261F3EC600B8A5C3 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258E261F3EC600B8A5C3 /* SMCSuperIO.kext */; };
+		CF672595261F3EC600B8A5C3 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67258F261F3EC600B8A5C3 /* VirtualSMC.kext */; };
 		CF6F1118241E96DD00B70805 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1117241E96DD00B70805 /* Root.swift */; };
 		CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1119241E96EB00B70805 /* ACPI.swift */; };
 		CF6F111C241E96F400B70805 /* Booter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F111B241E96F400B70805 /* Booter.swift */; };
@@ -54,12 +60,6 @@
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFDEAADD25EFF8A9003E13E5 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAADC25EFF8A9003E13E5 /* AppleALC.kext */; };
 		CFDEAADF25EFF8BD003E13E5 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAADE25EFF8BD003E13E5 /* WhateverGreen.kext */; };
-		CFDEAAE625EFF8DA003E13E5 /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE025EFF8D9003E13E5 /* SMCProcessor.kext */; };
-		CFDEAAE725EFF8DA003E13E5 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE125EFF8D9003E13E5 /* SMCSuperIO.kext */; };
-		CFDEAAE825EFF8DA003E13E5 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE225EFF8D9003E13E5 /* VirtualSMC.kext */; };
-		CFDEAAE925EFF8DA003E13E5 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE325EFF8D9003E13E5 /* SMCDellSensors.kext */; };
-		CFDEAAEA25EFF8DA003E13E5 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE425EFF8D9003E13E5 /* SMCBatteryManager.kext */; };
-		CFDEAAEB25EFF8DA003E13E5 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDEAAE525EFF8DA003E13E5 /* SMCLightSensor.kext */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */; };
@@ -119,6 +119,12 @@
 		CF672584261F3E2400B8A5C3 /* OpenRuntime.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenRuntime.efi; sourceTree = "<group>"; };
 		CF672586261F3E3B00B8A5C3 /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
 		CF672588261F3E4700B8A5C3 /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
+		CF67258A261F3EC600B8A5C3 /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
+		CF67258B261F3EC600B8A5C3 /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
+		CF67258C261F3EC600B8A5C3 /* SMCLightSensor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCLightSensor.kext; sourceTree = "<group>"; };
+		CF67258D261F3EC600B8A5C3 /* SMCBatteryManager.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCBatteryManager.kext; sourceTree = "<group>"; };
+		CF67258E261F3EC600B8A5C3 /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
+		CF67258F261F3EC600B8A5C3 /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
 		CF6F1117241E96DD00B70805 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		CF6F1119241E96EB00B70805 /* ACPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPI.swift; sourceTree = "<group>"; };
 		CF6F111B241E96F400B70805 /* Booter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booter.swift; sourceTree = "<group>"; };
@@ -142,12 +148,6 @@
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFDEAADC25EFF8A9003E13E5 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CFDEAADE25EFF8BD003E13E5 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
-		CFDEAAE025EFF8D9003E13E5 /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
-		CFDEAAE125EFF8D9003E13E5 /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
-		CFDEAAE225EFF8D9003E13E5 /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
-		CFDEAAE325EFF8D9003E13E5 /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
-		CFDEAAE425EFF8D9003E13E5 /* SMCBatteryManager.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCBatteryManager.kext; sourceTree = "<group>"; };
-		CFDEAAE525EFF8DA003E13E5 /* SMCLightSensor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCLightSensor.kext; sourceTree = "<group>"; };
 		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		CFEACE91249E5C8300A7F0B3 /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
@@ -177,12 +177,12 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
-				CFDEAAE425EFF8D9003E13E5 /* SMCBatteryManager.kext */,
-				CFDEAAE325EFF8D9003E13E5 /* SMCDellSensors.kext */,
-				CFDEAAE525EFF8DA003E13E5 /* SMCLightSensor.kext */,
-				CFDEAAE025EFF8D9003E13E5 /* SMCProcessor.kext */,
-				CFDEAAE125EFF8D9003E13E5 /* SMCSuperIO.kext */,
-				CFDEAAE225EFF8D9003E13E5 /* VirtualSMC.kext */,
+				CF67258D261F3EC600B8A5C3 /* SMCBatteryManager.kext */,
+				CF67258B261F3EC600B8A5C3 /* SMCDellSensors.kext */,
+				CF67258C261F3EC600B8A5C3 /* SMCLightSensor.kext */,
+				CF67258A261F3EC600B8A5C3 /* SMCProcessor.kext */,
+				CF67258E261F3EC600B8A5C3 /* SMCSuperIO.kext */,
+				CF67258F261F3EC600B8A5C3 /* VirtualSMC.kext */,
 				CFDEAADE25EFF8BD003E13E5 /* WhateverGreen.kext */,
 				CFDEAADC25EFF8A9003E13E5 /* AppleALC.kext */,
 				CF0E480825C9C7BF002BEE7B /* BrcmBluetoothInjector.kext */,
@@ -375,22 +375,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFDEAAE625EFF8DA003E13E5 /* SMCProcessor.kext in Resources */,
-				CFDEAAE725EFF8DA003E13E5 /* SMCSuperIO.kext in Resources */,
-				CFDEAAE825EFF8DA003E13E5 /* VirtualSMC.kext in Resources */,
+				CF672590261F3EC600B8A5C3 /* SMCProcessor.kext in Resources */,
 				CF672583261F3E1500B8A5C3 /* NvmExpressDxe.efi in Resources */,
 				CFDEAADF25EFF8BD003E13E5 /* WhateverGreen.kext in Resources */,
 				CF0E480E25C9C7C0002BEE7B /* BrcmFirmwareData.kext in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
-				CFDEAAEB25EFF8DA003E13E5 /* SMCLightSensor.kext in Resources */,
 				CF0E480C25C9C7C0002BEE7B /* BrcmBluetoothInjector.kext in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
 				CF0E480D25C9C7C0002BEE7B /* BrcmPatchRAM2.kext in Resources */,
 				CF0E47F825C9C4C7002BEE7B /* Lilu.kext in Resources */,
 				CF77A0B7256C2D100082464D /* macpro71.png in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
-				CFDEAAE925EFF8DA003E13E5 /* SMCDellSensors.kext in Resources */,
 				CFEACE92249E5C8300A7F0B3 /* IntelMausi.kext in Resources */,
+				CF672594261F3EC600B8A5C3 /* SMCSuperIO.kext in Resources */,
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CFDEAADD25EFF8A9003E13E5 /* AppleALC.kext in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
@@ -399,7 +396,8 @@
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CF672581261F3DEB00B8A5C3 /* OpenCore.efi in Resources */,
 				CF77A0B9256C2D100082464D /* imacpro.png in Resources */,
-				CFDEAAEA25EFF8DA003E13E5 /* SMCBatteryManager.kext in Resources */,
+				CF672591261F3EC600B8A5C3 /* SMCDellSensors.kext in Resources */,
+				CF672592261F3EC600B8A5C3 /* SMCLightSensor.kext in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
 				CF92213125C9E58A00CBD096 /* generate_keys in Resources */,
 				CF67257F261F3DD900B8A5C3 /* BOOTx64.efi in Resources */,
@@ -407,12 +405,14 @@
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF672589261F3E4700B8A5C3 /* XhciDxe.efi in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
+				CF672593261F3EC600B8A5C3 /* SMCBatteryManager.kext in Resources */,
 				CF672587261F3E3B00B8A5C3 /* OpenUsbKbDxe.efi in Resources */,
 				CF672585261F3E2400B8A5C3 /* OpenRuntime.efi in Resources */,
 				CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
+				CF672595261F3EC600B8A5C3 /* VirtualSMC.kext in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
