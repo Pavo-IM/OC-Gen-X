@@ -46,7 +46,7 @@ struct apfs: Codable {
 
 struct appleInput: Codable {
     var appleEvent: String = "Builtin"
-    var customDelays: String = "Auto"
+    var customDelays: Bool = false
     var keyInitialDelay: Int = 0
     var keySubsequentDelay: Int = 5
     var pointerSpeedDiv: Int = 1

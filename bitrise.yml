@@ -66,7 +66,7 @@ workflows:
         - username: $GITHUB_USER
         - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
         - tag: $CURRENT_SHORT_BUNDLE_VERSION
-        - body: 7f52ae5 Fixed Ryzen, Proxintosh and Threadripper's parsing bug
+        - body: 6928dfa Added forgotten updated OpenCore files
         - commit: master
         - name: $CURRENT_SHORT_BUNDLE_VERSION
         - draft: "no"
