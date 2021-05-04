@@ -183,9 +183,12 @@ struct protocols: Codable {
 struct uQuirks: Codable {
     var activateHpetSupport: Bool = false
     var disableSecurityPolicy: Bool = false
+    var enableVectorAcceleration: Bool = true
     var exitBootServicesDelay: Int = 0
+    var forgeUefiSupport: Bool = false
     var ignoreInvalidFlexRatio: Bool = false
     var releaseUsbOwnership: Bool = false
+    var reloadOptionRoms: Bool = false
     var requestBootVarRouting: Bool = true
     var tscSyncTimeout: Int = 0
     var unblockFsConnect: Bool = false
@@ -193,9 +196,12 @@ struct uQuirks: Codable {
     enum CodingKeys: String, CodingKey {
         case activateHpetSupport = "ActivateHpetSupport"
         case disableSecurityPolicy = "DisableSecurityPolicy"
+        case enableVectorAcceleration  = "EnableVectorAcceleration"
         case exitBootServicesDelay = "ExitBootServicesDelay"
+        case forgeUefiSupport = "ForgeUefiSupport"
         case ignoreInvalidFlexRatio = "IgnoreInvalidFlexRatio"
         case releaseUsbOwnership = "ReleaseUsbOwnership"
+        case reloadOptionRoms = "ReloadOptionRoms"
         case requestBootVarRouting = "RequestBootVarRouting"
         case tscSyncTimeout = "TscSyncTimeout"
         case unblockFsConnect = "UnblockFsConnect"
