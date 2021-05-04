@@ -66,7 +66,12 @@ workflows:
         - username: $GITHUB_USER
         - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
         - tag: $CURRENT_SHORT_BUNDLE_VERSION
-        - body: $BITRISE_CHANGELOG
+        - body: |-
+            e54d77d Added OpenCore 0.6.9 additions
+            15f85e0 Updated AppleALC to 1.6.0
+            a2e2cc6 Updated IntelMausi to 1.0.6
+            583ac33 Updated Lilu to 1.5.3
+            6444eea Updated VirtualSMC and plugins to 1.2.3
         - commit: master
         - name: $CURRENT_SHORT_BUNDLE_VERSION
         - draft: "no"
