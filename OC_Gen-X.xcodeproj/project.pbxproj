@@ -41,18 +41,19 @@
 		CF6F1124241E972600B70805 /* NVRAM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1123241E972600B70805 /* NVRAM.swift */; };
 		CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1125241E973600B70805 /* PlatformInfo.swift */; };
 		CF6F1128241E973E00B70805 /* UEFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1127241E973E00B70805 /* UEFI.swift */; };
-		CF7603AA264186A0000E5836 /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFB33C182641859800333D4C /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CF7603AB26418789000E5836 /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB33C0E2641851400333D4C /* OpenCore.efi */; };
-		CF7603AC2641878C000E5836 /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB33C0C2641850500333D4C /* BOOTx64.efi */; };
-		CF7603AD26418791000E5836 /* OpenRuntime.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB33C122641854000333D4C /* OpenRuntime.efi */; };
-		CF7603AE26418794000E5836 /* NvmExpressDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB33C132641854000333D4C /* NvmExpressDxe.efi */; };
-		CF7603AF26418798000E5836 /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB33C112641854000333D4C /* OpenUsbKbDxe.efi */; };
-		CF7603B02641879B000E5836 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFB33C102641854000333D4C /* XhciDxe.efi */; };
 		CF77A0B6256C2D100082464D /* macpro61.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B1256C2D100082464D /* macpro61.png */; };
 		CF77A0B7256C2D100082464D /* macpro71.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B2256C2D100082464D /* macpro71.png */; };
 		CF77A0B8256C2D100082464D /* macpro.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B3256C2D100082464D /* macpro.png */; };
 		CF77A0B9256C2D100082464D /* imacpro.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B4256C2D100082464D /* imacpro.png */; };
 		CF77A0BA256C2D100082464D /* imac.png in Resources */ = {isa = PBXBuildFile; fileRef = CF77A0B5256C2D100082464D /* imac.png */; };
+		CF8037A7266E831E003F7BB0 /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037A6266E831E003F7BB0 /* BOOTx64.efi */; };
+		CF8037A9266E8330003F7BB0 /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037A8266E8330003F7BB0 /* OpenCore.efi */; };
+		CF8037AB266E8350003F7BB0 /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AA266E8350003F7BB0 /* macserial */; };
+		CF8037B0266E838D003F7BB0 /* OpenRuntime.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AC266E838D003F7BB0 /* OpenRuntime.efi */; };
+		CF8037B1266E838D003F7BB0 /* NvmExpressDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AD266E838D003F7BB0 /* NvmExpressDxe.efi */; };
+		CF8037B2266E838D003F7BB0 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AE266E838D003F7BB0 /* XhciDxe.efi */; };
+		CF8037B3266E838D003F7BB0 /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AF266E838D003F7BB0 /* OpenUsbKbDxe.efi */; };
+		CF8037B4266E83C5003F7BB0 /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF8037AA266E8350003F7BB0 /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CF8B211925C781FE00596150 /* XPCServices in Resources */ = {isa = PBXBuildFile; fileRef = CF8B211725C781FE00596150 /* XPCServices */; };
 		CF8B211A25C7821300596150 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; };
 		CF8B211B25C7821300596150 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -87,7 +88,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				CF7603AA264186A0000E5836 /* macserial in CopyFiles */,
+				CF8037B4266E83C5003F7BB0 /* macserial in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,17 +138,17 @@
 		CF77A0B3256C2D100082464D /* macpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = macpro.png; sourceTree = "<group>"; };
 		CF77A0B4256C2D100082464D /* imacpro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imacpro.png; sourceTree = "<group>"; };
 		CF77A0B5256C2D100082464D /* imac.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imac.png; sourceTree = "<group>"; };
+		CF8037A6266E831E003F7BB0 /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
+		CF8037A8266E8330003F7BB0 /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
+		CF8037AA266E8350003F7BB0 /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
+		CF8037AC266E838D003F7BB0 /* OpenRuntime.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenRuntime.efi; sourceTree = "<group>"; };
+		CF8037AD266E838D003F7BB0 /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
+		CF8037AE266E838D003F7BB0 /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
+		CF8037AF266E838D003F7BB0 /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
 		CF8B211625C781FE00596150 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CF8B211725C781FE00596150 /* XPCServices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XPCServices; sourceTree = "<group>"; };
 		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
 		CF92213025C9E58A00CBD096 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
-		CFB33C0C2641850500333D4C /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
-		CFB33C0E2641851400333D4C /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
-		CFB33C102641854000333D4C /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
-		CFB33C112641854000333D4C /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
-		CFB33C122641854000333D4C /* OpenRuntime.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenRuntime.efi; sourceTree = "<group>"; };
-		CFB33C132641854000333D4C /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
-		CFB33C182641859800333D4C /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
@@ -209,10 +210,10 @@
 		CF4C200A243D069000D2F187 /* Drivers */ = {
 			isa = PBXGroup;
 			children = (
-				CFB33C132641854000333D4C /* NvmExpressDxe.efi */,
-				CFB33C122641854000333D4C /* OpenRuntime.efi */,
-				CFB33C112641854000333D4C /* OpenUsbKbDxe.efi */,
-				CFB33C102641854000333D4C /* XhciDxe.efi */,
+				CF8037AD266E838D003F7BB0 /* NvmExpressDxe.efi */,
+				CF8037AC266E838D003F7BB0 /* OpenRuntime.efi */,
+				CF8037AF266E838D003F7BB0 /* OpenUsbKbDxe.efi */,
+				CF8037AE266E838D003F7BB0 /* XhciDxe.efi */,
 				CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */,
 			);
 			path = Drivers;
@@ -221,9 +222,9 @@
 		CF4C2035243D077E00D2F187 /* OC_Files */ = {
 			isa = PBXGroup;
 			children = (
-				CFB33C182641859800333D4C /* macserial */,
-				CFB33C0E2641851400333D4C /* OpenCore.efi */,
-				CFB33C0C2641850500333D4C /* BOOTx64.efi */,
+				CF8037AA266E8350003F7BB0 /* macserial */,
+				CF8037A6266E831E003F7BB0 /* BOOTx64.efi */,
+				CF8037A8266E8330003F7BB0 /* OpenCore.efi */,
 			);
 			path = OC_Files;
 			sourceTree = "<group>";
@@ -389,25 +390,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF7603AE26418794000E5836 /* NvmExpressDxe.efi in Resources */,
 				CF1BF837264175AF00A794BE /* SMCProcessor.kext in Resources */,
-				CF7603AB26418789000E5836 /* OpenCore.efi in Resources */,
 				CF672597261F3F0900B8A5C3 /* WhateverGreen.kext in Resources */,
+				CF8037A7266E831E003F7BB0 /* BOOTx64.efi in Resources */,
 				CF1BF83D2641762000A794BE /* AppleALC.kext in Resources */,
-				CF7603AC2641878C000E5836 /* BOOTx64.efi in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CF1BF836264175AF00A794BE /* SMCBatteryManager.kext in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
 				CF77A0B7256C2D100082464D /* macpro71.png in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CF67259E261F3F9600B8A5C3 /* BrcmPatchRAM2.kext in Resources */,
-				CF7603AF26418798000E5836 /* OpenUsbKbDxe.efi in Resources */,
 				CFEE63DB261F422300F708D3 /* ryzen.plist in Resources */,
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
 				CF1BF835264175AF00A794BE /* SMCSuperIO.kext in Resources */,
-				CF7603B02641879B000E5836 /* XhciDxe.efi in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
+				CF8037B1266E838D003F7BB0 /* NvmExpressDxe.efi in Resources */,
+				CF8037B3266E838D003F7BB0 /* OpenUsbKbDxe.efi in Resources */,
+				CF8037AB266E8350003F7BB0 /* macserial in Resources */,
+				CF8037B2266E838D003F7BB0 /* XhciDxe.efi in Resources */,
 				CF1BF83B2641760D00A794BE /* Lilu.kext in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CF77A0B9256C2D100082464D /* imacpro.png in Resources */,
@@ -420,16 +421,17 @@
 				CF67259F261F3F9600B8A5C3 /* BrcmBluetoothInjector.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
+				CF8037B0266E838D003F7BB0 /* OpenRuntime.efi in Resources */,
 				CFEE63DF261F577D00F708D3 /* threadripper.plist in Resources */,
 				CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */,
 				CF1BF834264175AF00A794BE /* SMCLightSensor.kext in Resources */,
 				CF6725A1261F3F9600B8A5C3 /* BrcmPatchRAM3.kext in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
-				CF7603AD26418791000E5836 /* OpenRuntime.efi in Resources */,
 				CFEE63DD261F571100F708D3 /* proxmox.plist in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
 				CF1BF83F2641768B00A794BE /* IntelMausi.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
+				CF8037A9266E8330003F7BB0 /* OpenCore.efi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
