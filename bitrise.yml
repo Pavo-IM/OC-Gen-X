@@ -66,7 +66,7 @@ workflows:
         - username: $GITHUB_USER
         - repository_url: https://github.com/Pavo-IM/OC-Gen-X.git
         - tag: $CURRENT_SHORT_BUNDLE_VERSION
-        - body: 91b4a8a Fixed AppleInput's CustomDelays value type
+        - body: f80360b Removed unneeded kernel patch from Threadripper config
         - commit: master
         - name: $CURRENT_SHORT_BUNDLE_VERSION
         - draft: "no"
