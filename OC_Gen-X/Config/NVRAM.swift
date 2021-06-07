@@ -52,6 +52,7 @@ struct addAppleBootVariableGuid: Codable {
     var systemAudioVolume: Data = Data([0x46])
     var bootArgs: String = "-v keepsyms=1"
     var csrActiveConfig: Data = Data([0x00,0x00,0x00,0x00])
+    var forceDisplayRotationInEFI: Int = 0
     var prevLangKbd: Data = Data([0x72,0x75,0x2D,0x52,0x55,0x3A,0x32,0x35,0x32])
     var runefiupdater: String = "No"
     
@@ -59,6 +60,7 @@ struct addAppleBootVariableGuid: Codable {
         case systemAudioVolume = "SystemAudioVolume"
         case bootArgs = "boot-args"
         case csrActiveConfig = "csr-active-config"
+        case forceDisplayRotationInEFI = "ForceDisplayRotationInEFI"
         case prevLangKbd = "prev-lang:kbd"
         case runefiupdater = "run-efi-updater"
     }

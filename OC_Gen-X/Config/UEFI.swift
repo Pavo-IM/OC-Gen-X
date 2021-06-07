@@ -113,7 +113,7 @@ struct output: Codable {
     var consoleMode: String = ""
     var directGopRendering: Bool = false
     var forceResolution: Bool = false
-    var gopPassThrough: Bool = false
+    var gopPassThrough: String = "Disabled"
     var ignoreTextInGraphics: Bool = false
     var provideConsoleGop: Bool = true
     var reconnectOnResChange: Bool = false
@@ -144,6 +144,7 @@ struct protocols: Codable {
     var appleAudio: Bool = false
     var appleBootPolicy: Bool = false
     var appleDebugLog: Bool = false
+    var appleEg2Info: Bool = false
     var appleFramebufferInfo: Bool = false
     var appleImageConversion: Bool = false
     var appleImg4Verification: Bool = false
@@ -163,6 +164,7 @@ struct protocols: Codable {
         case appleAudio = "AppleAudio"
         case appleBootPolicy = "AppleBootPolicy"
         case appleDebugLog = "AppleDebugLog"
+        case appleEg2Info = "AppleEg2Info"
         case appleFramebufferInfo = "AppleFramebufferInfo"
         case appleImageConversion = "AppleImageConversion"
         case appleImg4Verification = "AppleImg4Verification"

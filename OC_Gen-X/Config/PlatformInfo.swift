@@ -25,7 +25,7 @@ struct platFormInfo: Codable {
 }
 
 struct generic: Codable {
-    var adviseWindows: Bool = false
+    var adviseFeatures: Bool = false
     var maxBIOSVersion: Bool = false
     var mlb: String = ""
     var rom: Data = Data()
@@ -37,7 +37,7 @@ struct generic: Codable {
     var systemUUID: String = ""
     
     enum CodingKeys: String, CodingKey {
-        case adviseWindows = "AdviseWindows"
+        case adviseFeatures = "AdviseFeatures"
         case maxBIOSVersion = "MaxBIOSVersion"
         case mlb = "MLB"
         case rom = "ROM"

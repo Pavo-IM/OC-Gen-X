@@ -97,6 +97,7 @@ struct entries: Codable {
 struct security: Codable {
     var allowNvramReset: Bool = false
     var allowSetDefault: Bool = false
+    var allowToggleSip: Bool = false
     var apECID: Int = 0
     var authRestart: Bool = false
     var blacklistAppleUpdate: Bool = true
@@ -113,6 +114,7 @@ struct security: Codable {
     enum CodingKeys: String, CodingKey {
         case allowNvramReset = "AllowNvramReset"
         case allowSetDefault = "AllowSetDefault"
+        case allowToggleSip = "AllowToggleSip"
         case apECID = "ApECID"
         case authRestart = "AuthRestart"
         case blacklistAppleUpdate = "BlacklistAppleUpdate"
