@@ -19,7 +19,6 @@
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
 		CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */; };
-		CF672597261F3F0900B8A5C3 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF672596261F3F0900B8A5C3 /* WhateverGreen.kext */; };
 		CF67259E261F3F9600B8A5C3 /* BrcmPatchRAM2.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67259A261F3F9600B8A5C3 /* BrcmPatchRAM2.kext */; };
 		CF67259F261F3F9600B8A5C3 /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67259B261F3F9600B8A5C3 /* BrcmBluetoothInjector.kext */; };
 		CF6725A0261F3F9600B8A5C3 /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF67259C261F3F9600B8A5C3 /* BrcmFirmwareData.kext */; };
@@ -54,6 +53,7 @@
 		CF8037C2266E8492003F7BB0 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF8037BC266E8492003F7BB0 /* SMCDellSensors.kext */; };
 		CF8037C3266E8492003F7BB0 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF8037BD266E8492003F7BB0 /* SMCLightSensor.kext */; };
 		CF8037C4266E8492003F7BB0 /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF8037BE266E8492003F7BB0 /* SMCProcessor.kext */; };
+		CF8037C6266E84C7003F7BB0 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF8037C5266E84C7003F7BB0 /* WhateverGreen.kext */; };
 		CF8B211925C781FE00596150 /* XPCServices in Resources */ = {isa = PBXBuildFile; fileRef = CF8B211725C781FE00596150 /* XPCServices */; };
 		CF8B211A25C7821300596150 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; };
 		CF8B211B25C7821300596150 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -111,7 +111,6 @@
 		CF59E731241DA2D600A7C5EC /* OC_Gen_X.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OC_Gen_X.entitlements; sourceTree = "<group>"; };
 		CF59E739241DA57A00A7C5EC /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		CF59E73D241DA7F500A7C5EC /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		CF672596261F3F0900B8A5C3 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
 		CF67259A261F3F9600B8A5C3 /* BrcmPatchRAM2.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM2.kext; sourceTree = "<group>"; };
 		CF67259B261F3F9600B8A5C3 /* BrcmBluetoothInjector.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmBluetoothInjector.kext; sourceTree = "<group>"; };
 		CF67259C261F3F9600B8A5C3 /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		CF8037BC266E8492003F7BB0 /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
 		CF8037BD266E8492003F7BB0 /* SMCLightSensor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCLightSensor.kext; sourceTree = "<group>"; };
 		CF8037BE266E8492003F7BB0 /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
+		CF8037C5266E84C7003F7BB0 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
 		CF8B211625C781FE00596150 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CF8B211725C781FE00596150 /* XPCServices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XPCServices; sourceTree = "<group>"; };
 		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
@@ -182,6 +182,7 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CF8037C5266E84C7003F7BB0 /* WhateverGreen.kext */,
 				CF8037B9266E8492003F7BB0 /* SMCBatteryManager.kext */,
 				CF8037BC266E8492003F7BB0 /* SMCDellSensors.kext */,
 				CF8037BD266E8492003F7BB0 /* SMCLightSensor.kext */,
@@ -195,7 +196,6 @@
 				CF67259C261F3F9600B8A5C3 /* BrcmFirmwareData.kext */,
 				CF67259A261F3F9600B8A5C3 /* BrcmPatchRAM2.kext */,
 				CF67259D261F3F9600B8A5C3 /* BrcmPatchRAM3.kext */,
-				CF672596261F3F0900B8A5C3 /* WhateverGreen.kext */,
 				CFEAE82025A3C2A900356BE8 /* AirportBrcmFixup.kext */,
 				CF4C2013243D06D300D2F187 /* USBInjectAll.kext */,
 				CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */,
@@ -390,7 +390,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF672597261F3F0900B8A5C3 /* WhateverGreen.kext in Resources */,
 				CF8037A7266E831E003F7BB0 /* BOOTx64.efi in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
@@ -422,6 +421,7 @@
 				CF8037B0266E838D003F7BB0 /* OpenRuntime.efi in Resources */,
 				CFEE63DF261F577D00F708D3 /* threadripper.plist in Resources */,
 				CFEAE82125A3C2A900356BE8 /* AirportBrcmFixup.kext in Resources */,
+				CF8037C6266E84C7003F7BB0 /* WhateverGreen.kext in Resources */,
 				CF8037C1266E8492003F7BB0 /* VirtualSMC.kext in Resources */,
 				CF6725A1261F3F9600B8A5C3 /* BrcmPatchRAM3.kext in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
