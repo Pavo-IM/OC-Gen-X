@@ -13,7 +13,6 @@
 		CF1BF837264175AF00A794BE /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF831264175AF00A794BE /* SMCProcessor.kext */; };
 		CF1BF838264175AF00A794BE /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF832264175AF00A794BE /* SMCDellSensors.kext */; };
 		CF1BF839264175AF00A794BE /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF833264175AF00A794BE /* VirtualSMC.kext */; };
-		CF1BF83B2641760D00A794BE /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF83A2641760D00A794BE /* Lilu.kext */; };
 		CF1BF83D2641762000A794BE /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF83C2641762000A794BE /* AppleALC.kext */; };
 		CF1BF83F2641768B00A794BE /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF83E2641768B00A794BE /* IntelMausi.kext */; };
 		CF2D7720256196BF00D7507C /* trx40.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2D771F256196BF00D7507C /* trx40.swift */; };
@@ -54,6 +53,7 @@
 		CF8037B2266E838D003F7BB0 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AE266E838D003F7BB0 /* XhciDxe.efi */; };
 		CF8037B3266E838D003F7BB0 /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF8037AF266E838D003F7BB0 /* OpenUsbKbDxe.efi */; };
 		CF8037B4266E83C5003F7BB0 /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF8037AA266E8350003F7BB0 /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CF8037B6266E842A003F7BB0 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF8037B5266E842A003F7BB0 /* Lilu.kext */; };
 		CF8B211925C781FE00596150 /* XPCServices in Resources */ = {isa = PBXBuildFile; fileRef = CF8B211725C781FE00596150 /* XPCServices */; };
 		CF8B211A25C7821300596150 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; };
 		CF8B211B25C7821300596150 /* Sparkle.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CF8B211625C781FE00596150 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -102,7 +102,6 @@
 		CF1BF831264175AF00A794BE /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
 		CF1BF832264175AF00A794BE /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
 		CF1BF833264175AF00A794BE /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
-		CF1BF83A2641760D00A794BE /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
 		CF1BF83C2641762000A794BE /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CF1BF83E2641768B00A794BE /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CF2D771F256196BF00D7507C /* trx40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trx40.swift; sourceTree = "<group>"; };
@@ -145,6 +144,7 @@
 		CF8037AD266E838D003F7BB0 /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
 		CF8037AE266E838D003F7BB0 /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
 		CF8037AF266E838D003F7BB0 /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
+		CF8037B5266E842A003F7BB0 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
 		CF8B211625C781FE00596150 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		CF8B211725C781FE00596150 /* XPCServices */ = {isa = PBXFileReference; lastKnownFileType = folder; path = XPCServices; sourceTree = "<group>"; };
 		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
@@ -182,9 +182,9 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CF8037B5266E842A003F7BB0 /* Lilu.kext */,
 				CF1BF83E2641768B00A794BE /* IntelMausi.kext */,
 				CF1BF83C2641762000A794BE /* AppleALC.kext */,
-				CF1BF83A2641760D00A794BE /* Lilu.kext */,
 				CF1BF830264175AF00A794BE /* SMCBatteryManager.kext */,
 				CF1BF832264175AF00A794BE /* SMCDellSensors.kext */,
 				CF1BF82E264175AF00A794BE /* SMCLightSensor.kext */,
@@ -409,7 +409,6 @@
 				CF8037B3266E838D003F7BB0 /* OpenUsbKbDxe.efi in Resources */,
 				CF8037AB266E8350003F7BB0 /* macserial in Resources */,
 				CF8037B2266E838D003F7BB0 /* XhciDxe.efi in Resources */,
-				CF1BF83B2641760D00A794BE /* Lilu.kext in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CF77A0B9256C2D100082464D /* imacpro.png in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
@@ -418,6 +417,7 @@
 				CF1BF838264175AF00A794BE /* SMCDellSensors.kext in Resources */,
 				CF1BF839264175AF00A794BE /* VirtualSMC.kext in Resources */,
 				CF77A0B8256C2D100082464D /* macpro.png in Resources */,
+				CF8037B6266E842A003F7BB0 /* Lilu.kext in Resources */,
 				CF67259F261F3F9600B8A5C3 /* BrcmBluetoothInjector.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
