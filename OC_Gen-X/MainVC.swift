@@ -243,13 +243,23 @@ class MainVC: NSViewController {
             return
         }
         let getromItems = getrom.components(separatedBy: "\n")
-        snInput.stringValue = seperateSystemSn.last!
-        smuuidInput.stringValue = systemSmUUID.last!
-        mlbInput.stringValue = systemMLB.last!
+        
+        if let last = seperateSystemSn.last {
+            snInput.stringValue = last
+        }
+        if let last = systemSmUUID.last {
+            smuuidInput.stringValue = last
+        }
+        if let last = systemMLB.last {
+            mlbInput.stringValue = last
+        }
+
         
         if systemModel.last != "" {
-            modelInput.title = systemModel.last!
-            smbiosList.title = systemModel.last!
+            if let last = systemModel.last {
+                modelInput.title = last
+                smbiosList.title = last
+            }
         }
         
         if getromItems.count >= 1 {
