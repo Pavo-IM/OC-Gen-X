@@ -224,25 +224,48 @@ class MainVC: NSViewController {
         smbiosList.selectItem(at: 0)
         modelInput.addItems(withTitles: agpmSmbiosList)
         let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
-        let readSystem = shell(launchPath: macSerial, arguments: ["-s"])!.components(separatedBy: "\n")
-        let systemModel = readSystem[0].components(separatedBy: " ")
-        let seperateSystemSn = readSystem[5].components(separatedBy: " ")
-        let systemSmUUID = readSystem[14].components(separatedBy: " ")
-        let systemMLB = readSystem[16].components(separatedBy: " ")
-        let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
-        snInput.stringValue = seperateSystemSn.last!
-        smuuidInput.stringValue = systemSmUUID.last!
-        mlbInput.stringValue = systemMLB.last!
+        guard let readSystem = shell(launchPath: macSerial, arguments: ["-s"]) else {
+            print("cant read Serial")
+            return
+        }
+        let readSystemItems = readSystem.components(separatedBy: "\n")
+        let systemModel = readSystemItems[0].components(separatedBy: " ")
+        let seperateSystemSn = readSystemItems[5].components(separatedBy: " ")
+        let systemSmUUID = readSystemItems[14].components(separatedBy: " ")
+        let systemMLB = readSystemItems[16].components(separatedBy: " ")
+        guard let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup",
+                                     arguments1: ["-listallhardwareports"],
+                                     launchPath2: "/usr/bin/grep",
+                                     arguments2: ["Ethernet", "-A", "3"],
+                                     launchPath3: "/usr/bin/awk",
+                                     arguments3: ["/Ethernet Address:/{print $3}"]) else {
+            print("cant read rom")
+            return
+        }
+        let getromItems = getrom.components(separatedBy: "\n")
+        
+        if let last = seperateSystemSn.last {
+            snInput.stringValue = last
+        }
+        if let last = systemSmUUID.last {
+            smuuidInput.stringValue = last
+        }
+        if let last = systemMLB.last {
+            mlbInput.stringValue = last
+        }
+
         
         if systemModel.last != "" {
-            modelInput.title = systemModel.last!
-            smbiosList.title = systemModel.last!
+            if let last = systemModel.last {
+                modelInput.title = last
+                smbiosList.title = last
+            }
         }
         
-        if getrom!.count >= 1 {
-            romInput.placeholderString = getrom![1]
+        if getromItems.count >= 1 {
+            romInput.placeholderString = getromItems[1]
         } else {
-            romInput.placeholderString = getrom![0]
+            romInput.placeholderString = getromItems[0]
         }
         
         switch romInput.placeholderString {
@@ -538,18 +561,40 @@ class MainVC: NSViewController {
     @IBAction func serialRefresh(_ sender: NSButton) {
         let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
         let modelName = modelInput.titleOfSelectedItem!
-        let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
-        let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
-        let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
-        snInput.stringValue = sn.last!
-        smuuidInput.stringValue = sn.last!
-        mlbInput.stringValue = mlb.first!
-        snInput.placeholderString = sn[0]
-        snInput.stringValue = snInput.placeholderString!
-        mlbInput.placeholderString = mlb[0]
-        mlbInput.stringValue = mlbInput.placeholderString!
-        smuuidInput.placeholderString = uuid[0]
-        smuuidInput.stringValue = smuuidInput.placeholderString!
+        
+        guard let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"]) else { return }
+        let snItems = sn.components(separatedBy: " |")
+        
+        if let lastItem = snItems.last {
+            snInput.stringValue =  lastItem
+            smuuidInput.stringValue = lastItem
+
+        }
+        
+        snInput.placeholderString = snItems[0]
+        snInput.stringValue = snItems[0]
+
+        guard let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(snItems[0])"]) else {
+            print("cant read mld")
+            return
+        }
+        let mlbItems = mlb.components(separatedBy: "\n")
+
+        if let firstItem = mlbItems.first {
+            mlbInput.stringValue = firstItem
+        }
+        
+        mlbInput.placeholderString = mlbItems[0]
+        mlbInput.stringValue = mlbItems[0]
+        
+        guard let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"]) else {
+            print("cant read uuid")
+            return
+        }
+        let uuidItems = uuid.components(separatedBy: "\n")
+        
+        smuuidInput.placeholderString = uuidItems[0]
+        smuuidInput.stringValue = uuidItems[0]
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
@@ -811,8 +856,8 @@ class MainVC: NSViewController {
         case .on:
             let patchesPlistURL = Bundle.main.url(forResource: "proxmox", withExtension: "plist")
             let plistDecoder = PropertyListDecoder()
-            let data = try! Data(contentsOf: patchesPlistURL!)
-            let patchesData = try! plistDecoder.decode(Root.self, from: data)
+            guard let data = try? Data(contentsOf: patchesPlistURL!) else { return }
+            guard let patchesData = try? plistDecoder.decode(Root.self, from: data) else { return }
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -832,8 +877,8 @@ class MainVC: NSViewController {
         case .on:
             let patchesPlistURL = Bundle.main.url(forResource: "threadripper", withExtension: "plist")
             let plistDecoder = PropertyListDecoder()
-            let data = try! Data(contentsOf: patchesPlistURL!)
-            let patchesData = try! plistDecoder.decode(Root.self, from: data)
+            guard let data = try? Data(contentsOf: patchesPlistURL!) else { return }
+            guard let patchesData = try? plistDecoder.decode(Root.self, from: data) else { return }
             config.booter.mmioWhitelist.append(devirtE2100000)
             config.booter.mmioWhitelist.append(devirtE3180000)
             config.booter.mmioWhitelist.append(devirtEF100000)
@@ -1072,8 +1117,8 @@ class MainVC: NSViewController {
                 if agpmChecked.state == .on {
                     let plistDecoder = PropertyListDecoder()
                     let getAGPMFilePathURL = URL.init(fileURLWithPath: getAGPMFilePath)
-                    let getData = try! Data(contentsOf: getAGPMFilePathURL)
-                    let plistData = try! plistDecoder.decode(PlistGet.self, from: getData)
+                    guard let getData = try? Data(contentsOf: getAGPMFilePathURL) else { return }
+                    guard let plistData = try? plistDecoder.decode(PlistGet.self, from: getData) else { return }
                     let agpmInjectorDir = ocKextsDir.appendingPathComponent("AGPMInjector.kext")
                     let agpmInjectorContentsDir = agpmInjectorDir.appendingPathComponent("Contents")
                     let agpmInjectorInfoPlistFilename = agpmInjectorContentsDir.appendingPathComponent("Info.plist")
