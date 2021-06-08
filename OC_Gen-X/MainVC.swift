@@ -1127,7 +1127,32 @@ class MainVC: NSViewController {
                         amdGPUList.state = NSControl.StateValue.off
                         let nvidiaGpu = NvidiaDictionary[nvidiaGPUList.titleOfSelectedItem!]
                         
-                        let plistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild, cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion, cfBundleGetInfoString: plistData.cfBundleGetInfoString, cfBundleIdentifier: bundleID, cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion, cfBundleName: bundleName, cfBundlePackageType: plistData.cfBundlePackageType, cfBundleShortVersionString: bundleShortVersionName as! String, cfBundleSignature: bundleSig, cfBundleVersion: plistData.cfBundleVersion, nsHumanReadableCopyright: plistData.nsHumanReadableCopyright, setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier, ioClass: plistData.IOKitPersonalities.AGPM.ioClass, ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch, ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass, setMachines: setMachines(machine: setMachine(machinetype: setMachine.MachineType(stringValue: smbiosList!.titleOfSelectedItem!)!, setGPUs: setGpu(gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!, agdcEnabled: AgdcEnabled, setHeuristic: setHeuristic(setID: setID), controlID: controlID, maxPowerState: maxPState, minPowerState: miniPState))))), osBundleRequired: plistData.osBundleRequired)
+                        let plistToEncode = setPlist(buildMachineOSBuild: plistData.buildMachineOSBuild,
+                                                     cfBundleDevelopmentRegion: plistData.cfBundleDevelopmentRegion,
+                                                     cfBundleGetInfoString: plistData.cfBundleGetInfoString,
+                                                     cfBundleIdentifier: bundleID,
+                                                     cfBundleInfoDictionaryVersion: plistData.cfBundleInfoDictionaryVersion,
+                                                     cfBundleName: bundleName,
+                                                     cfBundlePackageType: plistData.cfBundlePackageType,
+                                                     cfBundleShortVersionString: bundleShortVersionName as! String,
+                                                     cfBundleSignature: bundleSig,
+                                                     cfBundleVersion: plistData.cfBundleVersion,
+                                                     nsHumanReadableCopyright: plistData.nsHumanReadableCopyright,
+                                                     setIOKitPersonalities: setIOKitPersonalities(setAGPM: setAGPM(cfBundleIdentifier: plistData.IOKitPersonalities.AGPM.cfBundleIdentifier,
+                                                                                                                   ioClass: plistData.IOKitPersonalities.AGPM.ioClass,
+                                                                                                                   ioNameMatch: plistData.IOKitPersonalities.AGPM.ioNameMatch,
+                                                                                                                   ioProviderClass: plistData.IOKitPersonalities.AGPM.ioProviderClass,
+                                                                                                                   setMachines: setMachines(machine: setMachine(
+                                                                                                                                                machinetype: setMachine.MachineType(
+                                                                                                                                                    stringValue: smbiosList!.titleOfSelectedItem!)!,
+                                                                                                                                                    setGPUs: setGpu(
+                                                                                                                                                        gpu: setGpu.Gputype(stringValue: nvidiaGpu!)!,
+                                                                                                                                                        agdcEnabled: AgdcEnabled,
+                                                                                                                                                        setHeuristic: setHeuristic(setID: setID),
+                                                                                                                                                        controlID: controlID,
+                                                                                                                                                        maxPowerState: maxPState,
+                                                                                                                                                        minPowerState: miniPState))))),
+                                                     osBundleRequired: plistData.osBundleRequired)
                         
                         let setData = try plistEncoder.encode(plistToEncode)
                         try setData.write(to: agpmInjectorInfoPlistFilename)
