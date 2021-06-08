@@ -233,7 +233,16 @@ class MainVC: NSViewController {
         let seperateSystemSn = readSystemItems[5].components(separatedBy: " ")
         let systemSmUUID = readSystemItems[14].components(separatedBy: " ")
         let systemMLB = readSystemItems[16].components(separatedBy: " ")
-        let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
+        guard let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup",
+                                     arguments1: ["-listallhardwareports"],
+                                     launchPath2: "/usr/bin/grep",
+                                     arguments2: ["Ethernet", "-A", "3"],
+                                     launchPath3: "/usr/bin/awk",
+                                     arguments3: ["/Ethernet Address:/{print $3}"]) else {
+            print("cant read rom")
+            return
+        }
+        let getromItems = getrom.components(separatedBy: "\n")
         snInput.stringValue = seperateSystemSn.last!
         smuuidInput.stringValue = systemSmUUID.last!
         mlbInput.stringValue = systemMLB.last!
@@ -243,10 +252,10 @@ class MainVC: NSViewController {
             smbiosList.title = systemModel.last!
         }
         
-        if getrom!.count >= 1 {
-            romInput.placeholderString = getrom![1]
+        if getromItems.count >= 1 {
+            romInput.placeholderString = getromItems[1]
         } else {
-            romInput.placeholderString = getrom![0]
+            romInput.placeholderString = getromItems[0]
         }
         
         switch romInput.placeholderString {
