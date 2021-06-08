@@ -549,10 +549,13 @@ class MainVC: NSViewController {
     }
     
     @IBAction func serialRefresh(_ sender: NSButton) {
-        let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
-        let modelName = modelInput.titleOfSelectedItem!
-        
-        guard let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"]) else { return }
+        guard let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial"),
+              let modelName = modelInput.titleOfSelectedItem,
+              let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])
+        else {
+            print("cant read serial")
+            return
+        }
         let snItems = sn.components(separatedBy: " |")
         
         if let lastItem = snItems.last {

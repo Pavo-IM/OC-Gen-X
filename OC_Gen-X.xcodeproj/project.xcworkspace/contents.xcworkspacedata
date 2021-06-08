@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Volumes/Storage/Github/OC_Gen-X/OC_Gen-X.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
