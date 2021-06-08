@@ -551,18 +551,40 @@ class MainVC: NSViewController {
     @IBAction func serialRefresh(_ sender: NSButton) {
         let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
         let modelName = modelInput.titleOfSelectedItem!
-        let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"])!.components(separatedBy: " |")
-        let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(sn[0])"])!.components(separatedBy: "\n")
-        let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"])!.components(separatedBy: "\n")
-        snInput.stringValue = sn.last!
-        smuuidInput.stringValue = sn.last!
-        mlbInput.stringValue = mlb.first!
-        snInput.placeholderString = sn[0]
-        snInput.stringValue = snInput.placeholderString!
-        mlbInput.placeholderString = mlb[0]
-        mlbInput.stringValue = mlbInput.placeholderString!
-        smuuidInput.placeholderString = uuid[0]
-        smuuidInput.stringValue = smuuidInput.placeholderString!
+        
+        guard let sn = shell(launchPath: macSerial, arguments: ["-m", "\(modelName)","-n","1"]) else { return }
+        let snItems = sn.components(separatedBy: " |")
+        
+        if let lastItem = snItems.last {
+            snInput.stringValue =  lastItem
+            smuuidInput.stringValue = lastItem
+
+        }
+        
+        snInput.placeholderString = snItems[0]
+        snInput.stringValue = snItems[0]
+
+        guard let mlb = shell(launchPath: macSerial, arguments: ["--mlb", "\(snItems[0])"]) else {
+            print("cant read mld")
+            return
+        }
+        let mlbItems = mlb.components(separatedBy: "\n")
+
+        if let firstItem = mlbItems.first {
+            mlbInput.stringValue = firstItem
+        }
+        
+        mlbInput.placeholderString = mlbItems[0]
+        mlbInput.stringValue = mlbItems[0]
+        
+        guard let uuid = shell(launchPath: "/bin/bash", arguments: ["-c", "uuidgen"]) else {
+            print("cant read uuid")
+            return
+        }
+        let uuidItems = uuid.components(separatedBy: "\n")
+        
+        smuuidInput.placeholderString = uuidItems[0]
+        smuuidInput.stringValue = uuidItems[0]
     }
     
     @IBAction func generateClicked(_ sender: NSButton) {
