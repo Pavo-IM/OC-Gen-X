@@ -846,8 +846,8 @@ class MainVC: NSViewController {
         case .on:
             let patchesPlistURL = Bundle.main.url(forResource: "proxmox", withExtension: "plist")
             let plistDecoder = PropertyListDecoder()
-            let data = try! Data(contentsOf: patchesPlistURL!)
-            let patchesData = try! plistDecoder.decode(Root.self, from: data)
+            guard let data = try? Data(contentsOf: patchesPlistURL!) else { return }
+            guard let patchesData = try? plistDecoder.decode(Root.self, from: data) else { return }
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
@@ -867,8 +867,8 @@ class MainVC: NSViewController {
         case .on:
             let patchesPlistURL = Bundle.main.url(forResource: "threadripper", withExtension: "plist")
             let plistDecoder = PropertyListDecoder()
-            let data = try! Data(contentsOf: patchesPlistURL!)
-            let patchesData = try! plistDecoder.decode(Root.self, from: data)
+            guard let data = try? Data(contentsOf: patchesPlistURL!) else { return }
+            guard let patchesData = try? plistDecoder.decode(Root.self, from: data) else { return }
             config.booter.mmioWhitelist.append(devirtE2100000)
             config.booter.mmioWhitelist.append(devirtE3180000)
             config.booter.mmioWhitelist.append(devirtEF100000)
