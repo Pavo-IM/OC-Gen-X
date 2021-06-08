@@ -1107,8 +1107,8 @@ class MainVC: NSViewController {
                 if agpmChecked.state == .on {
                     let plistDecoder = PropertyListDecoder()
                     let getAGPMFilePathURL = URL.init(fileURLWithPath: getAGPMFilePath)
-                    let getData = try! Data(contentsOf: getAGPMFilePathURL)
-                    let plistData = try! plistDecoder.decode(PlistGet.self, from: getData)
+                    guard let getData = try? Data(contentsOf: getAGPMFilePathURL) else { return }
+                    guard let plistData = try? plistDecoder.decode(PlistGet.self, from: getData) else { return }
                     let agpmInjectorDir = ocKextsDir.appendingPathComponent("AGPMInjector.kext")
                     let agpmInjectorContentsDir = agpmInjectorDir.appendingPathComponent("Contents")
                     let agpmInjectorInfoPlistFilename = agpmInjectorContentsDir.appendingPathComponent("Info.plist")
