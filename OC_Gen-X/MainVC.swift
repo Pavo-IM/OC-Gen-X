@@ -224,11 +224,15 @@ class MainVC: NSViewController {
         smbiosList.selectItem(at: 0)
         modelInput.addItems(withTitles: agpmSmbiosList)
         let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
-        let readSystem = shell(launchPath: macSerial, arguments: ["-s"])!.components(separatedBy: "\n")
-        let systemModel = readSystem[0].components(separatedBy: " ")
-        let seperateSystemSn = readSystem[5].components(separatedBy: " ")
-        let systemSmUUID = readSystem[14].components(separatedBy: " ")
-        let systemMLB = readSystem[16].components(separatedBy: " ")
+        guard let readSystem = shell(launchPath: macSerial, arguments: ["-s"]) else {
+            print("cant read Serial")
+            return
+        }
+        let readSystemItems = readSystem.components(separatedBy: "\n")
+        let systemModel = readSystemItems[0].components(separatedBy: " ")
+        let seperateSystemSn = readSystemItems[5].components(separatedBy: " ")
+        let systemSmUUID = readSystemItems[14].components(separatedBy: " ")
+        let systemMLB = readSystemItems[16].components(separatedBy: " ")
         let getrom = shellPipe(launchPath1: "/usr/sbin/networksetup", arguments1: ["-listallhardwareports"], launchPath2: "/usr/bin/grep", arguments2: ["Ethernet", "-A", "3"], launchPath3: "/usr/bin/awk", arguments3: ["/Ethernet Address:/{print $3}"])?.components(separatedBy: "\n")
         snInput.stringValue = seperateSystemSn.last!
         smuuidInput.stringValue = systemSmUUID.last!
