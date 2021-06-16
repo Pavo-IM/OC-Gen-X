@@ -840,6 +840,7 @@ class MainVC: NSViewController {
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
+            config.kernel.emulate.dummyPowerManagement = true
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
@@ -900,6 +901,7 @@ class MainVC: NSViewController {
             config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
+            config.kernel.emulate.dummyPowerManagement = true
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
