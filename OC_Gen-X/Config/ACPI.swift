@@ -84,6 +84,7 @@ struct acpuQuirks: Codable {
     var rebaseRegions: Bool = false
     var resetHwSig: Bool = false
     var resetLogoStatus: Bool = false
+    var syncTableIds: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case fadtEnableReset = "FadtEnableReset"
@@ -91,5 +92,6 @@ struct acpuQuirks: Codable {
         case rebaseRegions = "RebaseRegions"
         case resetHwSig = "ResetHwSig"
         case resetLogoStatus = "ResetLogoStatus"
+        case syncTableIds = "SyncTableIds"
     }
 }

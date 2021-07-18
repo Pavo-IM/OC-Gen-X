@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF0D6E8E26A3C84F003EE332 /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF0D6E8D26A3C84F003EE332 /* AirportBrcmFixup.kext */; };
 		CF1BF83F2641768B00A794BE /* IntelMausi.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1BF83E2641768B00A794BE /* IntelMausi.kext */; };
 		CF1C1B02266E8D3C00F7BC6D /* BrcmBluetoothInjector.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1AFF266E8CE300F7BC6D /* BrcmBluetoothInjector.kext */; };
 		CF1C1B03266E8D3C00F7BC6D /* BrcmFirmwareData.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1AFD266E8CE300F7BC6D /* BrcmFirmwareData.kext */; };
@@ -27,7 +28,6 @@
 		CF33581626A3C11A005DBC7B /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33581026A3C11A005DBC7B /* SMCDellSensors.kext */; };
 		CF33581826A3C131005DBC7B /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33581726A3C131005DBC7B /* AppleALC.kext */; };
 		CF33581A26A3C142005DBC7B /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33581926A3C142005DBC7B /* Lilu.kext */; };
-		CF33581C26A3C158005DBC7B /* AirportBrcmFixup.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33581B26A3C158005DBC7B /* AirportBrcmFixup.kext */; };
 		CF33582126A3C18C005DBC7B /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF33581D26A3C18C005DBC7B /* XhciDxe.efi */; };
 		CF33582226A3C18C005DBC7B /* NvmExpressDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF33581E26A3C18C005DBC7B /* NvmExpressDxe.efi */; };
 		CF33582326A3C18C005DBC7B /* OpenUsbKbDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF33581F26A3C18C005DBC7B /* OpenUsbKbDxe.efi */; };
@@ -97,6 +97,7 @@
 
 /* Begin PBXFileReference section */
 		B896CFA1249F24E50061F934 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		CF0D6E8D26A3C84F003EE332 /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CF1BF83E2641768B00A794BE /* IntelMausi.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = IntelMausi.kext; sourceTree = "<group>"; };
 		CF1C1AFD266E8CE300F7BC6D /* BrcmFirmwareData.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareData.kext; sourceTree = "<group>"; };
 		CF1C1AFE266E8CE300F7BC6D /* BrcmPatchRAM2.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM2.kext; sourceTree = "<group>"; };
@@ -116,7 +117,6 @@
 		CF33581026A3C11A005DBC7B /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
 		CF33581726A3C131005DBC7B /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CF33581926A3C142005DBC7B /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
-		CF33581B26A3C158005DBC7B /* AirportBrcmFixup.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AirportBrcmFixup.kext; sourceTree = "<group>"; };
 		CF33581D26A3C18C005DBC7B /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
 		CF33581E26A3C18C005DBC7B /* NvmExpressDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = NvmExpressDxe.efi; sourceTree = "<group>"; };
 		CF33581F26A3C18C005DBC7B /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
-				CF33581B26A3C158005DBC7B /* AirportBrcmFixup.kext */,
+				CF0D6E8D26A3C84F003EE332 /* AirportBrcmFixup.kext */,
 				CF33581926A3C142005DBC7B /* Lilu.kext */,
 				CF33581726A3C131005DBC7B /* AppleALC.kext */,
 				CF33580B26A3C119005DBC7B /* SMCBatteryManager.kext */,
@@ -422,8 +422,8 @@
 				CF33581626A3C11A005DBC7B /* SMCDellSensors.kext in Resources */,
 				CF33581426A3C11A005DBC7B /* VirtualSMC.kext in Resources */,
 				CF77A0B8256C2D100082464D /* macpro.png in Resources */,
+				CF0D6E8E26A3C84F003EE332 /* AirportBrcmFixup.kext in Resources */,
 				CF33581826A3C131005DBC7B /* AppleALC.kext in Resources */,
-				CF33581C26A3C158005DBC7B /* AirportBrcmFixup.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF33581A26A3C142005DBC7B /* Lilu.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
@@ -605,7 +605,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3.1.6;
+				CURRENT_PROJECT_VERSION = 3.1.7;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_ARCHS = arm64;
@@ -625,7 +625,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 3.1.6;
+				MARKETING_VERSION = 3.1.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,7 +642,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3.1.6;
+				CURRENT_PROJECT_VERSION = 3.1.7;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
 				ENABLE_HARDENED_RUNTIME = YES;
 				EXCLUDED_ARCHS = arm64;
@@ -662,7 +662,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MARKETING_VERSION = 3.1.6;
+				MARKETING_VERSION = 3.1.7;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oc-gen-x.OC-Gen-X";
 				PRODUCT_NAME = "$(TARGET_NAME)";
