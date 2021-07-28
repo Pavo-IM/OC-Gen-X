@@ -739,7 +739,6 @@ class MainVC: NSViewController {
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
-            config.kernel.kQuirks.appleCpuPmCfgLock = true
             config.kernel.kQuirks.appleXcpmCfgLock = true
             config.kernel.kQuirks.disableIoMapper = true
             config.kernel.kQuirks.panicNoKextDump = true
