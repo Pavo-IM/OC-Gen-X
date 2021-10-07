@@ -65,9 +65,6 @@
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
-		CFEE63DB261F422300F708D3 /* ryzen.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEE63DA261F422300F708D3 /* ryzen.plist */; };
-		CFEE63DD261F571100F708D3 /* proxmox.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEE63DC261F571100F708D3 /* proxmox.plist */; };
-		CFEE63DF261F577D00F708D3 /* threadripper.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFEE63DE261F577D00F708D3 /* threadripper.plist */; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -156,9 +153,6 @@
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
-		CFEE63DA261F422300F708D3 /* ryzen.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ryzen.plist; sourceTree = "<group>"; };
-		CFEE63DC261F571100F708D3 /* proxmox.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = proxmox.plist; sourceTree = "<group>"; };
-		CFEE63DE261F577D00F708D3 /* threadripper.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = threadripper.plist; sourceTree = "<group>"; };
 		D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyperlinkTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -316,9 +310,6 @@
 		CFEE63D9261F420E00F708D3 /* AMD Patches */ = {
 			isa = PBXGroup;
 			children = (
-				CFEE63DA261F422300F708D3 /* ryzen.plist */,
-				CFEE63DC261F571100F708D3 /* proxmox.plist */,
-				CFEE63DE261F577D00F708D3 /* threadripper.plist */,
 			);
 			path = "AMD Patches";
 			sourceTree = "<group>";
@@ -408,7 +399,6 @@
 				CF77A0B7256C2D100082464D /* macpro71.png in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CF33580626A3C075005DBC7B /* BOOTx64.efi in Resources */,
-				CFEE63DB261F422300F708D3 /* ryzen.plist in Resources */,
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF33582326A3C18C005DBC7B /* OpenUsbKbDxe.efi in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
@@ -427,11 +417,9 @@
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CF33581A26A3C142005DBC7B /* Lilu.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
-				CFEE63DF261F577D00F708D3 /* threadripper.plist in Resources */,
 				CF33581326A3C11A005DBC7B /* SMCProcessor.kext in Resources */,
 				CF33580826A3C084005DBC7B /* OpenCore.efi in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
-				CFEE63DD261F571100F708D3 /* proxmox.plist in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
 				CF1BF83F2641768B00A794BE /* IntelMausi.kext in Resources */,
 				CF33581226A3C11A005DBC7B /* SMCLightSensor.kext in Resources */,
