@@ -108,7 +108,7 @@ struct security: Codable {
     var passwordHash: Data = Data()
     var passwordSalt: Data = Data()
     var scanPolicy: Int = 0
-    var secureBootModel: String = "Disabled"
+    var secureBootModel: String = "Default"
     var vault: String = "Optional"
     
     enum CodingKeys: String, CodingKey {
