@@ -5,7 +5,7 @@ struct uefi: Codable {
     var appleInput: appleInput
     var audio: audio
     var connectDrivers: Bool = true
-    var drivers: [String] = []
+    var drivers: [uefiDrivers]
     var input: input
     var output: output
     var protocols: protocols
@@ -47,6 +47,7 @@ struct apfs: Codable {
 struct appleInput: Codable {
     var appleEvent: String = "Builtin"
     var customDelays: Bool = false
+    var graphicsInputMirroring: Bool = true
     var keyInitialDelay: Int = 0
     var keySubsequentDelay: Int = 5
     var pointerSpeedDiv: Int = 1
@@ -55,6 +56,7 @@ struct appleInput: Codable {
     enum CodingKeys: String, CodingKey {
         case appleEvent = "AppleEvent"
         case customDelays = "CustomDelays"
+        case graphicsInputMirroring = "GraphicsInputMirroring"
         case keyInitialDelay = "KeyInitialDelay"
         case keySubsequentDelay = "KeySubsequentDelay"
         case pointerSpeedDiv = "PointerSpeedDiv"
@@ -83,6 +85,20 @@ struct audio: Codable {
         case resetTrafficClass = "ResetTrafficClass"
         case setupDelay = "SetupDelay"
         case volumeAmplifier = "VolumeAmplifier"
+    }
+}
+
+struct uefiDrivers: Codable {
+    var arguments: String = ""
+    var comment: String = ""
+    var enabled: Bool = false
+    var path: String = ""
+    
+    enum CodingKeys: String, CodingKey {
+        case arguments = "Arguments"
+        case comment = "Comment"
+        case enabled = "Enabled"
+        case path = "Path"
     }
 }
 
@@ -155,7 +171,7 @@ struct protocols: Codable {
     var appleUserInterfaceTheme: Bool = false
     var dataHub: Bool = false
     var deviceProperties: Bool = false
-    var firmwareVolume: Bool = false
+    var firmwareVolume: Bool = true
     var hashServices: Bool = false
     var osInfo: Bool = false
     var unicodeCollation: Bool = false
@@ -187,6 +203,7 @@ struct uQuirks: Codable {
     var disableSecurityPolicy: Bool = false
     var enableVectorAcceleration: Bool = true
     var exitBootServicesDelay: Int = 0
+    var forceOcWriteFlash: Bool = false
     var forgeUefiSupport: Bool = false
     var ignoreInvalidFlexRatio: Bool = false
     var releaseUsbOwnership: Bool = false
@@ -200,6 +217,7 @@ struct uQuirks: Codable {
         case disableSecurityPolicy = "DisableSecurityPolicy"
         case enableVectorAcceleration  = "EnableVectorAcceleration"
         case exitBootServicesDelay = "ExitBootServicesDelay"
+        case forceOcWriteFlash = "ForceOcWriteFlash"
         case forgeUefiSupport = "ForgeUefiSupport"
         case ignoreInvalidFlexRatio = "IgnoreInvalidFlexRatio"
         case releaseUsbOwnership = "ReleaseUsbOwnership"
