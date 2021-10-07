@@ -101,13 +101,13 @@ struct force: Codable {
 }
 
 struct kPatch: Codable {
-    var arch: String = "Any"
+    var arch: String = "x86_64"
     var base: String = ""
     var comment: String = ""
     var count: Int = 0
-    var enabled: Bool = false
+    var enabled: Bool = true
     var find: Data = Data()
-    var identifier: String = ""
+    var identifier: String = "kernel"
     var limit: Int = 0
     var mask: Data = Data()
     var maxKernel: String = ""

@@ -67,8 +67,9 @@ class MainVC: NSViewController {
     @IBOutlet weak var threadripperChecked: NSButton!
     @IBOutlet weak var modelInput: NSPopUpButton!
     @IBOutlet weak var romInput: NSTextField!
-    var ryzenPatches = [kPatch]()
-    var threadripperPatches = [kPatch]()
+    @IBOutlet weak var coreCountLabel: NSTextField!
+    @IBOutlet weak var coreCountList: NSPopUpButton!
+    
     var config = Root(
         acpi: acpi(add: [acpiAdd()], delete: [acpiDelete()], patch: [acpiPatch()], quirks: acpuQuirks()),
         
@@ -84,7 +85,7 @@ class MainVC: NSViewController {
         
         platFormInfo: platFormInfo(generic: generic(), memory: memory(devices: [devices()])),
         
-        uefi: uefi(apfs: apfs(), appleInput: appleInput(), audio: audio(), input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
+        uefi: uefi(apfs: apfs(), appleInput: appleInput(), audio: audio(), connectDrivers: true, drivers: [uefiDrivers()], input: input(), output: output(), protocols: protocols(), quirks: uQuirks(), reservedMemory: [reservedMemory()])
     )
     
     var agpmSmbiosList = [
@@ -182,6 +183,17 @@ class MainVC: NSViewController {
         "GTX Titan Black": "Vendor10deDevice100c"
     ]
     
+    var amdCPUCoreCountList = [
+        "4 Core",
+        "6 Core",
+        "8 Core",
+        "12 Core",
+        "16 Core",
+        "24 Core",
+        "32 Core",
+        "64 Core",
+    ]
+    
     let getAGPMFilePath = "/System/Library/Extensions/AppleGraphicsPowerManagement.kext/Contents/Info.plist"
     let bundleID = "com.apple.driver.AGPMInjector"
     let bundleName = "AGPMInjector"
@@ -213,6 +225,7 @@ class MainVC: NSViewController {
         let sortedArray = agpmSmbiosList.sorted()
         let sortedAMDDictionary = AMDDictionary.keys.sorted()
         let sortedNvidiaDictionary = NvidiaDictionary.keys.sorted()
+        let coreCount = amdCPUCoreCountList
         amdGPUList.removeAllItems()
         amdGPUList.addItems(withTitles: sortedAMDDictionary)
         amdGPUList.selectItem(at: 0)
@@ -223,6 +236,9 @@ class MainVC: NSViewController {
         smbiosList.addItems(withTitles: sortedArray)
         smbiosList.selectItem(at: 0)
         modelInput.addItems(withTitles: agpmSmbiosList)
+        coreCountList.removeAllItems()
+        coreCountList.selectItem(at: 0)
+        coreCountList.addItems(withTitles: coreCount)
         let macSerial = Bundle.main.path(forAuxiliaryExecutable: "macserial")!
         guard let readSystem = shell(launchPath: macSerial, arguments: ["-s"]) else {
             print("cant read Serial")
@@ -830,16 +846,75 @@ class MainVC: NSViewController {
         
         switch ryzenChecked.state {
         case .on:
-            let patchesPlistURL = Bundle.main.url(forResource: "ryzen", withExtension: "plist")
-            let plistDecoder = PropertyListDecoder()
-            let data = try! Data(contentsOf: patchesPlistURL!)
-            let patchesData = try! plistDecoder.decode(Root.self, from: data)
+            if coreCountList.titleOfSelectedItem == "4 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "6 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "8 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "12 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "16 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "24 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "32 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "64 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
+            }
+            
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.enableSafeModeSlide = true
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
-            config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
             config.kernel.emulate.dummyPowerManagement = true
+            config.kernel.kPatch.append(ryzenPatch1)
+            config.kernel.kPatch.append(ryzenPatch2)
+            config.kernel.kPatch.append(ryzenPatch3)
+            config.kernel.kPatch.append(ryzenPatch4)
+            config.kernel.kPatch.append(ryzenPatch5)
+            config.kernel.kPatch.append(ryzenPatch6)
+            config.kernel.kPatch.append(ryzenPatch7)
+            config.kernel.kPatch.append(ryzenPatch8)
+            config.kernel.kPatch.append(ryzenPatch9)
+            config.kernel.kPatch.append(ryzenPatch10)
+            config.kernel.kPatch.append(ryzenPatch11)
+            config.kernel.kPatch.append(ryzenPatch12)
+            config.kernel.kPatch.append(ryzenPatch13)
+            config.kernel.kPatch.append(ryzenPatch14)
+            config.kernel.kPatch.append(ryzenPatch15)
+            config.kernel.kPatch.append(ryzenPatch16)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
             config.kernel.kQuirks.xhciPortLimit = true
@@ -854,16 +929,11 @@ class MainVC: NSViewController {
         
         switch proxintoshChecked.state {
         case .on:
-            let patchesPlistURL = Bundle.main.url(forResource: "proxmox", withExtension: "plist")
-            let plistDecoder = PropertyListDecoder()
-            guard let data = try? Data(contentsOf: patchesPlistURL!) else { return }
-            guard let patchesData = try? plistDecoder.decode(Root.self, from: data) else { return }
             config.booter.quirks.enableWriteUnprotector = false
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.emulate.cpuid1Data = Data([0x57,0x06,0x05,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
             config.kernel.emulate.cpuid1Mask = Data([0xFF,0xFF,0xFF,0xFF, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,0x00])
-            config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
@@ -875,10 +945,6 @@ class MainVC: NSViewController {
         
         switch threadripperChecked.state {
         case .on:
-            let patchesPlistURL = Bundle.main.url(forResource: "threadripper", withExtension: "plist")
-            let plistDecoder = PropertyListDecoder()
-            guard let data = try? Data(contentsOf: patchesPlistURL!) else { return }
-            guard let patchesData = try? plistDecoder.decode(Root.self, from: data) else { return }
             config.booter.mmioWhitelist.append(devirtE2100000)
             config.booter.mmioWhitelist.append(devirtE3180000)
             config.booter.mmioWhitelist.append(devirtEF100000)
@@ -899,7 +965,6 @@ class MainVC: NSViewController {
             config.booter.quirks.rebuildAppleMemoryMap = true
             config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
-            config.kernel.kPatch.append(contentsOf: patchesData.kernel.kPatch)
             config.kernel.emulate.dummyPowerManagement = true
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
@@ -1056,35 +1121,35 @@ class MainVC: NSViewController {
         
         switch openRuntimeChecked.state {
         case .on:
-            config.uefi.drivers.append("OpenRuntime.efi")
+            config.uefi.drivers.append(uefiDrivers.init(arguments: "", comment: "", enabled: true, path: "OpenRuntime.efi"))
         default:
             break
         }
         
         switch hfsPlusChecked.state {
         case .on:
-            config.uefi.drivers.append("HfsPlus.efi")
+            config.uefi.drivers.append(uefiDrivers.init(arguments: "", comment: "", enabled: true, path: "HfsPlus.efi"))
         default:
             break
         }
         
         switch openUSBChecked.state {
         case .on:
-            config.uefi.drivers.append("OpenUsbKbDxe.efi")
+            config.uefi.drivers.append(uefiDrivers.init(arguments: "", comment: "", enabled: true, path: "OpenUsbKbDxe.efi"))
         default:
             break
         }
         
         switch nvmExpressChecked.state {
         case .on:
-            config.uefi.drivers.append("NvmExpressDxe.efi")
+            config.uefi.drivers.append(uefiDrivers.init(arguments: "", comment: "", enabled: true, path: "NvmExpressDxe.efi"))
         default:
             break
         }
         
         switch xhciChecked.state {
         case .on:
-            config.uefi.drivers.append("XhciDxe.efi")
+            config.uefi.drivers.append(uefiDrivers.init(arguments: "", comment: "", enabled: true, path: "XhciDxe.efi"))
         default:
             break
         }

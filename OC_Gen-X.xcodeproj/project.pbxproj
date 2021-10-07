@@ -14,7 +14,6 @@
 		CF1C1B04266E8D3C00F7BC6D /* BrcmFirmwareRepo.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1B01266E8CE300F7BC6D /* BrcmFirmwareRepo.kext */; };
 		CF1C1B05266E8D3C00F7BC6D /* BrcmPatchRAM2.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1AFE266E8CE300F7BC6D /* BrcmPatchRAM2.kext */; };
 		CF1C1B06266E8D3C00F7BC6D /* BrcmPatchRAM3.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF1C1B00266E8CE300F7BC6D /* BrcmPatchRAM3.kext */; };
-		CF2D7720256196BF00D7507C /* trx40.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2D771F256196BF00D7507C /* trx40.swift */; };
 		CF33580326A3BFE6005DBC7B /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CF33580226A3BFE6005DBC7B /* macserial */; };
 		CF33580426A3C044005DBC7B /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF33580226A3BFE6005DBC7B /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CF33580626A3C075005DBC7B /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF33580526A3C075005DBC7B /* BOOTx64.efi */; };
@@ -62,6 +61,9 @@
 		CF92213125C9E58A00CBD096 /* generate_keys in Resources */ = {isa = PBXBuildFile; fileRef = CF92212F25C9E58A00CBD096 /* generate_keys */; };
 		CF92213225C9E58A00CBD096 /* generate_appcast in Resources */ = {isa = PBXBuildFile; fileRef = CF92213025C9E58A00CBD096 /* generate_appcast */; };
 		CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFC0F3B9256EA9BF00549048 /* AGPM.swift */; };
+		CFD0F172270F5D9300041B05 /* Ryzen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0F171270F5D9300041B05 /* Ryzen.swift */; };
+		CFD0F174270F5DAD00041B05 /* Proxmox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0F173270F5DAD00041B05 /* Proxmox.swift */; };
+		CFD0F176270F5DCB00041B05 /* TRX40.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0F175270F5DCB00041B05 /* TRX40.swift */; };
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
@@ -101,7 +103,6 @@
 		CF1C1AFF266E8CE300F7BC6D /* BrcmBluetoothInjector.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmBluetoothInjector.kext; sourceTree = "<group>"; };
 		CF1C1B00266E8CE300F7BC6D /* BrcmPatchRAM3.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmPatchRAM3.kext; sourceTree = "<group>"; };
 		CF1C1B01266E8CE300F7BC6D /* BrcmFirmwareRepo.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = BrcmFirmwareRepo.kext; sourceTree = "<group>"; };
-		CF2D771F256196BF00D7507C /* trx40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trx40.swift; sourceTree = "<group>"; };
 		CF33580226A3BFE6005DBC7B /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		CF33580526A3C075005DBC7B /* BOOTx64.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = BOOTx64.efi; sourceTree = "<group>"; };
 		CF33580726A3C084005DBC7B /* OpenCore.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenCore.efi; sourceTree = "<group>"; };
@@ -150,6 +151,9 @@
 		CF92212F25C9E58A00CBD096 /* generate_keys */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_keys; sourceTree = "<group>"; };
 		CF92213025C9E58A00CBD096 /* generate_appcast */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = generate_appcast; sourceTree = "<group>"; };
 		CFC0F3B9256EA9BF00549048 /* AGPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPM.swift; sourceTree = "<group>"; };
+		CFD0F171270F5D9300041B05 /* Ryzen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ryzen.swift; sourceTree = "<group>"; };
+		CFD0F173270F5DAD00041B05 /* Proxmox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxmox.swift; sourceTree = "<group>"; };
+		CFD0F175270F5DCB00041B05 /* TRX40.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRX40.swift; sourceTree = "<group>"; };
 		CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = HfsPlus.efi; sourceTree = "<group>"; };
 		CFE16258260CF94D00F4616C /* sandybridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sandybridge.swift; sourceTree = "<group>"; };
 		CFE8A22F249E662400D72669 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
@@ -277,7 +281,6 @@
 				CF6F1123241E972600B70805 /* NVRAM.swift */,
 				CF6F1125241E973600B70805 /* PlatformInfo.swift */,
 				CF6F1127241E973E00B70805 /* UEFI.swift */,
-				CF2D771F256196BF00D7507C /* trx40.swift */,
 				CFC0F3B9256EA9BF00549048 /* AGPM.swift */,
 				CFE16258260CF94D00F4616C /* sandybridge.swift */,
 			);
@@ -310,6 +313,9 @@
 		CFEE63D9261F420E00F708D3 /* AMD Patches */ = {
 			isa = PBXGroup;
 			children = (
+				CFD0F171270F5D9300041B05 /* Ryzen.swift */,
+				CFD0F173270F5DAD00041B05 /* Proxmox.swift */,
+				CFD0F175270F5DCB00041B05 /* TRX40.swift */,
 			);
 			path = "AMD Patches";
 			sourceTree = "<group>";
@@ -437,12 +443,13 @@
 				CF6F1126241E973600B70805 /* PlatformInfo.swift in Sources */,
 				CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */,
 				CF6F1120241E971400B70805 /* Kernel.swift in Sources */,
-				CF2D7720256196BF00D7507C /* trx40.swift in Sources */,
 				CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */,
 				CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */,
 				CF6F111C241E96F400B70805 /* Booter.swift in Sources */,
 				CF6F1122241E971E00B70805 /* Misc.swift in Sources */,
 				D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */,
+				CFD0F176270F5DCB00041B05 /* TRX40.swift in Sources */,
+				CFD0F172270F5D9300041B05 /* Ryzen.swift in Sources */,
 				CF6F1124241E972600B70805 /* NVRAM.swift in Sources */,
 				CFC0F3BA256EA9BF00549048 /* AGPM.swift in Sources */,
 				CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */,
@@ -450,6 +457,7 @@
 				CF59E73E241DA7F500A7C5EC /* MainWindowController.swift in Sources */,
 				CF6F1118241E96DD00B70805 /* Root.swift in Sources */,
 				CF6F111E241E970B00B70805 /* DeviceProperties.swift in Sources */,
+				CFD0F174270F5DAD00041B05 /* Proxmox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
