@@ -181,11 +181,13 @@ struct kQuirks: Codable {
 }
 
 struct scheme: Codable {
+    var customKernel: Bool = false
     var fuzzyMatch: Bool = true
     var kernelArch: String = "x86_64"
     var kernelCache: String = "Auto"
     
     enum CodingKeys: String, CodingKey {
+        case customKernel = "CustomKernel"
         case fuzzyMatch = "FuzzyMatch"
         case kernelArch = "KernelArch"
         case kernelCache = "KernelCache"
