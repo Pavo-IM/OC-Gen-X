@@ -848,50 +848,50 @@ class MainVC: NSViewController {
         case .on:
             if coreCountList.titleOfSelectedItem == "4 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x04, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x04, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "6 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x06, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x06, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "8 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x08, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x08, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "12 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x0C, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x0C, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "16 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x10, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x10, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "24 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x18, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x18, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "32 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x20, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x20, 0x00, 0x00, 0x00, 0x90])
             }
             
             if coreCountList.titleOfSelectedItem == "64 Core" {
                 ryzenPatch1.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch2.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
-                ryzenPatch3.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x40, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x40, 0x00, 0x00, 0x00, 0x90])
             }
             
             config.booter.quirks.enableWriteUnprotector = false
@@ -945,6 +945,53 @@ class MainVC: NSViewController {
         
         switch threadripperChecked.state {
         case .on:
+            if coreCountList.titleOfSelectedItem == "4 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x04, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x04, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x04, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "6 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x06, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x06, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x06, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "8 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x08, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x08, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x08, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "12 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x0C, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x0C, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x0C, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "16 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x10, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x10, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x10, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "24 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x18, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x18, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x18, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "32 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x20, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x20, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x20, 0x00, 0x00, 0x00, 0x90])
+            }
+            
+            if coreCountList.titleOfSelectedItem == "64 Core" {
+                ryzenPatch1.replace = Data([0xB8, 0x40, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch2.replace = Data([0xBA, 0x40, 0x00, 0x00, 0x00, 0x00])
+                ryzenPatch3.replace = Data([0xBA, 0x40, 0x00, 0x00, 0x00, 0x90])
+            }
             config.booter.mmioWhitelist.append(devirtE2100000)
             config.booter.mmioWhitelist.append(devirtE3180000)
             config.booter.mmioWhitelist.append(devirtEF100000)
@@ -966,6 +1013,20 @@ class MainVC: NSViewController {
             config.booter.quirks.setupVirtualMap = false
             config.booter.quirks.syncRuntimePermissions = true
             config.kernel.emulate.dummyPowerManagement = true
+            config.kernel.kPatch.append(ryzenPatch1)
+            config.kernel.kPatch.append(ryzenPatch2)
+            config.kernel.kPatch.append(ryzenPatch3)
+            config.kernel.kPatch.append(ryzenPatch4)
+            config.kernel.kPatch.append(ryzenPatch5)
+            config.kernel.kPatch.append(ryzenPatch6)
+            config.kernel.kPatch.append(ryzenPatch7)
+            config.kernel.kPatch.append(ryzenPatch8)
+            config.kernel.kPatch.append(ryzenPatch9)
+            config.kernel.kPatch.append(ryzenPatch10)
+            config.kernel.kPatch.append(ryzenPatch11)
+            config.kernel.kPatch.append(ryzenPatch12)
+            config.kernel.kPatch.append(ryzenPatch13)
+            config.kernel.kPatch.append(ryzenPatch14)
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
