@@ -21,7 +21,6 @@
 		CF33581426A3C11A005DBC7B /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33580E26A3C119005DBC7B /* VirtualSMC.kext */; };
 		CF33581526A3C11A005DBC7B /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33580F26A3C11A005DBC7B /* SMCSuperIO.kext */; };
 		CF33581626A3C11A005DBC7B /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33581026A3C11A005DBC7B /* SMCDellSensors.kext */; };
-		CF33581826A3C131005DBC7B /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF33581726A3C131005DBC7B /* AppleALC.kext */; };
 		CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */; };
 		CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C200C243D06B700D2F187 /* AppleMCEReporterDisabler.kext */; };
 		CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C200D243D06B700D2F187 /* SmallTreeIntel82576.kext */; };
@@ -41,6 +40,7 @@
 		CF5F304B27108632002CCBB5 /* XhciDxe.efi in Resources */ = {isa = PBXBuildFile; fileRef = CF5F304727108632002CCBB5 /* XhciDxe.efi */; };
 		CF5F304C2710866A002CCBB5 /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CF5F304227108605002CCBB5 /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CF5F304E27108725002CCBB5 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5F304D27108725002CCBB5 /* Lilu.kext */; };
+		CF5F305027108757002CCBB5 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF5F304F27108757002CCBB5 /* AppleALC.kext */; };
 		CF6F1118241E96DD00B70805 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1117241E96DD00B70805 /* Root.swift */; };
 		CF6F111A241E96EB00B70805 /* ACPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F1119241E96EB00B70805 /* ACPI.swift */; };
 		CF6F111C241E96F400B70805 /* Booter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF6F111B241E96F400B70805 /* Booter.swift */; };
@@ -109,7 +109,6 @@
 		CF33580E26A3C119005DBC7B /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
 		CF33580F26A3C11A005DBC7B /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
 		CF33581026A3C11A005DBC7B /* SMCDellSensors.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCDellSensors.kext; sourceTree = "<group>"; };
-		CF33581726A3C131005DBC7B /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CF4B049D249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = LucyRTL8125Ethernet.kext; sourceTree = "<group>"; };
 		CF4C200C243D06B700D2F187 /* AppleMCEReporterDisabler.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleMCEReporterDisabler.kext; sourceTree = "<group>"; };
 		CF4C200D243D06B700D2F187 /* SmallTreeIntel82576.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SmallTreeIntel82576.kext; sourceTree = "<group>"; };
@@ -131,6 +130,7 @@
 		CF5F304627108632002CCBB5 /* OpenUsbKbDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = OpenUsbKbDxe.efi; sourceTree = "<group>"; };
 		CF5F304727108632002CCBB5 /* XhciDxe.efi */ = {isa = PBXFileReference; lastKnownFileType = file; path = XhciDxe.efi; sourceTree = "<group>"; };
 		CF5F304D27108725002CCBB5 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
+		CF5F304F27108757002CCBB5 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
 		CF6F1117241E96DD00B70805 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
 		CF6F1119241E96EB00B70805 /* ACPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACPI.swift; sourceTree = "<group>"; };
 		CF6F111B241E96F400B70805 /* Booter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booter.swift; sourceTree = "<group>"; };
@@ -180,9 +180,9 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CF5F304F27108757002CCBB5 /* AppleALC.kext */,
 				CF5F304D27108725002CCBB5 /* Lilu.kext */,
 				CF0D6E8D26A3C84F003EE332 /* AirportBrcmFixup.kext */,
-				CF33581726A3C131005DBC7B /* AppleALC.kext */,
 				CF33580B26A3C119005DBC7B /* SMCBatteryManager.kext */,
 				CF33581026A3C11A005DBC7B /* SMCDellSensors.kext */,
 				CF33580C26A3C119005DBC7B /* SMCLightSensor.kext */,
@@ -404,6 +404,7 @@
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF5F3041271085ED002CCBB5 /* OpenCore.efi in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
+				CF5F305027108757002CCBB5 /* AppleALC.kext in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
 				CF5F304B27108632002CCBB5 /* XhciDxe.efi in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
@@ -415,7 +416,6 @@
 				CF33581426A3C11A005DBC7B /* VirtualSMC.kext in Resources */,
 				CF77A0B8256C2D100082464D /* macpro.png in Resources */,
 				CF0D6E8E26A3C84F003EE332 /* AirportBrcmFixup.kext in Resources */,
-				CF33581826A3C131005DBC7B /* AppleALC.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
 				CF33581326A3C11A005DBC7B /* SMCProcessor.kext in Resources */,
