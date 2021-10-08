@@ -917,7 +917,7 @@ class MainVC: NSViewController {
             config.kernel.kPatch.append(ryzenPatch16)
             config.kernel.kQuirks.panicNoKextDump = true
             config.kernel.kQuirks.powerTimeoutKernelPanic = true
-            config.kernel.kQuirks.xhciPortLimit = true
+            config.kernel.kQuirks.provideCurrentCpuInfo = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
@@ -1027,6 +1027,7 @@ class MainVC: NSViewController {
             config.kernel.kPatch.append(ryzenPatch12)
             config.kernel.kPatch.append(ryzenPatch13)
             config.kernel.kPatch.append(ryzenPatch14)
+            config.kernel.kQuirks.provideCurrentCpuInfo = true
             config.misc.debug.appleDebug = true
             config.misc.debug.applePanic = true
             config.misc.debug.disableWatchDog = true
