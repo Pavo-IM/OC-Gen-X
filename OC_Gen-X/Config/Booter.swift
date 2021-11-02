@@ -68,6 +68,7 @@ struct booterQuirks: Codable {
     var protectUefiServices: Bool = false
     var provideCustomSlide: Bool = true
     var provideMaxSlide: Int = 0
+    var resizeAppleGpuBars: Int = -1
     var rebuildAppleMemoryMap: Bool = false
     var setupVirtualMap: Bool = true
     var signalAppleOS: Bool = false
@@ -89,6 +90,7 @@ struct booterQuirks: Codable {
         case protectUefiServices = "ProtectUefiServices"
         case provideCustomSlide = "ProvideCustomSlide"
         case provideMaxSlide = "ProvideMaxSlide"
+        case resizeAppleGpuBars = "ResizeAppleGpuBars"
         case rebuildAppleMemoryMap = "RebuildAppleMemoryMap"
         case setupVirtualMap = "SetupVirtualMap"
         case signalAppleOS = "SignalAppleOS"

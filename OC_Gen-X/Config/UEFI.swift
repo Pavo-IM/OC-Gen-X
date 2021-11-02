@@ -209,6 +209,7 @@ struct uQuirks: Codable {
     var releaseUsbOwnership: Bool = false
     var reloadOptionRoms: Bool = false
     var requestBootVarRouting: Bool = true
+    var resizeGpuBars: Int = -1
     var tscSyncTimeout: Int = 0
     var unblockFsConnect: Bool = false
     
@@ -223,6 +224,7 @@ struct uQuirks: Codable {
         case releaseUsbOwnership = "ReleaseUsbOwnership"
         case reloadOptionRoms = "ReloadOptionRoms"
         case requestBootVarRouting = "RequestBootVarRouting"
+        case resizeGpuBars = "ResizeGpuBars"
         case tscSyncTimeout = "TscSyncTimeout"
         case unblockFsConnect = "UnblockFsConnect"
     }
