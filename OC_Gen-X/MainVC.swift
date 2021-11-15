@@ -121,6 +121,9 @@ class MainVC: NSViewController {
     ]
     
     var AMDDictionary = [
+        "RX 6900XT": "Vendor1002Device73bf",
+        "RX 6800XT": "Vendor1002Device73bf",
+        "RX 6600XT": "Vendor1002Device73ff",
         "RX 5600XT": "Vendor1002Device731F",
         "RX 5500XT": "Vendor1002Device7340",
         "Radeon VII": "Vendor1002Device66af",
