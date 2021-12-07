@@ -132,11 +132,13 @@ struct output: Codable {
     var gopPassThrough: String = "Disabled"
     var ignoreTextInGraphics: Bool = false
     var provideConsoleGop: Bool = true
+    var reconnectGraphicsOnConnect: Bool = false
     var reconnectOnResChange: Bool = false
     var replaceTabWithSpace: Bool = false
     var resolution: String = "Max"
     var sanitiseClearScreen: Bool = false
     var textRenderer: String = "BuiltinGraphics"
+    var uIScale: Int = 0
     var ugaPassThrough: Bool = false
     
     enum CodingKeys: String, CodingKey {
@@ -147,11 +149,13 @@ struct output: Codable {
         case gopPassThrough = "GopPassThrough"
         case ignoreTextInGraphics = "IgnoreTextInGraphics"
         case provideConsoleGop = "ProvideConsoleGop"
+        case reconnectGraphicsOnConnect = "ReconnectGraphicsOnConnect"
         case reconnectOnResChange = "ReconnectOnResChange"
         case replaceTabWithSpace = "ReplaceTabWithSpace"
         case resolution = "Resolution"
         case sanitiseClearScreen = "SanitiseClearScreen"
         case textRenderer = "TextRenderer"
+        case uIScale = "UIScale"
         case ugaPassThrough = "UgaPassThrough"
     }
 }
@@ -202,6 +206,7 @@ struct uQuirks: Codable {
     var activateHpetSupport: Bool = false
     var disableSecurityPolicy: Bool = false
     var enableVectorAcceleration: Bool = true
+    var enableVmx: Bool = false
     var exitBootServicesDelay: Int = 0
     var forceOcWriteFlash: Bool = false
     var forgeUefiSupport: Bool = false
@@ -217,6 +222,7 @@ struct uQuirks: Codable {
         case activateHpetSupport = "ActivateHpetSupport"
         case disableSecurityPolicy = "DisableSecurityPolicy"
         case enableVectorAcceleration  = "EnableVectorAcceleration"
+        case enableVmx = "EnableVmx"
         case exitBootServicesDelay = "ExitBootServicesDelay"
         case forceOcWriteFlash = "ForceOcWriteFlash"
         case forgeUefiSupport = "ForgeUefiSupport"

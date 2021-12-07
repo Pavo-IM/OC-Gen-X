@@ -32,11 +32,9 @@ struct nAdd: Codable {
 
 struct addAppleVendorVariableGuid: Codable {
     var defaultBackgroundColor: Data = Data([0x00,0x00,0x00,0x00])
-    var uiScale: Data = Data([0x01])
     
     enum CodingKeys: String, CodingKey {
         case defaultBackgroundColor = "DefaultBackgroundColor"
-        case uiScale = "UIScale"
     }
 }
 
@@ -67,7 +65,7 @@ struct addAppleBootVariableGuid: Codable {
 }
 
 struct nDelete: Codable {
-    var blockAppleVendorVariableGuid: [String] = ["UIScale", "DefaultBackgroundColor"]
+    var blockAppleVendorVariableGuid: [String] = ["DefaultBackgroundColor"]
     var blockAppleVendorGuid: [String] = ["rtc-blacklist"]
     var blockAppleBootVariableGuid: [String] = ["boot-args"]
     
