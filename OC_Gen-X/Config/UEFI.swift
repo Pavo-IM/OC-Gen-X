@@ -50,6 +50,9 @@ struct appleInput: Codable {
     var graphicsInputMirroring: Bool = true
     var keyInitialDelay: Int = 0
     var keySubsequentDelay: Int = 5
+    var pointerPollMask: Int = -1
+    var pointerPollMax: Int = 80
+    var pointerPollMin: Int = 10
     var pointerSpeedDiv: Int = 1
     var pointerSpeedMul: Int = 1
     
@@ -59,6 +62,9 @@ struct appleInput: Codable {
         case graphicsInputMirroring = "GraphicsInputMirroring"
         case keyInitialDelay = "KeyInitialDelay"
         case keySubsequentDelay = "KeySubsequentDelay"
+        case pointerPollMask = "PointerPollMask"
+        case pointerPollMax = "PointerPollMax"
+        case pointerPollMin = "PointerPollMin"
         case pointerSpeedDiv = "PointerSpeedDiv"
         case pointerSpeedMul = "PointerSpeedMul"
     }
@@ -67,24 +73,28 @@ struct appleInput: Codable {
 struct audio: Codable {
     var audioCodec: Int = 0
     var audioDevice: String = "PciRoot(0x0)/Pci(0x1b,0x0)"
-    var audioOut: Int = 0
+    var audioOutMask: Int = 0
     var audioSupport: Bool = false
-    var minimumVolume: Int = 20
+    var disconnectHda: Bool = false
+    var maximumGain: Int = -15
+    var minimumAssistGain: Int = -30
+    var minimumAudibleGain: Int = -55
     var playChime: String = "Auto"
     var resetTrafficClass: Bool = false
     var setupDelay: Int = 0
-    var volumeAmplifier: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case audioCodec = "AudioCodec"
         case audioDevice = "AudioDevice"
-        case audioOut = "AudioOut"
+        case audioOutMask = "AudioOutMask"
         case audioSupport = "AudioSupport"
-        case minimumVolume = "MinimumVolume"
+        case disconnectHda = "DisconnectHda"
+        case maximumGain = "MaximumGain"
+        case minimumAssistGain = "MinimumAssistGain"
+        case minimumAudibleGain = "MinimumAudibleGain"
         case playChime = "PlayChime"
         case resetTrafficClass = "ResetTrafficClass"
         case setupDelay = "SetupDelay"
-        case volumeAmplifier = "VolumeAmplifier"
     }
 }
 
