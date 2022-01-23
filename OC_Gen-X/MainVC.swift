@@ -942,6 +942,7 @@ class MainVC: NSViewController {
             config.misc.debug.disableWatchDog = true
             config.misc.security.allowNvramReset = true
             config.misc.security.allowSetDefault = true
+            config.misc.security.secureBootModel = "Disabled"
         default:
             break
         }
