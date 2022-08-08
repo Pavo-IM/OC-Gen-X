@@ -53,15 +53,6 @@
 		CFDAC3AB28A1667300911275 /* OpenCore.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3AA28A1667300911275 /* OpenCore.efi */; };
 		CFDAC3AD28A1668C00911275 /* BOOTx64.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3AC28A1668C00911275 /* BOOTx64.efi */; };
 		CFDAC3AF28A1669C00911275 /* macserial in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3AE28A1669C00911275 /* macserial */; };
-		CFDAC3B128A166B100911275 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B028A166B100911275 /* WhateverGreen.kext */; };
-		CFDAC3B328A166C000911275 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B228A166C000911275 /* AppleALC.kext */; };
-		CFDAC3B528A166D100911275 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B428A166D100911275 /* Lilu.kext */; };
-		CFDAC3BC28A166EB00911275 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B628A166EA00911275 /* VirtualSMC.kext */; };
-		CFDAC3BD28A166EB00911275 /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B728A166EA00911275 /* SMCProcessor.kext */; };
-		CFDAC3BE28A166EB00911275 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B828A166EB00911275 /* SMCSuperIO.kext */; };
-		CFDAC3BF28A166EB00911275 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B928A166EB00911275 /* SMCDellSensors.kext */; };
-		CFDAC3C028A166EB00911275 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3BA28A166EB00911275 /* SMCLightSensor.kext */; };
-		CFDAC3C128A166EB00911275 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3BB28A166EB00911275 /* SMCBatteryManager.kext */; };
 		CFDAC3C228A1673E00911275 /* macserial in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFDAC3AE28A1669C00911275 /* macserial */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
@@ -390,25 +381,19 @@
 				CF0321AC275FB2FD00C29F18 /* NvmExpressDxe.efi in Resources */,
 				CF1C1B02266E8D3C00F7BC6D /* BrcmBluetoothInjector.kext in Resources */,
 				CFDAC3AF28A1669C00911275 /* macserial in Resources */,
-				CFDAC3BC28A166EB00911275 /* VirtualSMC.kext in Resources */,
 				CF1C1B03266E8D3C00F7BC6D /* BrcmFirmwareData.kext in Resources */,
 				CF1C1B04266E8D3C00F7BC6D /* BrcmFirmwareRepo.kext in Resources */,
-				CFDAC3BD28A166EB00911275 /* SMCProcessor.kext in Resources */,
 				CF1C1B05266E8D3C00F7BC6D /* BrcmPatchRAM2.kext in Resources */,
 				CF1C1B06266E8D3C00F7BC6D /* BrcmPatchRAM3.kext in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
 				CF77A0B7256C2D100082464D /* macpro71.png in Resources */,
-				CFDAC3BE28A166EB00911275 /* SMCSuperIO.kext in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
-				CFDAC3C128A166EB00911275 /* SMCBatteryManager.kext in Resources */,
 				CF0321AD275FB2FD00C29F18 /* XhciDxe.efi in Resources */,
-				CFDAC3B328A166C000911275 /* AppleALC.kext in Resources */,
 				CFDAC3AD28A1668C00911275 /* BOOTx64.efi in Resources */,
-				CFDAC3BF28A166EB00911275 /* SMCDellSensors.kext in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CF77A0B9256C2D100082464D /* imacpro.png in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
@@ -420,11 +405,8 @@
 				CF0D6E8E26A3C84F003EE332 /* AirportBrcmFixup.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
-				CFDAC3B528A166D100911275 /* Lilu.kext in Resources */,
-				CFDAC3B128A166B100911275 /* WhateverGreen.kext in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
-				CFDAC3C028A166EB00911275 /* SMCLightSensor.kext in Resources */,
 				CF1BF83F2641768B00A794BE /* IntelMausi.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
 			);
