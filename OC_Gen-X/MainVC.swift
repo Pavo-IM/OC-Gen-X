@@ -434,7 +434,7 @@ class MainVC: NSViewController {
         let bundle = Bundle.main
         let fm = FileManager.default
         let kextname = bundle.path(forResource: "\(item)", ofType: ".kext")
-        let kextnameURL = URL(fileURLWithPath: kextname!)
+        let kextnameURL = URL(fileURLWithPath: (kextname)!)
         let kextnameDir = "\(item).kext"
         do {
             try fm.copyItem(at: kextnameURL, to: location.appendingPathComponent(kextnameDir))

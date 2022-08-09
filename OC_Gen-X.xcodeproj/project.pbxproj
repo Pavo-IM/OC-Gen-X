@@ -57,6 +57,15 @@
 		CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */ = {isa = PBXBuildFile; fileRef = CFDE3E8A252B8A4B004AE661 /* HfsPlus.efi */; };
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
+		CFF942C228A29AFE00E6FA42 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B628A166EA00911275 /* VirtualSMC.kext */; };
+		CFF942C328A29B0100E6FA42 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B428A166D100911275 /* Lilu.kext */; };
+		CFF942C428A29B2700E6FA42 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B028A166B100911275 /* WhateverGreen.kext */; };
+		CFF942C528A29B2A00E6FA42 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B228A166C000911275 /* AppleALC.kext */; };
+		CFF942C628A29B2F00E6FA42 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B828A166EB00911275 /* SMCSuperIO.kext */; };
+		CFF942C728A29B3200E6FA42 /* SMCProcessor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B728A166EA00911275 /* SMCProcessor.kext */; };
+		CFF942C828A29B3600E6FA42 /* SMCLightSensor.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3BA28A166EB00911275 /* SMCLightSensor.kext */; };
+		CFF942C928A29B3A00E6FA42 /* SMCDellSensors.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B928A166EB00911275 /* SMCDellSensors.kext */; };
+		CFF942CA28A29B3D00E6FA42 /* SMCBatteryManager.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3BB28A166EB00911275 /* SMCBatteryManager.kext */; };
 		D5B5BBF824A7B6CC004E5D7C /* HyperlinkTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B5BBF724A7B6CC004E5D7C /* HyperlinkTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -378,22 +387,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF942C328A29B0100E6FA42 /* Lilu.kext in Resources */,
 				CF0321AC275FB2FD00C29F18 /* NvmExpressDxe.efi in Resources */,
 				CF1C1B02266E8D3C00F7BC6D /* BrcmBluetoothInjector.kext in Resources */,
 				CFDAC3AF28A1669C00911275 /* macserial in Resources */,
+				CFF942C228A29AFE00E6FA42 /* VirtualSMC.kext in Resources */,
 				CF1C1B03266E8D3C00F7BC6D /* BrcmFirmwareData.kext in Resources */,
 				CF1C1B04266E8D3C00F7BC6D /* BrcmFirmwareRepo.kext in Resources */,
 				CF1C1B05266E8D3C00F7BC6D /* BrcmPatchRAM2.kext in Resources */,
+				CFF942C828A29B3600E6FA42 /* SMCLightSensor.kext in Resources */,
 				CF1C1B06266E8D3C00F7BC6D /* BrcmPatchRAM3.kext in Resources */,
 				CF8B211925C781FE00596150 /* XPCServices in Resources */,
 				CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */,
+				CFF942C628A29B2F00E6FA42 /* SMCSuperIO.kext in Resources */,
 				CF77A0B7256C2D100082464D /* macpro71.png in Resources */,
 				CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */,
 				CF92213225C9E58A00CBD096 /* generate_appcast in Resources */,
 				CF77A0B6256C2D100082464D /* macpro61.png in Resources */,
+				CFF942CA28A29B3D00E6FA42 /* SMCBatteryManager.kext in Resources */,
 				CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */,
 				CF0321AD275FB2FD00C29F18 /* XhciDxe.efi in Resources */,
 				CFDAC3AD28A1668C00911275 /* BOOTx64.efi in Resources */,
+				CFF942C928A29B3A00E6FA42 /* SMCDellSensors.kext in Resources */,
+				CFF942C728A29B3200E6FA42 /* SMCProcessor.kext in Resources */,
 				CF4C2010243D06B700D2F187 /* SmallTreeIntel82576.kext in Resources */,
 				CF77A0B9256C2D100082464D /* imacpro.png in Resources */,
 				CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */,
@@ -407,6 +423,8 @@
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
+				CFF942C428A29B2700E6FA42 /* WhateverGreen.kext in Resources */,
+				CFF942C528A29B2A00E6FA42 /* AppleALC.kext in Resources */,
 				CF1BF83F2641768B00A794BE /* IntelMausi.kext in Resources */,
 				CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */,
 			);
