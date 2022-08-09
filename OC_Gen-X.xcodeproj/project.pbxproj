@@ -24,6 +24,7 @@
 		CF4C2014243D06D300D2F187 /* USBInjectAll.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2013243D06D300D2F187 /* USBInjectAll.kext */; };
 		CF4C2016243D06E100D2F187 /* RealtekRTL8111.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */; };
 		CF4C2018243D06EC00D2F187 /* AtherosE2200Ethernet.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */; };
+		CF590A9528A29E3800B5AF75 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CF590A9428A29E3800B5AF75 /* Lilu.kext */; };
 		CF59E728241DA2D500A7C5EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E727241DA2D500A7C5EC /* AppDelegate.swift */; };
 		CF59E72F241DA2D600A7C5EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF59E72D241DA2D600A7C5EC /* Main.storyboard */; };
 		CF59E73A241DA57A00A7C5EC /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF59E739241DA57A00A7C5EC /* MainVC.swift */; };
@@ -58,7 +59,6 @@
 		CFE16259260CF94D00F4616C /* sandybridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE16258260CF94D00F4616C /* sandybridge.swift */; };
 		CFE8A230249E662400D72669 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFE8A22F249E662400D72669 /* AppIcon.xcassets */; };
 		CFF942C228A29AFE00E6FA42 /* VirtualSMC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B628A166EA00911275 /* VirtualSMC.kext */; };
-		CFF942C328A29B0100E6FA42 /* Lilu.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B428A166D100911275 /* Lilu.kext */; };
 		CFF942C428A29B2700E6FA42 /* WhateverGreen.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B028A166B100911275 /* WhateverGreen.kext */; };
 		CFF942C528A29B2A00E6FA42 /* AppleALC.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B228A166C000911275 /* AppleALC.kext */; };
 		CFF942C628A29B2F00E6FA42 /* SMCSuperIO.kext in Resources */ = {isa = PBXBuildFile; fileRef = CFDAC3B828A166EB00911275 /* SMCSuperIO.kext */; };
@@ -112,6 +112,7 @@
 		CF4C2013243D06D300D2F187 /* USBInjectAll.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = USBInjectAll.kext; sourceTree = "<group>"; };
 		CF4C2015243D06E100D2F187 /* RealtekRTL8111.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = RealtekRTL8111.kext; sourceTree = "<group>"; };
 		CF4C2017243D06EC00D2F187 /* AtherosE2200Ethernet.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AtherosE2200Ethernet.kext; sourceTree = "<group>"; };
+		CF590A9428A29E3800B5AF75 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
 		CF59E724241DA2D500A7C5EC /* OC_Gen-X.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OC_Gen-X.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF59E727241DA2D500A7C5EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF59E72E241DA2D600A7C5EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -145,7 +146,6 @@
 		CFDAC3AE28A1669C00911275 /* macserial */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = macserial; sourceTree = "<group>"; };
 		CFDAC3B028A166B100911275 /* WhateverGreen.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = WhateverGreen.kext; sourceTree = "<group>"; };
 		CFDAC3B228A166C000911275 /* AppleALC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = AppleALC.kext; sourceTree = "<group>"; };
-		CFDAC3B428A166D100911275 /* Lilu.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = Lilu.kext; sourceTree = "<group>"; };
 		CFDAC3B628A166EA00911275 /* VirtualSMC.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = VirtualSMC.kext; sourceTree = "<group>"; };
 		CFDAC3B728A166EA00911275 /* SMCProcessor.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCProcessor.kext; sourceTree = "<group>"; };
 		CFDAC3B828A166EB00911275 /* SMCSuperIO.kext */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.kernel-extension"; path = SMCSuperIO.kext; sourceTree = "<group>"; };
@@ -180,13 +180,13 @@
 		CF4C2008243D067000D2F187 /* Kexts */ = {
 			isa = PBXGroup;
 			children = (
+				CF590A9428A29E3800B5AF75 /* Lilu.kext */,
 				CFDAC3BB28A166EB00911275 /* SMCBatteryManager.kext */,
 				CFDAC3B928A166EB00911275 /* SMCDellSensors.kext */,
 				CFDAC3BA28A166EB00911275 /* SMCLightSensor.kext */,
 				CFDAC3B728A166EA00911275 /* SMCProcessor.kext */,
 				CFDAC3B828A166EB00911275 /* SMCSuperIO.kext */,
 				CFDAC3B628A166EA00911275 /* VirtualSMC.kext */,
-				CFDAC3B428A166D100911275 /* Lilu.kext */,
 				CFDAC3B228A166C000911275 /* AppleALC.kext */,
 				CFDAC3B028A166B100911275 /* WhateverGreen.kext */,
 				CF0D6E8D26A3C84F003EE332 /* AirportBrcmFixup.kext */,
@@ -387,7 +387,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFF942C328A29B0100E6FA42 /* Lilu.kext in Resources */,
 				CF0321AC275FB2FD00C29F18 /* NvmExpressDxe.efi in Resources */,
 				CF1C1B02266E8D3C00F7BC6D /* BrcmBluetoothInjector.kext in Resources */,
 				CFDAC3AF28A1669C00911275 /* macserial in Resources */,
@@ -421,6 +420,7 @@
 				CF0D6E8E26A3C84F003EE332 /* AirportBrcmFixup.kext in Resources */,
 				CF4C200F243D06B700D2F187 /* AppleMCEReporterDisabler.kext in Resources */,
 				CFDE3E8B252B8A4B004AE661 /* HfsPlus.efi in Resources */,
+				CF590A9528A29E3800B5AF75 /* Lilu.kext in Resources */,
 				CF77A0BA256C2D100082464D /* imac.png in Resources */,
 				CF4B049E249EBD4B00690FB2 /* LucyRTL8125Ethernet.kext in Resources */,
 				CFF942C428A29B2700E6FA42 /* WhateverGreen.kext in Resources */,
@@ -602,7 +602,7 @@
 				CURRENT_PROJECT_VERSION = 3.3.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,7 +640,7 @@
 				CURRENT_PROJECT_VERSION = 3.3.2;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 5DG8PLV54H;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				EXCLUDED_ARCHS = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
